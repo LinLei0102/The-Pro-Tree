@@ -1,7 +1,7 @@
-# The-Modding-Tree
+# The-Pro-Tree 专业树
 
-An incremental game engine based on The Prestige Tree. It still requires programming knowledge, but it's mostly pretty easy things and copy/pasting.
+来自 CrazyHighNumbers69 的模组树作品，由 LinLei_Baruch 汉化
 
-[Look here for a tutorial on getting started with modding with TMT](docs/tutorials/getting-started.md)
+汉化在本地，暂时不上传GitHub，等全部汉化完毕再上传
 
-You can look in the [documentation](docs/!general-info.md) for more information on how it all works, or look at the code in layers.js to see what it all looks like.
+大家先凑合玩吧！如果对此模组树有疑问的，可加群 963150347 一同讨论哦
