@@ -3,7 +3,11 @@ let modInfo = {
 	id: "1",
 	author: "ProGamesGrinder",
 	pointsName: "积分",
-	modFiles: ["layers.js", "tree.js", "buttonpower.js", "ant.js", "grass.js", "cups.js", "dices.js", "fruits.js", "electricity.js", "houses.js", "ice.js", "achievements.js", "jetpacks.js", "keys.js", "lights.js", "money.js", "notes.js", "onions.js", "quadrilaterals.js", "rings.js", "sand.js", "trees.js", "universal.js", "void.js", "reincarnation.js", "wood.js", "xray.js", "yard.js", "zebras.js", "arrows.js", "ball.js", "circles.js", "duck.js", "eggs.js", "fire.js", "games.js", "hammers.js" , "islands.js", "juice.js","supernova.js","sacrifice.js","asc.js"],
+	// 【顺序敏感，勿随意调整】TREE_LAYERS 的排序比较器为 (a, b) => (a.position > b.position) ? 1 : -1，
+	// 而第 3~7 行各层的 position 均为 '0'，该比较器恒返回 -1，实际效果是「把整行反转」，
+	// 因此树节点的行内显示顺序 = 脚本加载顺序的逆序。本清单顺序必须与原 index.html 的加载顺序一致，
+	// 否则树中第 5、6 行的节点排列会改变。前 26 项 = 原 index.html 静态标签顺序；后 16 项 = 原 loader 注入顺序。
+	modFiles: ["tree.js", "layers.js", "buttonpower.js", "grass.js", "cups.js", "dices.js", "fruits.js", "achievements.js", "electricity.js", "houses.js", "ice.js", "jetpacks.js", "keys.js", "lights.js", "money.js", "notes.js", "rings.js", "sand.js", "universal.js", "reincarnation.js", "void.js", "wood.js", "xray.js", "yard.js", "arrows.js", "ball.js", "ant.js", "onions.js", "quadrilaterals.js", "trees.js", "zebras.js", "circles.js", "duck.js", "eggs.js", "fire.js", "games.js", "hammers.js", "islands.js", "juice.js", "supernova.js", "sacrifice.js", "asc.js"],
 	discordName: "ProGames YT 粉丝群",
 	discordLink: "https://discord.gg/8pwhpb8rtM",
 	initialStartPoints: new ExpantaNum (0), // Used for hard resets and new players
