@@ -7,7 +7,7 @@ addLayer("fi", {
     ],
     microtabs: {
         stuff: {
-                        "Upgrades": {
+                        "升级": {
                             unlocked() {return (hasAchievement("a", 11))},
                     content: [
                         ["blank", "15px"],
@@ -19,182 +19,182 @@ addLayer("fi", {
                 },
     upgrades: {
         11: { title: "826",
-        description: "Gain x20 Medals!",
+        description: "获得 ×20 奖牌！",
         cost: new EN("1"),
         unlocked() {
             return hasChallenge("re", 31)
         },
         },
         12: { title: "827",
-        description: "Gain x10 Fire",
+        description: "获得 ×10 火",
         cost: new EN("10"),
         unlocked() {
             return hasUpgrade("fi", 11)
         },
         },
         13: { title: "828",
-        description: "Gain x100 Fire",
+        description: "获得 ×100 火",
         cost: new EN("1000"),
         unlocked() {
             return hasUpgrade("fi", 12)
         },
         },
         14: { title: "829",
-        description: "Gain x1,000 Fire",
+        description: "获得 ×1,000 火",
         cost: new EN("100000"),
         unlocked() {
             return hasUpgrade("fi", 13)
         },
         },
         15: { title: "830",
-        description: "Gain x10,000 Fire",
+        description: "获得 ×10,000 火",
         cost: new EN("1e8"),
         unlocked() {
             return hasUpgrade("fi", 14)
         },
         },
         21: { title: "831",
-        description: "Gain x100,000 Fire",
+        description: "获得 ×100,000 火",
         cost: new EN("1e12"),
         unlocked() {
             return hasUpgrade("fi", 15)
         },
         },
         22: { title: "832",
-        description: "Gain x1,000,000 Fire",
+        description: "获得 ×1,000,000 火",
         cost: new EN("1e15"),
         unlocked() {
             return hasUpgrade("fi", 21)
         },
         },
         23: { title: "833",
-        description: "Gain x10,000,000 Fire",
+        description: "获得 ×10,000,000 火",
         cost: new EN("1e21"),
         unlocked() {
             return hasUpgrade("fi", 22)
         },
         },
         24: { title: "834",
-        description: "Gain x100,000,000 Fire",
+        description: "获得 ×100,000,000 火",
         cost: new EN("1e28"),
         unlocked() {
             return hasUpgrade("fi", 23)
         },
         },
         25: { title: "835",
-        description: "Gain x1,000,000,000 Fire",
+        description: "获得 ×1,000,000,000 火",
         cost: new EN("1e36"),
         unlocked() {
             return hasUpgrade("fi", 24)
         },
         },
         31: { title: "836",
-        description: "Gain x1e10 Fire",
+        description: "获得 ×1e10 火",
         cost: new EN("1e45"),
         unlocked() {
             return hasUpgrade("fi", 25)
         },
         },
         32: { title: "837",
-        description: "Gain x1e11 Fire",
+        description: "获得 ×1e11 火",
         cost: new EN("1e55"),
         unlocked() {
             return hasUpgrade("fi", 31)
         },
         },
         33: { title: "838",
-        description: "Gain x1e12 Fire",
+        description: "获得 ×1e12 火",
         cost: new EN("1e66"),
         unlocked() {
             return hasUpgrade("fi", 32)
         },
         },
         34: { title: "839",
-        description: "Gain x1e13 Fire",
+        description: "获得 ×1e13 火",
         cost: new EN("1e78"),
         unlocked() {
             return hasUpgrade("fi", 33)
         },
         },
         35: { title: "840",
-        description: "Gain x1e14 Fire",
+        description: "获得 ×1e14 火",
         cost: new EN("1e91"),
         unlocked() {
             return hasUpgrade("fi", 34)
         },
         },
         41: { title: "841",
-        description: "Gain x1e15 Fire",
+        description: "获得 ×1e15 火",
         cost: new EN("1e106"),
         unlocked() {
             return hasUpgrade("fi", 35)
         },
         },
         42: { title: "842",
-        description: "Gain x1e16 Fire",
+        description: "获得 ×1e16 火",
         cost: new EN("1e121"),
         unlocked() {
             return hasUpgrade("fi", 41)
         },
         },
         43: { title: "843",
-        description: "Gain x1e17 Fire",
+        description: "获得 ×1e17 火",
         cost: new EN("1e137"),
         unlocked() {
             return hasUpgrade("fi", 42)
         },
         },
         44: { title: "844",
-        description: "Gain x1e18 Fire",
+        description: "获得 ×1e18 火",
         cost: new EN("1e154"),
         unlocked() {
             return hasUpgrade("fi", 43)
         },
         },
         45: { title: "845",
-        description: "Gain x1e19 Fire",
+        description: "获得 ×1e19 火",
         cost: new EN("1e173"),
         unlocked() {
             return hasUpgrade("fi", 44)
         },
         },
         51: { title: "846",
-        description: "Gain x1e20 Fire",
+        description: "获得 ×1e20 火",
         cost: new EN("1e191"),
         unlocked() {
             return hasUpgrade("fi", 45)
         },
         },
         52: { title: "847",
-        description: "Gain x1e21 Fire",
+        description: "获得 ×1e21 火",
         cost: new EN("1e210"),
         unlocked() {
             return hasUpgrade("fi", 51)
         },
         },
         53: { title: "848",
-        description: "Gain x1e22 Fire",
+        description: "获得 ×1e22 火",
         cost: new EN("1e232"),
         unlocked() {
             return hasUpgrade("fi", 52)
         },
         },
         54: { title: "849",
-        description: "Increase currencies from universal - fire",
+        description: "增加从宇宙到火的货币",
         cost: new EN("1e254"),
         unlocked() {
             return hasUpgrade("fi", 53)
         },
         },
         55: { title: "850",
-        description: "Gain x1e12 Medals.",
+        description: "获得 ×1e12 奖牌。",
         cost: new EN("10^^^50"),
         unlocked() {
             return hasUpgrade("fi", 54)
         },
         },
     },
-    name: "Fire", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "火", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "🔥", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -204,8 +204,8 @@ addLayer("fi", {
     }},
     color: " #fdcf58",
     requires: new EN("10^^^130"), // Can be a function that takes requirement increases into account
-    resource: "Fire", // Name of prestige currency
-    baseResource: "Points", // Name of resource prestige is based on
+    resource: "火", // Name of prestige currency
+    baseResource: "积分", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     branches: ["y", "eg"],
     type() {if (hasUpgrade("su", 535)) return "normal"
@@ -260,7 +260,7 @@ addLayer("fi", {
     },
     row: 7, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "*", description: "Shift+*: Reset for Fire", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "*", description: "Shift+*: 重置以获取火", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){if (hasUpgrade("su", 535)) return false
     else return (hasChallenge("re", 32) || player[this.layer].unlocked)},})

@@ -7,7 +7,7 @@ addLayer("ga", {
     ],
     microtabs: {
         stuff: {
-                        "Upgrades": {
+                        "升级": {
                             unlocked() {return (hasAchievement("a", 11))},
                     content: [
                         ["blank", "15px"],
@@ -19,175 +19,175 @@ addLayer("ga", {
                 },
     upgrades: {
         11: { title: "851",
-        description: "Gain x100 Medals!",
+        description: "获得 ×100 奖牌！",
         cost: new EN("1"),
         unlocked() {
             return hasChallenge("re", 41)
         },
         },
         12: { title: "852",
-        description: "Gain x10 Games.",
+        description: "获得 ×10 游戏。",
         cost: new EN("100"),
         unlocked() {
             return hasUpgrade("ga", 11)
         },
         },
         13: { title: "853",
-        description: "Gain x100 Games.",
+        description: "获得 ×100 游戏。",
         cost: new EN("1000"),
         unlocked() {
             return hasUpgrade("ga", 12)
         },
         },
         14: { title: "854",
-        description: "Gain x1,000 Games.",
+        description: "获得 ×1,000 游戏。",
         cost: new EN("100000"),
         unlocked() {
             return hasUpgrade("ga", 13)
         },
         },
         15: { title: "855",
-        description: "Gain x10,000 Games.",
+        description: "获得 ×10,000 游戏。",
         cost: new EN("100000000"),
         unlocked() {
             return hasUpgrade("ga", 14)
         },
         },
         21: { title: "856",
-        description: "Gain x100,000 Games.",
+        description: "获得 ×100,000 游戏。",
         cost: new EN("1e11"),
         unlocked() {
             return hasUpgrade("ga", 15)
         },
         },
         22: { title: "857",
-        description: "Gain x1,000,000 Games.",
+        description: "获得 ×1,000,000 游戏。",
         cost: new EN("1e16"),
         unlocked() {
             return hasUpgrade("ga", 21)
         },
         },
         23: { title: "858",
-        description: "Gain x10,000,000 Games.",
+        description: "获得 ×10,000,000 游戏。",
         cost: new EN("1e22"),
         unlocked() {
             return hasUpgrade("ga", 22)
         },
         },
         24: { title: "859",
-        description: "Gain x100,000,000 Games.",
+        description: "获得 ×100,000,000 游戏。",
         cost: new EN("1e29"),
         unlocked() {
             return hasUpgrade("ga", 23)
         },
         },
         25: { title: "860",
-        description: "Gain x1e9 Games.",
+        description: "获得 ×1e9 游戏。",
         cost: new EN("1e37"),
         unlocked() {
             return hasUpgrade("ga", 24)
         },
         },
         31: { title: "861",
-        description: "Gain x1e10 Games.",
+        description: "获得 ×1e10 游戏。",
         cost: new EN("1e46"),
         unlocked() {
             return hasUpgrade("ga", 25)
         },
         },
         32: { title: "862",
-        description: "Gain x1e11 Games.",
+        description: "获得 ×1e11 游戏。",
         cost: new EN("1e56"),
         unlocked() {
             return hasUpgrade("ga", 31)
         },
         },
         33: { title: "863",
-        description: "Gain x1e12 Games.",
+        description: "获得 ×1e12 游戏。",
         cost: new EN("1e67"),
         unlocked() {
             return hasUpgrade("ga", 32)
         },
         },
         34: { title: "864",
-        description: "Gain x1e13 Games.",
+        description: "获得 ×1e13 游戏。",
         cost: new EN("1e79"),
         unlocked() {
             return hasUpgrade("ga", 33)
         },
         },
         35: { title: "865",
-        description: "Gain x1e14 Games.",
+        description: "获得 ×1e14 游戏。",
         cost: new EN("1e92"),
         unlocked() {
             return hasUpgrade("ga", 34)
         },
         },
         41: { title: "866",
-        description: "Gain x1e15 Games.",
+        description: "获得 ×1e15 游戏。",
         cost: new EN("1e106"),
         unlocked() {
             return hasUpgrade("ga", 35)
         },
         },
         42: { title: "867",
-        description: "Gain x1e16 Games.",
+        description: "获得 ×1e16 游戏。",
         cost: new EN("1e121"),
         unlocked() {
             return hasUpgrade("ga", 41)
         },
         },
         43: { title: "868",
-        description: "Gain x1e17 Games.",
+        description: "获得 ×1e17 游戏。",
         cost: new EN("1e137"),
         unlocked() {
             return hasUpgrade("ga", 42)
         },
         },
         44: { title: "869",
-        description: "Gain x1e18 Games.",
+        description: "获得 ×1e18 游戏。",
         cost: new EN("1e154"),
         unlocked() {
             return hasUpgrade("ga", 43)
         },
         },
         45: { title: "870",
-        description: "Gain x1e19 Games.",
+        description: "获得 ×1e19 游戏。",
         cost: new EN("1e172"),
         unlocked() {
             return hasUpgrade("ga", 44)
         },
         },
         51: { title: "871",
-        description: "Gain x1e20 Games.",
+        description: "获得 ×1e20 游戏。",
         cost: new EN("1e191"),
         unlocked() {
             return hasUpgrade("ga", 45)
         },
         },
         52: { title: "872",
-        description: "Gain x1e21 Games.",
+        description: "获得 ×1e21 游戏。",
         cost: new EN("1e211"),
         unlocked() {
             return hasUpgrade("ga", 51)
         },
         },
         53: { title: "873",
-        description: "Gain x1e22 Games.",
+        description: "获得 ×1e22 游戏。",
         cost: new EN("1e232"),
         unlocked() {
             return hasUpgrade("ga", 52)
         },
         },
         54: { title: "874",
-        description: "Increase Row 7 and Row 8 currencies but remove universal layer.",
+        description: "提升第 7 行与第 8 行的货币，但移除宇宙层。",
         cost: new EN("1e254"),
         unlocked() {
             return hasUpgrade("ga", 53)
         },
         },
         55: { title: "875",
-        description: "Gain ^1.1 Medals.",
+        description: "获得 ^1.1 奖牌。",
         cost: new EN("10^^^100"),
         unlocked() {
             return hasUpgrade("ga", 54)
@@ -199,7 +199,7 @@ addLayer("ga", {
         },
         autoUpgrade() { if (hasMilestone("re" , 22)) return true},
 
-    name: "Games", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "游戏", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "🎮", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -209,8 +209,8 @@ addLayer("ga", {
     }},
     color: " #ffffff",
     requires: new EN("10^^^750"), // Can be a function that takes requirement increases into account
-    resource: "Games", // Name of prestige currency
-    baseResource: "Points", // Name of resource prestige is based on
+    resource: "游戏", // Name of prestige currency
+    baseResource: "积分", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     branches: ["z", "fi"],
     type() {if (hasUpgrade("su", 535)) return "normal"
@@ -259,7 +259,7 @@ addLayer("ga", {
     },
     row: 7, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "&", description: "Shift+&: Reset for Games", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "&", description: "Shift+&: 重置获取游戏", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){if (hasUpgrade("su", 535)) return false
     else return (hasChallenge("re", 41) || player[this.layer].unlocked)},})

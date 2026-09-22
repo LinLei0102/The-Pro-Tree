@@ -26,7 +26,7 @@ doReset(resettingLayer) {
     if (layers[resettingLayer].row > this.row) layerDataReset("b", keep)
 },
 effectDescription(){
-    return "multiplying point gain by " + format(tmp[this.layer].effect)
+    return "使积分获取乘以 " + format(tmp[this.layer].effect)
     /*
       use format(num) whenever displaying a number
     */
@@ -40,7 +40,7 @@ effectDescription(){
 ],
 microtabs: {
     stuff: {
-                    "Upgrades": {
+                    "升级": {
                         unlocked() {return (hasAchievement("a", 11))},
                 content: [
                     ["blank", "15px"],
@@ -48,7 +48,7 @@ microtabs: {
                     ["upgrades", [1,2,3,4,5,6,7,8,9]]
                 ]
             },
-            "Challenges": {
+            "挑战": {
                 unlocked() {return (hasMilestone("f", 3))},
                 content: [
                     ["blank", "15px"],
@@ -59,12 +59,12 @@ microtabs: {
     },
     upgrades: {
         11: { title: "26",
-        description: "10x point gain.",
+        description: "10× 积分获取。",
         cost: new EN(1),
 
         },
         12: { title: "27",
-        description: "Point gain is boosted by Button Power.",
+        description: "积分获取受按钮能量增益。",
         cost: EN(5),
         effect() {
             return player[this.layer].points.add(1).pow(0.5).min("1e10000000")
@@ -75,7 +75,7 @@ microtabs: {
         }
         },
         13: { title: "28",
-        description: "69x Point Gain.",
+        description: "69× 积分获取。",
         cost:EN(10),
         unlocked() {
             return hasUpgrade("b", 12)
@@ -83,7 +83,7 @@ microtabs: {
         }
         },
         14: { title: "29",
-        description: "Gain 10x More People.",
+        description: "获得 10× 更多人员。",
         cost: EN(25),
         unlocked() {
             return hasUpgrade("b", 13)
@@ -91,7 +91,7 @@ microtabs: {
         }
         },
         15: { title: "30",
-        description: "Unlock more people upgrades.",
+        description: "解锁更多人员升级。",
         cost: EN(100),
         unlocked() {
             return hasUpgrade("b", 14)
@@ -99,7 +99,7 @@ microtabs: {
         }
         },
         21: { title: "31",
-        description: "Keep first 2 rows of People Upgrades.",
+        description: "保留前 2 行人员升级。",
         cost: EN(1.111e11),
         unlocked() {
             return hasUpgrade("p", 25)
@@ -107,7 +107,7 @@ microtabs: {
         }
         },
         22: { title: "32",
-        description: "100x People Gain.",
+        description: "100× 人员获取。",
         cost: EN(1e13),
         unlocked() {
             return hasUpgrade("b", 21)
@@ -115,7 +115,7 @@ microtabs: {
         }
         },
         23: { title: "33",
-        description: "6,969x Point Gain.",
+        description: "6,969× 积分获取。",
         cost: EN(1e14),
         unlocked() {
             return hasUpgrade("b", 22)
@@ -123,7 +123,7 @@ microtabs: {
         }
         },
         24: { title: "34",
-        description: "6,969x People Gain.",
+        description: "6,969× 人员获取。",
         cost: EN(1e21),
         unlocked() {
             return hasUpgrade("b", 23)
@@ -131,7 +131,7 @@ microtabs: {
         }
         },
         25: { title: "35",
-        description: "More People Upgrades.",
+        description: "更多人员升级。",
         cost: EN(1e23),
         unlocked() {
             return hasUpgrade("b", 24)
@@ -139,7 +139,7 @@ microtabs: {
         }
         },
         31: { title: "36",
-        description: "^1.01 Points.",
+        description: "^1.01 积分。",
         cost: EN(1e138),
         unlocked() {
             return hasUpgrade("ant", 25)
@@ -147,7 +147,7 @@ microtabs: {
         }
         },
         32: { title: "37",
-        description: "420x Button Power.",
+        description: "420× 按钮能量。",
         cost: EN(1e144),
         unlocked() {
             return hasUpgrade("b", 31)
@@ -155,7 +155,7 @@ microtabs: {
         }
         },
         33: { title: "38",
-        description: "1,000x Points.",
+        description: "1,000× 积分。",
         cost: EN(1e151),
         unlocked() {
             return hasUpgrade("b", 32)
@@ -163,7 +163,7 @@ microtabs: {
         }
         },
         34: { title: "39",
-        description: "1,000x Button Power.",
+        description: "1,000× 按钮能量。",
         cost: EN(1e161),
         unlocked() {
             return hasUpgrade("b", 33)
@@ -171,7 +171,7 @@ microtabs: {
         }
         },
         35: { title: "40",
-        description: "More People Upgrades.",
+        description: "更多人员升级。",
         cost: EN(1e169),
         unlocked() {
             return hasUpgrade("b", 34)
@@ -179,7 +179,7 @@ microtabs: {
         }
         },
         41: { title: "41",
-        description: "Gain ^1.01 People.",
+        description: "获得 ^1.01 人员。",
         cost: EN("1e1503"),
         unlocked() {
             return hasUpgrade("g", 25)
@@ -187,7 +187,7 @@ microtabs: {
         }
         },
         42: { title: "42",
-        description: "Gain ^1.05 People.",
+        description: "获得 ^1.05 人员。",
         cost: EN("1e1525"),
         unlocked() {
             return hasUpgrade("b", 41)
@@ -195,7 +195,7 @@ microtabs: {
         }
         },
         43: { title: "43",
-        description: "Gain ^1.01 Button Power.",
+        description: "获得 ^1.01 按钮能量。",
         cost: EN("1e1630"),
         unlocked() {
             return hasUpgrade("b", 42)
@@ -203,7 +203,7 @@ microtabs: {
         }
         },
         44: { title: "44",
-        description: "Gain ^1.03 Button Power.",
+        description: "获得 ^1.03 按钮能量。",
         cost: EN("1e1640"),
         unlocked() {
             return hasUpgrade("b", 43)
@@ -211,7 +211,7 @@ microtabs: {
         }
         },
         45: { title: "45",
-        description: "Gain 100x Grass.",
+        description: "获得 100× 草。",
         cost: EN("1e1666"),
         unlocked() {
             return hasUpgrade("b", 44)
@@ -219,7 +219,7 @@ microtabs: {
         }
         },
         51: { title: "46",
-        description: "Gain 1e20x Button Power.",
+        description: "获得 1e20× 按钮能量。",
         cost: EN("1e1670"),
         unlocked() {
             return hasUpgrade("b", 45)
@@ -227,7 +227,7 @@ microtabs: {
         }
         },
         52: { title: "47",
-        description: "Gain 1e15x People.",
+        description: "获得 1e15× 人员。",
         cost: EN("1e1785"),
         unlocked() {
             return hasUpgrade("b", 51)
@@ -235,7 +235,7 @@ microtabs: {
         }
         },
         53: { title: "48",
-        description: "Gain 1e10x Points.",
+        description: "获得 1e10× 积分。",
         cost: EN("1e1850"),
         unlocked() {
             return hasUpgrade("b", 52)
@@ -243,7 +243,7 @@ microtabs: {
         }
         },
         54: { title: "49",
-        description: "Gain 1e5x Points.",
+        description: "获得 1e5× 积分。",
         cost: EN("1e1920"),
         unlocked() {
             return hasUpgrade("b", 53)
@@ -251,7 +251,7 @@ microtabs: {
         }
         },
         55: { title: "50",
-        description: "^1.0015 Points.",
+        description: "^1.0015 积分。",
         cost: EN("1e1950"),
         unlocked() {
             return hasUpgrade("b", 54)
@@ -259,7 +259,7 @@ microtabs: {
         }
         },
         61: { title: "?",
-        description: "x1e109 Points.",
+        description: "×1e109 积分。",
         cost: EN("1e20415"),
         unlocked() {
             return inChallenge("j", 12)
@@ -269,31 +269,31 @@ microtabs: {
     },
     challenges: {
         11: {
-            name: "Pointless",
-            challengeDescription: "Raise point gain to ^0.01.",
-            goalDescription: "1.00e370 Points.",
-            rewardDescription: "Gain 1e69x Points.",
+            name: "无意义",
+            challengeDescription: "将积分获取提升至 ^0.01。",
+            goalDescription: "1.00e370 积分。",
+            rewardDescription: "获得 1e69× 积分。",
             canComplete: function() {return player.points.gte("e370")},
             unlocked() { return (hasMilestone('f', 3)) },
         },
         12: {
-            name: "Nuclear",
-            challengeDescription: "Raise People gain to ^0.001.",
-            goalDescription: "1e71,300 Points.",
-            rewardDescription: "Gain ^1.01 People.",
+            name: "核能",
+            challengeDescription: "将人员获取提升至 ^0.001。",
+            goalDescription: "1e71,300 积分。",
+            rewardDescription: "获得 ^1.01 人员。",
             canComplete: function() {return player.points.gte("e71300")},
             unlocked() { return (hasChallenge('b', 11)) },
         },
         13: {
-            name: "Productionless",
-            challengeDescription: "Raise People and Point gain to ^0.001.",
-            goalDescription: "1.00e53 Points.",
-            rewardDescription: "Gain ^1.1 People, 1e69x Points and unlock more cup upgrades.",
+            name: "无产出",
+            challengeDescription: "将人员与积分获取提升至 ^0.001。",
+            goalDescription: "1.00e53 积分。",
+            rewardDescription: "获得 ^1.1 人员、1e69× 积分，并解锁更多奖杯升级。",
             canComplete: function() {return player.points.gte("e53")},
             unlocked() { return (hasUpgrade('f', 35)) },
             },
         },
-    name: "Button", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "按钮", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "🔘", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -302,8 +302,8 @@ microtabs: {
     }},
     color: "#ff0000",
     requires: EN(10000), // Can be a function that takes requirement increases into account
-    resource: "Button Power", // Name of prestige currency
-    baseResource: "points", // Name of resource prestige is based on
+    resource: "按钮能量", // Name of prestige currency
+    baseResource: "积分", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     type() {if (hasUpgrade("z", 13)) return "static"
     else return "normal"},    
@@ -368,7 +368,7 @@ microtabs: {
     },
     row: 1, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "b", description: "B: Reset for button power", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "b", description: "B: 重置以获取按钮能量", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     passiveGeneration() {
         if (hasUpgrade("z", 13)) return (hasUpgrade("z", 13)?0:0)

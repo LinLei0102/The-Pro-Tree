@@ -7,7 +7,7 @@ addLayer("ju", {
     ],
     microtabs: {
         stuff: {
-                        "Upgrades": {
+                        "升级": {
                             unlocked() {return (hasAchievement("a", 11))},
                     content: [
                         ["blank", "15px"],
@@ -19,182 +19,182 @@ addLayer("ju", {
                 },
     upgrades: {
         11: { title: "926",
-        description: "Gain ^1.01 Medals and Triple Juice gain.",
+        description: "获得 ^1.01 奖牌并使果汁获取变为三倍。",
         cost: new EN("1"),
         unlocked() {
             return hasChallenge("re", 62)
         },
         },
         12: { title: "927",
-        description: "Gain x10 Juices.",
+        description: "获得 ×10 果汁。",
         cost: new EN("100"),
         unlocked() {
             return hasUpgrade("ju", 11)
         },
         },
         13: { title: "928",
-        description: "Gain x100 Juices.",
+        description: "获得 ×100 果汁。",
         cost: new EN("1000"),
         unlocked() {
             return hasUpgrade("ju", 12)
         },
         },
         14: { title: "929",
-        description: "Gain x1,000 Juices.",
+        description: "获得 ×1,000 果汁。",
         cost: new EN("100000"),
         unlocked() {
             return hasUpgrade("ju", 13)
         },
         },
         15: { title: "930",
-        description: "Gain x10,000 Juices.",
+        description: "获得 ×10,000 果汁。",
         cost: new EN("100000000"),
         unlocked() {
             return hasUpgrade("ju", 14)
         },
         },
         21: { title: "931",
-        description: "Gain x100,000 Juices.",
+        description: "获得 ×100,000 果汁。",
         cost: new EN("1e11"),
         unlocked() {
             return hasUpgrade("ju", 15)
         },
         },
         22: { title: "932",
-        description: "Gain x1,000,000 Juices.",
+        description: "获得 ×1,000,000 果汁。",
         cost: new EN("1e16"),
         unlocked() {
             return hasUpgrade("ju", 21)
         },
         },
         23: { title: "933",
-        description: "Gain x10,000,000 Juices.",
+        description: "获得 ×10,000,000 果汁。",
         cost: new EN("1e22"),
         unlocked() {
             return hasUpgrade("ju", 22)
         },
         },
         24: { title: "934",
-        description: "Gain x100,000,000 Juices.",
+        description: "获得 ×100,000,000 果汁。",
         cost: new EN("1e29"),
         unlocked() {
             return hasUpgrade("ju", 23)
         },
         },
         25: { title: "935",
-        description: "Gain x1e9 Juices.",
+        description: "获得 ×1e9 果汁。",
         cost: new EN("1e37"),
         unlocked() {
             return hasUpgrade("ju", 24)
         },
         },
         31: { title: "936",
-        description: "Gain x1e10 Juices.",
+        description: "获得 ×1e10 果汁。",
         cost: new EN("1e46"),
         unlocked() {
             return hasUpgrade("ju", 25)
         },
         },
         32: { title: "937",
-        description: "Gain x1e11 Juices.",
+        description: "获得 ×1e11 果汁。",
         cost: new EN("1e56"),
         unlocked() {
             return hasUpgrade("ju", 31)
         },
         },
         33: { title: "938",
-        description: "Gain x1e12 Juices.",
+        description: "获得 ×1e12 果汁。",
         cost: new EN("1e67"),
         unlocked() {
             return hasUpgrade("ju", 32)
         },
         },
         34: { title: "939",
-        description: "Gain x1e13 Juices.",
+        description: "获得 ×1e13 果汁。",
         cost: new EN("1e79"),
         unlocked() {
             return hasUpgrade("ju", 33)
         },
         },
         35: { title: "940",
-        description: "Gain x1e14 Juices.",
+        description: "获得 ×1e14 果汁。",
         cost: new EN("1e92"),
         unlocked() {
             return hasUpgrade("ju", 34)
         },
         },
         41: { title: "941",
-        description: "Gain x1e15 Juices.",
+        description: "获得 ×1e15 果汁。",
         cost: new EN("1e106"),
         unlocked() {
             return hasUpgrade("ju", 35)
         },
         },
         42: { title: "942",
-        description: "Gain x1e16 Juices.",
+        description: "获得 ×1e16 果汁。",
         cost: new EN("1e121"),
         unlocked() {
             return hasUpgrade("ju", 41)
         },
         },
         43: { title: "943",
-        description: "Gain x1e17 Juices.",
+        description: "获得 ×1e17 果汁。",
         cost: new EN("1e137"),
         unlocked() {
             return hasUpgrade("ju", 42)
         },
         },
         44: { title: "944",
-        description: "Gain x1e18 Juices.",
+        description: "获得 ×1e18 果汁。",
         cost: new EN("1e154"),
         unlocked() {
             return hasUpgrade("ju", 43)
         },
         },
         45: { title: "945",
-        description: "Gain x1e19 Juices.",
+        description: "获得 ×1e19 果汁。",
         cost: new EN("1e172"),
         unlocked() {
             return hasUpgrade("ju", 44)
         },
         },
         51: { title: "946",
-        description: "Gain x1e20 Juices.",
+        description: "获得 ×1e20 果汁。",
         cost: new EN("1e191"),
         unlocked() {
             return hasUpgrade("ju", 45)
         },
         },
         52: { title: "947",
-        description: "Gain x1e21 Juices.",
+        description: "获得 ×1e21 果汁。",
         cost: new EN("1e211"),
         unlocked() {
             return hasUpgrade("ju", 51)
         },
         },
         53: { title: "948",
-        description: "Gain x1e22 Juices.",
+        description: "获得 ×1e22 果汁。",
         cost: new EN("1e232"),
         unlocked() {
             return hasUpgrade("ju", 52)
         },
         },
         54: { title: "949",
-        description: "Increase Row 7 and Row 8 currencies.",
+        description: "提升第 7 行与第 8 行的货币。",
         cost: new EN("1e255"),
         unlocked() {
             return hasUpgrade("ju", 53)
         },
         },
-        55: { title: "950 (50 more to 1K!)",
-        description: "Gain x1.000e10 Medals.",
+        55: { title: "950（再 50 到 1K！）",
+        description: "获得 ×1.000e10 奖牌。",
         cost: new EN("10^^^1e16"),
         unlocked() {
             return hasUpgrade("ju", 54)
         },
         },
     },
-    name: "Juices", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "果汁", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "🍊", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -204,8 +204,8 @@ addLayer("ju", {
     }},
     color: "#da614e",
     requires: new EN("10^^^1e33"), // Can be a function that takes requirement increases into account
-    resource: "Juices", // Name of prestige currency
-    baseResource: "Points", // Name of resource prestige is based on
+    resource: "果汁", // Name of prestige currency
+    baseResource: "积分", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     branches: ["is", "ba"],
     type() {if (hasUpgrade("su", 535)) return "normal"
@@ -250,7 +250,7 @@ addLayer("ju", {
     },
     row: 7, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "#", description: "Shift+#: Reset for Juices", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "#", description: "Shift+#: 重置获取果汁", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){if (hasUpgrade("su", 535)) return false
     else return (hasChallenge("re", 71) || player[this.layer].unlocked)},})

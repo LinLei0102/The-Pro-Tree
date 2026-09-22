@@ -52,11 +52,11 @@ var systemComponents = {
       v-if="tmp[layer].tooltip != ''"
 			:text="(tmp[layer].isLayer) ? (
 				player[layer].unlocked ? (tmp[layer].tooltip ? tmp[layer].tooltip : formatWhole(player[layer].points) + ' ' + tmp[layer].resource)
-				: (tmp[layer].tooltipLocked ? tmp[layer].tooltipLocked : 'Reach ' + formatWhole(tmp[layer].requires) + ' ' + tmp[layer].baseResource + ' to unlock (You have ' + formatWhole(tmp[layer].baseAmount) + ' ' + tmp[layer].baseResource + ')')
+				: (tmp[layer].tooltipLocked ? tmp[layer].tooltipLocked : '需要 ' + formatWhole(tmp[layer].requires) + ' ' + tmp[layer].baseResource + ' 才能解锁（你有 ' + formatWhole(tmp[layer].baseAmount) + ' ' + tmp[layer].baseResource + '）')
 			)
 			: (
-				tmp[layer].canClick ? (tmp[layer].tooltip ? tmp[layer].tooltip : 'I am a button!')
-				: (tmp[layer].tooltipLocked ? tmp[layer].tooltipLocked : 'I am a button!')
+				tmp[layer].canClick ? (tmp[layer].tooltip ? tmp[layer].tooltip : '我是一个按钮！')
+				: (tmp[layer].tooltipLocked ? tmp[layer].tooltipLocked : '我是一个按钮！')
 			)"></tooltip>
 			<node-mark :layer='layer' :data='tmp[layer].marked'></node-mark></span>
 		</button>
@@ -106,17 +106,17 @@ var systemComponents = {
 		template: `			
 		<div class="overlayThing" style="padding-bottom:7px; width: 90%; z-index: 1000; position: relative">
 		<span v-if="player.devSpeed && player.devSpeed != 1" class="overlayThing">
-			<br>Dev Speed: {{format(player.devSpeed)}}x<br>
+			<br>开发速度: {{format(player.devSpeed)}}x<br>
 		</span>
 		<span v-if="player.offTime !== undefined"  class="overlayThing">
-			<br>Offline Time: {{formatTime(player.offTime.remain)}}<br>
+			<br>离线时间: {{formatTime(player.offTime.remain)}}<br>
 		</span>
 		<br>
-		<span v-if="player.points.lt('1e1000')"  class="overlayThing">You have </span>
+		<span v-if="player.points.lt('1e1000')"  class="overlayThing">你有 </span>
 		<h2  class="overlayThing" id="points">{{format(player.points)}}</h2>
 		<span v-if="player.points.lt('1e1e6')"  class="overlayThing"> {{modInfo.pointsName}}</span>
 		<br>
-		<span v-if="canGenPoints()"  class="overlayThing">({{tmp.other.oompsMag != 0 ? format(tmp.other.oomps) + " OOM" + (tmp.other.oompsMag < 0 ? "^OOM" : tmp.other.oompsMag > 1 ? "^" + tmp.other.oompsMag : "") + "s" : formatSmall(getPointGen())}}/sec)</span>
+		<span v-if="canGenPoints()"  class="overlayThing">({{tmp.other.oompsMag != 0 ? format(tmp.other.oomps) + " 数量级" + (tmp.other.oompsMag < 0 ? "^数量级" : tmp.other.oompsMag > 1 ? "^" + tmp.other.oompsMag : "") : formatSmall(getPointGen())}}/秒)</span>
 		<div v-for="thing in tmp.displayThings" class="overlayThing"><span v-if="thing" v-html="thing"></span></div>
 	</div>
 	`
@@ -130,20 +130,20 @@ var systemComponents = {
         <h3>{{VERSION.withName}}</h3>
         <span v-if="modInfo.author">
             <br>
-            Made by {{modInfo.author}}	
+            由 {{modInfo.author}}	
         </span>
         <br>
-        The Modding Tree <a v-bind:href="'https://github.com/Acamaeda/The-Modding-Tree/blob/master/changelog.md'" target="_blank" class="link" v-bind:style = "{'font-size': '14px', 'display': 'inline'}" >{{TMT_VERSION.tmtNum}}</a> by Acamaeda
+        The Modding Tree <a v-bind:href="'https://github.com/Acamaeda/The-Modding-Tree/blob/master/changelog.md'" target="_blank" class="link" v-bind:style = "{'font-size': '14px', 'display': 'inline'}" >{{TMT_VERSION.tmtNum}}</a> 作者 Acamaeda
         <br>
-        The Prestige Tree made by Jacorb and Aarex
+        The Prestige Tree 由 Jacorb 和 Aarex 制作
 		<br><br>
-		<div class="link" onclick="showTab('changelog-tab')">Changelog</div><br>
+		<div class="link" onclick="showTab('changelog-tab')">更新日志</div><br>
         <span v-if="modInfo.discordLink"><a class="link" v-bind:href="modInfo.discordLink" target="_blank">{{modInfo.discordName}}</a><br></span>
-        <a class="link" href="https://discord.gg/F3xveHV" target="_blank" v-bind:style="modInfo.discordLink ? {'font-size': '16px'} : {}">The Modding Tree Discord</a><br>
-        <a class="link" href="http://discord.gg/wwQfgPa" target="_blank" v-bind:style="{'font-size': '16px'}">Main Prestige Tree server</a><br>
+        <a class="link" href="https://discord.gg/F3xveHV" target="_blank" v-bind:style="modInfo.discordLink ? {'font-size': '16px'} : {}">The Modding Tree 的 Discord 服务器</a><br>
+        <a class="link" href="http://discord.gg/wwQfgPa" target="_blank" v-bind:style="{'font-size': '16px'}">主 Prestige Tree 服务器</a><br>
 		<br><br>
-        Time Played: {{ formatTime(player.timePlayed) }}<br><br>
-        <h3>Hotkeys</h3><br>
+        游戏时长: {{ formatTime(player.timePlayed) }}<br><br>
+        <h3>快捷键</h3><br>
         <span v-for="key in hotkeys" v-if="player[key.layer].unlocked && tmp[key.layer].hotkeys[key.id].unlocked"><br>{{key.description}}</span></div>
     `
     },
@@ -152,34 +152,34 @@ var systemComponents = {
         template: `
 		<div>
 			<div class="upgRow">
-				<button class="tabButton" style="border-color:var(--color)" onclick="options.optionTab='saving';">Saving</button>
-				<button class="tabButton" style="border-color:var(--color)" onclick="options.optionTab='display';">Display</button>
+				<button class="tabButton" style="border-color:var(--color)" onclick="options.optionTab='saving';">存档</button>
+				<button class="tabButton" style="border-color:var(--color)" onclick="options.optionTab='display';">显示</button>
 			</div>
 			<table v-if="options.optionTab == 'saving'">
 				<tr>
-					<td><button class="opt" onclick="save()">Save</button></td>
-					<td><button class="opt" onclick="toggleOpt('autosave')">Autosave: {{ options.autosave?"ON":"OFF" }}</button></td>
-					<td><button class="opt" onclick="toggleOpt('offlineProd')">Offline Prod: {{ options.offlineProd?"ON":"OFF" }}</button></td>
+					<td><button class="opt" onclick="save()">保存</button></td>
+					<td><button class="opt" onclick="toggleOpt('autosave')">自动存档: {{ options.autosave?"开":"关" }}</button></td>
+					<td><button class="opt" onclick="toggleOpt('offlineProd')">离线产出: {{ options.offlineProd?"开":"关" }}</button></td>
 				</tr>
 				<tr>
-					<td><button class="opt" onclick="exportSave()">Export to clipboard</button></td>
-					<td><button class="opt" onclick="importSave()">Import</button></td>
-					<td><button class="opt" onclick="hardReset()">HARD RESET</button></td>
+					<td><button class="opt" onclick="exportSave()">导出到剪贴板</button></td>
+					<td><button class="opt" onclick="importSave()">导入</button></td>
+					<td><button class="opt" onclick="hardReset()">硬重置</button></td>
 				</tr>
 			</table>
 			<table v-if="options.optionTab == 'display'">
 				<tr>
-					<td><button class="opt" onclick="switchTheme()">Theme: {{ getThemeName() }}</button></td>
-					<td><button class="opt" onclick="adjustMSDisp()">Show Milestones: {{ MS_DISPLAYS[MS_SETTINGS.indexOf(options.msDisplay)]}}</button></td>
-					<td><button class="opt" onclick="toggleOpt('hqTree')">High-Quality Tree: {{ options.hqTree?"ON":"OFF" }}</button></td>
+					<td><button class="opt" onclick="switchTheme()">主题: {{ getThemeName() }}</button></td>
+					<td><button class="opt" onclick="adjustMSDisp()">显示里程碑: {{ MS_DISPLAYS[MS_SETTINGS.indexOf(options.msDisplay)]}}</button></td>
+					<td><button class="opt" onclick="toggleOpt('hqTree')">高质量树形图: {{ options.hqTree?"开":"关" }}</button></td>
 				</tr>
 				<tr>
-					<td><button class="opt" onclick="toggleOpt('hideChallenges')">Completed Challenges: {{ options.hideChallenges?"HIDDEN":"SHOWN" }}</button></td>
-					<td><button class="opt" onclick="toggleOpt('forceOneTab'); needsCanvasUpdate = true">Single-Tab Mode: {{ options.forceOneTab?"ALWAYS":"AUTO" }}</button></td>
-					<td><button class="opt" onclick="toggleOpt('antiEpilepsy')">Anti-Epilepsy Mode: {{ options.antiEpilepsy?"ON":"OFF" }}</button></td>
+					<td><button class="opt" onclick="toggleOpt('hideChallenges')">已完成挑战: {{ options.hideChallenges?"隐藏":"显示" }}</button></td>
+					<td><button class="opt" onclick="toggleOpt('forceOneTab'); needsCanvasUpdate = true">单标签模式: {{ options.forceOneTab?"始终":"自动" }}</button></td>
+					<td><button class="opt" onclick="toggleOpt('antiEpilepsy')">防癫痫模式: {{ options.antiEpilepsy?"开":"关" }}</button></td>
 				</tr>
 				<tr>
-					<td><button class="opt" onclick="adjustNotation()">Large Number Format: {{ NT_DISPLAYS[NT_SETTINGS.indexOf(options.notation)]}}</button></td>
+					<td><button class="opt" onclick="adjustNotation()">大数记数法: {{ NT_DISPLAYS[NT_SETTINGS.indexOf(options.notation)]}}</button></td>
 				</tr> 
 			</table>
 		</div>`

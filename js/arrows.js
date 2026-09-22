@@ -7,7 +7,7 @@ addLayer("ar", {
     ],
     microtabs: {
         stuff: {
-                        "Upgrades": {
+                        "升级": {
                             unlocked() {return (hasAchievement("a", 11))},
                     content: [
                         ["blank", "15px"],
@@ -18,182 +18,182 @@ addLayer("ar", {
                 },
     upgrades: {
         11: { title: "701",
-        description: "Gain x3 Medals!",
+        description: "获得 ×3 奖牌！",
         cost: new EN("1"),
         unlocked() {
             return hasUpgrade("re", 105)
         },
         },
         12: { title: "702",
-        description: "Gain x25 Arrows.",
+        description: "获得 ×25 箭。",
         cost: new EN("69"),
         unlocked() {
             return hasUpgrade("ar", 11)
         },
         },
         13: { title: "703",
-        description: "Gain x1.000e35 Arrows.",
+        description: "获得 ×1.000e35 箭。",
         cost: new EN("2500"),
         unlocked() {
             return hasUpgrade("ar", 12)
         },
         },
         14: { title: "704",
-        description: "Gain ^9,765,625 Arrows.",
+        description: "获得 ^9,765,625 箭。",
         cost: new EN("1e38"),
         unlocked() {
             return hasUpgrade("ar", 13)
         },
         },
         15: { title: "705",
-        description: "Gain ^5.5e174 Arrows.",
+        description: "获得 ^5.5e174 箭。",
         cost: new EN("1e182724318"),
         unlocked() {
             return hasUpgrade("ar", 14)
         },
         },
         21: { title: "706",
-        description: "Gain a bad boost to arrows.",
+        description: "获得对箭的糟糕增益。",
         cost: new EN("e9.774e182"),
         unlocked() {
             return hasUpgrade("ar", 15)
         },
         },
         22: { title: "707",
-        description: "Gain more arrows.",
+        description: "获得更多箭。",
         cost: new EN("ee1.8e308"),
         unlocked() {
             return hasUpgrade("ar", 21)
         },
         },
         23: { title: "708",
-        description: "Gain even more arrows.",
+        description: "获得更多的箭。",
         cost: new EN("10^^7"),
         unlocked() {
             return hasUpgrade("ar", 22)
         },
         },
         24: { title: "709",
-        description: "Gain a lot more arrows.",
+        description: "获得多得多的箭。",
         cost: new EN("10^^25"),
         unlocked() {
             return hasUpgrade("ar", 23)
         },
         },
         25: { title: "710",
-        description: "Gain a medium boost to arrows.",
+        description: "获得对箭的中等增益。",
         cost: new EN("10^^100"),
         unlocked() {
             return hasUpgrade("ar", 24)
         },
         },
         31: { title: "711",
-        description: "Gain a decent boost to arrows.",
+        description: "获得对箭的不错增益。",
         cost: new EN("10^^1000"),
         unlocked() {
             return hasUpgrade("ar", 25)
         },
         },
         32: { title: "712",
-        description: "Gain a good boost to arrows.",
+        description: "获得对箭的良好增益。",
         cost: new EN("10^^1e6"),
         unlocked() {
             return hasUpgrade("ar", 31)
         },
         },
         33: { title: "713",
-        description: "Gain a awesome boost to arrows.",
+        description: "获得对箭的极佳增益。",
         cost: new EN("10^^9e15"),
         unlocked() {
             return hasUpgrade("ar", 32)
         },
         },
         34: { title: "714",
-        description: "Gain a big boost to arrows.",
+        description: "获得对箭的大幅增益。",
         cost: new EN("10^^e1e9"),
         unlocked() {
             return hasUpgrade("ar", 33)
         },
         },
         35: { title: "715",
-        description: "Gain a large boost to arrows.",
+        description: "获得对箭的巨大增益。",
         cost: new EN("10^^e1e69"),
         unlocked() {
             return hasUpgrade("ar", 34)
         },
         },
         41: { title: "716",
-        description: "Gain a bigger boost to arrows.",
+        description: "获得对箭的更大增益。",
         cost: new EN("10^^ee1e9"),
         unlocked() {
             return hasUpgrade("ar", 35)
         },
         },
         42: { title: "717",
-        description: "Gain a large boost to arrows.",
+        description: "获得对箭的巨大增益。",
         cost: new EN("10^^ee1e42"),
         unlocked() {
             return hasUpgrade("ar", 41)
         },
         },
         43: { title: "718",
-        description: "Gain a very large boost to arrows.",
+        description: "获得对箭的极大增益。",
         cost: new EN("10^^ee1e69"),
         unlocked() {
             return hasUpgrade("ar", 42)
         },
         },
         44: { title: "719",
-        description: "Gain a ultra boost to arrows.",
+        description: "获得对箭的超强增益。",
         cost: new EN("10^^ee1e420"),
         unlocked() {
             return hasUpgrade("ar", 43)
         },
         },
         45: { title: "720",
-        description: "Gain a massive boost to arrows.",
+        description: "获得对箭的海量增益。",
         cost: new EN("10^^ee1e1337"),
         unlocked() {
             return hasUpgrade("ar", 44)
         },
         },
         51: { title: "721",
-        description: "Gain a insane boost to arrows.",
+        description: "获得对箭的疯狂增益。",
         cost: new EN("10^^eeee1e9"),
         unlocked() {
             return hasUpgrade("ar", 45)
         },
         },
         52: { title: "722",
-        description: "Gain a extreme boost to arrows.",
+        description: "获得对箭的极端增益。",
         cost: new EN("10^^eeeee1e9"),
         unlocked() {
             return hasUpgrade("ar", 51)
         },
         },
         53: { title: "723",
-        description: "Gain a OMEGA boost to arrows.",
+        description: "获得对箭的欧米伽增益。",
         cost: new EN("10^^eeeeee1e9"),
         unlocked() {
             return hasUpgrade("ar", 52)
         },
         },
         54: { title: "724",
-        description: "Gain a ultimate boost to row 6 - row 7.",
+        description: "获得对第 6 行 - 第 7 行的终极增益。",
         cost: new EN("10^^eeeeeee1e9"),
         unlocked() {
             return hasUpgrade("ar", 53)
         },
         },
         55: { title: "725",
-        description: "Remove onion layer but gain x125 medals.",
+        description: "移除洋葱层，但获得 ×125 奖牌。",
         cost: new EN("10^^^3"),
         unlocked() {
             return hasUpgrade("ar", 54)
         },
         },
     },
-    name: "Arrows", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "箭", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "➜", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -203,8 +203,8 @@ addLayer("ar", {
     }},
     color: "#ffffff",
     requires: new EN("10^^10^^5"), // Can be a function that takes requirement increases into account
-    resource: "Arrows", // Name of prestige currency
-    baseResource: "Points", // Name of resource prestige is based on
+    resource: "箭", // Name of prestige currency
+    baseResource: "积分", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     branches: ["u" , "z"],
     type() {if (hasUpgrade("su", 535)) return "normal"
@@ -263,7 +263,7 @@ addLayer("ar", {
     },
     row: 6, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "?", description: "Shift+?: Reset for Arrows", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "?", description: "Shift+?: 重置以获取箭", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){if (hasUpgrade("su", 535)) return false
     else return (hasUpgrade("re", 105) || player[this.layer].unlocked)},})

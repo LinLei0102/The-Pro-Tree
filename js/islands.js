@@ -7,7 +7,7 @@ addLayer("is", {
     ],
     microtabs: {
         stuff: {
-                        "Upgrades": {
+                        "升级": {
                             unlocked() {return (hasAchievement("a", 11))},
                     content: [
                         ["blank", "15px"],
@@ -19,175 +19,175 @@ addLayer("is", {
                 },
     upgrades: {
         11: { title: "901",
-        description: "Gain x1,000,000 Medals and double island gain!",
+        description: "获得 ×1,000,000 奖牌并使岛屿获取翻倍！",
         cost: new EN("1"),
         unlocked() {
             return hasChallenge("re", 62)
         },
         },
         12: { title: "902",
-        description: "Gain x10 Islands.",
+        description: "获得 ×10 岛屿。",
         cost: new EN("100"),
         unlocked() {
             return hasUpgrade("is", 11)
         },
         },
         13: { title: "903",
-        description: "Gain x100 Islands.",
+        description: "获得 ×100 岛屿。",
         cost: new EN("1000"),
         unlocked() {
             return hasUpgrade("is", 12)
         },
         },
         14: { title: "904",
-        description: "Gain x1,000 Islands.",
+        description: "获得 ×1,000 岛屿。",
         cost: new EN("100000"),
         unlocked() {
             return hasUpgrade("is", 13)
         },
         },
         15: { title: "905",
-        description: "Gain x10,000 Islands.",
+        description: "获得 ×10,000 岛屿。",
         cost: new EN("100000000"),
         unlocked() {
             return hasUpgrade("is", 14)
         },
         },
         21: { title: "906",
-        description: "Gain x100,000 Islands.",
+        description: "获得 ×100,000 岛屿。",
         cost: new EN("1e11"),
         unlocked() {
             return hasUpgrade("is", 15)
         },
         },
         22: { title: "907",
-        description: "Gain x1,000,000 Islands.",
+        description: "获得 ×1,000,000 岛屿。",
         cost: new EN("1e16"),
         unlocked() {
             return hasUpgrade("is", 21)
         },
         },
         23: { title: "908",
-        description: "Gain x10,000,000 Islands.",
+        description: "获得 ×10,000,000 岛屿。",
         cost: new EN("1e22"),
         unlocked() {
             return hasUpgrade("is", 22)
         },
         },
         24: { title: "909",
-        description: "Gain x100,000,000 Islands.",
+        description: "获得 ×100,000,000 岛屿。",
         cost: new EN("1e29"),
         unlocked() {
             return hasUpgrade("is", 23)
         },
         },
         25: { title: "910",
-        description: "Gain x1e9 Islands.",
+        description: "获得 ×1e9 岛屿。",
         cost: new EN("1e37"),
         unlocked() {
             return hasUpgrade("is", 24)
         },
         },
-        31: { title: "911, whats ur emergency?",
-        description: "Gain x1e10 Islands.",
+        31: { title: "911，你有什么紧急情况？",
+        description: "获得 ×1e10 岛屿。",
         cost: new EN("1e46"),
         unlocked() {
             return hasUpgrade("is", 25)
         },
         },
         32: { title: "912",
-        description: "Gain x1e11 Islands.",
+        description: "获得 ×1e11 岛屿。",
         cost: new EN("1e56"),
         unlocked() {
             return hasUpgrade("is", 31)
         },
         },
         33: { title: "913",
-        description: "Gain x1e12 Islands.",
+        description: "获得 ×1e12 岛屿。",
         cost: new EN("1e67"),
         unlocked() {
             return hasUpgrade("is", 32)
         },
         },
         34: { title: "914",
-        description: "Gain x1e13 Islands.",
+        description: "获得 ×1e13 岛屿。",
         cost: new EN("1e79"),
         unlocked() {
             return hasUpgrade("is", 33)
         },
         },
         35: { title: "915",
-        description: "Gain x1e14 Islands.",
+        description: "获得 ×1e14 岛屿。",
         cost: new EN("1e92"),
         unlocked() {
             return hasUpgrade("is", 34)
         },
         },
         41: { title: "916",
-        description: "Gain x1e15 Islands.",
+        description: "获得 ×1e15 岛屿。",
         cost: new EN("1e106"),
         unlocked() {
             return hasUpgrade("is", 35)
         },
         },
         42: { title: "917",
-        description: "Gain x1e16 Islands.",
+        description: "获得 ×1e16 岛屿。",
         cost: new EN("1e121"),
         unlocked() {
             return hasUpgrade("is", 41)
         },
         },
         43: { title: "918",
-        description: "Gain x1e17 Islands.",
+        description: "获得 ×1e17 岛屿。",
         cost: new EN("1e137"),
         unlocked() {
             return hasUpgrade("is", 42)
         },
         },
         44: { title: "919",
-        description: "Gain x1e18 Islands.",
+        description: "获得 ×1e18 岛屿。",
         cost: new EN("1e154"),
         unlocked() {
             return hasUpgrade("is", 43)
         },
         },
         45: { title: "920",
-        description: "Gain x1e19 Islands.",
+        description: "获得 ×1e19 岛屿。",
         cost: new EN("1e172"),
         unlocked() {
             return hasUpgrade("is", 44)
         },
         },
         51: { title: "921",
-        description: "Gain x1e20 Islands.",
+        description: "获得 ×1e20 岛屿。",
         cost: new EN("1e191"),
         unlocked() {
             return hasUpgrade("is", 45)
         },
         },
         52: { title: "922",
-        description: "Gain x1e21 Islands.",
+        description: "获得 ×1e21 岛屿。",
         cost: new EN("1e211"),
         unlocked() {
             return hasUpgrade("is", 51)
         },
         },
         53: { title: "923",
-        description: "Gain x1e22 Islands.",
+        description: "获得 ×1e22 岛屿。",
         cost: new EN("1e232"),
         unlocked() {
             return hasUpgrade("is", 52)
         },
         },
         54: { title: "924",
-        description: "Increase Row 7 and Row 8 currencies.",
+        description: "提升第 7 行与第 8 行的货币。",
         cost: new EN("1e255"),
         unlocked() {
             return hasUpgrade("is", 53)
         },
         },
-        55: { title: "925 (75 more to 1K!)",
-        description: "Gain ^1.23456789 Medals.",
+        55: { title: "925（再 75 到 1K！）",
+        description: "获得 ^1.23456789 奖牌。",
         cost: new EN("10^^^9e15"),
         unlocked() {
             return hasUpgrade("is", 54)
@@ -199,7 +199,7 @@ addLayer("is", {
         },
         autoUpgrade() { if (hasMilestone("re" , 24)) return true},
 
-    name: "Islands", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "岛屿", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "🏝️", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -209,8 +209,8 @@ addLayer("is", {
     }},
     color: " #ffffff",
     requires: new EN("10^^^9.007e15"), // Can be a function that takes requirement increases into account
-    resource: "Islands", // Name of prestige currency
-    baseResource: "Points", // Name of resource prestige is based on
+    resource: "岛屿", // Name of prestige currency
+    baseResource: "积分", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     branches: ["ba", "ha"],
     type() {if (hasUpgrade("su", 535)) return "normal"
@@ -253,7 +253,7 @@ addLayer("is", {
     },
     row: 7, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "$", description: "Shift+$: Reset for islands", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "$", description: "Shift+$: 重置获取岛屿", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){if (hasUpgrade("su", 535)) return false
     else return (hasChallenge("re", 62) || player[this.layer].unlocked)},})

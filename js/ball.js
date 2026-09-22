@@ -7,7 +7,7 @@ addLayer("ba", {
     ],
     microtabs: {
         stuff: {
-                        "Upgrades": {
+                        "升级": {
                             unlocked() {return (hasAchievement("a", 11))},
                     content: [
                         ["blank", "15px"],
@@ -18,182 +18,182 @@ addLayer("ba", {
                 },
     upgrades: {
         11: { title: "726",
-        description: "Gain x4 Medals!",
+        description: "获得 ×4 奖牌！",
         cost: new EN("1"),
         unlocked() {
             return hasUpgrade("re", 105)
         },
         },
         12: { title: "727",
-        description: "Gain x8.000e9 Balls.",
+        description: "获得 ×8.000e9 球。",
         cost: new EN("42"),
         unlocked() {
             return hasUpgrade("ba", 11)
         },
         },
         13: { title: "728",
-        description: "Gain ^1e9 Balls.",
+        description: "获得 ^1e9 球。",
         cost: new EN("4e11"),
         unlocked() {
             return hasUpgrade("ba", 12)
         },
         },
         14: { title: "729",
-        description: "Gain ^1e308 Balls.",
+        description: "获得 ^1e308 球。",
         cost: new EN("0"),
         unlocked() {
             return hasUpgrade("ba", 13)
         },
         },
         15: { title: "730",
-        description: "Gain more balls.",
+        description: "获得更多球。",
         cost: new EN("0"),
         unlocked() {
             return hasUpgrade("ba", 14)
         },
         },
         21: { title: "731",
-        description: "Gain more balls.",
+        description: "获得更多球。",
         cost: new EN("0"),
         unlocked() {
             return hasUpgrade("ba", 15)
         },
         },
         22: { title: "732",
-        description: "Gain more balls.",
+        description: "获得更多球。",
         cost: new EN("0"),
         unlocked() {
             return hasUpgrade("ba", 21)
         },
         },
         23: { title: "733",
-        description: "Gain more balls.",
+        description: "获得更多球。",
         cost: new EN("0"),
         unlocked() {
             return hasUpgrade("ba", 22)
         },
         },
         24: { title: "734",
-        description: "Gain more balls.",
+        description: "获得更多球。",
         cost: new EN("0"),
         unlocked() {
             return hasUpgrade("ba", 23)
         },
         },
         25: { title: "735",
-        description: "Gain more balls.",
+        description: "获得更多球。",
         cost: new EN("0"),
         unlocked() {
             return hasUpgrade("ba", 24)
         },
         },
         31: { title: "736",
-        description: "Gain more balls.",
+        description: "获得更多球。",
         cost: new EN("0"),
         unlocked() {
             return hasUpgrade("ba", 25)
         },
         },
         32: { title: "737",
-        description: "Gain more balls.",
+        description: "获得更多球。",
         cost: new EN("0"),
         unlocked() {
             return hasUpgrade("ba", 31)
         },
         },
         33: { title: "738",
-        description: "Gain more balls.",
+        description: "获得更多球。",
         cost: new EN("0"),
         unlocked() {
             return hasUpgrade("ba", 32)
         },
         },
         34: { title: "739",
-        description: "Gain more balls.",
+        description: "获得更多球。",
         cost: new EN("0"),
         unlocked() {
             return hasUpgrade("ba", 33)
         },
         },
         35: { title: "740",
-        description: "Gain more balls.",
+        description: "获得更多球。",
         cost: new EN("0"),
         unlocked() {
             return hasUpgrade("ba", 34)
         },
         },
         41: { title: "741",
-        description: "Gain more balls.",
+        description: "获得更多球。",
         cost: new EN("0"),
         unlocked() {
             return hasUpgrade("ba", 35)
         },
         },
         42: { title: "742",
-        description: "Gain more balls.",
+        description: "获得更多球。",
         cost: new EN("0"),
         unlocked() {
             return hasUpgrade("ba",41)
         },
         },
         43: { title: "743",
-        description: "Gain more balls.",
+        description: "获得更多球。",
         cost: new EN("0"),
         unlocked() {
             return hasUpgrade("ba", 42)
         },
         },
         44: { title: "744",
-        description: "Gain more balls.",
+        description: "获得更多球。",
         cost: new EN("0"),
         unlocked() {
             return hasUpgrade("ba", 43)
         },
         },
         45: { title: "745",
-        description: "Gain more balls.",
+        description: "获得更多球。",
         cost: new EN("0"),
         unlocked() {
             return hasUpgrade("ba", 44)
         },
         },
         51: { title: "746",
-        description: "Gain more balls.",
+        description: "获得更多球。",
         cost: new EN("0"),
         unlocked() {
             return hasUpgrade("ba", 45)
         },
         },
         52: { title: "747",
-        description: "Gain more balls.",
+        description: "获得更多球。",
         cost: new EN("0"),
         unlocked() {
             return hasUpgrade("ba", 51)
         },
         },
         53: { title: "748",
-        description: "Gain more balls.",
+        description: "获得更多球。",
         cost: new EN("0"),
         unlocked() {
             return hasUpgrade("ba", 52)
         },
         },
         54: { title: "749",
-        description: "Increase all other currencies.",
+        description: "增加所有其他货币。",
         cost: new EN("0"),
         unlocked() {
             return hasUpgrade("ba", 53)
         },
         },
         55: { title: "750",
-        description: "Unlock 1 new reincarnation upgrade and gain x10,000 medals.",
+        description: "解锁 1 项新轮回升级，并获得 ×10,000 奖牌。",
         cost: new EN("10^^^4"),
         unlocked() {
             return hasUpgrade("ba", 54)
         },
         },
     },
-    name: "Balls", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "球", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "⚽", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -206,8 +206,8 @@ addLayer("ba", {
         },  
     color: "#21abcd",
     requires: new EN("10^^^4"), // Can be a function that takes requirement increases into account
-    resource: "Balls", // Name of prestige currency
-    baseResource: "Points", // Name of resource prestige is based on
+    resource: "球", // Name of prestige currency
+    baseResource: "积分", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     branches: ["u" , "ar"],
     type() {if (hasUpgrade("su", 535)) return "normal"
@@ -262,7 +262,7 @@ addLayer("ba", {
     },
     row: 6, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "=", description: "Shift+=: Reset for Balls", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "=", description: "Shift+=: 重置以获取球", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){if (hasUpgrade("su", 535)) return false
     else return (hasUpgrade("re", 111) || player[this.layer].unlocked)},})

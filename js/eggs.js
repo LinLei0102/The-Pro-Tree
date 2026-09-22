@@ -7,7 +7,7 @@ addLayer("eg", {
     ],
     microtabs: {
         stuff: {
-                        "Upgrades": {
+                        "升级": {
                             unlocked() {return (hasAchievement("a", 11))},
                     content: [
                         ["blank", "15px"],
@@ -19,175 +19,175 @@ addLayer("eg", {
                 },
     upgrades: {
         11: { title: "801",
-        description: "Gain x10 Medals!",
+        description: "获得 ×10 奖牌！",
         cost: new EN("1"),
         unlocked() {
             return hasChallenge("re", 31)
         },
         },
         12: { title: "802",
-        description: "Gain x10 Eggs.",
+        description: "获得 ×10 蛋。",
         cost: new EN("111"),
         unlocked() {
             return hasUpgrade("eg", 11)
         },
         },
         13: { title: "803",
-        description: "Gain x100 Eggs.",
+        description: "获得 ×100 蛋。",
         cost: new EN("500"),
         unlocked() {
             return hasUpgrade("eg", 12)
         },
         },
         14: { title: "804",
-        description: "Gain x1,000 Eggs.",
+        description: "获得 ×1,000 蛋。",
         cost: new EN("50000"),
         unlocked() {
             return hasUpgrade("eg", 13)
         },
         },
         15: { title: "805",
-        description: "Gain x10,000 Eggs.",
+        description: "获得 ×10,000 蛋。",
         cost: new EN("5e7"),
         unlocked() {
             return hasUpgrade("eg", 14)
         },
         },
         21: { title: "806",
-        description: "Gain x100,000 Eggs.",
+        description: "获得 ×100,000 蛋。",
         cost: new EN("5e11"),
         unlocked() {
             return hasUpgrade("eg", 15)
         },
         },
         22: { title: "807",
-        description: "Gain x1,000,000 Eggs.",
+        description: "获得 ×1,000,000 蛋。",
         cost: new EN("5e16"),
         unlocked() {
             return hasUpgrade("eg", 21)
         },
         },
         23: { title: "808",
-        description: "Gain x10,000,000 Eggs.",
+        description: "获得 ×10,000,000 蛋。",
         cost: new EN("5e22"),
         unlocked() {
             return hasUpgrade("eg", 22)
         },
         },
         24: { title: "809",
-        description: "Gain x100,000,000 Eggs.",
+        description: "获得 ×100,000,000 蛋。",
         cost: new EN("5e28"),
         unlocked() {
             return hasUpgrade("eg", 23)
         },
         },
         25: { title: "810",
-        description: "Gain x1e9 Eggs.",
+        description: "获得 ×1e9 蛋。",
         cost: new EN("5e36"),
         unlocked() {
             return hasUpgrade("eg", 24)
         },
         },
         31: { title: "811",
-        description: "Gain x1e10 Eggs.",
+        description: "获得 ×1e10 蛋。",
         cost: new EN("5e45"),
         unlocked() {
             return hasUpgrade("eg", 25)
         },
         },
         32: { title: "812",
-        description: "Gain x1e11 Eggs.",
+        description: "获得 ×1e11 蛋。",
         cost: new EN("5e55"),
         unlocked() {
             return hasUpgrade("eg", 31)
         },
         },
         33: { title: "813",
-        description: "Gain x1e12 Eggs.",
+        description: "获得 ×1e12 蛋。",
         cost: new EN("5e66"),
         unlocked() {
             return hasUpgrade("eg", 32)
         },
         },
         34: { title: "814",
-        description: "Gain x1e13 Eggs.",
+        description: "获得 ×1e13 蛋。",
         cost: new EN("5e78"),
         unlocked() {
             return hasUpgrade("eg", 33)
         },
         },
         35: { title: "815",
-        description: "Gain x1e14 Eggs.",
+        description: "获得 ×1e14 蛋。",
         cost: new EN("5e91"),
         unlocked() {
             return hasUpgrade("eg", 34)
         },
         },
         41: { title: "816",
-        description: "Gain x1e15 Eggs.",
+        description: "获得 ×1e15 蛋。",
         cost: new EN("5e105"),
         unlocked() {
             return hasUpgrade("eg", 35)
         },
         },
         42: { title: "817",
-        description: "Gain x1e16 Eggs.",
+        description: "获得 ×1e16 蛋。",
         cost: new EN("5e120"),
         unlocked() {
             return hasUpgrade("eg", 41)
         },
         },
         43: { title: "818",
-        description: "Gain x1e17 Eggs.",
+        description: "获得 ×1e17 蛋。",
         cost: new EN("5e136"),
         unlocked() {
             return hasUpgrade("eg", 42)
         },
         },
         44: { title: "819",
-        description: "Gain x1e18 Eggs.",
+        description: "获得 ×1e18 蛋。",
         cost: new EN("5e153"),
         unlocked() {
             return hasUpgrade("eg", 43)
         },
         },
         45: { title: "820",
-        description: "Gain x1e19 Eggs.",
+        description: "获得 ×1e19 蛋。",
         cost: new EN("5e171"),
         unlocked() {
             return hasUpgrade("eg", 44)
         },
         },
         51: { title: "821",
-        description: "Gain x1e20 Eggs.",
+        description: "获得 ×1e20 蛋。",
         cost: new EN("5e190"),
         unlocked() {
             return hasUpgrade("eg", 45)
         },
         },
         52: { title: "822",
-        description: "Gain x1e21 Eggs.",
+        description: "获得 ×1e21 蛋。",
         cost: new EN("5e210"),
         unlocked() {
             return hasUpgrade("eg", 51)
         },
         },
         53: { title: "823",
-        description: "Gain x1e22 Eggs.",
+        description: "获得 ×1e22 蛋。",
         cost: new EN("5e232"),
         unlocked() {
             return hasUpgrade("eg", 52)
         },
         },
         54: { title: "824",
-        description: "Increase universal - eggs currency.",
+        description: "增加宇宙到蛋的货币。",
         cost: new EN("5e254"),
         unlocked() {
             return hasUpgrade("eg", 53)
         },
         },
         55: { title: "825",
-        description: "Gain x1.000e10 Medals.",
+        description: "获得 ×1.000e10 奖牌。",
         cost: new EN("10^^^25"),
         unlocked() {
             return hasUpgrade("eg", 54)
@@ -197,7 +197,7 @@ addLayer("eg", {
     passiveGeneration() { 
         if (hasMilestone("re", 19)) return (hasMilestone("re", 19)?1:0)
         }, 
-    name: "Eggs", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "蛋", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "🥚", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -207,8 +207,8 @@ addLayer("eg", {
     }},
     color: " #FFFFff",
     requires: new EN("10^^^36"), // Can be a function that takes requirement increases into account
-    resource: "Eggs", // Name of prestige currency
-    baseResource: "Points", // Name of resource prestige is based on
+    resource: "蛋", // Name of prestige currency
+    baseResource: "积分", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     branches: ["x", "du"],
     type() {if (hasUpgrade("su", 535)) return "normal"
@@ -260,7 +260,7 @@ addLayer("eg", {
     },
     row: 7, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "(", description: "Shift+(: Reset for Eggs", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "(", description: "Shift+(: 重置以获取蛋", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){if (hasUpgrade("su", 535)) return false
     else return (hasChallenge("re", 31) || player[this.layer].unlocked)},})

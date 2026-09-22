@@ -7,21 +7,21 @@ addLayer("w", {
     ],
     microtabs: {
         stuff: {
-                        "Upgrades": {
+                        "升级": {
                             unlocked() {return (hasAchievement("a", 11))},
                     content: [
                         ["blank", "15px"],
                         ["upgrades", [1,2,3,4,5,6,7,8,9]]
                     ]
                 },
-                "Buyables": {
+                "可购买项": {
                     unlocked() {return (hasUpgrade("w", 12))},
                     content: [
                         ["blank", "15px"],
                         "buyables"
                     ]
                 },
-        "Milestones": {
+        "里程碑": {
             unlocked() {return (hasAchievement("a", 11))},
     content: [
         ["blank", "15px"],
@@ -32,39 +32,39 @@ addLayer("w", {
     },
     upgrades: {
         11: { title: "601",
-        description: "Gain x1.1 Medals.",
+        description: "获得 ×1.1 奖牌。",
         cost: new EN("1"),
         },
         12: { title: "602",
-        description: "Unlock the tenth buyable.",
+        description: "解锁第十个可购买项。",
         cost: new EN("1000"),
         unlocked() {
             return hasUpgrade("w", 11)
         }
         },
         13: { title: "603",
-        description: "Make the tenth buyable cheaper.",
+        description: "使第十个可购买项更便宜。",
         cost: new EN("69420"),
         unlocked() {
             return hasUpgrade("w", 12)
         }
         },
         14: { title: "604",
-        description: "Unlock the next buyable.",
+        description: "解锁下一个可购买项。",
         cost: new EN("1e6"),
         unlocked() {
             return hasUpgrade("w", 13)
         }
         },
         15: { title: "605",
-        description: "Make the eleventh buyable cheaper.",
+        description: "使第十一个可购买项更便宜。",
         cost: new EN("1e18"),
         unlocked() {
             return hasUpgrade("w", 14)
         }
         },
         21: { title: "606",
-        description: "Wood boosts itself.",
+        description: "木材增益自身。",
         cost: new EN("1e2150"),
         unlocked() {
             return hasUpgrade("w", 15)
@@ -73,133 +73,133 @@ addLayer("w", {
         effectDisplay(){return `${format(this.effect())}x`}
         },
         22: { title: "607",
-        description: "Gain a massive amount of wood.",
+        description: "获得巨量木材。",
         cost: new EN("1e3935"),
         unlocked() {
             return hasUpgrade("w", 21)
         },
     },
     23: { title: "608",
-        description: "Gain a lot more amount of wood.",
+        description: "获得多得多木材。",
         cost: new EN("e1e30003"),
         unlocked() {
             return hasUpgrade("w", 22)
         },
     },
     24: { title: "609",
-        description: "Gain even more amount of wood.",
+        description: "获得更多木材。",
         cost: new EN("ee1e9"),
         unlocked() {
             return hasUpgrade("w", 23)
         },
     },
     25: { title: "610",
-        description: "Gain a big amount of wood.",
+        description: "获得大量木材。",
         cost: new EN("ee1e15"),
         unlocked() {
             return hasUpgrade("w", 24)
         },
     },
     31: { title: "611",
-        description: "Gain a decent amount of wood.",
+        description: "获得可观木材。",
         cost: new EN("ee1e27"),
         unlocked() {
             return hasUpgrade("w", 25)
         },
     },
     32: { title: "612",
-        description: "Gain a insane amount of wood.",
+        description: "获得疯狂数量的木材。",
         cost: new EN("ee1e51"),
         unlocked() {
             return hasUpgrade("w",31)
         },
     },
     33: { title: "613",
-        description: "Gain a extreme amount of wood.",
+        description: "获得极限数量的木材。",
         cost: new EN("ee1e147"),
         unlocked() {
             return hasUpgrade("w",32)
         },
     },
     34: { title: "614",
-        description: "Gain a good amount of wood.",
+        description: "获得不错的木材量。",
         cost: new EN("ee1e589"),
         unlocked() {
             return hasUpgrade("w",33)
         },
     },
     35: { title: "615",
-        description: "Gain a god amount of wood.",
+        description: "获得神明数量的木材。",
         cost: new EN("ee1e69423"),
         unlocked() {
             return hasUpgrade("w",34)
         },
     },
     41: { title: "616",
-        description: "Increase wood gain.",
+        description: "提升木材获取量。",
         cost: new EN("10^^100"),
         unlocked() {
             return hasUpgrade("w",35)
         },
     },
     42: { title: "617",
-        description: "Increase wood gain again.",
+        description: "再次提升木材获取量。",
         cost: new EN("10^^200"),
         unlocked() {
             return hasUpgrade("w",41)
         },
     },
     43: { title: "618",
-        description: "Increase wood gain yet again.",
+        description: "再度提升木材获取量。",
         cost: new EN("10^^400"),
         unlocked() {
             return hasUpgrade("w",42)
         },
     },
     44: { title: "619",
-        description: "Increase wood gain and again.",
+        description: "又一次提升木材获取量。",
         cost: new EN("10^^777"),
         unlocked() {
             return hasUpgrade("w",43)
         },
     },
     45: { title: "620",
-        description: "Increase wood gain even more.",
+        description: "进一步提升木材获取量。",
         cost: new EN("10^^1000"),
         unlocked() {
             return hasUpgrade("w",44)
         },
     },
     51: { title: "621",
-        description: "Increase wood gain by even more.",
+        description: "更大幅度地提升木材获取量。",
         cost: new EN("10^^1666"),
         unlocked() {
             return hasUpgrade("w",45)
         },
     },
     52: { title: "622",
-        description: "Increase wood gain by a lot more.",
+        description: "大幅度提升木材获取量。",
         cost: new EN("10^^2222"),
         unlocked() {
             return hasUpgrade("w",51)
         },
     },
     53: { title: "623",
-        description: "Increase wood gain by so much.",
+        description: "超大幅度提升木材获取量。",
         cost: new EN("10^^3003"),
         unlocked() {
             return hasUpgrade("w",52)
         },
     },
     54: { title: "624",
-        description: "Increase wood gain to the cap + increase all other currencies.",
+        description: "将木材获取量提升至上限 + 提升所有其他货币。",
         cost: new EN("10^^5000"),
         unlocked() {
             return hasUpgrade("w",53)
         },
     },
     55: { title: "625",
-        description: "The Onion upgrade 71 is ^4 more and gain x10 medals.",
+        description: "洋葱升级 71 额外 ^4，且获得 ×10 奖牌。",
         cost: new EN("10^^10000"),
         unlocked() {
             return hasUpgrade("w",54)
@@ -209,9 +209,9 @@ addLayer("w", {
 
     buyables: {
         11: {
-            title: "<h3>Tenth Buyable<h3>",
+            title: "<h3>第十个可购买项<h3>",
             cost(x) { return hasUpgrade("w",13) ? new EN(1).mul(new EN(3).pow(x)) : new EN(1).mul(new EN(4).pow(x)) },
-            display() {return `<h3>Double Wood Gain.<h3>\nLevel: ` + formatWhole(player.w.buyables[11]) + `<br>Cost: ${format(this.cost())} Wood\nEffect: ${format(this.effect())}x Wood`},
+            display() {return `<h3>木材获取量翻倍。<h3>\n等级: ` + formatWhole(player.w.buyables[11]) + `<br>花费: ${format(this.cost())} 木材\n效果: ${format(this.effect())}× 木材`},
             canAfford() {return player.w.points.gte(this.cost())},
             buy() {
                 player.w.points = player.w.points.sub(this.cost())
@@ -224,9 +224,9 @@ addLayer("w", {
         },
     },
     12: {
-        title: "<h3>Eleventh Buyable<h3>",
+        title: "<h3>第十一个可购买项<h3>",
         cost(x) { return hasUpgrade("w",15) ? new EN(2).pow(new EN(2).pow(x)) : new EN(2).pow(new EN(3).pow(x)) },
-        display() {return `<h3>Exponentiate Wood Gain.<h3>\nLevel: ` + formatWhole(player.w.buyables[12]) + `<br>Cost: ${format(this.cost())} Wood\nEffect: ^${format(this.effect())} Wood`},
+        display() {return `<h3>木材获取量指数化。<h3>\n等级: ` + formatWhole(player.w.buyables[12]) + `<br>花费: ${format(this.cost())} 木材\n效果: ^${format(this.effect())} 木材`},
         canAfford() {return player.w.points.gte(this.cost())},
         buy() {
             player.w.points = player.w.points.sub(this.cost())
@@ -241,24 +241,24 @@ addLayer("w", {
 },
 milestones: {
     1: {
-        requirementDescription: "3e3,333 Wood",
-        effectDescription: "Automate the first wood buyable and buy max.",
+        requirementDescription: "3e3,333 木材",
+        effectDescription: "自动购买第一个木材可购买项并最大购买。",
         done() { return player.w.points.gte("3e3333") },
         toggles: [
           ["w","auto"]
         ]
     },
         2: {
-            requirementDescription: "e1e3,003 Wood",
-            effectDescription: "Automate the second wood buyable.",
+            requirementDescription: "e1e3,003 木材",
+            effectDescription: "自动购买第二个木材可购买项。",
             done() { return player.w.points.gte("ee3003") },
             toggles: [
               ["w","auto2"]
             ]
         },
         3: {
-            requirementDescription: "eee1.000e9 Wood",
-            effectDescription: "Buy max of second wood buyable.",
+            requirementDescription: "eee1.000e9 木材",
+            effectDescription: "最大购买第二个木材可购买项。",
             done() { return player.w.points.gte("eeee9") },
         },
 },
@@ -271,7 +271,7 @@ automate(){
         hasMilestone("w",3) ? setBuyableAmount("w",12,tmp.w.buyables[12].canAfford?player.w.points.div(2).log().floor(2).add(1):getBuyableAmount("w",12)) : buyBuyable("w",12)
     }
 },
-    name: "Wood", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "木材", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "🟫", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -281,8 +281,8 @@ automate(){
     }},
     color: "#966F33",
     requires: new EN("10^^1.26e18"), // Can be a function that takes requirement increases into account
-    resource: "Wood", // Name of prestige currency
-    baseResource: "Points", // Name of resource prestige is based on
+    resource: "木材", // Name of prestige currency
+    baseResource: "积分", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     branches: ["q" , "v"],
     type() {if (hasUpgrade("su", 535)) return "normal"
@@ -347,7 +347,7 @@ automate(){
 
     row: 6, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "w", description: "W: Reset for Wood", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "w", description: "W: 重置以获得木材", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){if (hasUpgrade("su", 535)) return false
     else return (hasUpgrade("re", 31) || player[this.layer].unlocked)},

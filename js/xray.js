@@ -7,7 +7,7 @@ addLayer("x", {
     ],
     microtabs: {
         stuff: {
-                        "Upgrades": {
+                        "升级": {
                             unlocked() {return (hasAchievement("a", 11))},
                     content: [
                         ["blank", "15px"],
@@ -18,182 +18,182 @@ addLayer("x", {
                 },
     upgrades: {
         11: { title: "626",
-        description: "Gain x1.25 Medals.",
+        description: "获得 ×1.25 奖牌。",
         cost: new EN("1"),
         unlocked() {
             return hasUpgrade("re", 55)
         },
         },
         12: { title: "627",
-        description: "Gain x5 X-Rays.",
+        description: "获得 ×5 X 射线。",
         cost: new EN("1e6"),
         unlocked() {
             return hasUpgrade("x", 11)
         },
         },
         13: { title: "628",
-        description: "Gain x3,125 X-Rays.",
+        description: "获得 ×3,125 X 射线。",
         cost: new EN("1e7"),
         unlocked() {
             return hasUpgrade("x", 12)
         },
         },
         14: { title: "629",
-        description: "Gain x5.527e174 X-Rays.",
+        description: "获得 ×5.527e174 X 射线。",
         cost: new EN("1e10"),
         unlocked() {
             return hasUpgrade("x", 13)
         },
         },
         15: { title: "630",
-        description: "Gain ^90 X-Rays.",
+        description: "获得 ^90 X 射线。",
         cost: new EN("1e185"),
         unlocked() {
             return hasUpgrade("x", 14)
         },
         },
         21: { title: "631",
-        description: "Gain ^125 X-Rays.",
+        description: "获得 ^125 X 射线。",
         cost: new EN("1e16430"),
         unlocked() {
             return hasUpgrade("x", 15)
         },
         },
         22: { title: "632",
-        description: "Gain ^1,300 X-Rays.",
+        description: "获得 ^1,300 X 射线。",
         cost: new EN("1e2053675"),
         unlocked() {
             return hasUpgrade("x", 21)
         },
         },
         23: { title: "633",
-        description: "Gain a good boost to X-Rays.",
+        description: "获得对 X 射线的不错增益。",
         cost: new EN("e1.339e9"),
         unlocked() {
             return hasUpgrade("x", 22)
         },
         },
         24: { title: "634",
-        description: "Gain a decent boost to X-Rays.",
+        description: "获得对 X 射线的可观增益。",
         cost: new EN("e5e999999999"),
         unlocked() {
             return hasUpgrade("x", 23)
         },
         },
         25: { title: "635",
-        description: "Gain a medium boost to X-Rays.",
+        description: "获得对 X 射线的中等增益。",
         cost: new EN("eeeee9"),
         unlocked() {
             return hasUpgrade("x", 24)
         },
         },
         31: { title: "636",
-        description: "Gain a big boost to X-Rays.",
+        description: "获得对 X 射线的大幅增益。",
         cost: new EN("10^^10"),
         unlocked() {
             return hasUpgrade("x", 25)
         },
         },
         32: { title: "637",
-        description: "Gain a large boost to X-Rays.",
+        description: "获得对 X 射线的较大增益。",
         cost: new EN("10^^18"),
         unlocked() {
             return hasUpgrade("x", 31)
         },
         },
         33: { title: "638",
-        description: "Gain a bigger boost to X-Rays.",
+        description: "获得对 X 射线的更大增益。",
         cost: new EN("10^^34"),
         unlocked() {
             return hasUpgrade("x", 32)
         },
         },
         34: { title: "639",
-        description: "Gain a very large boost to X-Rays.",
+        description: "获得对 X 射线的极大增益。",
         cost: new EN("10^^66"),
         unlocked() {
             return hasUpgrade("x", 33)
         },
         },
         35: { title: "640",
-        description: "Gain a ultra boost to X-Rays.",
+        description: "获得对 X 射线的终极增益。",
         cost: new EN("10^^130"),
         unlocked() {
             return hasUpgrade("x", 34)
         },
         },
         41: { title: "641",
-        description: "Gain a massive boost to X-Rays.",
+        description: "获得对 X 射线的巨量增益。",
         cost: new EN("10^^258"),
         unlocked() {
             return hasUpgrade("x", 35)
         },
         },
         42: { title: "642",
-        description: "Gain a insane boost to X-Rays.",
+        description: "获得对 X 射线的疯狂增益。",
         cost: new EN("10^^514"),
         unlocked() {
             return hasUpgrade("x", 41)
         },
         },
         43: { title: "643",
-        description: "Gain a extreme boost to X-Rays.",
+        description: "获得对 X 射线的极限增益。",
         cost: new EN("10^^1026"),
         unlocked() {
             return hasUpgrade("x", 42)
         },
         },
         44: { title: "644",
-        description: "Gain a OMEGA boost to X-Rays.",
+        description: "获得对 X 射线的欧米伽增益。",
         cost: new EN("10^^2050"),
         unlocked() {
             return hasUpgrade("x", 43)
         },
         },
         45: { title: "645",
-        description: "Gain a null boost to X-Rays.",
+        description: "获得对 X 射线的空增益。",
         cost: new EN("10^^4098"),
         unlocked() {
             return hasUpgrade("x", 44)
         },
         },
         51: { title: "646",
-        description: "Gain a GIANT boost to X-Rays.",
+        description: "获得对 X 射线的巨人增益。",
         cost: new EN("10^^8194"),
         unlocked() {
             return player.points.gte("10^^1e148")
         },
         },
         52: { title: "647",
-        description: "Gain a GOD boost to X-Rays.",
+        description: "获得对 X 射线的神明增益。",
         cost: new EN("10^^25000"),
         unlocked() {
             return hasUpgrade("x", 51)
         },
         },
         53: { title: "648",
-        description: "Gain a BEST boost to X-Rays.",
+        description: "获得对 X 射线的最强增益。",
         cost: new EN("10^^100000"),
         unlocked() {
             return hasUpgrade("x", 52)
         },
         },
         54: { title: "649",
-        description: "Gain a BIGGEST boost to X-Rays and increase other currencies.",
+        description: "获得对 X 射线的最大增益，并提升其他货币。",
         cost: new EN("10^^1000000"),
         unlocked() {
             return hasUpgrade("x", 53)
         },
         },
         55: { title: "650",
-        description: "Onion Upgrade 61 ^6 and gain x30 medals.",
+        description: "洋葱升级 61 ^6，且获得 ×30 奖牌。",
         cost: new EN("10^^1000000000"),
         unlocked() {
             return hasUpgrade("x", 54)
         },
         },
     },
-    name: "X-Rays", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "X 射线", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "🦴", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -203,8 +203,8 @@ addLayer("x", {
     }},
     color: "#5a6f6a",
     requires: new EN("10^^1e145"), // Can be a function that takes requirement increases into account
-    resource: "X-Rays", // Name of prestige currency
-    baseResource: "Points", // Name of resource prestige is based on
+    resource: "X 射线", // Name of prestige currency
+    baseResource: "积分", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     branches: ["r" , "w"],
     type() {if (hasUpgrade("su", 535)) return "normal"
@@ -267,7 +267,7 @@ addLayer("x", {
     },
     row: 6, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "x", description: "X: Reset for X-Rays", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "x", description: "X: 重置以获得 X 射线", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){if (hasUpgrade("su", 535)) return false
     else return (hasUpgrade("re", 55) || player[this.layer].unlocked)},

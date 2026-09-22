@@ -7,7 +7,7 @@ addLayer("q", {
     ],
     microtabs: {
         stuff: {
-                        "Upgrades": {
+                        "升级": {
                             unlocked() {return (hasAchievement("a", 11))},
                     content: [
                         ["blank", "15px"],
@@ -18,179 +18,179 @@ addLayer("q", {
         },
     upgrades: {
         11: { title: "401",
-        description: "Gain x2 Quadrilaterals.",
+        description: "获得 ×2 四边形。",
         cost: new EN("420"),
         },
         12: { title: "402",
-        description: "Gain x4 Quadrilaterals, ^69 Lights and a massive boost to keys.",
+        description: "获得 ×4 四边形、^69 灯光，钥匙获得庞大增益。",
         cost: new EN("1000"),
         unlocked() {
             return hasUpgrade("q", 11)
         }
         },
         13: { title: "403",
-        description: "Gain x16 Quadrilaterals, ^69 Lights yet again and a insane boost to keys.",
+        description: "获得 ×16 四边形、又一次 ^69 灯光，钥匙获得疯狂增益。",
         cost: new EN("6969"),
         unlocked() {
             return hasUpgrade("q", 12)
         }
         },
         14: { title: "404",
-        description: "Gain x256 Quadrilaterals, ^420 Lights and a extreme boost to keys.",
+        description: "获得 ×256 四边形、^420 灯光，钥匙获得极致增益。",
         cost: new EN("69420"),
         unlocked() {
             return hasUpgrade("q", 13)
         }
         },
         15: { title: "405",
-        description: "Gain x65,536 Quadrilaterals, ^420 Lights yet again and a GOD boost to keys.",
+        description: "获得 ×65,536 四边形、又一次 ^420 灯光，钥匙获得神级增益。",
         cost: new EN("7777777"),
         unlocked() {
             return hasUpgrade("q", 14)
         }
         },
         21: { title: "406",
-        description: "Gain x4.294e9 Quadrilaterals, ^69,420 Lights and a BEST boost to keys.",
+        description: "获得 ×4.294e9 四边形、^69,420 灯光，钥匙获得最佳增益。",
         cost: new EN("1e12"),
         unlocked() {
             return hasUpgrade("q", 15)
         }
         },
         22: { title: "407",
-        description: "Gain x1.844e19 Quadrilaterals, ^69,420 Lights yet again and a TRUE BEST boost to keys.",
+        description: "获得 ×1.844e19 四边形、又一次 ^69,420 灯光，钥匙获得真正最佳的增益。",
         cost: new EN("3e21"),
         unlocked() {
             return hasUpgrade("q", 21)
         }
         },
         23: { title: "408",
-        description: "Gain x3.400e38 Quadrilaterals, ^1e10 Lights and a TRUELY BEST boost to keys.",
+        description: "获得 ×3.400e38 四边形、^1e10 灯光，钥匙获得真正最佳的增益。",
         cost: new EN("4e40"),
         unlocked() {
             return hasUpgrade("q", 22)
         }
         },
         24: { title: "409",
-        description: "Gain x1.157e77 Quadrilaterals and ^1e69 Lights.",
+        description: "获得 ×1.157e77 四边形和 ^1e69 灯光。",
         cost: new EN("2e79"),
         unlocked() {
             return hasUpgrade("q", 23)
         }
         },
         25: { title: "410",
-        description: "Gain x1.340e154 Quadrilaterals and ^1e308 Lights.",
+        description: "获得 ×1.340e154 四边形和 ^1e308 灯光。",
         cost: new EN("4e156"),
         unlocked() {
             return hasUpgrade("q", 24)
         }
         },
         31: { title: "411",
-        description: "Gain x1.797e308 Quadrilaterals and a light boost.",
+        description: "获得 ×1.797e308 四边形和灯光增益。",
         cost: new EN("4e310"),
         unlocked() {
             return hasUpgrade("q", 25)
         }
         },
         32: { title: "412",
-        description: "Gain ^3 Quadrilaterals and a good light boost.",
+        description: "获得 ^3 四边形和不错的灯光增益。",
         cost: new EN("1e619"),
         unlocked() {
             return hasUpgrade("q", 31)
         }
         },
         33: { title: "413",
-        description: "Gain ^27 Quadrilaterals and a big light boost.",
+        description: "获得 ^27 四边形和较大的灯光增益。",
         cost: new EN("1e1851"),
         unlocked() {
             return hasUpgrade("q", 32)
         }
         },
         34: { title: "414",
-        description: "Gain ^19,683 Quadrilaterals and a bigger light boost.",
+        description: "获得 ^19,683 四边形和更大的灯光增益。",
         cost: new EN("5e49915"),
         unlocked() {
             return hasUpgrade("q", 33)
         }
         },
         35: { title: "415",
-        description: "Gain ^1e13 Quadrilaterals and a massive light boost.",
+        description: "获得 ^1e13 四边形和庞大的灯光增益。",
         cost: new EN("e496217279"),
         unlocked() {
             return hasUpgrade("q", 34)
         }
         },
         41: { title: "416",
-        description: "Gain ^1e100 Quadrilaterals and a INSANE light boost.",
+        description: "获得 ^1e100 四边形和疯狂的灯光增益。",
         cost: new EN("e3.745e21"),
         unlocked() {
             return hasUpgrade("q", 35)
         }
         },
         42: { title: "417",
-        description: "Gain a good Quadrilaterals boost and a EXTREME light boost.",
+        description: "获得不错的四边形增益和极致的灯光增益。",
         cost: new EN("e3.745e121"),
         unlocked() {
             return hasUpgrade("q", 41)
         }
         },
         43: { title: "418",
-        description: "Gain a big Quadrilaterals boost and a GOD light boost.",
+        description: "获得较大的四边形增益和神级的灯光增益。",
         cost: new EN("e3.745e421"),
         unlocked() {
             return hasUpgrade("q", 42)
         }
         },
         44: { title: "419",
-        description: "Gain a bigger Quadrilaterals boost and a BEST light boost.",
+        description: "获得更大的四边形增益和最佳的灯光增益。",
         cost: new EN("e3e3432"),
         unlocked() {
             return hasUpgrade("q", 43)
         }
         },
         45: { title: "420",
-        description: "Gain a massive Quadrilaterals boost and a TRUE BEST light boost.",
+        description: "获得庞大的四边形增益和真正最佳的灯光增益。",
         cost: new EN("e3e1003432"),
         unlocked() {
             return hasUpgrade("q", 44)
         }
         },
         51: { title: "421",
-        description: "Gain a insane Quadrilaterals boost.",
+        description: "获得疯狂的四边形增益。",
         cost: new EN("eee69"),
         unlocked() {
             return hasUpgrade("q", 45)
         }
         },
         52: { title: "422",
-        description: "Gain a EXTREME Quadrilaterals boost.",
+        description: "获得极致的四边形增益。",
         cost: new EN("eee1337"),
         unlocked() {
             return hasUpgrade("q", 51)
         }
         },
         53: { title: "423",
-        description: "Gain a GOD Quadrilaterals boost.",
+        description: "获得神级的四边形增益。",
         cost: new EN("eee7777777"),
         unlocked() {
             return hasUpgrade("q", 52)
         }
         },
         54: { title: "424",
-        description: "Gain a BEST Quadrilaterals boost.",
+        description: "获得最佳的四边形增益。",
         cost: new EN("eeee42"),
         unlocked() {
             return hasUpgrade("q", 53)
         }
         },
         55: { title: "425",
-        description: "The Onion Upgrade 71 is x4 more powerful and unlock 2 new challenges.",
+        description: "洋葱升级 71 强度 ×4 并解锁 2 个新挑战。",
         cost: new EN("eeee420"),
         unlocked() {
             return player.o.points.gte("eeeee10")
         }
         },
     },
-    name: "Quadrilaterals", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "四边形", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "🔲", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -200,8 +200,8 @@ addLayer("q", {
     }},
     color: "#f70845",
     requires: new EN("eeeeee10"), // Can be a function that takes requirement increases into account
-    resource: "Quadrilaterals", // Name of prestige currency
-    baseResource: "Points", // Name of resource prestige is based on
+    resource: "四边形", // Name of prestige currency
+    baseResource: "积分", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     type() {if (hasUpgrade("ci", 54)) return "static"
     else return "normal"},    
@@ -265,7 +265,7 @@ addLayer("q", {
     autoUpgrade() { if (hasMilestone("re" , 4)) return true},
     hotkeys: [
         
-        {key: "q", description: "Q: Reset for Quadrilaterals", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "q", description: "Q: 重置以获得四边形", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){if (hasUpgrade("ci", 54)) return false
     else return (hasUpgrade("o", 66) || player[this.layer].unlocked)},

@@ -7,11 +7,11 @@ addLayer("k", {
     ],
     microtabs: {
         stuff: {
-                        "Upgrades": {
+                        "升级": {
                             unlocked() {return (hasAchievement("a", 11))},
                     content: [
                         ["blank", "15px"],
-                        ["raw-html", () => `<h4 style="opacity:.5">You will only be able to get 1 key at a time.<br> But you can spend it on upgrades to increase.</h4>`],
+                        ["raw-html", () => `<h4 style="opacity:.5">你一次只能获得 1 把钥匙。<br> 但你可以将其花费在升级上以增加。</h4>`],
                         ["upgrades", [1,2,3,4,5,6,7,8,9]]
                     ]
                 },
@@ -19,215 +19,215 @@ addLayer("k", {
         },
     upgrades: {
         11: { title: "276",
-        description: "Point gain is increased by a lot and gain x2 Keys.",
+        description: "积分获取大幅提升并获得 ×2 钥匙。",
         cost: new EN("1"),
 
         },
         12: { title: "277",
-        description: "Square Key Gain.",
+        description: "钥匙获取平方。",
         cost: new EN("100"),
         unlocked() {
             return hasUpgrade("k", 11)
         }
         },
         13: { title: "278",
-        description: "Square Key Gain Again and also point gain is increased.",
+        description: "钥匙获取再次平方，同时积分获取提升。",
         cost: new EN("1337"),
         unlocked() {
             return hasUpgrade("k", 12)
         }
         },
         14: { title: "279",
-        description: "Square Key Gain yet again.",
+        description: "钥匙获取又一次平方。",
         cost: new EN("6969"),
         unlocked() {
             return hasUpgrade("k", 13)
         }
         },
         15: { title: "280",
-        description: "Square Key Gain yet again and again and point gain is increased.",
+        description: "钥匙获取一次又一次平方，同时积分获取提升。",
         cost: new EN("69420"),
         unlocked() {
             return hasUpgrade("k", 14)
         }
         },
         21: { title: "281",
-        description: "Cube Key gain.",
+        description: "钥匙获取立方。",
         cost: new EN("1e7"),
         unlocked() {
             return hasUpgrade("k", 15)
         }
         },
         22: { title: "282",
-        description: "Cube Key gain again.",
+        description: "钥匙获取再次立方。",
         cost: new EN("1e17"),
         unlocked() {
             return hasUpgrade("k", 21)
         }
         },
         23: { title: "283",
-        description: "Cube Key gain yet again.",
+        description: "钥匙获取又一次立方。",
         cost: new EN("5e45"),
         unlocked() {
             return hasUpgrade("k", 22)
         }
         },
         24: { title: "284",
-        description: "Cube Key gain yet again and again also increases point gain.",
+        description: "钥匙获取一次又一次立方，同时提升积分获取。",
         cost: new EN("3e132"),
         unlocked() {
             return hasUpgrade("k", 23)
         }
         },
         25: { title: "285",
-        description: "Cube Key gain yet again and again and again.",
+        description: "钥匙获取一遍又一遍又一遍立方。",
         cost: new EN("3e392"),
         unlocked() {
             return hasUpgrade("k", 24)
         }
         },
         31: { title: "286",
-        description: "^4 Key gain.",
+        description: "^4 钥匙获取。",
         cost: new EN("5e1172"),
         unlocked() {
             return hasUpgrade("k", 25)
         }
         },
         32: { title: "287",
-        description: "^4 Key gain.",
+        description: "^4 钥匙获取。",
         cost: new EN("1e4684"),
         unlocked() {
             return hasUpgrade("k", 31)
         }
         },
         33: { title: "288",
-        description: "^4 Key gain and increases point gain even more.",
+        description: "^4 钥匙获取并进一步提升积分获取。",
         cost: new EN("1e18729"),
         unlocked() {
             return hasUpgrade("k", 32)
         }
         },
         34: { title: "289",
-        description: "^4 Key gain.",
+        description: "^4 钥匙获取。",
         cost: new EN("1e74908"),
         unlocked() {
             return hasUpgrade("k", 33)
         }
         },
         35: { title: "290",
-        description: "^4 Key gain.",
+        description: "^4 钥匙获取。",
         cost: new EN("1e299626"),
         unlocked() {
             return hasUpgrade("k", 34)
         }
         },
         41: { title: "291",
-        description: "^5 Key gain and increase point gain.",
+        description: "^5 钥匙获取并提升积分获取。",
         cost: new EN("1e1198496"),
         unlocked() {
             return hasUpgrade("k", 35)
         }
         },
         42: { title: "292",
-        description: "^5 Key gain and increase point gain.",
+        description: "^5 钥匙获取并提升积分获取。",
         cost: new EN("1e5992474"),
         unlocked() {
             return hasUpgrade("k", 41)
         }
         },
         43: { title: "293",
-        description: "^5 Key gain and increase point gain.",
+        description: "^5 钥匙获取并提升积分获取。",
         cost: new EN("1e19981181"),
         unlocked() {
             return hasUpgrade("k", 42)
         }
         },
         44: { title: "294",
-        description: "^5 Key gain and increase point gain.",
+        description: "^5 钥匙获取并提升积分获取。",
         cost: new EN("1e79905898"),
         unlocked() {
             return hasUpgrade("k", 43)
         }
         },
         45: { title: "295",
-        description: "^10 Key gain! Increase point gain by a lot.",
+        description: "^10 钥匙获取！大幅提升积分获取。",
         cost: new EN("1e379529481"),
         unlocked() {
             return hasUpgrade("k", 44)
         }
         },
         51: { title: "296",
-        description: "^100 Key gain!",
+        description: "^100 钥匙获取！",
         cost: new EN("e1.227e14"),
         unlocked() {
             return hasUpgrade("m", 15)
         }
         },
         52: { title: "297",
-        description: "^1,000 Key gain!",
+        description: "^1,000 钥匙获取！",
         cost: new EN("e1.227e16"),
         unlocked() {
             return hasUpgrade("k", 51)
         }
         },
         53: { title: "298",
-        description: "^10,000 Key gain!",
+        description: "^10,000 钥匙获取！",
         cost: new EN("e1.227e19"),
         unlocked() {
             return hasUpgrade("k", 52)
         }
         },
         54: { title: "299",
-        description: "^100,000 Key gain!",
+        description: "^100,000 钥匙获取！",
         cost: new EN("e1.317e32"),
         unlocked() {
             return hasUpgrade("m", 24)
         }
         },
         55: { title: "300",
-        description: "^1e10 Key gain! Increase point gain also.",
+        description: "^1e10 钥匙获取！同时提升积分获取。",
         cost: new EN("e4.978e59"),
         unlocked() {
             return hasUpgrade("m", 35)
         }
         },
         61: { title: "?",
-        description: "Increase something.",
+        description: "提升某样东西。",
         cost: new EN("25000"),
         unlocked() {
             return inChallenge("o", 11)
         }
         },
         62: { title: "?",
-        description: "Increase even more.",
+        description: "提升得更多。",
         cost: new EN("1e74"),
         unlocked() {
             return inChallenge("o", 11)
         }
         },
         63: { title: "?",
-        description: "Increase a lot more.",
+        description: "提升得多得多。",
         cost: new EN("1e1411"),
         unlocked() {
             return inChallenge("o", 11)
         }
         },
         64: { title: "?",
-        description: "Increase by more more and more.",
+        description: "提升，越来越多。",
         cost: new EN("1e70831"),
         unlocked() {
             return inChallenge("o", 11)
         }
         },
         65: { title: "?",
-        description: "uNlOcK sOmEthIng.",
+        description: "解 锁 某 样 东 西。",
         cost: new EN("e5e9"),
         unlocked() {
             return inChallenge("o", 11)
         }
         },
         66: { title: "?",
-        description: "Gain even more keys and lights.",
+        description: "获得更多钥匙与灯光。",
         cost: new EN("100"),
         unlocked() {
             return inChallenge("z", 11)
@@ -238,7 +238,7 @@ addLayer("k", {
       use format(num) whenever displaying a number
     */
    
-    name: "Keys", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "钥匙", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "🔑", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -248,8 +248,8 @@ addLayer("k", {
     }},
     color: "#b6c0b3",
     requires: new EN("eee9"), // Can be a function that takes requirement increases into account
-    resource: "Keys", // Name of prestige currency
-    baseResource: "Points", // Name of resource prestige is based on
+    resource: "钥匙", // Name of prestige currency
+    baseResource: "积分", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     type() {if (hasUpgrade("z", 45)) return "static"
     else return "normal"},    
@@ -378,7 +378,7 @@ addLayer("k", {
         if (hasMilestone("o", 1)) return (hasMilestone("o", 1)?1:0)
         }, 
     hotkeys: [
-        {key: "k", description: "K: Reset for Keys", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "k", description: "K: 重置获取钥匙", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     
     layerShown(){if (hasUpgrade("z", 45)) return false

@@ -7,7 +7,7 @@ addLayer("ci", {
     ],
     microtabs: {
         stuff: {
-                        "Upgrades": {
+                        "升级": {
                             unlocked() {return (hasAchievement("a", 11))},
                     content: [
                         ["blank", "15px"],
@@ -18,175 +18,175 @@ addLayer("ci", {
                 },
     upgrades: {
         11: { title: "751",
-        description: "Gain x5 Medals!",
+        description: "获得 ×5 奖牌！",
         cost: new EN("1"),
         unlocked() {
             return hasUpgrade("re", 113)
         },
         },
         12: { title: "752",
-        description: "Gain x2 Medals and x2,000 Circles.",
+        description: "获得 ×2 奖牌和 ×2,000 圆。",
         cost: new EN("50"),
         unlocked() {
             return hasUpgrade("ci", 11)
         },
         },
         13: { title: "753",
-        description: "Gain more circles.",
+        description: "获得更多圆。",
         cost: new EN("4e11"),
         unlocked() {
             return hasUpgrade("ci", 12)
         },
         },
         14: { title: "754",
-        description: "Gain more circles.",
+        description: "获得更多圆。",
         cost: new EN("10^^6"),
         unlocked() {
             return hasUpgrade("ci", 13)
         },
         },
         15: { title: "755",
-        description: "Gain more circles.",
+        description: "获得更多圆。",
         cost: new EN("10^^100"),
         unlocked() {
             return hasUpgrade("ci", 14)
         },
         },
         21: { title: "756",
-        description: "Gain more circles.",
+        description: "获得更多圆。",
         cost: new EN("10^^1000000"),
         unlocked() {
             return hasUpgrade("ci", 15)
         },
         },
         22: { title: "757",
-        description: "Gain more circles.",
+        description: "获得更多圆。",
         cost: new EN("10^^1000000"),
         unlocked() {
             return hasUpgrade("ci", 21)
         },
         },
         23: { title: "758",
-        description: "Gain more circles.",
+        description: "获得更多圆。",
         cost: new EN("10^^1000000"),
         unlocked() {
             return hasUpgrade("ci", 22)
         },
         },
         24: { title: "759",
-        description: "Gain more circles.",
+        description: "获得更多圆。",
         cost: new EN("10^^1000000"),
         unlocked() {
             return hasUpgrade("ci", 23)
         },
         },
         25: { title: "760",
-        description: "Gain more circles.",
+        description: "获得更多圆。",
         cost: new EN("10^^1000000"),
         unlocked() {
             return hasUpgrade("ci", 24)
         },
         },
         31: { title: "761",
-        description: "Nothing.",
+        description: "无。",
         cost: new EN("10^^^4"),
         unlocked() {
             return hasUpgrade("ci", 25)
         },
         },
         32: { title: "762",
-        description: "Nothing.",
+        description: "无。",
         cost: new EN("10^^^4"),
         unlocked() {
             return hasUpgrade("ci", 31)
         },
         },
         33: { title: "763",
-        description: "Nothing.",
+        description: "无。",
         cost: new EN("10^^^4"),
         unlocked() {
             return hasUpgrade("ci", 32)
         },
         },
         34: { title: "764",
-        description: "Nothing.",
+        description: "无。",
         cost: new EN("10^^^4"),
         unlocked() {
             return hasUpgrade("ci", 33)
         },
         },
         35: { title: "765",
-        description: "Gain more circles.",
+        description: "获得更多圆。",
         cost: new EN("10^^^4"),
         unlocked() {
             return hasUpgrade("ci", 34)
         },
         },
         41: { title: "766",
-        description: "Nothing.",
+        description: "无。",
         cost: new EN("10^^^5"),
         unlocked() {
             return hasUpgrade("ci", 35)
         },
         },
         42: { title: "767",
-        description: "Nothing.",
+        description: "无。",
         cost: new EN("10^^^5"),
         unlocked() {
             return hasUpgrade("ci", 41)
         },
         },
         43: { title: "768",
-        description: "Nothing.",
+        description: "无。",
         cost: new EN("10^^^5"),
         unlocked() {
             return hasUpgrade("ci", 42)
         },
         },
         44: { title: "769",
-        description: "Nothing.",
+        description: "无。",
         cost: new EN("10^^^5"),
         unlocked() {
             return hasUpgrade("ci", 43)
         },
         },
         45: { title: "770",
-        description: "Nothing.",
+        description: "无。",
         cost: new EN("10^^^5"),
         unlocked() {
             return hasUpgrade("ci", 44)
         },
         },
         51: { title: "771",
-        description: "Nothing.",
+        description: "无。",
         cost: new EN("10^^^5"),
         unlocked() {
             return hasUpgrade("ci", 45)
         },
         },
         52: { title: "772",
-        description: "Nothing.",
+        description: "无。",
         cost: new EN("10^^^5"),
         unlocked() {
             return hasUpgrade("ci", 51)
         },
         },
         53: { title: "773",
-        description: "Nothing.",
+        description: "无。",
         cost: new EN("10^^^5"),
         unlocked() {
             return hasUpgrade("ci", 52)
         },
         },
         54: { title: "774",
-        description: "Increase currencies from sand - circles, but remove quantum and rings layer.",
+        description: "增加从沙子到圆的货币，但移除量子层和圆环层。",
         cost: new EN("10^^^5"),
         unlocked() {
             return hasUpgrade("ci", 53)
         },
         },
         55: { title: "775",
-        description: "Gain x1,000,000 Medals.",
+        description: "获得 ×1,000,000 奖牌。",
         cost: new EN("10^^^6"),
         unlocked() {
             return player.points.gte("10^^^8")
@@ -196,7 +196,7 @@ addLayer("ci", {
     passiveGeneration() { 
         if (hasMilestone("re", 17)) return (hasMilestone("re", 17)?1:0)
         }, 
-    name: "Circles", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "圆", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "⚪", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -206,8 +206,8 @@ addLayer("ci", {
     }},
     color: "#ffffff",
     requires: new EN("10^^^6"), // Can be a function that takes requirement increases into account
-    resource: "Circles", // Name of prestige currency
-    baseResource: "Points", // Name of resource prestige is based on
+    resource: "圆", // Name of prestige currency
+    baseResource: "积分", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     branches: ["v"],
     type() {if (hasUpgrade("su", 535)) return "normal"
@@ -250,7 +250,7 @@ addLayer("ci", {
     },
     row: 7, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "!", description: "Shift+!: Reset for Circles", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "!", description: "Shift+!: 重置以获取圆", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){if (hasUpgrade("su", 535)) return false
     else return (hasUpgrade("re", 113) || player[this.layer].unlocked)},})

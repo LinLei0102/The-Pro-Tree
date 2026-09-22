@@ -1,542 +1,542 @@
-# The Modding Tree changelog:
+# The Modding Tree 更新日志：
 
 # v2.6.6.2 = 9/9/21
-- nodeStyle can now be used to set fonts.
+- nodeStyle 现在可用于设置字体。
 
 # v2.6.6.1 = 9/8/21
-- Fixed options not updating when new ones are added.
+- 修复了新增选项时选项不更新的问题。
 
 # v2.6.6 - 9/7/21
-- Added option for shift-clicking nodes toggling their tooltips.
-- Fixed NaN check for setting Decimal values with text boxes.
-- Added display-image, h-line, and v-line to documentation.
-- Fixed an issue with subtab glow colors.
-- Locked/hidden subtabs can't cause node glowing.
-- Fixed being able to buy upgrades on deactivated layers.
-- Updated break_eternity library.
-- Cleaned up buyable/clickable code.
+- 新增选项：按住 Shift 点击节点可切换其提示框。
+- 修复了通过文本框设置 Decimal 数值时的 NaN 检查。
+- 在文档中新增了 display-image、h-line 和 v-line。
+- 修复了子标签发光颜色的问题。
+- 已锁定/隐藏的子标签不会再导致节点发光。
+- 修复了在已停用层上仍能购买升级的问题。
+- 更新了 break_eternity 库。
+- 整理了可购买项/可点击项的代码。
 
 # v2.6.5.1 - 7/13/21
-- Fixed offline production more.
+- 进一步修复了离线产出。
 
 # v2.6.5 - 7/7/21
-- Fixed offline production.
-- Fixed formatting for small negative numbers.
-- Fixed divide by zero when a 0-second tick occurs.
-- "deactivated" now also affects achievement/milestone unlocking.
-- Locked challenges cannot be entered.
-- Fixed a bug with subtab glow colors.
+- 修复了离线产出。
+- 修复了小负数的格式化。
+- 修复了出现 0 秒游戏刻时除以零的问题。
+- 「已停用」现在也会影响成就/里程碑的解锁。
+- 无法进入已锁定的挑战。
+- 修复了子标签发光颜色的一个错误。
 
 # v2.6.4.2 - 6/17/21
-- Fixed a bug with the endgame screen.
-- Fixed hotkey-related crash.
-- Fixed resetting not working correctly.
+- 修复了终局界面的一个错误。
+- 修复了与快捷键相关的崩溃。
+- 修复了重置无法正常工作的问题。
 
 # v2.6.4 - 6/17/21
-- The game now autosaves before closing, if autosave is on. (Thank you to thepaperpilot for this!)
-- More Anti-NaN safety.
-- Fixed challenges glowing from countsAs.
-- Improved tooltip centering (thanks to Scarlettt!)
-- canReset now works properly for non-custom layers.
-- Fixed baseAmount being set to 0 even when a layer resets nothing.
-- Fixed centering on tooltips.
-- Changed some default values on startup to prevent potential issues.
-- Cleaned up resetting.
+- 如果开启了自动存档，游戏现在会在关闭前自动存档。（感谢 thepaperpilot！）
+- 更多防 NaN 的安全措施。
+- 修复了挑战因 countsAs 而发光的问题。
+- 改进了提示框的居中（感谢 Scarlettt！）
+- canReset 现在对非自定义层也能正常工作。
+- 修复了即使某层不重置任何内容 baseAmount 仍被设为 0 的问题。
+- 修复了提示框的居中问题。
+- 更改了启动时的部分默认值，以防止潜在问题。
+- 整理了重置相关代码。
 
 # v2.6.3 - 6/11/21
-- Added better support for using multiple layer files and similar. See modFiles in modInfo.
-- The demo now has each layer in its own file as well.
+- 新增了对使用多个层文件及类似用法的更好支持。参见 modInfo 中的 modFiles。
+- 演示现在也将每个层放在各自的文件中。
 
 # v2.6.2.2 - 6/10/21
-- Fixed an error message regarding popup.css.
+- 修复了与 popup.css 相关的一条错误信息。
 
 # v2.6.2.1 - 6/10/21
-- Fixed a visual bug with milestones.
+- 修复了里程碑的一个视觉错误。
 
 ## v2.6.2 - 6/10/21
-- Broke up style.css into many files to make it easier to find and customize what matters. If you already have custom CSS, keep that and ignore the new ones maybe?
-- Added buyable and clickable trees.
-- Added optional tooltips to upgrades, buyables, clickables, milestones, and gridables.
-- Fixed the passiveGeneration display.
-- Fixed "marked" feature.
-- doReset now will function on non-numeric rows besides "side".
+- 将 style.css 拆分为多个文件，以便更容易找到并自定义重要的部分。如果你已经有自定义 CSS，那就保留它，或许可以忽略新的那些？
+- 新增了可购买项树和可点击项树。
+- 为升级、可购买项、可点击项、里程碑和网格项新增了可选提示框。
+- 修复了 passiveGeneration 的显示。
+- 修复了「标记」功能。
+- doReset 现在也能在除「side」以外的非数字行上生效。
 
 ## v2.6.1 - 6/7/21
-- Added global background style to mod.js.
-- Tree branches can have custom line widths.
-- If an upgrade has both canAfford and cost, it checks both. (So you can use canAfford for other things)
-- Releasing a held buyable/clickable with onHold doesn't click it again.
-- Fixed hard resetting while NaN'ed and exporting NaN saves for debugging.
-- Attempt to fix buttons sometimes not updating.
-- Added "instant" feature for bars. (not useful for most people)
-- Improvements to theme code, partially by Cubedey.
+- 为 mod.js 新增了全局背景样式。
+- 树分支可以拥有自定义线宽。
+- 如果一个升级同时拥有 canAfford 和 cost，则会同时检查两者。（这样你就可以把 canAfford 用于其他用途）
+- 松开带有 onHold 的按住状态的可购买项/可点击项时，不会再次点击它。
+- 修复了处于 NaN 状态时的硬重置，以及为调试而导出 NaN 存档的问题。
+- 尝试修复按钮有时不更新的问题。
+- 为进度条新增了「即时」功能。（对大多数人没用）
+- 改进了主题相关代码，部分由 Cubedey 完成。
 
 ## v2.6.0.1 - 6/4/21
-- Removed excess NaN alerts (now only checks player, not temp).
-- Fixed background images covering up tree branches.
+- 移除了多余的 NaN 警报（现在只检查 player，不检查 temp）。
+- 修复了背景图片遮挡树分支的问题。
 
-## v2.6: Fixed Reality - 6/3/21
-- Fixed issues with NaN checking. The game also will not save if the save is broken.
-- Added a drop-down menu component!
-- Added upgrade-tree component!
-- Options are now saved separately, and not affected by hard resetting or importing saves.
-- Fixed demo.html
-- Fixed branches not working on the right tab.
-- Fixed background color not working on the left tab.
-- Fixed branches not updating when tree tab is not shown.
-- You can now use "this" in tabFormat!
-- Added per-row displaying for achievements, challenges, milestones, grids, buyables, and clickables. THIS WILL BREAK BUYABLES/CLICKABLES THAT PREVIOUSLY USED THEIR TABFORMAT ARGUMENT FOR SIZE.
-- Added onComplete for milestones.
-- Added addBuyables.
-- The prestige/sec display now shows non-whole numbers.
-- resetsNothing now works immediately on a reset that enables it.
-- Made the star on maxed challenges larger.
+## v2.6: 修正现实 - 6/3/21
+- 修复了 NaN 检查的问题。如果存档已损坏，游戏也不会保存。
+- 新增了下拉菜单组件！
+- 新增了升级树组件！
+- 选项现在单独保存，不受硬重置或导入存档影响。
+- 修复了 demo.html
+- 修复了分支在右侧标签上无法工作的问题。
+- 修复了背景颜色在左侧标签上无法生效的问题。
+- 修复了未显示树标签时分支不更新的问题。
+- 现在你可以在 tabFormat 中使用「this」了！
+- 为成就、挑战、里程碑、网格、可购买项和可点击项新增了逐行显示。这会破坏此前将 TABFORMAT 参数用于设置尺寸的可购买项/可点击项。
+- 为里程碑新增了 onComplete。
+- 新增了 addBuyables。
+- 声望/秒的显示现在会显示非整数。
+- resetsNothing 现在会在启用它的那次重置中立即生效。
+- 放大了已满级挑战上的星标。
 
-- diff can no longer be negative.
-- Fixed challenges with no currencyDisplayName using "points" instead of the mod's pointsName.
-- inChallenge no longer can return undefined.
-- Fixed certain things skipping negative rows (now they are treated like non-numeric rows, and don't appear in the tree still).
-- Things are 0.2% more optimized.
-- Fixed problems in the documentation.
-- Added more customization to the "mark" component (but not an easy way to access it)
+- diff 不能再为负数。
+- 修复了没有 currencyDisplayName 的挑战使用「points」而非该 mod 的 pointsName 的问题。
+- inChallenge 不能再返回 undefined。
+- 修复了某些内容跳过负数行的问题（现在它们被视为非数字行，并且仍然不会出现在树中）。
+- 各项内容的优化程度提高了 0.2%。
+- 修复了文档中的问题。
+- 为「标记」组件新增了更多自定义选项（但没有提供便捷的访问方式）
 
 
 ### v2.5.11.1 - 5/27/21
-- Fixed issues caused when the tree tab is disabled.
+- 修复了树标签被禁用时引发的问题。
 
 ### v2.5.11 - 5/27/21
-- Finished part 1 of the "making a mod" tutorial.
-- The challenge that you are currently in is highlighted, and will not be hidden if "hide completed challenges" is on and it is already completed.
-- Added leftTab, which makes a layer use the left tab instead of the right one (good for trees-within-trees and such)
-- Added startNavTab, which lets you choose which tab starts out on the left side.
-- Fixed the infobox not appearing in default tabFormat.
-- Fixed upgrade/buyable layering when they are hovered over.
-- Fixed devSpeed being applied twice.
+- 完成了「制作 mod」教程的第 1 部分。
+- 你当前所在的挑战会被高亮，并且即使开启了「隐藏已完成挑战」且该挑战已完成，也不会被隐藏。
+- 新增了 leftTab，它让某个层使用左侧标签而非右侧标签（适用于树中树之类的情况）
+- 新增了 startNavTab，让你可以选择哪个标签初始位于左侧。
+- 修复了信息框在默认 tabFormat 中不显示的问题。
+- 修复了升级/可购买项被悬停时的层级问题。
+- 修复了 devSpeed 被应用两次的问题。
 
 ### v2.5.10.2 - 5/24/21
-- Fixed some things in the tree tab not being clickable.
+- 修复了树标签中某些内容无法点击的问题。
 
 ### v2.5.10.1 - 5/23/21
-- Actually fixed the tooltip issue.
+- 真正修复了提示框的问题。
 
 ### v2.5.10 - 5/22/21
-- Tooltips can now show over the top overlay again.
-- Tweaked number formatting (e1000's keep the decimal places on the mantissa.)
-- Fixed text on two settings buttons not changing.
-- Started making a new tutorial.
+- 提示框现在又能显示在顶部浮层之上了。
+- 调整了数字格式化（e1000 类的数字会保留尾数的小数位。）
+- 修复了两个设置按钮上的文字不变化的问题。
+- 开始制作新的教程。
 
 ### v2.5.9.2 - 5/19/21
-- Fixed many issues with things not updating.
+- 修复了许多内容不更新的问题。
 
 ### v2.5.9.1 - 5/18/21
-- Made text inputs never give NaNs.
+- 让文本输入框永远不会产生 NaN。
 
 ### v2.5.9 - 5/18/21
-- Fixed issue when using text inputs for Numbers.
-- Added particle color feature.
-- Particle speed and dir are updated as it moves.
-- Added setSpeed and setDir for particles.
-- Added more trig functions.
+- 修复了将文本输入框用于 Number 时的问题。
+- 新增了粒子颜色功能。
+- 粒子移动时会更新其速度和方向。
+- 为粒子新增了 setSpeed 和 setDir。
+- 新增了更多三角函数。
 
 ### v2.5.8 - 5/17/21
-- Added makeShinies, which creates a stationary particle in a random spot.
-- Bars will visually update more quickly.
-- Fixed a major particle-related issue.
-- Fixed autoUpgrade.
-- Fixed a minor visual issue with tree nodes.
+- 新增了 makeShinies，它会在随机位置创建一个静止粒子。
+- 进度条的可视更新会更快。
+- 修复了一个与粒子相关的重大问题。
+- 修复了 autoUpgrade。
+- 修复了树节点的一个轻微视觉问题。
 
 ### v2.5.7 - 5/15/21
-- Added a particle system! Not only can it be used for visual effects, but particles can interact with the mouse. They could be used to create golden cookies or collectables, for example.
-- Added marked feature to buyables, clickables, and challenges. By default, stars multi-completion challenges when maxed.
-- Added 'deactivated' feature to layers, which disables many features.
-- Improved number formatting slightly.
+- 新增了粒子系统！它不仅可以用于视觉效果，粒子还能与鼠标交互。例如，它们可以用来制作金色饼干或收集物。
+- 为可购买项、可点击项和挑战新增了标记功能。默认情况下，当多重完成挑战满级时会为其加星标。
+- 为层新增了「已停用」功能，它会禁用许多功能。
+- 略微改进了数字格式化。
 
 ### v2.5.6 - 5/14/21
-- You can now use non-numeric ids for upgrades, buyables, etc.
-- Fixed an exploit that let you buy an extra buyable.
-- Moved basic getter/setter functions to easyAccess.js.
+- 现在你可以为升级、可购买项等使用非数字 id。
+- 修复了一个允许你多购买一个可购买项的漏洞。
+- 将基础的取值/设值函数移到了 easyAccess.js。
 
 ### v2.5.5.2 - 5/12/21
-- Fixed a major issue with buyables.
-- Fixed a variety of tabFormat-related issues.
-- Fixed commas appearing in decimal places (thanks to pg132!)
+- 修复了可购买项的一个重大问题。
+- 修复了各种与 tabFormat 相关的问题。
+- 修复了小数位中出现逗号的问题（感谢 pg132！）
 
 ### v2.5.5.1 - 5/12/21
-- Fixed clickables.
+- 修复了可点击项。
 
 ### v2.5.5 - 5/12/21
-- Added grids! They are a grid of buttons which behave the same, but have their own data. Good for inventory grids, map tiles, and more!
-- Added "marked" feature to add a mark to a node. Can be an image instead of a star. (Originally by Jacorb)
-- Added "layer-proxy" component that lets you use components from another layer.
-- Added the ability to display non-whole numbers in main-display.
+- 新增了网格！它们是由行为一致但各自拥有独立数据的按钮组成的网格。适用于物品栏网格、地图格子等！
+- 新增了「标记」功能，可为节点添加标记。标记可以是图片而非星标。（最初由 Jacorb 制作）
+- 新增了「layer-proxy」组件，让你可以使用来自另一个层的组件。
+- 新增了在 main-display 中显示非整数的能力。
 
 ### v2.5.4 - 5/10/21
-- Added a setting to always use single-tab mode.
-- Added directMult, which multiplies prestige gain after exponents and softcaps. It actually multiplies gain for static layers.
-- Added onEnter and onExit for challenges.
-- Improved displaying numbers between 0.0001 and 0.1.
-- Added documentation on how gainMult/Exp work for static layers.
-- Fixed a visual issue on mobile, thanks to thepaperpilot.
-- Improved documentation in general.
+- 新增了始终使用单标签模式的设置。
+- 新增了 directMult，它会在指数和软上限之后乘以声望获取量。对于静态层，它实际上直接乘以获取量。
+- 为挑战新增了 onEnter 和 onExit。
+- 改进了 0.0001 到 0.1 之间数字的显示。
+- 新增了关于 gainMult/Exp 对静态层如何生效的文档。
+- 修复了移动端的一个视觉问题，感谢 thepaperpilot。
+- 整体上改进了文档。
 
 ### v2.5.3 - 5/8/21
-- Improved performance of tab formats and bars.
-- Respec confirmation settings are now kept on resets.
-- Improved compatibility with older browsers.
-- Fixed missing pixel on vertical bars.
+- 提升了标签格式和进度条的性能。
+- 洗点确认设置现在会在重置后保留。
+- 改进了与旧版浏览器的兼容性。
+- 修复了竖直进度条缺失一个像素的问题。
 
 ### v2.5.2.1 - 5/7/21
-- Fixed microtabs making layers highlight incorrectly.
+- 修复了微标签导致层高亮错误的问题。
 
 ### v2.5.2 - 5/7/21
-- Added glowColor for subtabs.
-- Improved the display for extremely small numbers.
-- Fixed issues in the buyable docs.
+- 为子标签新增了 glowColor。
+- 改进了极小数字的显示。
+- 修复了可购买项文档中的问题。
 
 ### v2.5.1 - 5/7/21
-- Fixed dynamic things in tabFormat not updating.
+- 修复了 tabFormat 中的动态内容不更新的问题。
 
-## v2.5: Dreams Really Do Come True - 5/7/21
-- Optimizations, hopefully a significant amount.
-- Added OOM/s point gen display at high values (thanks to Ducdat!)
-- Only one tab will display if the window is not wide enough (also thanks to Ducdat!)
-- Holding down a buyable's button now buys it continuously.
-- New milestone setting will also show the most recently unlocked milestone. (Also renamed all settings to be clearer)
-- Added an onHold feature for clickables.
-- Layer nodes will be highlighted even if the player is on the same tab.
-- Added customizable node glowColor.
-- Added buyable purchaseLimit.
-- Amount is automatically supplied to buyable cost and effect functions.
-- Locked (not yet visible) milestones no longer take up space. Also fixed hidden milestones taking a tiny bit of space.
-- Re-centered respec buttons.
-- Force-displayed tooltips are not hidden by resets.
-- Added formatting support for very small numbers. Disabled in most places by default because rounding errors might cause issues. Access it with formatSmall, or enable it globally by adding "allowSmall: true" to modInfo.
+## v2.5: 梦想真的会成真 - 5/7/21
+- 优化，希望幅度可观。
+- 新增了高数值下的 OOM/s 积分产出显示（感谢 Ducdat！）
+- 如果窗口宽度不足，将只显示一个标签（同样感谢 Ducdat！）
+- 按住可购买项的按钮现在会持续购买它。
+- 新的里程碑设置还会显示最近解锁的里程碑。（同时重命名了所有设置以使其更清晰）
+- 为可点击项新增了 onHold 功能。
+- 即使玩家就在同一个标签上，层节点也会被高亮。
+- 新增了可自定义的节点 glowColor。
+- 新增了可购买项 purchaseLimit。
+- 数量会自动提供给可购买项的 cost 和 effect 函数。
+- 已锁定（尚不可见）的里程碑不再占用空间。同时修复了隐藏里程碑会占用极少空间的问题。
+- 重新居中了洗点按钮。
+- 强制显示的提示框不会被重置隐藏。
+- 新增了对极小数字的格式化支持。由于舍入误差可能引发问题，默认在大多数地方禁用。可通过 formatSmall 使用它，或在 modInfo 中添加「allowSmall: true」来全局启用。
 
 
 ### v2.4.1 - 4/29/21
-- A number of minor fixes, many thanks to thepaperpilot.
-- The respec confirmation checkbox is now part of the respec-button component.
-    (This also fixes the checkbox appearing when there is no respec button)
-- Added a few undocumented changes to the 2.4 changelog (the two at the bottom)
+- 若干小幅修复，非常感谢 thepaperpilot。
+- 洗点确认复选框现在是 respec-button 组件的一部分。
+    （这也修复了没有洗点按钮时复选框仍会出现的问题）
+- 在 2.4 更新日志中补充了几条未记录的变更（最底部的那两条）
 
-## v2.4: Rationalized Edition - 4/29/21
-- Completely reworked tooltips. Shift-click a node to force its tooltip to stay displayed. (And hopefully finally fixed flickering!)
-- Added text-input and slider components.
-- Added the ability to toggle respec confirmations.
-- Added custom respec confirmation messages.
-- The red layer highlight will not appear before a layer is unlocked.
-- Added unlocking hotkeys.
-- You no longer need to supply 'rows' and 'cols' for any Big Features.
-- Node symbols can use HTML.
-- Added documentation for the respec button.
-- Added prestigeNotify to subtabs, and prestigeNotify in subtabs also highlights the layer node.
-- The version number no longer contains special characters or irrational numbers.
+## v2.4: 合理化版本 - 4/29/21
+- 完全重做了提示框。Shift 点击节点可强制其提示框保持显示。（希望终于修复了闪烁问题！）
+- 新增了文本输入和滑块组件。
+- 新增了切换洗点确认的能力。
+- 新增了自定义洗点确认消息。
+- 在层解锁之前不会出现红色的层高亮。
+- 新增了解锁快捷键。
+- 你不再需要为任何大型功能提供「rows」和「cols」。
+- 节点符号可以使用 HTML。
+- 新增了洗点按钮的文档。
+- 为子标签新增了 prestigeNotify，子标签中的 prestigeNotify 也会高亮该层节点。
+- 版本号不再包含特殊字符或无理数。
 
-- Added ctrlDown and shiftDown variables.
-- Tooltips now use HTML (this means you need to replace any newlines with <br>)
+- 新增了 ctrlDown 和 shiftDown 变量。
+- 提示框现在使用 HTML（这意味着你需要将所有换行替换为 <br>）
 
 
 ### v2.π.1 - 4/7/21
-- Fixed formatting for some larger numbers.
-- Upgrades will expand if there is too much text to display. 
-- Fixed styling challenges.
-- No longer attempts to display a base currency when there is none.
+- 修复了某些较大数字的格式化。
+- 如果文字过多无法显示，升级会展开。 
+- 修复了挑战的样式。
+- 当不存在基础货币时，不再尝试显示它。
 
-## v2.π: Incrementally Updated - 2/5/21
-- Performance improvements.
-- Fixed tooltips overlapping with the top display.
-- Clicking a popup dismisses it immediately.
-- Added support for bulk challenge completions.
-- "Best" is updated automatically.
-- Fixed keeping Decimal values on reset.
-- Code reorganization and style improvements by fudo.
+## v2.π: 增量更新 - 2/5/21
+- 性能改进。
+- 修复了提示框与顶部显示重叠的问题。
+- 点击弹窗会立即将其关闭。
+- 新增了对批量完成挑战的支持。
+- 「最佳」会自动更新。
+- 修复了重置时保留 Decimal 数值的问题。
+- 由 fudo 进行代码重组和样式改进。
 
 
 ### v2.3.5 - 12/21/20
-- Added resetTime, which tracks the time since a layer prestiged or was reset.
-- A layer node will be highlighted red if one of its subtabs is highlighted red.
-- Fixed issues with keeping challenges, buyables, and clickables on reset.
-- Improved the unlocking of custom layers.
-- Other minor fixes.
+- 新增了 resetTime，它记录自某层进行声望或被重置以来的时间。
+- 如果某个层的某个子标签被高亮为红色，该层节点也会被高亮为红色。
+- 修复了重置时保留挑战、可购买项和可点击项的问题。
+- 改进了自定义层的解锁。
+- 其他小幅修复。
 
 ### v2.3.4 - 12/16/20
-- Added a node image feature.
-- Resource display now always shows the amount of the currency the layer's gain is based on.
-- Added spacing between tree nodes.
-- Another attempt to fix tooltip flickering.
+- 新增了节点图片功能。
+- 资源显示现在总是显示该层获取量所基于的货币数量。
+- 新增了树节点之间的间距。
+- 再次尝试修复提示框闪烁。
 
 ### v2.3.3 - 12/13/20
-- Fixed the first node in a row always taking up space.
-- layerShown is now optional.
-- All prestige types can now use features for custom prestige types.
+- 修复了一行中第一个节点总是占用空间的问题。
+- layerShown 现在是可选的。
+- 所有声望类型现在都可以使用自定义声望类型的功能。
 
 ### v2.3.2 - 12/13/20
-- Fixed achievement/milestone popups.
+- 修复了成就/里程碑弹窗。
 
 ### v2.3.1 - 12/12/20
-- Another attempt to fix flickering tooltips.
-- The "this" keyword should work everywhere except tabFormat arrays (although I may have missed some things).
-- Fixed tree branches not updating when scrolling on the right-side tab.
-- Fixed a spacing issue when a node's symbol is ""
-- Removed some old, unneeded files.
+- 再次尝试修复提示框闪烁。
+- 「this」关键字应该能在除 tabFormat 数组以外的所有地方使用（不过我可能漏掉了一些地方）。
+- 修复了在右侧标签上滚动时树分支不更新的问题。
+- 修复了节点符号为 "" 时的间距问题
+- 移除了一些陈旧、不需要的文件。
 
-## v2.3: Cooler and Newer Edition - 12/10/20
-- Added achievement/milestone popups (thank you to Jacorb for this contribution!)
-- The changelog tab is back, and can be set in mod.js.
-- Layer nodes and respec buttons will not be clicked by pressing "enter".
-- Possible fix for flickering tooltips and strange transitions.
-- The victory screen text is configurable.
-- Added image and textStyle features to achievements.
-- Added an argument to use specific rows in an "upgrades" component.
-- Fixed the comma appearing in the main display when there was no effectDescription
-- Added the ability to easily make a tab that is a collection of layers in subtabs.
-- Improved spacing for embedding layers with subtabs into subtabs.
+## v2.3: 更酷更新的版本 - 12/10/20
+- 新增了成就/里程碑弹窗（感谢 Jacorb 的贡献！）
+- 更新日志标签回归了，并且可以在 mod.js 中设置。
+- 按下「enter」不会点击层节点和洗点按钮。
+- 针对提示框闪烁和异常过渡的可能修复。
+- 胜利界面的文字可配置。
+- 为成就新增了图片和 textStyle 功能。
+- 新增了一个参数，用于在「upgrades」组件中使用特定的行。
+- 修复了没有 effectDescription 时主显示中出现逗号的问题
+- 新增了轻松制作「由子标签中的各个层组成的标签」的能力。
+- 改进了将带子标签的层嵌入子标签时的间距。
 
 
 ### v2.2.8 - 12/03/20
-- Double-clicking a layer node brings you to the main subtab for that layer.
-- Attempted to fix challenges visually updating a different way.
-- Added a softcap function for use in formulas.
-- Added displayRow feature, which lets layers be shown somewhere separate from where they are in the reset order (e.g. side layers)
-- Fixed autoupgrade issue.
+- 双击层节点会将你带到该层的主子标签。
+- 尝试以另一种方式修复挑战的可视更新。
+- 新增了用于公式中的软上限函数。
+- 新增了 displayRow 功能，它让层可以显示在与其重置顺序位置不同的地方（例如侧边层）
+- 修复了自动升级的问题。
 
 ### v2.2.7 - 11/30/20
-- Added autoUpgrade feature.
-- resource-display now shows resource gain per second if passiveGain is active.
-- Fixed formatting issues on some large numbers.
-- Better support for using classed objects in player and in layers/tmp.
-- Made hard resetting more effective.
-- Removed Herobrine from getStartClickables.
+- 新增了 autoUpgrade 功能。
+- 如果 passiveGain 处于激活状态，resource-display 现在会显示每秒资源获取量。
+- 修复了某些大数字的格式化问题。
+- 更好地支持在 player 以及 layers/tmp 中使用类对象。
+- 让硬重置更有效。
+- 从 getStartClickables 中移除了 Herobrine。
 
 ### v2.2.6 - 11/30/20
-- Added goalDescription for challenges and made the new "canComplete" system the standard.
-- Another attempt to fix challenges not visually updating.
-- Fixed side layers not appearing.
-- Fixed getStartClickables again.
+- 为挑战新增了 goalDescription，并将新的「canComplete」系统设为标准。
+- 再次尝试修复挑战不进行可视更新的问题。
+- 修复了侧边层不出现的问题。
+- 再次修复了 getStartClickables。
 
 ### v2.2.5 - 11/29/20
-- Added features for overriding the displays and costs/goals of upgrades and challenges to make them fully custom.
-- best, total, and unlocked are always automatically added to layerData (but best and total will only display if you add them yourself).
-- Fixed getStartClickables.
+- 新增了覆盖升级和挑战的显示与花费/目标的功能，使它们可以完全自定义。
+- best、total 和 unlocked 总是会自动添加到 layerData 中（但只有你自己添加时，best 和 total 才会显示）。
+- 修复了 getStartClickables。
 
 ### v2.2.4 - 11/28/20
-- Added softcap and softcapPower features (for Normal layers)
-- Offline time limit and default max tick length were fixed (previously the limits were 1000x too large)
-- Added fixOldSaves.
-- You can use HTML in main-display.
-- Fixed a number of minor oddities.
+- 新增了软上限和 softcapPower 功能（用于普通层）
+- 修复了离线时间上限和默认最大游戏刻长度（此前这些上限大了 1000 倍）
+- 新增了 fixOldSaves。
+- 你可以在 main-display 中使用 HTML。
+- 修复了若干小异常。
 
 ### v2.2.3 - 11/28/20
-- Layers will be highlighted if you can finish a challenge.
-- The "can complete challenge" color now overrides the "already completed" color.
-- Button nodes now work as side "layers".
-- Setting a tooltip to "" hides it entirely.
+- 如果你能完成某个挑战，相应的层会被高亮。
+- 「可完成挑战」的颜色现在会覆盖「已完成」的颜色。
+- 按钮节点现在可以作为侧边「层」使用。
+- 将提示框设为 "" 会完全隐藏它。
 
 ### v2.2.2 - 11/22/20
-- Fixed right half of the screen being unclickable in some circumstances.
-- Fixed tree branches being offset.
-- Fix to lastSafeTab.
+- 修复了在某些情况下屏幕右半部分无法点击的问题。
+- 修复了树分支偏移的问题。
+- 修复了 lastSafeTab。
 
 ### v2.2.1 - 11/7/20
-- Added a small highlight to layers you can meaningfully prestige on.
-- Added passiveGeneration and autoPrestige features to standardize prestige automation. (The old ways still work, but the new ones work better with other things)
-- Improved milestones visually a bit.
-- "best" and "total" are now only displayed if present in startData.
-- Fixed issues with things not updating visually. (Thank you to to Jacorb!)
-- Side layers and button nodes can now be highlighted.
-- Updated docs on the new tree-related features.
+- 为可以进行有意义声望的层新增了小幅高亮。
+- 新增了 passiveGeneration 和 autoPrestige 功能，以标准化声望自动化。（旧方法仍然可用，但新方法与其他内容配合得更好）
+- 略微改进了里程碑的外观。
+- 「best」和「total」现在仅在 startData 中存在时才会显示。
+- 修复了内容不进行可视更新的问题。（感谢 Jacorb！）
+- 侧边层和按钮节点现在可以被高亮。
+- 更新了关于新的树相关功能的文档。
 
-## v2.2: Uprooted - 11/7/20
-- You can now embed a layer inside of a subtab or microtab!
-- Added support for hiding or reformatting the tree tab 
-- Added non-layer button nodes
-- Added shouldNotify to subtab/microtab buttons. (You can make them highlighted)
-- Added commas to large exponents.
-- Upgrades now only show "currently" if they have an effectDisplay (so not for constant effects).
-- Achievements are part of the default tab format.
-- NaN is now handled more intelligently.
-- Renamed files, and moved less relevant ones to another folder.
-- The "hide completed challenges" setting now only hides challenges at max completions.
-- Thank you to thepaperpilot for fixing errors in docs and improving the infobox appearance!
-- Many other minor fixes.
+## v2.2: 连根拔起 - 11/7/20
+- 现在你可以将某个层嵌入到子标签或微标签内部！
+- 新增了对隐藏或重新格式化树标签的支持 
+- 新增了非层按钮节点
+- 为子标签/微标签按钮新增了 shouldNotify。（你可以让它们高亮）
+- 为大指数新增了逗号分隔。
+- 升级现在只有在拥有 effectDisplay 时才会显示「当前」（因此对恒定效果不显示）。
+- 成就是默认标签格式的一部分。
+- NaN 现在被更智能地处理。
+- 重命名了文件，并将不太相关的文件移到了另一个文件夹。
+- 「隐藏已完成挑战」设置现在只隐藏达到最大完成次数的挑战。
+- 感谢 thepaperpilot 修复文档中的错误并改进信息框的外观！
+- 许多其他小幅修复。
 
 
 ### v2.1.4 - 10/25/20
-- Added an infobox component. Thank you to thepaperpilot for this contribution!
-- Layer type is now optional, and defaults to "none".
-- Improved the look of bars and tab buttons.
-- Improved spacing between layer nodes (also thanks to thepaperpilot!)
-- Fixed the "blank" component breaking if only specifying the height.
-- Fixed some numbers not displaying with enough digits.
-- Made a few more things able to be functions.
-- A few other minor fixes.
+- 新增了信息框组件。感谢 thepaperpilot 的贡献！
+- 层类型现在是可选的，默认为「none」。
+- 改进了进度条和标签按钮的外观。
+- 改进了层节点之间的间距（同样感谢 thepaperpilot！）
+- 修复了「blank」组件在仅指定高度时会出错的问题。
+- 修复了某些数字显示位数不足的问题。
+- 让更多内容可以成为函数。
+- 其他一些小幅修复。
 
 ### v2.1.3.1 - 10/21/20
-- Fixed the update function.
+- 修复了 update 函数。
 
 ### v2.1.3 - 10/21/20
-- gainMult and gainExp are now optional.
-- Layer unlocking is now kept on reset.
-- Game should start up faster.
-- Layer updates now have a determined order and starts with earlier-rowed layers.
-- Automation now has a determined order and starts with later-rowed layers.
-- Fixed issues with resetting clickables and challenges.
-- Commas should no longer appear in the decimal places of a number.
-- Fixed potential issue in displaying the tree.
+- gainMult 和 gainExp 现在是可选的。
+- 层的解锁状态现在会在重置时保留。
+- 游戏启动应该更快了。
+- 层更新现在有了确定的顺序，并从行号更靠前的层开始。
+- 自动化现在有了确定的顺序，并从行号更靠后的层开始。
+- 修复了重置可点击项和挑战的问题。
+- 数字的小数位中不应再出现逗号。
+- 修复了显示树时的潜在问题。
 
 ### v2.1.2 - 10/19/20
-- Added buyUpgrade function (buyUpg still works though)
-- Added author name to modInfo.
-- Fix to crash caused when the name of a subtab or microtab is changed.
-- Fixes to outdated information in docs.
-- Improvements to Discord links.
-- Thank you to thepaperpilot for contributing to this update!
+- 新增了 buyUpgrade 函数（不过 buyUpg 仍然可用）
+- 为 modInfo 新增了作者名。
+- 修复了更改子标签或微标签名称时导致的崩溃。
+- 修复了文档中过时的信息。
+- 改进了 Discord 链接。
+- 感谢 thepaperpilot 对本次更新的贡献！
 
 ### v2.1.1 - 10/17/20
-- Added resource-display component, which displays the base currency for the prestige layer, as well as the best
-    and/or total of this layer's prestige currency.
-- Fixed the value for the base currency not updating in resource-display.
+- 新增了 resource-display 组件，它会显示声望层的基础货币，以及该层声望货币的最佳
+    和/或总计。
+- 修复了 resource-display 中基础货币的数值不更新的问题。
 
-## v2.1: We should have thought of this sooner! - 10/17/20
-- Moved most of the code users will want to edit to mod.js, added documentation for it.
-    - Specifically, modInfo, VERSION, canGenPoints, getPointGen, and maxTickLength
-- Added getStartPoints()
-- Added the ability to store non-layer-related data
-- Added the ability to display more things at the top of the tree tab below points.
-- Made the endgame condition customizable
-- Added "sell one" and "sell all" buttons for buyables.
-- Moved the old "game" to demo.js, and replaced it with a minimal game that won't cause issues when edited.
-- Fixed issues with version number
-- Fixed number formatting issue making things like "10e9" appear.
+## v2.1: 我们本该早点想到这一点！ - 10/17/20
+- 将用户想要编辑的大部分代码移到了 mod.js，并为其新增了文档。
+    - 具体来说，是 modInfo、VERSION、canGenPoints、getPointGen 和 maxTickLength
+- 新增了 getStartPoints()
+- 新增了存储与层无关的数据的能力
+- 新增了在树标签顶部、积分下方显示更多内容的能力。
+- 让终局条件可自定义
+- 为可购买项新增了「出售一个」和「全部出售」按钮。
+- 将旧的「game」移到了 demo.js，并替换为一个在被编辑时不会引发问题的极简游戏。
+- 修复了版本号的问题
+- 修复了会导致出现类似「10e9」这样的数字格式化问题。
 
 
 ### v2.0.5 - 10/16/20
-- Made more features (including prestige parameters) able to be dynamic.
-- Layer nodes can be hidden but still take up space with "ghost" visibility
-- Added clickableEffect for real.
-- Fixed some visual issues with bars.
-- A few other minor tweaks and improvements.
+- 让更多功能（包括声望参数）可以动态化。
+- 层节点可以隐藏，但通过「幽灵」可见性仍然占用空间
+- 真正新增了 clickableEffect。
+- 修复了进度条的一些视觉问题。
+- 其他一些小幅调整和改进。
 
 ### v2.0.4 - 10/16/20
-- Fixed HTML on buttons interfering with clicking on them.
+- 修复了按钮上的 HTML 干扰点击的问题。
 
 ### v2.0.3 - 10/16/20
-- Fixed hotkeys not displaying in info.
-- Fixed the game supressing all external hotkeys.
-- You can use more things as currencies for upgrade costs and challenge goals using currencyLocation.
-- Added maxTickLength, which can be used to prevent offline time or tab-switching from breaking time-limit based mechanics.
-- Made buyable respec buttons and clickable "master" buttons their own components, and gave them a hide/show feature.
-- Added a general "tooltip" feature for achievements.
+- 修复了快捷键不在信息中显示的问题。
+- 修复了游戏屏蔽所有外部快捷键的问题。
+- 使用 currencyLocation，你可以将更多内容用作升级花费和挑战目标的货币。
+- 新增了 maxTickLength，可用于防止离线时间或切换标签破坏基于时间限制的机制。
+- 将可购买项的洗点按钮和可点击项的「主」按钮设为各自的组件，并为它们新增了隐藏/显示功能。
+- 为成就新增了通用的「提示框」功能。
 
 ### v2.0.2 - 10/15/20
-- Branches are now dynamic (they can be functions).
-- Fixed a crash related to offline time.
-- Fixed links being too wide.
+- 分支现在是动态的（它们可以是函数）。
+- 修复了与离线时间相关的崩溃。
+- 修复了链接过宽的问题。
 
 ### v2.0.1 - 10/15/20
-- Fixed side layers appearing multiple times.
+- 修复了侧边层多次出现的问题。
 
-## v2.0: The Pinnacle of Achievement Mountain - 10/15/20
-- Added progress bars, which are highly customizable and can be horizontal or vertical!
-- Added "side layers", displayed smaller and off to the side, and don't get reset by default.
-    They can be used for global achievements and statistics. Speaking of which...
-- Added achievements!
-- Added clickables, a more generalized variant of buyables.
-- Almost every value in layer data can be either a function or a constant value!
-- Added support for multiple completions of challenges.
-- Added "none" prestige type, which removes the need for any other prestige-related features.
-- The points display and other gui elements stay at the top of the screen when the tree scrolls.
-- Added getter/setter functions for the amounts and effects of most Big Features
-- Moved modInfo to game.js, added a spot in modInfo for a Discord link, changelog link.
-    Also added a separate mod version from the TMT version in VERSION.
-- Tree structure is based on layer data, no index.html editing is needed.
-- Tmp does not need to be manually updated.
-- You don't have to have the same amount of upgrades in every row (and challs and buyables)
-- "unlocked" is optional for all Big Components (defaults to true).
-- All displays will update correctly.
-- Changelog is no longer in index.html at all.
-- Generation of Points now happens in the main game loop
-- Changed the reset functions to make keeping things easier
-- Renamed many things to increase readability (see the list in the link below)
-- Improved documentation based on feedback
+## v2.0: 成就之山的巅峰 - 10/15/20
+- 新增了进度条，它高度可自定义，且可以是水平或竖直的！
+- 新增了「侧边层」，它们显示得更小并位于侧边，默认不会被重置。
+    它们可用于全局成就和统计。说到这个……
+- 新增了成就！
+- 新增了可点击项，它是可购买项更通用的变体。
+- 层数据中几乎每个数值都可以是函数或常量！
+- 新增了对挑战多次完成的支持。
+- 新增了「none」声望类型，它免去了对其他任何声望相关功能的需要。
+- 当树滚动时，积分显示和其他界面元素会停留在屏幕顶部。
+- 为大多数大型功能的数值和效果新增了取值/设值函数
+- 将 modInfo 移到了 game.js，并在 modInfo 中为 Discord 链接和更新日志链接新增了位置。
+    还在 VERSION 中新增了独立于 TMT 版本的 mod 版本。
+- 树结构基于层数据，无需编辑 index.html。
+- Tmp 无需手动更新。
+- 你不必让每一行拥有相同数量的升级（以及挑战和可购买项）
+- 「unlocked」对所有大型组件都是可选的（默认为 true）。
+- 所有显示都会正确更新。
+- 更新日志已完全不在 index.html 中。
+- 积分的产出现在发生在主游戏循环中
+- 更改了重置函数，让保留内容更容易
+- 重命名了许多内容以提高可读性（参见下方链接中的列表）
+- 根据反馈改进了文档
 
-  [For a full list of changes to the format and functionality of existing things, click here.](2.0-format-changes.md)
+  [关于现有内容的格式与功能的完整变更列表，请点击此处。](2.0-format-changes.md)
 
 
 
 ### v1.3.5:
 
-- Completely automated convertToDecimal, now you never have to worry about it again.
-- Branches can be defined without a color id. But they can also use hex values for color ids!
-- Created a tutorial for getting started with TMT and Github.
-- Page title is now automatically taken from mod name.
+- 完全自动化了 convertToDecimal，现在你再也不用担心它了。
+- 分支可以在没有颜色 id 的情况下定义。但它们也可以使用十六进制值作为颜色 id！
+- 创建了 TMT 和 Github 入门教程。
+- 页面标题现在会自动取自 mod 名称。
 
 ### v1.3.4 - 10/8/20
 
-- Added "midsection" feature to add things to a tab's layout while still keeping the standard layout.
-- Fix for being able to buy more buyables than you should.
+- 新增了「midsection」功能，可在保持标准布局的同时向标签布局中添加内容。
+- 修复了能够购买超过上限的可购买项的问题。
 
 ### v1.3.3 - 10/7/20
-- Fix for the "order of operations" issue in temp.
+- 修复了 temp 中「运算顺序」的问题。
 
 ### v1.3.1 - 10/7/20
 
-- Added custom CSS and tooltips for Layer Nodes.
-- Added custom CSS for upgrades, buyables, milestones, and challenges, both individually and layer-wide.
-- You can now use HTML in most display text!
-- You can now make milestones unlockable and not display immediately.
-- Fixed importing saves, and issue with upgrades not appearing, and probably more.
-- Optional "name" layer feature, used in confirmation messages.
+- 为层节点新增了自定义 CSS 和提示框。
+- 为升级、可购买项、里程碑和挑战新增了自定义 CSS，既支持单个也支持整层范围。
+- 现在你可以在大多数显示文本中使用 HTML！
+- 现在你可以让里程碑可解锁且不立即显示。
+- 修复了导入存档、升级不出现的问题，可能还有更多。
+- 可选的「name」层功能，用于确认消息中。
 
-## v1.3: Tabception... ception! - 10/7/20
+## v1.3: 标签中的标签... 中的标签！ - 10/7/20
 
-- Added subtabs! And also a Micro-tab component to let you make smaller subtab-esque areas anywhere.
-- Added a "custom" prestige formula type, and a number of features to support it.
-- Added points/sec display (can be disabled).
-- Added h-line, v-line and image-display components, plus components for individual upgrades, challenges, and milestones.
-- Added upgEffect, buyableEffect, and challEffect functions.
-- Added "hide completed challenges" setting.
-- Moved old changelogs to a separate place.
-- Fixed hasMilestone and incr_order.
-- Static layers now show the currency amount needed for the next one if you can buy max.
+- 新增了子标签！还新增了微标签组件，让你可以在任何地方创建更小的类子标签区域。
+- 新增了「custom」声望公式类型，以及若干支持它的功能。
+- 新增了积分/秒显示（可禁用）。
+- 新增了 h-line、v-line 和 image-display 组件，以及用于单个升级、挑战和里程碑的组件。
+- 新增了 upgEffect、buyableEffect 和 challEffect 函数。
+- 新增了「隐藏已完成挑战」设置。
+- 将旧的更新日志移到了单独的位置。
+- 修复了 hasMilestone 和 incr_order。
+- 如果你能最大购买，静态层现在会显示下一个所需货币的数量。
 
 
 ### v1.2.4 - 10/4/20
 
-- Layers are now highlighted if you can buy an upgrade, and a new feature, shouldNotify,
-lets you make it highlight other ways.
-- Fixed bugs with hasUpg, hasChall, hasMilestone, and inChallenge.
-- Changed the sample code to use the above functions for convenience.
+- 如果你能购买某个升级，层现在会被高亮；还有一项新功能 shouldNotify，
+可以让你让它以其他方式高亮。
+- 修复了 hasUpg、hasChall、hasMilestone 和 inChallenge 的错误。
+- 更改了示例代码以使用上述函数，方便起见。
 
 ### v1.2.3 - 10/3/20
 
-- Added a row component, which displays a list of objects in a row.
-- Added a column component, which displays a list of objects in a column (useful within a row).
-- Changed blanks to have a customizable width and height.
+- 新增了行组件，它会以一行显示对象列表。
+- 新增了列组件，它会以一列显示对象列表（在行内很有用）。
+- 更改了空白组件，使其宽高可自定义。
 
-## v1.2: This Changes Everything! - 10/3/20
+## v1.2: 这改变了一切！ - 10/3/20
 
-- Many layer features can now be static values or functions. (This made some formats change,
-which will break old things)
-- You can now use the "this" keyword, to make code easier to transfer when making new layers.
-- Also added "this.layer", which is the current layer's name, and works on existing subfeatures
-(e.g. individual upgrades) as well! Subfeatures also have "this.id".
-- Fixed a big save issue. If you use a unique mod id, your save will never conflict with other mods.
-- Added a configurable offline time limit in modinfo at the top of index.html. (default 1 hour)
-- Added a few minor features, and updated the docs with new information.
+- 许多层功能现在可以是静态值或函数。（这使得一些格式发生了变化，
+这会破坏旧内容）
+- 现在你可以使用「this」关键字，让你在制作新层时更容易迁移代码。
+- 还新增了「this.layer」，它是当前层的名称，并且对现有的子功能也有效
+（例如单个升级）！子功能也有「this.id」。
+- 修复了一个重大的存档问题。如果你使用唯一的模组 id，你的存档将永远不会与其他模组冲突。
+- 在 index.html 顶部的 modinfo 中新增了可配置的离线时间上限。（默认 1 小时）
+- 新增了一些小功能，并用新信息更新了文档。
 
 
 ### v1.1.1 - 9/30/20
 
-- You can define hotkeys directly from layer config.
+- 你可以直接从层配置中定义快捷键。
 
-## v1.1: Enhanced Edition - 9/30/20
+## v1.1: 增强版 - 9/30/20
 
-- Added "Buyables", which can function like Space Buildings or Enhancers.
-- Custom CSS can now be used on any component! Make the third argument an object with CSS
-parameters.
-- Lots of minor good things.
+- 新增了「可购买项」，它们可以像太空建筑或增强器那样运作。
+- 自定义 CSS 现在可以用于任何组件！将第三个参数设为一个带有 CSS
+参数的对象。
+- 许多小的好东西。
 
 
 ## v1.0 - 9/27/20
-- First release.
+- 首次发布。

@@ -9,10 +9,10 @@ function addTime(diff, layer) {
 
 	//I am not that good to perfectly fix that leak. ~ DB Aarex
 	if (time + 0 !== time) {
-		console.log("Memory leak detected. Trying to fix...")
+		console.log("检测到内存泄漏。正在尝试修复...")
 		time = toNumber(time)
 		if (isNaN(time) || time == 0) {
-			console.log("Couldn't fix! Resetting...")
+			console.log("修复失败！正在重置...")
 			time = layer ? player.timePlayed : 0
 			if (!layer) player.timePlayedReset = true
 		}
@@ -25,7 +25,7 @@ function addTime(diff, layer) {
 function respecBuyables(layer) {
 	if (!layers[layer].buyables) return
 	if (!layers[layer].buyables.respec) return
-	if (!player[layer].noRespecConfirm && !confirm(tmp[layer].buyables.respecMessage || "Are you sure you want to respec? This will force you to do a \"" + (tmp[layer].name ? tmp[layer].name : layer) + "\" reset as well!")) return
+	if (!player[layer].noRespecConfirm && !confirm(tmp[layer].buyables.respecMessage || "你确定要洗点吗？这还会强制你进行一次 \"" + (tmp[layer].name ? tmp[layer].name : layer) + "\" 重置！")) return
 	run(layers[layer].buyables.respec, layers[layer].buyables)
 	updateBuyableTemp(layer)
 	document.activeElement.blur()
@@ -280,7 +280,7 @@ function updateMilestones(layer) {
 		if (!(hasMilestone(layer, id)) && layers[layer].milestones[id].done()) {
 			player[layer].milestones.push(id)
 			if (layers[layer].milestones[id].onComplete) layers[layer].milestones[id].onComplete()
-			if (tmp[layer].milestonePopups || tmp[layer].milestonePopups === undefined) doPopup("milestone", tmp[layer].milestones[id].requirementDescription, "Milestone Gotten!", 3, tmp[layer].color);
+			if (tmp[layer].milestonePopups || tmp[layer].milestonePopups === undefined) doPopup("milestone", tmp[layer].milestones[id].requirementDescription, "里程碑达成！", 3, tmp[layer].color);
 			player[layer].lastMilestone = id
 		}
 	}
@@ -291,7 +291,7 @@ function updateAchievements(layer) {
 		if (isPlainObject(layers[layer].achievements[id]) && !(hasAchievement(layer, id)) && layers[layer].achievements[id].done()) {
 			player[layer].achievements.push(id)
 			if (layers[layer].achievements[id].onComplete) layers[layer].achievements[id].onComplete()
-			if (tmp[layer].achievementPopups || tmp[layer].achievementPopups === undefined) doPopup("achievement", tmp[layer].achievements[id].name, "Achievement Gotten!", 3, tmp[layer].color);
+			if (tmp[layer].achievementPopups || tmp[layer].achievementPopups === undefined) doPopup("achievement", tmp[layer].achievements[id].name, "成就达成！", 3, tmp[layer].color);
 		}
 	}
 }
@@ -306,10 +306,10 @@ function addTime(diff, layer) {
 
 	//I am not that good to perfectly fix that leak. ~ DB Aarex
 	if (time + 0 !== time) {
-		console.log("Memory leak detected. Trying to fix...")
+		console.log("检测到内存泄漏。正在尝试修复...")
 		time = toNumber(time)
 		if (isNaN(time) || time == 0) {
-			console.log("Couldn't fix! Resetting...")
+			console.log("修复失败！正在重置...")
 			time = layer ? player.timePlayed : 0
 			if (!layer) player.timePlayedReset = true
 		}
@@ -377,18 +377,18 @@ var activePopups = [];
 var popupID = 0;
 
 // Function to show popups
-function doPopup(type = "none", text = "This is a test popup.", title = "", timer = 3, color = "") {
+function doPopup(type = "none", text = "这是一个测试弹窗。", title = "", timer = 3, color = "") {
 	switch (type) {
 		case "achievement":
-			popupTitle = "Achievement Unlocked!";
+			popupTitle = "成就解锁！";
 			popupType = "achievement-popup"
 			break;
 		case "challenge":
-			popupTitle = "Challenge Complete";
+			popupTitle = "挑战完成";
 			popupType = "challenge-popup"
 			break;
 		default:
-			popupTitle = "Something Happened?";
+			popupTitle = "发生什么事了？";
 			popupType = "default-popup"
 			break;
 	}

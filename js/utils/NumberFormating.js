@@ -127,12 +127,12 @@ function formatWhole(decimal) {
 }
 
 function formatTime(s) {
-    if (EN(s).gte(31536000000)) return format(EN(s).div(31536000)) + " years"
-    if (s < 60) return format(s) + "s"
-    else if (s < 3600) return formatWhole(Math.floor(s / 60)) + "m " + format(s % 60) + "s"
-    else if (s < 86400) return formatWhole(Math.floor(s / 3600)) + "h " + formatWhole(Math.floor(s / 60) % 60) + "m " + format(s % 60) + "s"
-    else if (s < 31536000) return formatWhole(Math.floor(s / 86400) % 365) + "d " + formatWhole(Math.floor(s / 3600) % 24) + "h " + formatWhole(Math.floor(s / 60) % 60) + "m " + format(s % 60) + "s"
-    else return formatWhole(Math.floor(s / 31536000)) + "y " + formatWhole(Math.floor(s / 86400) % 365) + "d " + formatWhole(Math.floor(s / 3600) % 24) + "h " + formatWhole(Math.floor(s / 60) % 60) + "m " + format(s % 60) + "s"
+    if (EN(s).gte(31536000000)) return format(EN(s).div(31536000)) + " 年"
+    if (s < 60) return format(s) + "秒"
+    else if (s < 3600) return formatWhole(Math.floor(s / 60)) + "分" + format(s % 60) + "秒"
+    else if (s < 86400) return formatWhole(Math.floor(s / 3600)) + "时" + formatWhole(Math.floor(s / 60) % 60) + "分" + format(s % 60) + "秒"
+    else if (s < 31536000) return formatWhole(Math.floor(s / 86400) % 365) + "天" + formatWhole(Math.floor(s / 3600) % 24) + "时" + formatWhole(Math.floor(s / 60) % 60) + "分" + format(s % 60) + "秒"
+    else return formatWhole(Math.floor(s / 31536000)) + "年" + formatWhole(Math.floor(s / 86400) % 365) + "天" + formatWhole(Math.floor(s / 3600) % 24) + "时" + formatWhole(Math.floor(s / 60) % 60) + "分" + format(s % 60) + "秒"
 }
 
 function toPlaces(x, precision, maxAccepted) {

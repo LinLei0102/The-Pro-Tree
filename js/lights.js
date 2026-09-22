@@ -7,7 +7,7 @@ addLayer("l", {
     ],
     microtabs: {
         stuff: {
-                        "Upgrades": {
+                        "升级": {
                             unlocked() {return (hasAchievement("a", 11))},
                     content: [
                         ["blank", "15px"],
@@ -18,208 +18,208 @@ addLayer("l", {
         },
     upgrades: {
         11: { title: "301",
-        description: "Gain x69 Lights & boost point gain.",
+        description: "获得 ×69 灯光并提升积分获取。",
         cost: new EN("1"),
 
         },
         12: { title: "302",
-        description: "Gain x420 Lights.",
+        description: "获得 ×420 灯光。",
         cost: new EN("500"),
         unlocked() {
             return hasUpgrade("l", 11)
         }
         },
         13: { title: "303",
-        description: "Gain x6,969 Lights.",
+        description: "获得 ×6,969 灯光。",
         cost: new EN("6666666"),
         unlocked() {
             return hasUpgrade("l", 12)
         }
         },
         14: { title: "304",
-        description: "Gain x69,420 Lights.",
+        description: "获得 ×69,420 灯光。",
         cost: new EN("5e10"),
         unlocked() {
             return hasUpgrade("l", 13)
         }
         },
         15: { title: "305",
-        description: "Gain x1,000,000 Lights.",
+        description: "获得 ×1,000,000 灯光。",
         cost: new EN("5e15"),
         unlocked() {
             return hasUpgrade("l", 14)
         }
         },
         21: { title: "306",
-        description: "Gain x1e9 Lights.",
+        description: "获得 ×1e9 灯光。",
         cost: new EN("2e21"),
         unlocked() {
             return hasUpgrade("l", 15)
         }
         },
         22: { title: "307",
-        description: "Gain x1e12 Lights.",
+        description: "获得 ×1e12 灯光。",
         cost: new EN("5e30"),
         unlocked() {
             return hasUpgrade("l", 21)
         }
         },
         23: { title: "308",
-        description: "Gain x1e15 Lights.",
+        description: "获得 ×1e15 灯光。",
         cost: new EN("5e42"),
         unlocked() {
             return hasUpgrade("l", 22)
         }
         },
         24: { title: "309",
-        description: "Gain x1e18 Lights.",
+        description: "获得 ×1e18 灯光。",
         cost: new EN("1e58"),
         unlocked() {
             return hasUpgrade("l", 23)
         }
         },
         25: { title: "310",
-        description: "Gain x1e21 Lights and generate more points.",
+        description: "获得 ×1e21 灯光并产出更多积分。",
         cost: new EN("1e76"),
         unlocked() {
             return hasUpgrade("l", 24)
         }
         },
         31: { title: "311",
-        description: "Unlock a challenge.",
+        description: "解锁一个挑战。",
         cost: new EN("1e97"),
         unlocked() {
             return hasUpgrade("l", 25)
         }
         },
         32: { title: "312",
-        description: "Gain x1e24 Lights.",
+        description: "获得 ×1e24 灯光。",
         cost: new EN("1e191"),
         unlocked() {
             return hasUpgrade("l", 31)
         }
         },
         33: { title: "313",
-        description: "Gain x1e27 Lights.",
+        description: "获得 ×1e27 灯光。",
         cost: new EN("1e214"),
         unlocked() {
             return hasUpgrade("l",32)
         }
         },
         34: { title: "314",
-        description: "Gain x1e30 Lights.",
+        description: "获得 ×1e30 灯光。",
         cost: new EN("1e241"),
         unlocked() {
             return hasUpgrade("l",33)
         }
         },
         35: { title: "315",
-        description: "Gain x1e60 Lights.",
+        description: "获得 ×1e60 灯光。",
         cost: new EN("1e272"),
         unlocked() {
             return hasUpgrade("l",34)
         }
         },
         41: { title: "316",
-        description: "Gain x1e90 Lights.",
+        description: "获得 ×1e90 灯光。",
         cost: new EN("1e331"),
         unlocked() {
             return hasUpgrade("l",35)
         }
         },
         42: { title: "317",
-        description: "Gain x1e120 Lights.",
+        description: "获得 ×1e120 灯光。",
         cost: new EN("1e421"),
         unlocked() {
             return hasUpgrade("l",41)
         }
         },
         43: { title: "318",
-        description: "Gain x1e150 Lights.",
+        description: "获得 ×1e150 灯光。",
         cost: new EN("1e541"),
         unlocked() {
             return hasUpgrade("l",42)
         }
         },
         44: { title: "319",
-        description: "Gain x1e180 Lights.",
+        description: "获得 ×1e180 灯光。",
         cost: new EN("1e692"),
         unlocked() {
             return hasUpgrade("l",43)
         }
         },
         45: { title: "320",
-        description: "Gain x1e210 Lights, increase point gain and unlocks a new layer.",
+        description: "获得 ×1e210 灯光，提升积分获取并解锁一个新层。",
         cost: new EN("1e872"),
         unlocked() {
             return hasUpgrade("l",44)
         }
         },
         51: { title: "321",
-        description: "Gain x1e240 Lights.",
+        description: "获得 ×1e240 灯光。",
         cost: new EN("1e1081"),
         unlocked() {
             return hasUpgrade("m",45)
         }
         },
         52: { title: "322",
-        description: "Gain x1e270 Lights and increase point gain.",
+        description: "获得 ×1e270 灯光并提升积分获取。",
         cost: new EN("1e1321"),
         unlocked() {
             return hasUpgrade("l",51)
         }
         },
         53: { title: "323",
-        description: "Gain x1e300 Lights and increase point gain again.",
+        description: "获得 ×1e300 灯光并再次提升积分获取。",
         cost: new EN("1e1591"),
         unlocked() {
             return hasUpgrade("l",52)
         }
         },
         54: { title: "324",
-        description: "Gain x1e600 Lights and increase point gain yet again.",
+        description: "获得 ×1e600 灯光并又一次提升积分获取。",
         cost: new EN("1e1891"),
         unlocked() {
             return hasUpgrade("l",53)
         }
         },
         55: { title: "325",
-        description: "Gain x1e900 Lights, increase point gain yet again and unlock a last layer for row 5.",
+        description: "获得 ×1e900 灯光，又一次提升积分获取并解锁第 5 行的最后一个层。",
         cost: new EN("1e2492"),
         unlocked() {
             return hasUpgrade("l",54)
         }
         },
         61: { title: "?",
-        description: "Gain a light boost.",
+        description: "获得灯光增益。",
         cost: new EN("255"),
         unlocked() {
             return inChallenge("o",12)
         }
         },
         62: { title: "?",
-        description: "Gain a bigger light boost.",
+        description: "获得更大的灯光增益。",
         cost: new EN("7777777"),
         unlocked() {
             return inChallenge("o",12)
         }
         },
         63: { title: "?",
-        description: "Gain a even bigger light boost.",
+        description: "获得还要更大的灯光增益。",
         cost: new EN("2e427"),
         unlocked() {
             return inChallenge("o",12)
         }
         },
         64: { title: "?",
-        description: "Gain a lot of light boost.",
+        description: "获得大量灯光增益。",
         cost: new EN("1e69847"),
         unlocked() {
             return inChallenge("o",12)
         }
         },
         65: { title: "?",
-        description: "One more step closer to beat the challenge.",
+        description: "离击败挑战又近一步。",
         cost: new EN("1e105034924"),
         unlocked() {
             return inChallenge("o",12)
@@ -240,7 +240,7 @@ addLayer("l", {
         }
         },
         73: { title: "?",
-        description: "Complete this challenge",
+        description: "完成此挑战",
         cost: new EN("e5.005e9"),
         unlocked() {
             return inChallenge("o",13)
@@ -264,14 +264,14 @@ addLayer("l", {
 
 },
 effectDescription(){
-    return "You can only gain 1 light at a time, can be increased by upgrades."
+    return "你一次只能获得 1 灯光，可通过升级增加。"
     
     /*
       use format(num) whenever displaying a number
     */
    
   },
-    name: "Lights", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "灯光", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "💡", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -281,8 +281,8 @@ effectDescription(){
     }},
     color: "#FFFF8A",
     requires: new EN("ee1.80e308"), // Can be a function that takes requirement increases into account
-    resource: "Lights", // Name of prestige currency
-    baseResource: "Points", // Name of resource prestige is based on
+    resource: "灯光", // Name of prestige currency
+    baseResource: "积分", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     type() {if (hasUpgrade("z", 52)) return "static"
     else return "normal"},    
@@ -429,7 +429,7 @@ effectDescription(){
         if (hasMilestone("o", 1)) return (hasMilestone("o", 1)?1:0)
         },     
         hotkeys: [
-        {key: "l", description: "L: Reset for Lights", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "l", description: "L: 重置以获得灯光", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){if (hasUpgrade("z", 52)) return false
     else return (hasUpgrade("j", 55) || player[this.layer].unlocked)},

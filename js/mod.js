@@ -1,10 +1,10 @@
 let modInfo = {
-	name: "The Pro Tree",
+	name: "专业树",
 	id: "1",
 	author: "ProGamesGrinder",
-	pointsName: "points",
+	pointsName: "积分",
 	modFiles: ["layers.js", "tree.js", "buttonpower.js", "ant.js", "grass.js", "cups.js", "dices.js", "fruits.js", "electricity.js", "houses.js", "ice.js", "achievements.js", "jetpacks.js", "keys.js", "lights.js", "money.js", "notes.js", "onions.js", "quadrilaterals.js", "rings.js", "sand.js", "trees.js", "universal.js", "void.js", "reincarnation.js", "wood.js", "xray.js", "yard.js", "zebras.js", "arrows.js", "ball.js", "circles.js", "duck.js", "eggs.js", "fire.js", "games.js", "hammers.js" , "islands.js", "juice.js","supernova.js","sacrifice.js","asc.js"],
-	discordName: "The ProGames YT Fan Group",
+	discordName: "ProGames YT 粉丝群",
 	discordLink: "https://discord.gg/8pwhpb8rtM",
 	initialStartPoints: new ExpantaNum (0), // Used for hard resets and new players
 	offlineLimit: 24,  // In hours
@@ -13,194 +13,194 @@ let modInfo = {
 // Set your version in num and name
 let VERSION = {
 	num: "0.9c",
-	name: "Bug Fix+2"
+	name: "漏洞修复+2"
 }
 
-let changelog = `<h1>Changelog:</h1><br>
+let changelog = `<h1>更新日志：</h1><br>
 <h3>v0.9c (22/09/2023)</h3><br>
-- Balanced the game yet again.<br>
-- Made 2 upgrades cheaper.<br><br>
+- 又一次平衡了游戏。<br>
+- 让 2 个升级更便宜。<br><br>
 <h3>v0.9b</h3><br>
-- Balanced the game again.<br>
-- Fixed the same text in the 2nd last layer of the game.<br><br>
+- 再次平衡了游戏。<br>
+- 修复了游戏倒数第 2 层中相同的文本。<br><br>
 <h3>v0.9a (21/09/2023)</h3><br>
-- Fixed No Offline Progress Bug.<br>
-- Added 5 new upgrades.<br>
-- Added 1 new milestone.<br>
-- Changed 1 upgrade effect.<br><br>
+- 修复了没有离线进度的漏洞。<br>
+- 添加了 5 个新升级。<br>
+- 添加了 1 个新里程碑。<br>
+- 修改了 1 个升级效果。<br><br>
 <h3>v0.9 (20/09/2023)</h3><br>
-		- Endgame: 1H1,000 Points = 10^^^^1,000.<br>
-		- Added 10 new layers! (2 of them are Normal)<br>
-		- Added more buyables!<br>
-		- Added more milestones.<br>
-		- Added more achievements.<br>
-		- Added 1 new achievement reward for endgame.<br>
-		- Added more upgrades.<br>
-		- Added more challenges.<br>
-		- Added more hotkeys.<br>
-		- Bug Fixes.<br>
-		- Bringed one layer back from the old version.<br>
-		- Added even more OP upgrades.<br>
-		- Balanced the game.<br>
-		- Changed the endgame.<br>
-		- Changed statistics.<br>
-		- Added more tree Upgrades.<br>
-		- Added more sub-prestige layers.<br>
-		- Added more sub-currencies.<br>
-		- Added more milestone effects.<br>
-		- Added more tutorials.<br>
-		- Added more hardcaps.<br><br>
+		- 终局: 1H1,000 积分 = 10^^^^1,000.<br>
+		- 添加了 10 个新层！（其中 2 个是普通层）<br>
+		- 添加了更多可购买项！<br>
+		- 添加了更多里程碑。<br>
+		- 添加了更多成就。<br>
+		- 为终局添加了 1 个新成就奖励。<br>
+		- 添加了更多升级。<br>
+		- 添加了更多挑战。<br>
+		- 添加了更多快捷键。<br>
+		- 漏洞修复。<br>
+		- 从旧版本中带回了 1 个层。<br>
+		- 添加了更多超强升级。<br>
+		- 平衡了游戏。<br>
+		- 修改了终局。<br>
+		- 修改了统计。<br>
+		- 添加了更多树形升级。<br>
+		- 添加了更多次级声望层。<br>
+		- 添加了更多子货币。<br>
+		- 添加了更多里程碑效果。<br>
+		- 添加了更多教程。<br>
+		- 添加了更多硬上限。<br><br>
 <h3>v0.8e (03/06/2023)</h3><br>
-		- Improved the endgame.<br><br>
+		- 改进了终局。<br><br>
 <h3>v0.8d</h3><br>
-		- Some changes in the statistics.<br><br>
+		- 对统计做了一些改动。<br><br>
 <h3>v0.8c (28/05/2023)</h3><br>
-		- Bug Fixes again.<br><br>
+		- 再次漏洞修复。<br><br>
 <h3>v0.8b (20/05/2023)</h3><br>
-		- Changes to the game.<br><br>
+		- 对游戏做了一些改动。<br><br>
 <h3>v0.8a (14/05/2023)</h3><br>
-		- Bug Fixes.<br>
-		- Dropped the 2nd light upgrade cost to 500.<br><br>
+		- 漏洞修复。<br>
+		- 将第 2 个灯光升级的花费降至 500。<br><br>
 <h3>v0.8 (11/05/2023)</h3><br>
-		- Endgame: GGG1.000 Points = 10^^^^3.<br>
-		- Added 10 new layers!! (8 of them are normal.)<br>
-		- Added more buyables!<br>
-		- Added more milestones.<br>
-		- Added more upgrades.<br>
-		- Added more challenges.<br>
-		- Added more sub-currencies.<br>
-		- Added more achievements.<br>
-		- Added more auto upgrades.<br>
-		- Added more emojis.<br>
-        - Added more hotkeys.<br>
-		- Added a few tutorials to not get you stuck.<br>
-		- Changed the key requirement.<br>
+		- 终局: GGG1.000 积分 = 10^^^^3.<br>
+		- 添加了 10 个新层！！（其中 8 个是普通层）<br>
+		- 添加了更多可购买项！<br>
+		- 添加了更多里程碑。<br>
+		- 添加了更多升级。<br>
+		- 添加了更多挑战。<br>
+		- 添加了更多子货币。<br>
+		- 添加了更多成就。<br>
+		- 添加了更多自动升级。<br>
+		- 添加了更多表情符号。<br>
+        - 添加了更多快捷键。<br>
+		- 添加了一些教程，以免你卡住。<br>
+		- 修改了钥匙的条件。<br>
 		- eee10 --> eee9.<br>
-		- Changed a few key upgrades.<br>
-		- Changed the warning color to red.<br>
-		- Changed the endgame.<br>
-		- Added more achievement rewards.<br>
-		- Added best points.<br>
-		- Changed some achievements names.<br>
-		- Added more hardcaps.<br>
-		- Added more softcaps.<br>
-		- Added a sub-prestige layer.<br>
-		- Added statistics.<br>
-		- Added Tree Upgrades.<br>
-		- Added Respec.<br>
-		- Added Buyable Level Cap.<br>
-		- Bug Fixes.<br>
-		- Revamped the game even more.<br>
-		- Changed so many layer names.<br>
-		- Changed Color for some layers.<br>
-		- Added Multi-Completion Challenge.<br>
-		- Changed the Challenge decoration back to original.<br>
-		- Added Milestone Effect.<br>
-		- Added Star.<br><br>
+		- 修改了几个钥匙升级。<br>
+		- 将警告颜色改为红色。<br>
+		- 修改了终局。<br>
+		- 添加了更多成就奖励。<br>
+		- 添加了最佳积分。<br>
+		- 修改了一些成就名称。<br>
+		- 添加了更多硬上限。<br>
+		- 添加了更多软上限。<br>
+		- 添加了 1 个次级声望层。<br>
+		- 添加了统计。<br>
+		- 添加了树形升级。<br>
+		- 添加了洗点。<br>
+		- 添加了可购买项等级上限。<br>
+		- 漏洞修复。<br>
+		- 进一步重制了游戏。<br>
+		- 修改了大量层名称。<br>
+		- 修改了一些层的颜色。<br>
+		- 添加了多重完成挑战。<br>
+		- 将挑战装饰改回原样。<br>
+		- 添加了里程碑效果。<br>
+		- 添加了星星。<br><br>
 <h3>v0.7f (22/02/2023)</h3><br>
-	- Bug Fixes.<br>
-	- Changed some achievements.<br>
-	- Endgame: 1G6 Points.<br><br>
+	- 漏洞修复。<br>
+	- 修改了一些成就。<br>
+	- 终局: 1G6 积分。<br><br>
 <h3>v0.7e</h3><br>
-		- Added dates for each version (The ones it doesnt have the date, it is the same date i did on the earlier version.)<br><br>
+		- 为每个版本添加了日期（没有标注日期的版本，其日期与我制作较早版本时的日期相同。）<br><br>
 <h3>v0.7d</h3><br>
-		- Added more endgames for earlier versions.<br><br>
+		- 为较早的版本添加了更多终局。<br><br>
 <h3>v0.7c (18/02/2023)</h3><br>
-		- Changed the requirement for massive increased points.<br>
-		- The requirement is now 1.2e60 -> 1e61.<br><br>
+		- 修改了积分大幅提升的条件。<br>
+		- 该条件现在是 1.2e60 -> 1e61。<br><br>
 	<h3>v0.7b (17/02/2023)</h3><br>
-		- Fixed Prestige Upgrade 11 does not boost points.<br><br>
+		- 修复了声望升级 11 不提升积分的问题。<br><br>
 		<h3>v0.7a</h3><br>
-		- Bug Fixes.<br><br>
+		- 漏洞修复。<br><br>
 <h3>v0.7 (12/02/2023)</h3><br>
-		- Endgame: 1G5 Points = 10^^^5.<br>
-		- Added 8 new layers! (7 of them is normal.)<br>
-		- Added more buyables!<br>
-		- Added more auto-buyables.<br>
-		- Added more milestones.<br>
-		- Added more upgrades.<br>
-		- Added more challenges.<br>
-		- Added more achievements.<br>
-		- Added more auto upgrades.<br>
-		- Added more sub-currencies.<br>
-		- Added emojis.<br>
-		- Changed the code a little bit.<br>
-		- Changed the endgame.<br>
-		- Changed the hotkeys.<br>
-		- Changed some achievements requirements.<br><br>
+		- 终局: 1G5 积分 = 10^^^5.<br>
+		- 添加了 8 个新层！（其中 7 个是普通层）<br>
+		- 添加了更多可购买项！<br>
+		- 添加了更多自动购买项。<br>
+		- 添加了更多里程碑。<br>
+		- 添加了更多升级。<br>
+		- 添加了更多挑战。<br>
+		- 添加了更多成就。<br>
+		- 添加了更多自动升级。<br>
+		- 添加了更多子货币。<br>
+		- 添加了表情符号。<br>
+		- 稍微修改了代码。<br>
+		- 修改了终局。<br>
+		- 修改了快捷键。<br>
+		- 修改了一些成就的条件。<br><br>
 <h3>v0.6c (08/01/2023)</h3><br>
-		- Removed Christmas Event.<br>
-		- Changed the milestone for row 6.<br><br>
+		- 移除了圣诞活动。<br>
+		- 修改了第 6 行的里程碑。<br><br>
 <h3>v0.6b</h3><br>
-		- Changed some stuff.<br><br>
+		- 修改了一些东西。<br><br>
 <h3>v0.6a</h3><br>
-		- Added more settings!<br>
-		- Added more notations!<br><br>
+		- 添加了更多设置！<br>
+		- 添加了更多记数法！<br><br>
 <h3>v0.6 (18/12/2022)</h3><br>
-		- Endgame: F1,000,000 Points = 10^^1,000,000.<br>
-		- Added 6 new layers!<br>
-		- Added buyables.<br>
-		- Added auto-buyables.<br>
-		- Added new milestones.<br>
-		- Added new upgrades.<br>
-		- Added new challenges.<br>
-		- Added new achievements.<br>
-		- Added auto upgrade.<br>
-		- Added a small christmas event.<br>
-		- Revamped the game a bit.<br>
-		- Added sub-currencies.<br>
-		- Removed some stuff.<br>
-		- Added a warning once you reach endgame.<br><br>
+		- 终局: F1,000,000 积分 = 10^^1,000,000.<br>
+		- 添加了 6 个新层！<br>
+		- 添加了可购买项。<br>
+		- 添加了自动购买项。<br>
+		- 添加了新里程碑。<br>
+		- 添加了新升级。<br>
+		- 添加了新挑战。<br>
+		- 添加了新成就。<br>
+		- 添加了自动升级。<br>
+		- 添加了一个小型圣诞活动。<br>
+		- 稍微重制了游戏。<br>
+		- 添加了子货币。<br>
+		- 移除了一些东西。<br>
+		- 当你到达终局时添加了一个警告。<br><br>
 		<h3>v0.5a (21/11/2022)</h3><br>
-		- Bug Fixes.<br><br>
+		- 漏洞修复。<br><br>
 		<h3>v0.5 (15/11/2022)</h3><br>
-		- Endgame: eeee1.000e10 Points = 10^^6.<br>
-		- Added 5 new layers.<br>
-		- Added new milestones.<br>
-		- Added new upgrades.<br>
-		- Added new Challenges.<br>
-		- Added Achievements.<br>
-		- Rebalances + Bug fixes.<br><br>
-<h3>v0.4 (Released) (27/10/2022)</h3><br>
-		- Endgame: e1.000e17 Points.<br>
-		- Added 4 new layers.<br>
-		- Added new milestones.<br>
-		- Added new upgrades.<br>
-		- Added Challenges.
+		- 终局: eeee1.000e10 积分 = 10^^6.<br>
+		- 添加了 5 个新层。<br>
+		- 添加了新里程碑。<br>
+		- 添加了新升级。<br>
+		- 添加了新挑战。<br>
+		- 添加了成就。<br>
+		- 重新平衡 + 漏洞修复。<br><br>
+<h3>v0.4 (已发布) (27/10/2022)</h3><br>
+		- 终局: e1.000e17 积分。<br>
+		- 添加了 4 个新层。<br>
+		- 添加了新里程碑。<br>
+		- 添加了新升级。<br>
+		- 添加了挑战。
 		<h3></h3><br><br>	
 		<h3>v0.3 (19/10/2022)</h3><br>
-		- Endgame: 1e75,000 Points.<br>
-		- Added 3 new layers.<br>
-		- Added new milestones.<br>
-		- Added new upgrades.<br>
-		- Added Ants resets nothing.
+		- 终局: 1e75,000 积分。<br>
+		- 添加了 3 个新层。<br>
+		- 添加了新里程碑。<br>
+		- 添加了新升级。<br>
+		- 添加了蚂蚁重置不清空任何东西。
 		<h3></h3><br><br>	
 		<h3>v0.2 (10/10/2022)</h3><br>
-		- Endgame: 1e1,130 Points.<br>
-		- Added 1 new layer.<br>
-		- Added Milestones.<br>
-		- Added Branches.<br>
-		- Added New upgrades.<br>
-		- Added Passive Gain.<br>
-		- Added Keep stuff.<br>
-		- Added max ants.<br>
-		- Added current endgame at top.
+		- 终局: 1e1,130 积分。<br>
+		- 添加了 1 个新层。<br>
+		- 添加了里程碑。<br>
+		- 添加了分支。<br>
+		- 添加了新升级。<br>
+		- 添加了被动产出。<br>
+		- 添加了保留内容。<br>
+		- 添加了最大蚂蚁数。<br>
+		- 在顶部添加了当前终局。
 			<h3></h3><br><br>
 			<h3>v0.1 (08/10/2022)</h3><br>
-			- Endgame: 1.000e100 Points.<br>
-			- Added 1 new layer.<br>
-			- Added New Upgrades.
+			- 终局: 1.000e100 积分。<br>
+			- 添加了 1 个新层。<br>
+			- 添加了新升级。
 			<h3></h3><br><br>
 			<h3>v0.0b (02/10/2022)</h3><br>
-			- Endgame: 10,000,000 Points.<br><br>
+			- 终局: 10,000,000 积分。<br><br>
 			<h3>v0.0a (01/10/2022)</h3><br>
-			- Endgame: 1,000,000 Points.<br>
-			- Added 1 layer.<br>
-			- Added Upgrades.<br><br>
+			- 终局: 1,000,000 积分。<br>
+			- 添加了 1 个层。<br>
+			- 添加了升级。<br><br>
 			<h3>v0.0 (25/09/2022)</h3><br>
-			- Endgame: 1,000 Points.<br>
+			- 终局: 1,000 积分。<br>
 			`
-let winText = `Congratulations! You have reached the end and beaten this game, but for now...`
+let winText = `恭喜！你已到达终点并通关了本游戏，但现在...`
 
 // If you add new functions anywhere inside of a layer, and those functions have an effect when called, add them here.
 // (The ones here are examples, all official functions are already taken care of)
@@ -523,8 +523,8 @@ function getUndulatingColor(period = Math.sqrt(760)){
 var displayThings = [
 	function(){
 		let x = getUndulatingColor()
-		let a = "Current endgame: "+colorText("h2", x,format("10^^^^1000"))/*"Taeyeon"*/+" Points."
-		let d = isEndgame()?makeRed("<br>You are past endgame,<br>and the game might not be balanced here."):""
+		let a = "当前终局: "+colorText("h2", x,format("10^^^^1000"))/*"Taeyeon"*/+" 积分。"
+		let d = isEndgame()?makeRed("<br>你已越过终局，<br>游戏在此处的平衡可能并不完善。"):""
 		let e = `<br>────────────────────────────────────`
 		return a+d+e
 	},

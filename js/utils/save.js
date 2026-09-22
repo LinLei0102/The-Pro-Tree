@@ -230,7 +230,7 @@ function loadOptions() {
 }
 function setupModInfo() {
 	modInfo.changelog = changelog;
-	modInfo.winText = winText ? winText : `Congratulations! You have reached the end and beaten this game, but for now...`;
+	modInfo.winText = winText ? winText : `恭喜！你已到达终点并通关了本游戏，但现在...`;
 
 }
 function fixNaNs() {
@@ -246,7 +246,7 @@ function NaNcheck(data, name = "player") {
 		
 		else if (data[item] !== data[item] || checkOmegaNumNaN(data[item])) {
 			if (!NaNalert && !name.endsWith("-tab") && !name.endsWith("blank")) {
-				alert(`NaN lol\nat ${name}.${item}`)
+				alert(`数值异常（NaN）\n位置 ${name}.${item}`)
 				clearInterval(interval);
 				NaNalert = true;
 				return
@@ -272,10 +272,10 @@ function exportSave() {
 }
 function importSave(imported = undefined, forced = false) {
 	if (imported === undefined)
-		imported = prompt("Paste your save here");
+		imported = prompt("在此粘贴你的存档");
 	try {
 		tempPlr = Object.assign(getStartPlayer(), JSON.parse(atob(imported)));
-		if (tempPlr.versionType != modInfo.id && !forced && !confirm("This save appears to be for a different mod! Are you sure you want to import?")) // Wrong save (use "Forced" to force it to accept.)
+		if (tempPlr.versionType != modInfo.id && !forced && !confirm("此存档似乎来自其他模组！你确定要导入吗？")) // Wrong save (use "Forced" to force it to accept.)
 			return;
 		player = tempPlr;
 		player.versionType = modInfo.id;

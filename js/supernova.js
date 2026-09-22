@@ -27,9 +27,9 @@ addLayer("su", {
 
 },
 effectDescription(){
-    let s =  "multiplying medal gain by " + format(tmp[this.layer].effect) 
-    if(this.effect().gt("9.99e9999")){s=s+" (hardcapped)"}
-    else if(this.effect().gt("e3000")){s=s+" (softcapped)"}
+    let s =  "使奖牌获取量乘以 " + format(tmp[this.layer].effect) 
+    if(this.effect().gt("9.99e9999")){s=s+" （硬上限）"}
+    else if(this.effect().gt("e3000")){s=s+" （软上限）"}
     return s
     /*
       use format(num) whenever displaying a number
@@ -45,29 +45,29 @@ tabFormat: [
 row: "9",
 microtabs: {
     stuff: {
-                    "Upgrades": {
+                    "升级": {
                         unlocked() {return (hasAchievement("a", 11))},
                 content: [
                     ["blank", "15px"],
-                    ["raw-html", () => `<h4 style="opacity:.5">Welcome to the Supernova! Resets everything except achievements.<br> You will gain 10 neutron stars on your first supernova reset.</h4>`],
+                    ["raw-html", () => `<h4 style="opacity:.5">欢迎来到超新星！它会重置除成就以外的一切。<br> 首次超新星重置你将获得 10 中子星。</h4>`],
                     ["upgrades", [1,2,3,4,5,43,49,50,51,53]]
                 ]
             },
-            "Mining": {
+            "挖矿": {
                 unlocked() {return (hasUpgrade("su", 55))},
                         content: [
                             
                     ["blank", "15px"],
-                    ["display-text", () => "You have <h2 style='color: #918E85; text-shadow: 0 0 10px #918E85'>" + format(player.su.stones) + "</h2> Stone, multiplying neutron star gain by <h2 style='color: #918E85; text-shadow: 0 0 10px #918E85'> <br>" + format(player.su.stones.max(1).pow(0.02)) + "x.</h2><br>" + "<h3>" + "(" + format(tmp.su.effect2)  +  " Stone/s)</h3><br>-------------------------------------------------------------------------------------"],
-                    ["display-text", () => "You have <h2 style='color: #36454F; text-shadow: 0 0 10px #36454F'>" + format(player.su.coal) + "</h2> Coal, multiplying stone gain by <h2 style='color: #36454F; text-shadow: 0 0 10px #36454F'> <br>" + format(player.su.coal.max(1).pow(0.04)) + "x.</h2><br>-------------------------------------------------------------------------------------"],
-                    ["display-text", () => "You have <h2 style='color: #A59C94; text-shadow: 0 0 10px #A59C94'>" + format(player.su.iron) + "</h2> Iron, multiplying stone and coal gain by <h2 style='color: #A59C94; text-shadow: 0 0 10px #A59C94'> <br>" + format(player.su.iron.max(1).pow(0.1)) + "x.</h2><br>-------------------------------------------------------------------------------------"],
-                    ["display-text", () => "You have <h2 style='color: #FFD700; text-shadow: 0 0 10px #FFD700'>" + format(player.su.gold) + "</h2> Gold, multiplying stone, coal and iron gain by <h2 style='color: #FFD700; text-shadow: 0 0 10px #FFD700'> <br>" + format(player.su.gold.max(1).pow(0.16)) + "x.</h2><br>-------------------------------------------------------------------------------------"],
-                    ["display-text", () => "You have <h2 style='color: #B9F2FF; text-shadow: 0 0 10px #B9F2FF'>" + format(player.su.diamond) + "</h2> Diamond, multiplying stone, coal, iron and gold gain by <h2 style='color: #B9F2FF; text-shadow: 0 0 10px #B9F2FF'> <br>" + format(player.su.diamond.max(1).pow(0.25)) + "x.</h2><br>-------------------------------------------------------------------------------------"],
-                    ["display-text", () => "You have <h2 style='color: #9B111E; text-shadow: 0 0 10px #9B111E'>" + format(player.su.ruby) + "</h2> Ruby, multiplying stone - diamond gain by <h2 style='color: #9B111E; text-shadow: 0 0 10px #9B111E'> <br>" + format(player.su.ruby.max(1).pow(0.36)) + "x.</h2><br>-------------------------------------------------------------------------------------"],
-                    ["display-text", () => "You have <h2 style='color: #50c878; text-shadow: 0 0 10px #50c878'>" + format(player.su.emerald) + "</h2> Emerald, multiplying stone - ruby gain by <h2 style='color: #50c878; text-shadow: 0 0 10px #50c878'> <br>" + format(player.su.emerald.max(1).pow(0.5)) + "x.</h2><br>-------------------------------------------------------------------------------------"],
-                    ["display-text", () => "You have <h2 style='color: #9966cc; text-shadow: 0 0 10px #9966cc'>" + format(player.su.amethyst) + "</h2> Amethyst, multiplying stone - emerald gain by <h2 style='color: #9966cc; text-shadow: 0 0 10px #9966cc'> <br>" + format(player.su.amethyst.max(1).pow(0.64)) + "x.</h2><br>-------------------------------------------------------------------------------------"],
-                    ["display-text", () => "You have <h2 style='color: #0047AB; text-shadow: 0 0 10px #0047AB'>" + format(player.su.cobalt) + "</h2> Cobalt, multiplying stone - amethyst gain by <h2 style='color: #0047AB; text-shadow: 0 0 10px #0047AB'> <br>" + format(player.su.cobalt.max(1).pow(0.81)) + "x.</h2><br>-------------------------------------------------------------------------------------"],
-                    ["raw-html", () => `<h4 style="opacity:.5">Note: Buying an upgrade increases the cost of all upgrades in the same row!</h4><br>`],
+                    ["display-text", () => "你有 <h2 style='color: #918E85; text-shadow: 0 0 10px #918E85'>" + format(player.su.stones) + "</h2> 石头，使中子星获取量乘以 <h2 style='color: #918E85; text-shadow: 0 0 10px #918E85'> <br>" + format(player.su.stones.max(1).pow(0.02)) + "×。</h2><br>" + "<h3>" + "(" + format(tmp.su.effect2)  +  " 石头/秒)</h3><br>-------------------------------------------------------------------------------------"],
+                    ["display-text", () => "你有 <h2 style='color: #36454F; text-shadow: 0 0 10px #36454F'>" + format(player.su.coal) + "</h2> 煤，使石头获取量乘以 <h2 style='color: #36454F; text-shadow: 0 0 10px #36454F'> <br>" + format(player.su.coal.max(1).pow(0.04)) + "×。</h2><br>-------------------------------------------------------------------------------------"],
+                    ["display-text", () => "你有 <h2 style='color: #A59C94; text-shadow: 0 0 10px #A59C94'>" + format(player.su.iron) + "</h2> 铁，使石头与煤的获取量乘以 <h2 style='color: #A59C94; text-shadow: 0 0 10px #A59C94'> <br>" + format(player.su.iron.max(1).pow(0.1)) + "×。</h2><br>-------------------------------------------------------------------------------------"],
+                    ["display-text", () => "你有 <h2 style='color: #FFD700; text-shadow: 0 0 10px #FFD700'>" + format(player.su.gold) + "</h2> 金，使石头、煤与铁的获取量乘以 <h2 style='color: #FFD700; text-shadow: 0 0 10px #FFD700'> <br>" + format(player.su.gold.max(1).pow(0.16)) + "×。</h2><br>-------------------------------------------------------------------------------------"],
+                    ["display-text", () => "你有 <h2 style='color: #B9F2FF; text-shadow: 0 0 10px #B9F2FF'>" + format(player.su.diamond) + "</h2> 钻石，使石头、煤、铁与金的获取量乘以 <h2 style='color: #B9F2FF; text-shadow: 0 0 10px #B9F2FF'> <br>" + format(player.su.diamond.max(1).pow(0.25)) + "×。</h2><br>-------------------------------------------------------------------------------------"],
+                    ["display-text", () => "你有 <h2 style='color: #9B111E; text-shadow: 0 0 10px #9B111E'>" + format(player.su.ruby) + "</h2> 红宝石，使石头至钻石的获取量乘以 <h2 style='color: #9B111E; text-shadow: 0 0 10px #9B111E'> <br>" + format(player.su.ruby.max(1).pow(0.36)) + "×。</h2><br>-------------------------------------------------------------------------------------"],
+                    ["display-text", () => "你有 <h2 style='color: #50c878; text-shadow: 0 0 10px #50c878'>" + format(player.su.emerald) + "</h2> 翡翠，使石头至红宝石的获取量乘以 <h2 style='color: #50c878; text-shadow: 0 0 10px #50c878'> <br>" + format(player.su.emerald.max(1).pow(0.5)) + "×。</h2><br>-------------------------------------------------------------------------------------"],
+                    ["display-text", () => "你有 <h2 style='color: #9966cc; text-shadow: 0 0 10px #9966cc'>" + format(player.su.amethyst) + "</h2> 紫水晶，使石头至翡翠的获取量乘以 <h2 style='color: #9966cc; text-shadow: 0 0 10px #9966cc'> <br>" + format(player.su.amethyst.max(1).pow(0.64)) + "×。</h2><br>-------------------------------------------------------------------------------------"],
+                    ["display-text", () => "你有 <h2 style='color: #0047AB; text-shadow: 0 0 10px #0047AB'>" + format(player.su.cobalt) + "</h2> 钴，使石头至紫水晶的获取量乘以 <h2 style='color: #0047AB; text-shadow: 0 0 10px #0047AB'> <br>" + format(player.su.cobalt.max(1).pow(0.81)) + "×。</h2><br>-------------------------------------------------------------------------------------"],
+                    ["raw-html", () => `<h4 style="opacity:.5">注意: 购买一个升级会提高同一行所有升级的花费！</h4><br>`],
                     ["clickable", 11],
                     ["row", [["upgrade", 61]]],
                     ["row", [["upgrade", 71], ["upgrade", 72]]],
@@ -115,7 +115,7 @@ microtabs: {
 
                 ]
                     },
-                    "Buyables": {
+                    "可购买项": {
                         unlocked() {return (hasUpgrade("su", 101))},
 
                         content: [
@@ -123,21 +123,21 @@ microtabs: {
                             ["row", [["buyable", 11], ["buyable", 12],["buyable", 13],["buyable", 14],["buyable", 15],["buyable", 16],["buyable", 17],["buyable", 18]]],
                         ],
                     },
-            "Milestones": {
+            "里程碑": {
                 content: [
                     ["blank", "15px"],
                     "milestones"
                 ]
                 
             },
-            "Crystal": {
+            "水晶": {
                 unlocked() {return (hasUpgrade("su", 55))},
                 content: [
                     ["blank", "15px"],
-                    ["display-text", () => "You have <h2 style='color: #a7d8de ; text-shadow: 0 0 10px #a7d8de '>" + format(player.su.crystal) + "</h2> Crystal, raising stone - cobalt gain by <h2 style='color: #a7d8de ; text-shadow: 0 0 10px #a7d8de '> <br>^" + format(player.su.crystal.max(1).pow(1)) + ".</h2><br>-------------------------------------------------------------------------------------"],
-                    ["display-text", () => "You have <h2 style='color: #ffc0cb ; text-shadow: 0 0 10px #a7d8de '>" + formatWhole(player.su.crystaltiers) + "</h2> Crystal Tiers, multiplying crystal gain by <h2 style='color: #a7d8de ; text-shadow: 0 0 10px #a7d8de '> <br>x" + format(player.su.crystaltiers.max(1).pow(10)) + ".</h2><br>-------------------------------------------------------------------------------------"],
-                    ["display-text", () => "You have <h2 style='color: #00008b ; text-shadow: 0 0 10px #a7d8de '>" + formatWhole(player.su.crystallevels) + "</h2> Crystal Levels, tetrating crystal tier and crystal gain by <h2 style='color: #ffc0cb ; text-shadow: 0 0 10px #ffc0cb '> <br>^^" + format(player.su.crystallevels.max(1).pow(1)) + ".</h2><br>-------------------------------------------------------------------------------------"],
-                    ["display-text", () => "You have <h2 style='color: #FFFFFF ; text-shadow: 0 0 10px #a7d8de '>" + formatWhole(player.su.crystalstages) + "</h2> Crystal Stages, pentating crystal level, crystal tier and crystal gain by <h2 style='color: #00008b ; text-shadow: 0 0 10px #a7d8de '> <br>^^^" + format(player.su.crystalstages.max(1).pow(1)) + ".</h2><br>-------------------------------------------------------------------------------------"],
+                    ["display-text", () => "你有 <h2 style='color: #a7d8de ; text-shadow: 0 0 10px #a7d8de '>" + format(player.su.crystal) + "</h2> 水晶，使石头至钴的获取量提升 <h2 style='color: #a7d8de ; text-shadow: 0 0 10px #a7d8de '> <br>^" + format(player.su.crystal.max(1).pow(1)) + "。</h2><br>-------------------------------------------------------------------------------------"],
+                    ["display-text", () => "你有 <h2 style='color: #ffc0cb ; text-shadow: 0 0 10px #a7d8de '>" + formatWhole(player.su.crystaltiers) + "</h2> 水晶阶，使水晶获取量乘以 <h2 style='color: #a7d8de ; text-shadow: 0 0 10px #a7d8de '> <br>×" + format(player.su.crystaltiers.max(1).pow(10)) + "。</h2><br>-------------------------------------------------------------------------------------"],
+                    ["display-text", () => "你有 <h2 style='color: #00008b ; text-shadow: 0 0 10px #a7d8de '>" + formatWhole(player.su.crystallevels) + "</h2> 水晶级，使水晶阶与水晶的获取量四阶运算 <h2 style='color: #ffc0cb ; text-shadow: 0 0 10px #ffc0cb '> <br>^^" + format(player.su.crystallevels.max(1).pow(1)) + "。</h2><br>-------------------------------------------------------------------------------------"],
+                    ["display-text", () => "你有 <h2 style='color: #FFFFFF ; text-shadow: 0 0 10px #a7d8de '>" + formatWhole(player.su.crystalstages) + "</h2> 水晶段，使水晶级、水晶阶与水晶的获取量五阶运算 <h2 style='color: #00008b ; text-shadow: 0 0 10px #a7d8de '> <br>^^^" + format(player.su.crystalstages.max(1).pow(1)) + "。</h2><br>-------------------------------------------------------------------------------------"],
                     ["buyable", 21],
                     ["buyable", 22],
                     ["buyable", 23],
@@ -153,21 +153,21 @@ microtabs: {
         },
     },
         tooltip() {
-            return ("Supernova")
+            return ("超新星")
         },
         passiveGeneration() { 
             if (hasMilestone("sa", 1)) return (hasMilestone("sa", 1)?1:0)
             },
         buyables: {
             11: {
-              title: "<h3>Eightteenth Buyable<h3>",
+              title: "<h3>第十八个可购买项<h3>",
               cost(x) {return new EN(1e7).pow(new EN(10).pow(x)).floor()},
               canAfford() { return player.su.stones.gte(this.cost()) && getBuyableAmount('su', 11) < 1},
               buy() {
                  player.su.stones = player.su.stones.sub(this.cost())
                  setBuyableAmount(this.layer, this.id, getBuyableAmount(this.layer, this.id).add(1))
               },
-              display() {return `<h3>Mine coal!<h3>\nLevel: `+ formatWhole(player.su.buyables[11]) + `/1 \nCost: ${format(this.cost())}\n Stone<br>Effect: +${format(this.effect())} coal/s`},
+              display() {return `<h3>开采煤！<h3>\n等级: `+ formatWhole(player.su.buyables[11]) + `/1 \n花费: ${format(this.cost())}\n 石头<br>效果: +${format(this.effect())} 煤/秒`},
               effect(x) { 
                 mult2 = new EN(x)
                 mult2 = mult2.mul(hasUpgrade("su",111)?upgradeEffect("su",111):1)
@@ -192,7 +192,7 @@ microtabs: {
                 return new EN(mult2)}
             },
             12: {
-                title: "<h3>Nineteenth Buyable<h3>",
+                title: "<h3>第十九个可购买项<h3>",
                 cost(x) {return new EN(1e9).pow(new EN(10).pow(x)).floor()},
                 canAfford() { return player.su.coal.gte(this.cost()) && getBuyableAmount('su', 12) < 1},
                 buy() {
@@ -200,7 +200,7 @@ microtabs: {
                    setBuyableAmount(this.layer, this.id, getBuyableAmount(this.layer, this.id).add(1))
                 },
                 unlocked(){return hasUpgrade("su",141)},
-                display() {return `<h3>Mine iron!<h3>\nLevel: `+ formatWhole(player.su.buyables[12]) + `/1 \nCost: ${format(this.cost())}\n Coal<br>Effect: +${format(this.effect())} iron/s`},
+                display() {return `<h3>开采铁！<h3>\n等级: `+ formatWhole(player.su.buyables[12]) + `/1 \n花费: ${format(this.cost())}\n 煤<br>效果: +${format(this.effect())} 铁/秒`},
                 effect(x) { 
                   mult2 = new EN(x)
                   mult2 = mult2.mul(hasUpgrade("su",151)?upgradeEffect("su",151):1)
@@ -225,7 +225,7 @@ microtabs: {
                 return new EN(mult2)}
               },
               13: {
-                title: "<h3>Twentieth Buyable<h3>",
+                title: "<h3>第二十个可购买项<h3>",
                 cost(x) {return new EN(1e13).pow(new EN(10).pow(x)).floor()},
                 canAfford() { return player.su.iron.gte(this.cost()) && getBuyableAmount('su', 13) < 1},
                 buy() {
@@ -233,7 +233,7 @@ microtabs: {
                    setBuyableAmount(this.layer, this.id, getBuyableAmount(this.layer, this.id).add(1))
                 },
                 unlocked(){return hasUpgrade("su",191)},
-                display() {return `<h3>Mine gold!<h3>\nLevel: `+ formatWhole(player.su.buyables[13]) + `/1 \nCost: ${format(this.cost())}\n Iron<br>Effect: +${format(this.effect())} gold/s`},
+                display() {return `<h3>开采金！<h3>\n等级: `+ formatWhole(player.su.buyables[13]) + `/1 \n花费: ${format(this.cost())}\n 铁<br>效果: +${format(this.effect())} 金/秒`},
                 effect(x) { 
                   mult2 = new EN(x)
                   mult2 = mult2.mul(hasUpgrade("su",201)?upgradeEffect("su",201):1)
@@ -257,7 +257,7 @@ microtabs: {
                   return new EN(mult2)}
               },
               14: {
-                title: "<h3>Twenty-First Buyable<h3>",
+                title: "<h3>第二十一个可购买项<h3>",
                 cost(x) {return new EN(1e25).pow(new EN(10).pow(x)).floor()},
                 canAfford() { return player.su.gold.gte(this.cost()) && getBuyableAmount('su', 14) < 1},
                 buy() {
@@ -265,7 +265,7 @@ microtabs: {
                    setBuyableAmount(this.layer, this.id, getBuyableAmount(this.layer, this.id).add(1))
                 },
                 unlocked(){return hasUpgrade("su",241)},
-                display() {return `<h3>Mine diamond!<h3>\nLevel: `+ formatWhole(player.su.buyables[14]) + `/1 \nCost: ${format(this.cost())}\n Gold<br>Effect: +${format(this.effect())} diamond/s`},
+                display() {return `<h3>开采钻石！<h3>\n等级: `+ formatWhole(player.su.buyables[14]) + `/1 \n花费: ${format(this.cost())}\n 金<br>效果: +${format(this.effect())} 钻石/秒`},
                 effect(x) { 
                   mult2 = new EN(x)
                   mult2 = mult2.mul(hasUpgrade("su",251)?upgradeEffect("su",251):1)
@@ -288,7 +288,7 @@ microtabs: {
                   return new EN(mult2)}
               },
               15: {
-                title: "<h3>Twenty-Second Buyable<h3>",
+                title: "<h3>第二十二个可购买项<h3>",
                 cost(x) {return new EN(1e50).pow(new EN(10).pow(x)).floor()},
                 canAfford() { return player.su.diamond.gte(this.cost()) && getBuyableAmount('su', 15) < 1},
                 buy() {
@@ -296,7 +296,7 @@ microtabs: {
                    setBuyableAmount(this.layer, this.id, getBuyableAmount(this.layer, this.id).add(1))
                 },
                 unlocked(){return hasUpgrade("su",291)},
-                display() {return `<h3>Mine Ruby!<h3>\nLevel: `+ formatWhole(player.su.buyables[15]) + `/1 \nCost: ${format(this.cost())}\n Diamond<br>Effect: +${format(this.effect())} ruby/s`},
+                display() {return `<h3>开采红宝石！<h3>\n等级: `+ formatWhole(player.su.buyables[15]) + `/1 \n花费: ${format(this.cost())}\n 钻石<br>效果: +${format(this.effect())} 红宝石/秒`},
                 effect(x) { 
                   mult2 = new EN(x)
                   mult2 = mult2.mul(hasUpgrade("su",301)?upgradeEffect("su",301):1)
@@ -318,7 +318,7 @@ microtabs: {
                   return new EN(mult2)}
               },
               16: {
-                title: "<h3>Twenty-Third Buyable<h3>",
+                title: "<h3>第二十三个可购买项<h3>",
                 cost(x) {return new EN(1e74).pow(new EN(10).pow(x)).floor()},
                 canAfford() { return player.su.ruby.gte(this.cost()) && getBuyableAmount('su', 16) < 1},
                 buy() {
@@ -326,7 +326,7 @@ microtabs: {
                    setBuyableAmount(this.layer, this.id, getBuyableAmount(this.layer, this.id).add(1))
                 },
                 unlocked(){return hasUpgrade("su",351)},
-                display() {return `<h3>Mine Emerald!<h3>\nLevel: `+ formatWhole(player.su.buyables[16]) + `/1 \nCost: ${format(this.cost())}\n Ruby<br>Effect: +${format(this.effect())} emerald/s`},
+                display() {return `<h3>开采翡翠！<h3>\n等级: `+ formatWhole(player.su.buyables[16]) + `/1 \n花费: ${format(this.cost())}\n 红宝石<br>效果: +${format(this.effect())} 翡翠/秒`},
                 effect(x) { 
                   mult2 = new EN(x)
                   mult2 = mult2.mul(hasUpgrade("su",361)?upgradeEffect("su",361):1)
@@ -347,7 +347,7 @@ microtabs: {
                   return new EN(mult2)}
               },
               17: {
-                title: "<h3>Twenty-Fourth Buyable<h3>",
+                title: "<h3>第二十四个可购买项<h3>",
                 cost(x) {return new EN(1e75).pow(new EN(10).pow(x)).floor()},
                 canAfford() { return player.su.emerald.gte(this.cost()) && getBuyableAmount('su', 17) < 1},
                 buy() {
@@ -355,7 +355,7 @@ microtabs: {
                    setBuyableAmount(this.layer, this.id, getBuyableAmount(this.layer, this.id).add(1))
                 },
                 unlocked(){return hasUpgrade("su",391)},
-                display() {return `<h3>Mine Amethyst!<h3>\nLevel: `+ formatWhole(player.su.buyables[17]) + `/1 \nCost: ${format(this.cost())}\n Emerald<br>Effect: +${format(this.effect())} amethyst/s`},
+                display() {return `<h3>开采紫水晶！<h3>\n等级: `+ formatWhole(player.su.buyables[17]) + `/1 \n花费: ${format(this.cost())}\n 翡翠<br>效果: +${format(this.effect())} 紫水晶/秒`},
                 effect(x) { 
                   mult2 = new EN(x)
                   mult2 = mult2.mul(hasUpgrade("su",401)?upgradeEffect("su",401):1)
@@ -369,7 +369,7 @@ microtabs: {
                   return new EN(mult2)}
               },
               18: {
-                title: "<h3>Twenty-Fifth Buyable<h3>",
+                title: "<h3>第二十五个可购买项<h3>",
                 cost(x) {return new EN(1e60).pow(new EN(10).pow(x)).floor()},
                 canAfford() { return player.su.amethyst.gte(this.cost()) && getBuyableAmount('su', 18) < 1},
                 buy() {
@@ -377,7 +377,7 @@ microtabs: {
                    setBuyableAmount(this.layer, this.id, getBuyableAmount(this.layer, this.id).add(1))
                 },
                 unlocked(){return hasUpgrade("su",405)},
-                display() {return `<h3>Mine Cobalt!<h3>\nLevel: `+ formatWhole(player.su.buyables[18]) + `/1 \nCost: ${format(this.cost())}\n Amethyst<br>Effect: +${format(this.effect())} cobalt/s`},
+                display() {return `<h3>开采钴！<h3>\n等级: `+ formatWhole(player.su.buyables[18]) + `/1 \n花费: ${format(this.cost())}\n 紫水晶<br>效果: +${format(this.effect())} 钴/秒`},
                 effect(x) { 
                   mult2 = new EN(x)
                   mult2 = mult2.mul(hasUpgrade("su",411)?upgradeEffect("su",411):1)
@@ -388,11 +388,11 @@ microtabs: {
                   return new EN(mult2)}
               },
               21: {
-                title: "<h3>First Sub-Prestige-Layer<h3>",
+                title: "<h3>第一个子声望层<h3>",
                 cost() {
                   let n = getBuyableAmount(this.layer,this.id)
                   return new EN(1e69).pow(EN.pow(1.01,n.pow(1.01))) },
-                display() { return "<h3>Reset upgrades and all of your ores including neutron stars, but you will gain 1 crystal per second!</h3>"+ "<h3><br>Currently: +"+format(this.effect())+ "/s</h3>" + "\n<h3>Requires: "+format(this.cost())+" Cobalt</h3>\n\n<h3>You have done "+formatWhole(getBuyableAmount(this.layer,this.id))+" crystal resets.<h/3>" },
+                display() { return "<h3>重置升级与你的所有矿石（包括中子星），但你会每秒获得 1 水晶！</h3>"+ "<h3><br>当前: +"+format(this.effect())+ "/s</h3>" + "\n<h3>需要: "+format(this.cost())+" 钴</h3>\n\n<h3>你已完成 "+formatWhole(getBuyableAmount(this.layer,this.id))+" 次水晶重置。<h/3>" },
               effect(){return new EN(0).add(getBuyableAmount(this.layer,this.id))},
                 canAfford() { return player[this.layer].cobalt.gte(this.cost()) },
               unlocked(){return hasUpgrade(this.layer,11)||getBuyableAmount(this.layer,this.id).gte(1)},
@@ -429,11 +429,11 @@ microtabs: {
                 
         },
         22: {
-            title: "<h3>Second Sub-Prestige-Layer<h3>",
+            title: "<h3>第二个子声望层<h3>",
             cost() {
               let n = getBuyableAmount(this.layer,this.id)
               return new EN(1e10).pow(EN.pow(Infinity,n.pow(Infinity))) },
-            display() { return "<h3>Reset upgrades and all of your ores including neutron stars, but you will earn Crystal tier!</h3>"+ "<h3><br>Currently: +"+format(this.effect())+ "/s</h3>" + "\n<h3>Requires: "+format(this.cost())+" Crystal</h3>\n\n<h3>You have done "+formatWhole(getBuyableAmount(this.layer,this.id))+" crystal tiers resets.<h/3>" },
+            display() { return "<h3>重置升级与你的所有矿石（包括中子星），但你会获得水晶阶！</h3>"+ "<h3><br>当前: +"+format(this.effect())+ "/s</h3>" + "\n<h3>需要: "+format(this.cost())+" 水晶</h3>\n\n<h3>你已完成 "+formatWhole(getBuyableAmount(this.layer,this.id))+" 次水晶阶重置。<h/3>" },
           effect(){return new EN(0).add(getBuyableAmount(this.layer,this.id))},
             canAfford() { return player[this.layer].crystal.gte(this.cost()) },
           unlocked(){return hasUpgrade(this.layer,11)||getBuyableAmount(this.layer,this.id).gte(1)},
@@ -471,11 +471,11 @@ microtabs: {
             },
         },
         23: {
-            title: "<h3>Third Sub-Prestige-Layer<h3>",
+            title: "<h3>第三个子声望层<h3>",
             cost() {
               let n = getBuyableAmount(this.layer,this.id)
               return new EN("10^^1000").pow(EN.pow(Infinity,n.pow(Infinity))) },
-            display() { return "<h3>Reset upgrades and all of your ores including neutron stars, but you will earn Crystal level!</h3>"+ "<h3><br>Currently: +"+format(this.effect())+ "/s</h3>" + "\n<h3>Requires: "+format(this.cost())+" Crystal</h3>\n\n<h3>You have done "+formatWhole(getBuyableAmount(this.layer,this.id))+" crystal levels resets.<h/3>" },
+            display() { return "<h3>重置升级与你的所有矿石（包括中子星），但你会获得水晶级！</h3>"+ "<h3><br>当前: +"+format(this.effect())+ "/s</h3>" + "\n<h3>需要: "+format(this.cost())+" 水晶</h3>\n\n<h3>你已完成 "+formatWhole(getBuyableAmount(this.layer,this.id))+" 次水晶级重置。<h/3>" },
           effect(){return new EN(0).add(getBuyableAmount(this.layer,this.id))},
             canAfford() { return player[this.layer].crystal.gte(this.cost()) },
           unlocked(){return hasUpgrade(this.layer,11)||getBuyableAmount(this.layer,this.id).gte(1)},
@@ -508,11 +508,11 @@ microtabs: {
             },
         },
         24: {
-            title: "<h3>Fourth Sub-Prestige-Layer<h3>",
+            title: "<h3>第四个子声望层<h3>",
             cost() {
               let n = getBuyableAmount(this.layer,this.id)
               return new EN("10^^^1000").pow(EN.pow(Infinity,n.pow(Infinity))) },
-            display() { return "<h3>Reset upgrades and all of your ores including neutron stars, but you will earn Crystal stage!</h3>"+ "<h3><br>Currently: +"+format(this.effect())+ "/s</h3>" + "\n<h3>Requires: "+format(this.cost())+" Crystal</h3>\n\n<h3>You have done "+formatWhole(getBuyableAmount(this.layer,this.id))+" crystal stages resets.<h/3>" },
+            display() { return "<h3>重置升级与你的所有矿石（包括中子星），但你会获得水晶段！</h3>"+ "<h3><br>当前: +"+format(this.effect())+ "/s</h3>" + "\n<h3>需要: "+format(this.cost())+" 水晶</h3>\n\n<h3>你已完成 "+formatWhole(getBuyableAmount(this.layer,this.id))+" 次水晶段重置。<h/3>" },
           effect(){return new EN(0).add(getBuyableAmount(this.layer,this.id))},
             canAfford() { return player[this.layer].crystal.gte(this.cost()) },
           unlocked(){return hasUpgrade(this.layer,11)||getBuyableAmount(this.layer,this.id).gte(1)},
@@ -552,11 +552,11 @@ microtabs: {
             },
         },
         25: {
-            title: "<h3>Fifth Sub-Prestige-Layer<h3>",
+            title: "<h3>第五个子声望层<h3>",
             cost() {
               let n = getBuyableAmount(this.layer,this.id)
               return new EN("1e255").pow(EN.pow(Infinity,n.pow(Infinity))) },
-            display() { return "<h3>Reset upgrades and all of your ores including neutron stars and SP, but you will earn Challenge Points</h3>"+ "<h3><br>Currently: +"+format(this.effect())+ "/s</h3>" + "\n<h3>Requires: "+format(this.cost())+" SP</h3>\n\n<h3>You have done "+formatWhole(getBuyableAmount(this.layer,this.id))+" CP resets.<h/3>" },
+            display() { return "<h3>重置升级与你的所有矿石（包括中子星）和献祭点，但你会获得挑战点</h3>"+ "<h3><br>当前: +"+format(this.effect())+ "/s</h3>" + "\n<h3>需要: "+format(this.cost())+" 献祭点</h3>\n\n<h3>你已完成 "+formatWhole(getBuyableAmount(this.layer,this.id))+" 次挑战点重置。<h/3>" },
           effect(){return new EN(0).add(getBuyableAmount(this.layer,this.id))},
             canAfford() { return player.sa.points.gte(this.cost()) },
           unlocked(){return hasUpgrade(this.layer,535)||getBuyableAmount(this.layer,this.id).gte(1)},
@@ -600,11 +600,11 @@ microtabs: {
             },
         },
         26: {
-            title: "<h3>Sixth Sub-Prestige-Layer<h3>",
+            title: "<h3>第六个子声望层<h3>",
             cost() {
               let n = getBuyableAmount(this.layer,this.id)
               return new EN("10^^1000").pow(EN.pow(Infinity,n.pow(Infinity))) },
-            display() { return "<h3>Reset upgrades and all of your ores including neutron stars and SP, but you will earn Challenge Power</h3>"+ "<h3><br>Currently: +"+format(this.effect())+ "/s</h3>" + "\n<h3>Requires: "+format(this.cost())+" SP</h3>\n\n<h3>You have done "+formatWhole(getBuyableAmount(this.layer,this.id))+" CP^2 resets.<h/3>" },
+            display() { return "<h3>重置升级与你的所有矿石（包括中子星）和献祭点，但你会获得挑战能量</h3>"+ "<h3><br>当前: +"+format(this.effect())+ "/s</h3>" + "\n<h3>需要: "+format(this.cost())+" 献祭点</h3>\n\n<h3>你已完成 "+formatWhole(getBuyableAmount(this.layer,this.id))+" 次挑战点^2重置。<h/3>" },
           effect(){return new EN(0).add(getBuyableAmount(this.layer,this.id))},
             canAfford() { return player.sa.points.gte(this.cost()) },
           unlocked(){return hasUpgrade(this.layer,535)||getBuyableAmount(this.layer,this.id).gte(1)},
@@ -642,11 +642,11 @@ microtabs: {
             },
         },
         27: {
-            title: "<h3>Seventh Sub-Prestige-Layer<h3>",
+            title: "<h3>第七个子声望层<h3>",
             cost() {
               let n = getBuyableAmount(this.layer,this.id)
               return new EN("10^^^5000").pow(EN.pow(Infinity,n.pow(Infinity))) },
-            display() { return "<h3>Reset upgrades and all of your ores including neutron stars and SP, but you will earn Challenge Exponential</h3>"+ "<h3><br>Currently: +"+format(this.effect())+ "/s</h3>" + "\n<h3>Requires: "+format(this.cost())+" SP</h3>\n\n<h3>You have done "+formatWhole(getBuyableAmount(this.layer,this.id))+" CE resets.<h/3>" },
+            display() { return "<h3>重置升级与你的所有矿石（包括中子星）和献祭点，但你会获得挑战指数</h3>"+ "<h3><br>当前: +"+format(this.effect())+ "/s</h3>" + "\n<h3>需要: "+format(this.cost())+" 献祭点</h3>\n\n<h3>你已完成 "+formatWhole(getBuyableAmount(this.layer,this.id))+" 次挑战指数重置。<h/3>" },
           effect(){return new EN(0).add(getBuyableAmount(this.layer,this.id))},
             canAfford() { return player.sa.points.gte(this.cost()) },
           unlocked(){return hasUpgrade(this.layer,535)||getBuyableAmount(this.layer,this.id).gte(1)},
@@ -683,11 +683,11 @@ microtabs: {
             },
         },
         28: {
-            title: "<h3>Eighth Sub-Prestige-Layer<h3>",
+            title: "<h3>第八个子声望层<h3>",
             cost() {
               let n = getBuyableAmount(this.layer,this.id)
               return new EN("10^^^10^^^1e20").pow(EN.pow(Infinity,n.pow(Infinity))) },
-            display() { return "<h3>Reset sacrifice upgrades & challenges and all of your ores including neutron stars and SP, but you will earn Challenge Tetrational</h3>"+ "<h3><br>Currently: +"+format(this.effect())+ "/s</h3>" + "\n<h3>Requires: "+format(this.cost())+" SP</h3>\n\n<h3>You have done "+formatWhole(getBuyableAmount(this.layer,this.id))+" CT resets.<h/3>" },
+            display() { return "<h3>重置献祭升级与挑战、以及你的所有矿石（包括中子星）和献祭点，但你会获得挑战四阶</h3>"+ "<h3><br>当前: +"+format(this.effect())+ "/s</h3>" + "\n<h3>需要: "+format(this.cost())+" 献祭点</h3>\n\n<h3>你已完成 "+formatWhole(getBuyableAmount(this.layer,this.id))+" 次挑战四阶重置。<h/3>" },
           effect(){return new EN(0).add(getBuyableAmount(this.layer,this.id))},
             canAfford() { return player.sa.points.gte(this.cost()) },
           unlocked(){return hasUpgrade(this.layer,535)||getBuyableAmount(this.layer,this.id).gte(1)},
@@ -720,11 +720,11 @@ microtabs: {
             },
         },
         29: {
-            title: "<h3>Ninth Sub-Prestige-Layer<h3>",
+            title: "<h3>第九个子声望层<h3>",
             cost() {
               let n = getBuyableAmount(this.layer,this.id)
               return new EN("10^^^10^^^10^^10^^2").pow(EN.pow(Infinity,n.pow(Infinity))) },
-            display() { return "<h3>Reset sacrifice upgrades & challenges and all of your ores including neutron stars and SP, but you will earn Challenge Pentational</h3>"+ "<h3><br>Currently: +"+format(this.effect())+ "/s</h3>" + "\n<h3>Requires: "+format(this.cost())+" SP</h3>\n\n<h3>You have done "+formatWhole(getBuyableAmount(this.layer,this.id))+" CP^3 resets.<h/3>" },
+            display() { return "<h3>重置献祭升级与挑战、以及你的所有矿石（包括中子星）和献祭点，但你会获得挑战五阶</h3>"+ "<h3><br>当前: +"+format(this.effect())+ "/s</h3>" + "\n<h3>需要: "+format(this.cost())+" 献祭点</h3>\n\n<h3>你已完成 "+formatWhole(getBuyableAmount(this.layer,this.id))+" 次挑战点^3重置。<h/3>" },
           effect(){return new EN(0).add(getBuyableAmount(this.layer,this.id))},
             canAfford() { return player.sa.points.gte(this.cost()) },
           unlocked(){return hasUpgrade(this.layer,535)||getBuyableAmount(this.layer,this.id).gte(1)},
@@ -767,119 +767,119 @@ microtabs: {
     },
     upgrades: {
         11: { title: "951",
-        description: "Gain more lights.",
+        description: "获得更多灯光。",
         cost: new EN("0"),
         unlocked() {
             return hasAchievement("a", 111)
         }
         },
         12: { title: "952",
-        description: "Onion Upgrade 71 is x1,000,000 more powerful.",
+        description: "洋葱升级 71 的威力提升至 ×1,000,000。",
         cost: new EN("1"),
         unlocked() {
             return hasUpgrade("su", 11)
         }
         },
         13: { title: "953",
-        description: "Reincarnation Upgrade 105 and 155 is cubed.",
+        description: "轮回升级 105 和 155 立方化。",
         cost: new EN("1"),
         unlocked() {
             return hasUpgrade("su", 12)
         }
         },
         14: { title: "954",
-        description: "Gain x100 Ducks - Juices.",
+        description: "获得 ×100 鸭子 - 果汁。",
         cost: new EN("1"),
         unlocked() {
             return hasUpgrade("su", 13)
         }
         },
         15: { title: "955",
-        description: "Reincarnation Upgrade 171 is 10x faster and gain 10% neutron stars.",
+        description: "轮回升级 171 速度 ×10，且获得 10% 中子星。",
         cost: new EN("2"),
         unlocked() {
             return hasUpgrade("su", 14)
         }
         },
         21: { title: "956",
-        description: "Raise medal gain by 1.01.",
+        description: "奖牌获取 ×1.01。",
         cost: new EN("4"),
         unlocked() {
             return hasUpgrade("su", 15)
         }
         },
         22: { title: "957",
-        description: "Reincarnation Upgrade 181 is 10x faster.",
+        description: "轮回升级 181 速度 ×10。",
         cost: new EN("4"),
         unlocked() {
             return hasUpgrade("su", 21)
         }
         },
         23: { title: "958",
-        description: "Reincarnation Buyable 11 is 2x stronger.",
+        description: "轮回可购买项 11 强度 ×2。",
         cost: new EN("4"),
         unlocked() {
             return hasUpgrade("su", 22)
         }
         },
         24: { title: "959",
-        description: "Reincarnation Buyable 12 is 50% stronger.",
+        description: "轮回可购买项 12 强度 +50%。",
         cost: new EN("8"),
         unlocked() {
             return hasUpgrade("su", 23)
         }
         },
         25: { title: "960",
-        description: "Reincarnation Buyable 21 is 3x stronger and gain 20% neutron stars.",
+        description: "轮回可购买项 21 强度 ×3，且获得 20% 中子星。",
         cost: new EN("8"),
         unlocked() {
             return hasUpgrade("su", 24)
         }
         },
         31: { title: "961",
-        description: "Reincarnation Buyable 22 is 75% stronger.",
+        description: "轮回可购买项 22 强度 +75%。",
         cost: new EN("8"),
         unlocked() {
             return hasUpgrade("su", 25)
         }
         },
         32: { title: "962",
-        description: "Unlock a new reincarnation tree upgrade.",
+        description: "解锁一个新的轮回树形升级。",
         cost: new EN("16"),
         unlocked() {
             return hasUpgrade("su", 31)
         }
         },
         33: { title: "963",
-        description: "Raise medal gain by 1.025.",
+        description: "奖牌获取 ×1.025。",
         cost: new EN("16"),
         unlocked() {
             return hasUpgrade("su", 32)
         }
         },
         34: { title: "964",
-        description: "Raise medal gain by 1.01 again.",
+        description: "奖牌获取再次 ×1.01。",
         cost: new EN("16"),
         unlocked() {
             return hasUpgrade("su", 33)
         }
         },
         35: { title: "965",
-        description: "Gain 50% more Neutron Stars.",
+        description: "获得的中子星 +50%。",
         cost: new EN("32"),
         unlocked() {
             return hasUpgrade("su", 34)
         }
         },
         41: { title: "966",
-        description: "Unlock another tree upgrade and first 2 reincarnation buyables are 10% stronger.",
+        description: "解锁另一个树形升级，且前 2 个轮回可购买项强度 +10%。",
         cost: new EN("32"),
         unlocked() {
             return hasUpgrade("su", 35)
         }
         },
         42: { title: "967",
-        description: "Neutron Stars boosts itself.",
+        description: "中子星增益自身。",
         cost: new EN("64"),
         unlocked() {
             return hasUpgrade("su", 41)
@@ -889,7 +889,7 @@ microtabs: {
         effectDisplay(){return `${format(this.effect())}x`}
         },
         43: { title: "968",
-        description: "Neutron Stars raises medal gain at a reduced rate.",
+        description: "中子星以衰减的比率提升奖牌获取。",
         cost: new EN("64"),
         unlocked() {
             return hasUpgrade("su", 42)
@@ -899,35 +899,35 @@ microtabs: {
         effectDisplay(){return `^${format(this.effect())}`}
         },
         44: { title: "969",
-        description: "Last 2 Reincarnation Buyables are 25% stronger.",
+        description: "最后 2 个轮回可购买项强度 +25%。",
         cost: new EN("128"),
         unlocked() {
             return hasUpgrade("su", 43)
         }
         },
         45: { title: "970",
-        description: "Double Neutron Star Gain.",
+        description: "中子星获取翻倍。",
         cost: new EN("128"),
         unlocked() {
             return hasUpgrade("su", 44)
         }
         },
         51: { title: "971",
-        description: "Raise medal gain by 1.05.",
+        description: "奖牌获取 ×1.05。",
         cost: new EN("256"),
         unlocked() {
             return hasUpgrade("su", 45)
         }
         },
         52: { title: "972",
-        description: "All Reincarnation Buyables are 2x stronger.",
+        description: "所有轮回可购买项强度 ×2。",
         cost: new EN("512"),
         unlocked() {
             return hasUpgrade("su", 51)
         }
         },
         53: { title: "973",
-        description: "Every supernova upgrade, you get 5% more neutron stars (compounding)",
+        description: "每次超新星升级，你获得的中子星 +5%（复利）",
         cost: new EN("512"),
         unlocked() {
             return hasUpgrade("su", 52)
@@ -939,14 +939,14 @@ microtabs: {
         effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect      
         },
         54: { title: "974",
-        description: "Unlock 2 new reincarnation tree upgrades.",
+        description: "解锁 2 个新的轮回树形升级。",
         cost: new EN("1024"),
         unlocked() {
             return hasUpgrade("su", 53)
         }
         },
-        55: { title: "975 (25 more to 1K!)",
-        description: "Unlock a new sub-tab, RU155 does nothing and gain more points based on your supernova time spent on this reset.",
+        55: { title: "975（还差 25 到 1K！）",
+        description: "解锁一个新的子标签页，RU155 没有任何效果，并根据你在本次重置中花费的超新星时间获得更多积分。",
         cost: new EN("65536"),
         unlocked() {
             return hasUpgrade("su", 54)
@@ -957,9 +957,9 @@ microtabs: {
         },
         effectDisplay() { return "^" + format(this.effect()) },
         },
-        61: { title: "Eighteenth Tree Upgrade",
-        description: "Gain more stone based on your neutron stars (Hardcaps at 1.80e308x)",
-        currencyDisplayName: "Stone",
+        61: { title: "第十八个树形升级",
+        description: "根据你的中子星获得更多石头（硬上限 ×1.80e308）",
+        currencyDisplayName: "石头",
         currencyInternalName: "stones",
         currencyLayer: "su",
         cost:("100"),
@@ -968,9 +968,9 @@ microtabs: {
             return player.su.total.add(1).pow(0.1).min("1.79769e308")
         },
     },
-    71: { title: "Nineteenth Tree Upgrade",
-        description: "Raise Stone gain by 1.5.",
-        currencyDisplayName: "Stone",
+    71: { title: "第十九个树形升级",
+        description: "石头获取 ×1.5。",
+        currencyDisplayName: "石头",
         currencyInternalName: "stones",
         currencyLayer: "su",
         cost() {
@@ -992,9 +992,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    72: { title: "Twentieth Tree Upgrade",
-        description: "Raise Neutron Star and medal gain by 1.5.",
-        currencyDisplayName: "Stone",
+    72: { title: "第二十个树形升级",
+        description: "中子星与奖牌获取 ×1.5。",
+        currencyDisplayName: "石头",
         currencyInternalName: "stones",
         currencyLayer: "su",
         cost() {
@@ -1015,9 +1015,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    81: { title: "Twenty-First Tree Upgrade",
-        description: "Each Supernova Upgrade, raises stone gain by 1.01.",
-        currencyDisplayName: "Stone",
+    81: { title: "第二十一个树形升级",
+        description: "每次超新星升级，石头获取 ×1.01。",
+        currencyDisplayName: "石头",
         currencyInternalName: "stones",
         currencyLayer: "su",
         cost:("2e3"),
@@ -1036,9 +1036,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    91: { title: "Twenty-Second Tree Upgrade",
-        description: "Raise Stone gain by 1.5 again.",
-        currencyDisplayName: "Stone",
+    91: { title: "第二十二个树形升级",
+        description: "石头获取再次 ×1.5。",
+        currencyDisplayName: "石头",
         currencyInternalName: "stones",
         currencyLayer: "su",
         cost() {
@@ -1060,9 +1060,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    92: { title: "Twenty-Third Tree Upgrade",
-        description: "Stone boosts itself (Hardcaps at 1,000x)",
-        currencyDisplayName: "Stone",
+    92: { title: "第二十三个树形升级",
+        description: "石头增益自身（硬上限 ×1,000）",
+        currencyDisplayName: "石头",
         currencyInternalName: "stones",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -1088,9 +1088,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    101: { title: "Twenty-Fourth Tree Upgrade",
-        description: "Unlock a buyable.",
-        currencyDisplayName: "Stone",
+    101: { title: "第二十四个树形升级",
+        description: "解锁一个可购买项。",
+        currencyDisplayName: "石头",
         currencyInternalName: "stones",
         currencyLayer: "su",
         cost: ("1e7"),
@@ -1104,9 +1104,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    111: { title: "Twenty-Fifth Tree Upgrade",
-        description: "Stone boosts coal gain.",
-        currencyDisplayName: "Stone",
+    111: { title: "第二十五个树形升级",
+        description: "石头增益煤的获取。",
+        currencyDisplayName: "石头",
         currencyInternalName: "stones",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -1132,9 +1132,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    112: { title: "Twenty-Sixth Tree Upgrade",
-        description: "Each Supernova upgrade, adds +2x to coal gain.",
-        currencyDisplayName: "Coal",
+    112: { title: "第二十六个树形升级",
+        description: "每次超新星升级，煤获取增加 ×2。",
+        currencyDisplayName: "煤",
         currencyInternalName: "coal",
         currencyLayer: "su",
         effect() {
@@ -1161,9 +1161,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    121: { title: "Twenty-Seventh Tree Upgrade",
-        description: "Gain more coal based on your neutron stars.",
-        currencyDisplayName: "Coal",
+    121: { title: "第二十七个树形升级",
+        description: "根据你的中子星获得更多煤。",
+        currencyDisplayName: "煤",
         currencyInternalName: "coal",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -1189,9 +1189,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    122: { title: "Twenty-Eighth Tree Upgrade",
-    description: "Coal boosts itself.",
-    currencyDisplayName: "Coal",
+    122: { title: "第二十八个树形升级",
+    description: "煤增益自身。",
+    currencyDisplayName: "煤",
     currencyInternalName: "coal",
     currencyLayer: "su",
     effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -1218,9 +1218,9 @@ microtabs: {
     },
     style: { margin: "10px" }
 },
-131: { title: "Twenty-Eighth Tree Upgrade",
-    description: "Coal boosts neutron star gain.",
-    currencyDisplayName: "Coal",
+131: { title: "第二十八个树形升级",
+    description: "煤增益中子星获取。",
+    currencyDisplayName: "煤",
     currencyInternalName: "coal",
     currencyLayer: "su",
     effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -1246,9 +1246,9 @@ microtabs: {
     },
     style: { margin: "10px" }
 },
-132: { title: "Twenty-Ninth Tree Upgrade",
-    description: "Raise Stone gain by 1.25.",
-    currencyDisplayName: "Coal",
+132: { title: "第二十九个树形升级",
+    description: "石头获取 ×1.25。",
+    currencyDisplayName: "煤",
     currencyInternalName: "coal",
     currencyLayer: "su",
     cost() {
@@ -1270,9 +1270,9 @@ microtabs: {
     },
     style: { margin: "10px" }
 },
-141: { title: "Thirtieth Tree Upgrade",
-        description: "Unlock another buyable.",
-        currencyDisplayName: "Coal",
+141: { title: "第三十个树形升级",
+        description: "解锁另一个可购买项。",
+        currencyDisplayName: "煤",
         currencyInternalName: "coal",
         currencyLayer: "su",
         cost: ("1e9"),
@@ -1286,9 +1286,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-151: { title: "Thirty-First Tree Upgrade",
-        description: "Stone boosts iron gain.",
-        currencyDisplayName: "Stone",
+151: { title: "第三十一个树形升级",
+        description: "石头增益铁的获取。",
+        currencyDisplayName: "石头",
         currencyInternalName: "stones",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -1314,9 +1314,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-        152: { title: "Thirty-Second Tree Upgrade",
-        description: "Coal boosts iron gain.",
-        currencyDisplayName: "Coal",
+        152: { title: "第三十二个树形升级",
+        description: "煤增益铁的获取。",
+        currencyDisplayName: "煤",
         currencyInternalName: "coal",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -1342,9 +1342,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    161: { title: "Thirty-Third Tree Upgrade",
-        description: "Gain more iron based on your neutron stars.",
-        currencyDisplayName: "Iron",
+    161: { title: "第三十三个树形升级",
+        description: "根据你的中子星获得更多铁。",
+        currencyDisplayName: "铁",
         currencyInternalName: "iron",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -1370,9 +1370,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-        162: { title: "Thirty-Fourth Tree Upgrade",
-        description: "Each Supernova upgrade, increase 10% to iron gain (compounding)",
-        currencyDisplayName: "Iron",
+        162: { title: "第三十四个树形升级",
+        description: "每次超新星升级，铁获取 +10%（复利）",
+        currencyDisplayName: "铁",
         currencyInternalName: "iron",
         currencyLayer: "su",
         effect() {
@@ -1399,9 +1399,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    171: { title: "Thirty-Fifth Tree Upgrade",
-        description: "Iron boosts itself.",
-        currencyDisplayName: "Iron",
+    171: { title: "第三十五个树形升级",
+        description: "铁增益自身。",
+        currencyDisplayName: "铁",
         currencyInternalName: "iron",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -1427,9 +1427,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-        172: { title: "Thirty-Sixth Tree Upgrade",
-        description: "Iron boosts neutron star gain.",
-        currencyDisplayName: "Iron",
+        172: { title: "第三十六个树形升级",
+        description: "铁增益中子星获取。",
+        currencyDisplayName: "铁",
         currencyInternalName: "iron",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -1455,9 +1455,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    181: { title: "Thirty-Seventh Tree Upgrade",
-        description: "Raise Stone gain by 1.2.",
-        currencyDisplayName: "Coal",
+    181: { title: "第三十七个树形升级",
+        description: "石头获取 ×1.2。",
+        currencyDisplayName: "煤",
         currencyInternalName: "coal",
         currencyLayer: "su",
         cost() {
@@ -1479,9 +1479,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-        182: { title: "Thirty-Eighth Tree Upgrade",
-        description: "Raise Coal gain by 1.25.",
-        currencyDisplayName: "Iron",
+        182: { title: "第三十八个树形升级",
+        description: "煤获取 ×1.25。",
+        currencyDisplayName: "铁",
         currencyInternalName: "iron",
         currencyLayer: "su",
         cost() {
@@ -1503,9 +1503,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    191: { title: "Thirty-Ninth Tree Upgrade",
-        description: "Unlock another buyable.",
-        currencyDisplayName: "Iron",
+    191: { title: "第三十九个树形升级",
+        description: "解锁另一个可购买项。",
+        currencyDisplayName: "铁",
         currencyInternalName: "iron",
         currencyLayer: "su",
         cost: ("1e14"),
@@ -1519,9 +1519,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    201: { title: "Fortieth Tree Upgrade",
-        description: "Stone boosts gold gain.",
-        currencyDisplayName: "Stone",
+    201: { title: "第四十个树形升级",
+        description: "石头增益金的获取。",
+        currencyDisplayName: "石头",
         currencyInternalName: "stones",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -1547,9 +1547,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    202: { title: "Forty-First Tree Upgrade",
-        description: "Coal boosts gold gain.",
-        currencyDisplayName: "Coal",
+    202: { title: "第四十一个树形升级",
+        description: "煤增益金的获取。",
+        currencyDisplayName: "煤",
         currencyInternalName: "coal",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -1575,9 +1575,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    203: { title: "Forty-Second Tree Upgrade",
-        description: "Iron boosts gold gain.",
-        currencyDisplayName: "Iron",
+    203: { title: "第四十二个树形升级",
+        description: "铁增益金的获取。",
+        currencyDisplayName: "铁",
         currencyInternalName: "iron",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -1603,9 +1603,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    204: { title: "Forty-Third Tree Upgrade",
-        description: "Gain more gold based on your neutron stars.",
-        currencyDisplayName: "Gold",
+    204: { title: "第四十三个树形升级",
+        description: "根据你的中子星获得更多金。",
+        currencyDisplayName: "黄金",
         currencyInternalName: "gold",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -1631,9 +1631,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    205: { title: "Forty-Fourth Tree Upgrade",
-        description: "Each Supernova upgrade, increase 12.5% to gold gain (compounding).",
-        currencyDisplayName: "Gold",
+    205: { title: "第四十四个树形升级",
+        description: "每次超新星升级，金获取 +12.5%（复利）。",
+        currencyDisplayName: "黄金",
         currencyInternalName: "gold",
         currencyLayer: "su",
         effect() {
@@ -1660,9 +1660,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    211: { title: "Forty-Fifth Tree Upgrade",
-        description: "Gold boosts itself.",
-        currencyDisplayName: "Gold",
+    211: { title: "第四十五个树形升级",
+        description: "金增益自身。",
+        currencyDisplayName: "黄金",
         currencyInternalName: "gold",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -1688,9 +1688,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    221: { title: "Forty-Sixth Tree Upgrade",
-        description: "Gold boosts neutron star gain.",
-        currencyDisplayName: "Gold",
+    221: { title: "第四十六个树形升级",
+        description: "金增益中子星获取。",
+        currencyDisplayName: "黄金",
         currencyInternalName: "gold",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -1716,9 +1716,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    231: { title: "Forty-Seventh Tree Upgrade",
-        description: "Raise Stone gain by 1.2, coal by 1.3 and iron by 1.25.",
-        currencyDisplayName: "Gold",
+    231: { title: "第四十七个树形升级",
+        description: "石头获取 ×1.2、煤 ×1.3、铁 ×1.25。",
+        currencyDisplayName: "黄金",
         currencyInternalName: "gold",
         currencyLayer: "su",
         cost: ("2e20"),
@@ -1732,9 +1732,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    241: { title: "Forty-Eighth Tree Upgrade",
-        description: "Unlock another new buyable.",
-        currencyDisplayName: "Gold",
+    241: { title: "第四十八个树形升级",
+        description: "解锁另一个新的可购买项。",
+        currencyDisplayName: "黄金",
         currencyInternalName: "gold",
         currencyLayer: "su",
         cost: ("1e25"),
@@ -1748,9 +1748,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    251: { title: "Forty-Ninth Tree Upgrade",
-        description: "Stone boosts diamond gain.",
-        currencyDisplayName: "Stone",
+    251: { title: "第四十九个树形升级",
+        description: "石头增益钻石的获取。",
+        currencyDisplayName: "石头",
         currencyInternalName: "stones",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -1776,9 +1776,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    252: { title: "Fiftieth Tree Upgrade!",
-        description: "Coal boosts diamond gain.",
-        currencyDisplayName: "Coal",
+    252: { title: "第五十个树形升级！",
+        description: "煤增益钻石的获取。",
+        currencyDisplayName: "煤",
         currencyInternalName: "coal",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -1804,9 +1804,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    253: { title: "Fifty-First Tree Upgrade",
-        description: "Iron boosts diamond gain.",
-        currencyDisplayName: "Iron",
+    253: { title: "第五十一个树形升级",
+        description: "铁增益钻石的获取。",
+        currencyDisplayName: "铁",
         currencyInternalName: "iron",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -1832,9 +1832,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    254: { title: "Fifty-Second Tree Upgrade",
-        description: "Gold boosts diamond gain.",
-        currencyDisplayName: "Gold",
+    254: { title: "第五十二个树形升级",
+        description: "金增益钻石的获取。",
+        currencyDisplayName: "黄金",
         currencyInternalName: "gold",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -1860,9 +1860,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    261: { title: "Fifty-Third Tree Upgrade",
-        description: "Neutron stars boosts diamond gain.",
-        currencyDisplayName: "Diamond",
+    261: { title: "第五十三个树形升级",
+        description: "中子星增益钻石的获取。",
+        currencyDisplayName: "钻石",
         currencyInternalName: "diamond",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -1888,9 +1888,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    271: { title: "Fifty-Fourth Tree Upgrade",
-        description: "Diamond boosts neutron star gain.",
-        currencyDisplayName: "Diamond",
+    271: { title: "第五十四个树形升级",
+        description: "钻石增益中子星获取。",
+        currencyDisplayName: "钻石",
         currencyInternalName: "diamond",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -1916,9 +1916,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    272: { title: "Fifty-Fifth Tree Upgrade",
-        description: "Each supernova upgrade, increase 20% to diamond gain.",
-        currencyDisplayName: "Diamond",
+    272: { title: "第五十五个树形升级",
+        description: "每次超新星升级，钻石获取 +20%。",
+        currencyDisplayName: "钻石",
         currencyInternalName: "diamond",
         currencyLayer: "su",
         effect() {
@@ -1945,9 +1945,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    273: { title: "Fifty-Sixth Tree Upgrade",
-        description: "Diamond boosts itself.",
-        currencyDisplayName: "Diamond",
+    273: { title: "第五十六个树形升级",
+        description: "钻石增益自身。",
+        currencyDisplayName: "钻石",
         currencyInternalName: "diamond",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -1973,9 +1973,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    281: { title: "Fifty-Seventh Tree Upgrade",
-        description: "Raise Neutron Star gain by 1.5 again, stone by 1.1, coal by 1.3 again, iron by 1.25 and gold by 1.2.",
-        currencyDisplayName: "Diamond",
+    281: { title: "第五十七个树形升级",
+        description: "中子星获取再次 ×1.5，石头 ×1.1，煤再次 ×1.3，铁 ×1.25，金 ×1.2。",
+        currencyDisplayName: "钻石",
         currencyInternalName: "diamond",
         currencyLayer: "su",
         cost: ("1e35"),
@@ -1989,9 +1989,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    291: { title: "Fifty-Eighth Tree Upgrade",
-        description: "Unlock a new buyable.",
-        currencyDisplayName: "Diamond",
+    291: { title: "第五十八个树形升级",
+        description: "解锁一个新的可购买项。",
+        currencyDisplayName: "钻石",
         currencyInternalName: "diamond",
         currencyLayer: "su",
         cost: ("1e50"),
@@ -2005,9 +2005,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    301: { title: "Fifty-Ninth Tree Upgrade",
-        description: "Stone boosts ruby gain.",
-        currencyDisplayName: "Stone",
+    301: { title: "第五十九个树形升级",
+        description: "石头增益红宝石的获取。",
+        currencyDisplayName: "石头",
         currencyInternalName: "stones",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -2033,9 +2033,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    302: { title: "Sixtieth Tree Upgrade",
-        description: "Coal boosts ruby gain.",
-        currencyDisplayName: "Coal",
+    302: { title: "第六十个树形升级",
+        description: "煤增益红宝石的获取。",
+        currencyDisplayName: "煤",
         currencyInternalName: "coal",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -2061,9 +2061,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    303: { title: "Sixty-First Tree Upgrade",
-        description: "Iron boosts ruby gain.",
-        currencyDisplayName: "Iron",
+    303: { title: "第六十一个树形升级",
+        description: "铁增益红宝石的获取。",
+        currencyDisplayName: "铁",
         currencyInternalName: "iron",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -2089,9 +2089,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    304: { title: "Sixty-Second Tree Upgrade",
-        description: "Gold boosts ruby gain.",
-        currencyDisplayName: "Gold",
+    304: { title: "第六十二个树形升级",
+        description: "金增益红宝石的获取。",
+        currencyDisplayName: "黄金",
         currencyInternalName: "gold",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -2117,9 +2117,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    305: { title: "Sixty-Third Tree Upgrade",
-        description: "Diamond boosts ruby gain.",
-        currencyDisplayName: "Diamond",
+    305: { title: "第六十三个树形升级",
+        description: "钻石增益红宝石的获取。",
+        currencyDisplayName: "钻石",
         currencyInternalName: "diamond",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -2145,9 +2145,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    311: { title: "Sixty-Fourth Tree Upgrade",
-        description: "Neutron stars boosts ruby gain.",
-        currencyDisplayName: "Ruby",
+    311: { title: "第六十四个树形升级",
+        description: "中子星增益红宝石的获取。",
+        currencyDisplayName: "红宝石",
         currencyInternalName: "ruby",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -2165,9 +2165,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    321: { title: "Sixty-Fifth Tree Upgrade",
-        description: "Ruby boosts neutron star gain.",
-        currencyDisplayName: "Ruby",
+    321: { title: "第六十五个树形升级",
+        description: "红宝石增益中子星获取。",
+        currencyDisplayName: "红宝石",
         currencyInternalName: "ruby",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -2193,9 +2193,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    322: { title: "Sixty-Sixth Tree Upgrade",
-        description: "Ruby boosts itself.",
-        currencyDisplayName: "Ruby",
+    322: { title: "第六十六个树形升级",
+        description: "红宝石增益自身。",
+        currencyDisplayName: "红宝石",
         currencyInternalName: "ruby",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -2221,9 +2221,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    331: { title: "Sixty-Seventh Tree Upgrade",
-        description: "Each Supernova Upgrade, increases ruby gain by 15%.",
-        currencyDisplayName: "Ruby",
+    331: { title: "第六十七个树形升级",
+        description: "每次超新星升级，红宝石获取 +15%。",
+        currencyDisplayName: "红宝石",
         currencyInternalName: "ruby",
         currencyLayer: "su",
         effect() {
@@ -2250,9 +2250,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    341: { title: "Sixty-Eighth Tree Upgrade",
-        description: "Raise Coal, Iron, Gold gain by 1.25 and diamond by 1.2.",
-        currencyDisplayName: "Ruby",
+    341: { title: "第六十八个树形升级",
+        description: "煤、铁、金获取 ×1.25，钻石 ×1.2。",
+        currencyDisplayName: "红宝石",
         currencyInternalName: "ruby",
         currencyLayer: "su",
         cost: ("6.969e69"),
@@ -2266,9 +2266,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    351: { title: "Sixty-Ninth Tree Upgrade (nice)",
-        description: "Unlock a new buyable.",
-        currencyDisplayName: "Ruby",
+    351: { title: "第六十九个树形升级（不错）",
+        description: "解锁一个新的可购买项。",
+        currencyDisplayName: "红宝石",
         currencyInternalName: "ruby",
         currencyLayer: "su",
         cost: ("1e74"),
@@ -2282,9 +2282,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    361: { title: "Seventieth Tree Upgrade",
-        description: "Stone boosts emerald gain.",
-        currencyDisplayName: "Stone",
+    361: { title: "第七十个树形升级",
+        description: "石头增益翡翠的获取。",
+        currencyDisplayName: "石头",
         currencyInternalName: "stones",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -2310,9 +2310,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    362: { title: "Seventy-First Tree Upgrade",
-        description: "Coal boosts emerald gain.",
-        currencyDisplayName: "Coal",
+    362: { title: "第七十一个树形升级",
+        description: "煤增益翡翠的获取。",
+        currencyDisplayName: "煤",
         currencyInternalName: "coal",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -2338,9 +2338,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    363: { title: "Seventy-Second Tree Upgrade",
-        description: "Iron boosts emerald gain.",
-        currencyDisplayName: "Iron",
+    363: { title: "第七十二个树形升级",
+        description: "铁增益翡翠的获取。",
+        currencyDisplayName: "铁",
         currencyInternalName: "iron",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -2366,9 +2366,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    364: { title: "Seventy-Third Tree Upgrade",
-        description: "Gold boosts emerald gain.",
-        currencyDisplayName: "Gold",
+    364: { title: "第七十三个树形升级",
+        description: "金增益翡翠的获取。",
+        currencyDisplayName: "黄金",
         currencyInternalName: "gold",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -2394,9 +2394,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    365: { title: "Seventy-Fourth Tree Upgrade",
-        description: "Diamond boosts emerald gain.",
-        currencyDisplayName: "Diamond",
+    365: { title: "第七十四个树形升级",
+        description: "钻石增益翡翠的获取。",
+        currencyDisplayName: "钻石",
         currencyInternalName: "diamond",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -2422,9 +2422,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    371: { title: "Seventy-Fifth Tree Upgrade",
-        description: "Ruby boosts emerald gain.",
-        currencyDisplayName: "Ruby",
+    371: { title: "第七十五个树形升级",
+        description: "红宝石增益翡翠的获取。",
+        currencyDisplayName: "红宝石",
         currencyInternalName: "ruby",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
         effect() {
@@ -2442,9 +2442,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    381: { title: "Seventy-Sixth Tree Upgrade",
-        description: "Neutron star boosts emerald gain.",
-        currencyDisplayName: "Emerald",
+    381: { title: "第七十六个树形升级",
+        description: "中子星增益翡翠的获取。",
+        currencyDisplayName: "翡翠",
         currencyInternalName: "emerald",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -2470,9 +2470,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    382: { title: "Seventy-Seventh Tree Upgrade (nice)",
-        description: "Emerald boosts neutron star gain.",
-        currencyDisplayName: "Emerald",
+    382: { title: "第七十七个树形升级（不错）",
+        description: "翡翠增益中子星获取。",
+        currencyDisplayName: "翡翠",
         currencyInternalName: "emerald",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -2498,9 +2498,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    383: { title: "Seventy-Eighth Tree Upgrade",
-        description: "Emerald boosts itself.",
-        currencyDisplayName: "Emerald",
+    383: { title: "第七十八个树形升级",
+        description: "翡翠增益自身。",
+        currencyDisplayName: "翡翠",
         currencyInternalName: "emerald",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -2526,9 +2526,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    384: { title: "Seventy-Ninth Tree Upgrade",
-        description: "Each Supernova upgrade, increases emerald gain by 25%.",
-        currencyDisplayName: "Emerald",
+    384: { title: "第七十九个树形升级",
+        description: "每次超新星升级，翡翠获取 +25%。",
+        currencyDisplayName: "翡翠",
         currencyInternalName: "emerald",
         currencyLayer: "su",
         effect() {
@@ -2555,9 +2555,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    385: { title: "Eightieth Tree Upgrade",
-        description: "Raise Coal gain by 1.3, iron, gold, ruby by 1.25 and diamond by 1.2.",
-        currencyDisplayName: "Emerald",
+    385: { title: "第八十个树形升级",
+        description: "煤获取 ×1.3，铁、金、红宝石 ×1.25，钻石 ×1.2。",
+        currencyDisplayName: "翡翠",
         currencyInternalName: "emerald",
         currencyLayer: "su",
         cost() {
@@ -2579,9 +2579,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    391: { title: "Eighty-First Tree Upgrade",
-        description: "Unlock a new buyable.",
-        currencyDisplayName: "Emerald",
+    391: { title: "第八十一个树形升级",
+        description: "解锁一个新的可购买项。",
+        currencyDisplayName: "翡翠",
         currencyInternalName: "emerald",
         currencyLayer: "su",
         cost: ("1e75"),
@@ -2595,9 +2595,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    401: { title: "Eighty-Second Tree Upgrade",
-        description: "Stone boosts amethyst gain.",
-        currencyDisplayName: "Stone",
+    401: { title: "第八十二个树形升级",
+        description: "石头增益紫水晶的获取。",
+        currencyDisplayName: "石头",
         currencyInternalName: "stones",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -2623,9 +2623,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    402: { title: "Eighty-Third Tree Upgrade",
-        description: "Neutron Star boosts amethyst gain.",
-        currencyDisplayName: "Amethyst",
+    402: { title: "第八十三个树形升级",
+        description: "中子星增益紫水晶的获取。",
+        currencyDisplayName: "紫水晶",
         currencyInternalName: "amethyst",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -2651,9 +2651,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    403: { title: "Eighty-Fourth Tree Upgrade",
-        description: "Amethyst boosts neutron star gain.",
-        currencyDisplayName: "Amethyst",
+    403: { title: "第八十四个树形升级",
+        description: "紫水晶增益中子星获取。",
+        currencyDisplayName: "紫水晶",
         currencyInternalName: "amethyst",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -2679,9 +2679,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    404: { title: "Eighty-Fifth Tree Upgrade",
-        description: "Amethyst boosts itself.",
-        currencyDisplayName: "Amethyst",
+    404: { title: "第八十五个树形升级",
+        description: "紫水晶增益自身。",
+        currencyDisplayName: "紫水晶",
         currencyInternalName: "amethyst",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -2707,9 +2707,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    405: { title: "Eighty-Sixth Tree Upgrade",
-        description: "Unlock the final buyable.",
-        currencyDisplayName: "Amethyst",
+    405: { title: "第八十六个树形升级",
+        description: "解锁最终的可购买项。",
+        currencyDisplayName: "紫水晶",
         currencyInternalName: "amethyst",
         currencyLayer: "su",
         cost() {
@@ -2731,9 +2731,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    411: { title: "Eighty-Seventh Tree Upgrade",
-        description: "Stone boosts Cobalt gain.",
-        currencyDisplayName: "Stone",
+    411: { title: "第八十七个树形升级",
+        description: "石头增益钴的获取。",
+        currencyDisplayName: "石头",
         currencyInternalName: "stones",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -2751,9 +2751,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    421: { title: "Eighty-Eighth Tree Upgrade",
-        description: "Neutron Star boosts cobalt gain.",
-        currencyDisplayName: "Cobalt",
+    421: { title: "第八十八个树形升级",
+        description: "中子星增益钴的获取。",
+        currencyDisplayName: "钴",
         currencyInternalName: "cobalt",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -2779,9 +2779,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    422: { title: "Eighty-Ninth Tree Upgrade",
-        description: "Cobalt boosts neutron star gain.",
-        currencyDisplayName: "Cobalt",
+    422: { title: "第八十九个树形升级",
+        description: "钴增益中子星获取。",
+        currencyDisplayName: "钴",
         currencyInternalName: "cobalt",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -2808,7 +2808,7 @@ microtabs: {
         style: { margin: "10px" }
     },
     431: { title: "976",
-        description: "Gain more points based on your supernova time spent on this reset. (Stronger+)",
+        description: "根据你在本次重置中花费的超新星时间获得更多积分。（更强+）",
         cost: new EN("e1e47"),
         unlocked() {
             return hasUpgrade("su", 422)
@@ -2820,7 +2820,7 @@ microtabs: {
         effectDisplay() { return "^" + format(this.effect()) },
         },
         432: { title: "977",
-        description: "Raise Neutron star gain based on your supernova time spent on this reset.",
+        description: "根据你在本次重置中花费的超新星时间提升中子星获取。",
         cost: new EN("e1e50"),
         unlocked() {
             return hasUpgrade("su", 431)
@@ -2832,21 +2832,21 @@ microtabs: {
         effectDisplay() { return "^" + format(this.effect()) },
         },
         433: { title: "978",
-        description: "Unlock more tree upgrades.",
+        description: "解锁更多树形升级。",
         cost: new EN("e1e308"),
         unlocked() {
             return hasUpgrade("su", 432)
         },
         },
         434: { title: "979",
-        description: "Speed up Crystal Tier!",
+        description: "加速水晶阶！",
         cost: new EN("e2e22222"),
         unlocked() {
             return hasUpgrade("su", 481)
         },
         },
         435: { title: "980",
-        description: "Crystal Tiers raises crystal gain.",
+        description: "水晶阶提升水晶获取。",
         cost: new EN("ee3e6"),
         effectDisplay() { return "^" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
         effect() {
@@ -2856,9 +2856,9 @@ microtabs: {
             return hasUpgrade("su", 434)
         },
         },
-        441: { title: "Ninty Tree Upgrade",
-        description: "Raise all ores gains based on supernova time spent on this reset. (Excluding Crystal)",
-        currencyDisplayName: "Crystal",
+        441: { title: "第九十个树形升级",
+        description: "根据本次重置中花费的超新星时间提升所有矿石获取。（不含水晶）",
+        currencyDisplayName: "水晶",
         currencyInternalName: "crystal",
         currencyLayer: "su",
         effect() {
@@ -2885,9 +2885,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    451: { title: "Ninty-First Tree Upgrade",
-        description: "Cobalt boosts Crystal gain.",
-        currencyDisplayName: "Crystal",
+    451: { title: "第九十一个树形升级",
+        description: "钴增益水晶的获取。",
+        currencyDisplayName: "水晶",
         currencyInternalName: "crystal",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -2913,9 +2913,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    461: { title: "Ninty-Second Tree Upgrade",
-        description: "Crystal boosts itself.",
-        currencyDisplayName: "Crystal",
+    461: { title: "第九十二个树形升级",
+        description: "水晶增益自身。",
+        currencyDisplayName: "水晶",
         currencyInternalName: "crystal",
         currencyLayer: "su",
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -2941,9 +2941,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    471: { title: "Ninty-Third Tree Upgrade",
-        description: "Crystal gain is boosted based on supernova time spent on this reset.",
-        currencyDisplayName: "Crystal",
+    471: { title: "第九十三个树形升级",
+        description: "水晶获取根据本次重置中花费的超新星时间获得增益。",
+        currencyDisplayName: "水晶",
         currencyInternalName: "crystal",
         currencyLayer: "su",
         effect() {
@@ -2970,9 +2970,9 @@ microtabs: {
         },
         style: { margin: "10px" }
     },
-    481: { title: "Ninty-Fourth Tree Upgrade",
-        description: "Unlock Crystal Tiers.",
-        currencyDisplayName: "Crystal",
+    481: { title: "第九十四个树形升级",
+        description: "解锁水晶阶。",
+        currencyDisplayName: "水晶",
         currencyInternalName: "crystal",
         currencyLayer: "su",
 
@@ -2996,7 +2996,7 @@ microtabs: {
         style: { margin: "10px" }
     },
     491: { title: "981",
-        description: "Raise Crystal based on supernova time spent on this reset.",
+        description: "根据本次重置中花费的超新星时间提升水晶。",
         cost: new EN("ee2.5e7"),
         unlocked() {
             return hasUpgrade("su", 435)
@@ -3008,7 +3008,7 @@ microtabs: {
         effectDisplay() { return "^" + format(this.effect()) },
         },
         492: { title: "982",
-        description: "Gain more points based on your supernova time spent on this reset.",
+        description: "根据你在本次重置中花费的超新星时间获得更多积分。",
         cost: new EN("eee10"),
         unlocked() {
             return hasUpgrade("su", 491)
@@ -3020,7 +3020,7 @@ microtabs: {
         effectDisplay() { return "^" + format(this.effect()) },
         },
         493: { title: "983",
-        description: "Gain 100x Crystal Tier and per supernova upgrade, raise crystal gain by 1.2.",
+        description: "获得 ×100 水晶阶，且每次超新星升级，水晶获取 ×1.2。",
         cost: new EN("ee2e10"),
         unlocked() {
             return hasUpgrade("su", 492)
@@ -3032,14 +3032,14 @@ microtabs: {
         effectDisplay() { return "^" + format(upgradeEffect(this.layer, this.id))}, // Add formatting to the effect      ,
         },
         494: { title: "984",
-        description: "Cube Crystal Tier gain..",
+        description: "水晶阶获取立方化。。",
         cost: new EN("ee1e21"),
         unlocked() {
             return hasUpgrade("su", 493)
         },
         },
         495: { title: "985",
-        description: "Raise Crystal based on supernova time spent on this reset (Stronger).",
+        description: "根据本次重置中花费的超新星时间提升水晶（更强）。",
         cost: new EN("ee1e28"),
         unlocked() {
             return hasUpgrade("su", 494)
@@ -3051,7 +3051,7 @@ microtabs: {
         effectDisplay() { return "^" + format(this.effect()) },
         },
         501: { title: "986",
-        description: "Gain more Crystal Tiers based on supernova time spent on this reset.",
+        description: "根据本次重置中花费的超新星时间获得更多水晶阶。",
         cost: new EN("ee1.79e308"),
         unlocked() {
             return hasUpgrade("su", 495)
@@ -3063,7 +3063,7 @@ microtabs: {
         effectDisplay() { return "x" + format(this.effect()) },
         },
         502: { title: "987",
-        description: "Raise Crystal Tier gain based on your supernova time spent on this reset.",
+        description: "根据本次重置花费的超新星时间提升水晶阶获取量。",
         cost: new EN("eee420"),
         unlocked() {
             return hasUpgrade("su", 501)
@@ -3075,7 +3075,7 @@ microtabs: {
         effectDisplay() { return "^" + format(this.effect()) },
         },
         503: { title: "988",
-        description: "Crystal Tiers boosts itself.",
+        description: "水晶阶增益自身。",
         cost: new EN("eeee3"),
         unlocked() {
             return hasUpgrade("su", 502)
@@ -3086,7 +3086,7 @@ microtabs: {
         },
         },
         504: { title: "989",
-        description: "Crystal Tiers raises itself.",
+        description: "水晶阶提升自身。",
         cost: new EN("ee1e3003"),
         unlocked() {
             return hasUpgrade("su", 503)
@@ -3096,8 +3096,8 @@ microtabs: {
             return player.su.crystaltiers.add(1).pow("0.0001").min("1000")
         },
         },
-        505: { title: "990 (10 More to 1K)",
-        description: "Unlock Crystal Levels and crystal tiers raises itself by even more.",
+        505: { title: "990（再 10 个到 1K）",
+        description: "解锁水晶级，水晶阶提升自身的效果进一步增强。",
         cost: new EN("eeeee3"),
         unlocked() {
             return hasUpgrade("su", 504)
@@ -3108,7 +3108,7 @@ microtabs: {
         },
     },
     511: { title: "991",
-        description: "Crystal levels boosts itself.",
+        description: "水晶级增益自身。",
         cost: new EN("10^^1e6"),
         unlocked() {
             return hasUpgrade("su", 505)
@@ -3119,7 +3119,7 @@ microtabs: {
         },
     },
     512: { title: "992",
-        description: "Crystal levels is boosted based on supernova time spent on this reset.",
+        description: "水晶级根据本次重置花费的超新星时间获得增益。",
         cost: new EN("10^^1e7"),
         unlocked() {
             return hasUpgrade("su", 511)
@@ -3131,7 +3131,7 @@ microtabs: {
         effectDisplay() { return "x" + format(this.effect()) },
     },
     513: { title: "993",
-        description: "Every Supernova Upgrade = 10% more Crystal Levels.",
+        description: "每个超新星升级 = 水晶级多 10%。",
         cost: new EN("10^^1e11"),
         unlocked() {
             return hasUpgrade("su", 512)
@@ -3143,7 +3143,7 @@ microtabs: {
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id))}, // Add formatting to the effect      ,
         },
         514: { title: "994",
-        description: "Crystal levels is raised based on supernova time spent on this reset.",
+        description: "水晶级根据本次重置花费的超新星时间提升。",
         cost: new EN("10^^1e20"),
         unlocked() {
             return hasUpgrade("su", 513)
@@ -3155,7 +3155,7 @@ microtabs: {
         effectDisplay() { return "^" + format(this.effect()) },
     },
     515: { title: "995",
-        description: "Crystal levels raises itself, unlock more tree upgrades.",
+        description: "水晶级提升自身，解锁更多树形升级。",
         cost: new EN("10^^10^1e308"),
         unlocked() {
             return hasUpgrade("su", 514)
@@ -3165,9 +3165,9 @@ microtabs: {
             return player.su.crystallevels.add(1).tetr("1")
         },
     },
-    521: { title: "Ninty-Fifth Tree Upgrade",
-        description: "Crystal levels tetrates itself and unlock Crystal Stages.",
-        currencyDisplayName: "Crystal Levels",
+    521: { title: "第九十五个树形升级",
+        description: "水晶级对自身进行四阶运算，并解锁水晶段。",
+        currencyDisplayName: "水晶级",
         currencyInternalName: "crystallevels",
         currencyLayer: "su",
         effectDisplay() { return "^^" + format(upgradeEffect(this.layer, this.id)) }, // Add formatting to the effect
@@ -3194,7 +3194,7 @@ microtabs: {
         style: { margin: "10px" }
     },
     531: { title: "996",
-        description: "Crystal stages boosts itself.",
+        description: "水晶段增益自身。",
         cost: new EN("10^^^300"),
         unlocked() {
             return hasUpgrade("su", 521)
@@ -3205,7 +3205,7 @@ microtabs: {
         },
     },
     532: { title: "997",
-        description: "Crystal stages is boosted based on supernova time spent on this reset.",
+        description: "水晶段根据本次重置花费的超新星时间获得增益。",
         cost: new EN("10^^^10000"),
         unlocked() {
             return hasUpgrade("su", 531)
@@ -3217,7 +3217,7 @@ microtabs: {
         effectDisplay() { return "x" + format(this.effect()) },
     },
     533: { title: "998",
-        description: "Every Supernova Upgrade = 5% more Crystal Stages.",
+        description: "每个超新星升级 = 水晶段多 5%。",
         cost: new EN("10^^^2e7"),
         unlocked() {
             return hasUpgrade("su", 532)
@@ -3229,7 +3229,7 @@ microtabs: {
         effectDisplay() { return "x" + format(upgradeEffect(this.layer, this.id))}, // Add formatting to the effect      ,
         },
         534: { title: "999",
-        description: "Crystal stages is raised based on supernova time spent on this reset.",
+        description: "水晶段根据本次重置花费的超新星时间提升。",
         cost: new EN("10^^^1e13"),
         unlocked() {
             return hasUpgrade("su", 533)
@@ -3241,7 +3241,7 @@ microtabs: {
         effectDisplay() { return "^" + format(this.effect()) },
     },
     535: { title: "1,000!",
-        description: "Unlock a new prestige layer but remove row 6-7 layers (Excluding Void).",
+        description: "解锁一个新的声望层，但移除第 6-7 行的层（虚空除外）。",
         cost: new EN("10^^^10^1e308"),
         unlocked() {
             return hasUpgrade("su", 534)
@@ -3251,7 +3251,7 @@ microtabs: {
     clickables: {
         11: {
             display() {
-                return "Respec upgrades, but you do not get all the ores back."
+                return "洗点升级，但不会返还全部矿石。"
             },
             unlocked() {
                 return hasUpgrade("su", 55)
@@ -3273,8 +3273,8 @@ microtabs: {
             style: { ...smallClickable }
 },
     },
-    name: "Supernova", // This is optional, only used in a few places, If absent it just uses the layer id.
-    symbol: "SN", // This appears on the layer's node. Default is the id with the first letter capitalized
+    name: "超新星", // This is optional, only used in a few places, If absent it just uses the layer id.
+    symbol: "超", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
         unlocked: false,
@@ -3296,8 +3296,8 @@ microtabs: {
     }},
     color: "#FFB437",
     requires: new EN("3.333e33333"), // Can be a function that takes requirement increases into account
-    resource: "Neutron Stars", // Name of prestige currency
-    baseResource: "Medals", // Name of resource prestige is based on
+    resource: "中子星", // Name of prestige currency
+    baseResource: "奖牌", // Name of resource prestige is based on
     branches: ["re"],
     baseAmount() {return player.re.points}, // Get the current amount of baseResource
     type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
@@ -3398,60 +3398,60 @@ microtabs: {
         return new EN(1)
     },
     hotkeys: [
-        {key: "@", description: "Shift+@: Reset for supernova", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "@", description: "Shift+@: 重置以获得超新星", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
 layerShown(){return (hasUpgrade("re", 231) || player[this.layer].unlocked)},
     automate() {},
     milestones: {
         1: {
-            requirementDescription: "1 Neutron Star",
-            effectDescription: "Gain 100% of Medals on reset per second.",
+            requirementDescription: "1 中子星",
+            effectDescription: "重置时每秒获得 100% 的奖牌。",
             done() { return player.su.points.gte(1) }
     },
     2: {
-        requirementDescription: "25 Total Neutron Stars",
-        effectDescription: "Keep Reincarnation Milestones on reset.",
+        requirementDescription: "25 总中子星",
+        effectDescription: "重置时保留轮回里程碑。",
         done() { return player.su.total.gte(25) }
 },
 3: {
-    requirementDescription: "100 Total Neutron Stars",
-    effectDescription: "Gain 25% more Neutron Stars and autobuy juice upgrades.",
+    requirementDescription: "100 总中子星",
+    effectDescription: "获得 25% 更多中子星，并自动购买果汁升级。",
     done() { return player.su.total.gte(100) }
 },
 4: {
-    requirementDescription: "500 Total Neutron Stars",
-    effectDescription: "Keep Reincarnation Challenges on reset.",
+    requirementDescription: "500 总中子星",
+    effectDescription: "重置时保留轮回挑战。",
     done() { return player.su.total.gte(500) }
 },
 5: {
-    requirementDescription: "100,000 Total Neutron Stars",
-    effectDescription: "Keep Reincarnation Upgrades on reset.",
+    requirementDescription: "100,000 总中子星",
+    effectDescription: "重置时保留轮回升级。",
     done() { return player.su.total.gte(1e5) }
 },
 6: {
-    requirementDescription: "5 Crystal Resets",
-    effectDescription: "Crystal Resets reset nothing.",
+    requirementDescription: "5 次水晶重置",
+    effectDescription: "水晶重置不会重置任何内容。",
     done() { return getBuyableAmount("su", 21).gte("5")},
 },
 7: {
-    requirementDescription: "e1.797e308 Total Neutron Stars",
-    effectDescription: "Reincarnation Buyables are cubed!",
+    requirementDescription: "e1.797e308 总中子星",
+    effectDescription: "轮回可购买项立方化！",
     done() { return player.su.total.gte("e1.797e308") }
 },
 8: {
-    requirementDescription: "e1e9,000 Total Neutron Stars",
+    requirementDescription: "e1e9,000 总中子星",
     effect() {
         let eff = player.su.crystal.pow(3)
         return eff
     },
     effectDescription() {
-        return "Crystal also raises neutron star gain at a reduced rate.<br>Currently: ^"+format(milestoneEffect("su",8))+""}
+        return "水晶也会以降低的速率提升中子星获取量。<br>当前: ^"+format(milestoneEffect("su",8))+""}
         ,    done() { return player.su.total.gte("ee9000") }
         
     },
     9: {
-        requirementDescription: "e1e1,000,000 Total Neutron Stars",
-        effectDescription: "Crystal Tier is faster again and square crystal gain.",
+        requirementDescription: "e1e1,000,000 总中子星",
+        effectDescription: "水晶阶再次加速，并使水晶获取量平方。",
         done() { return player.su.total.gte("eee6") }
     },
     },

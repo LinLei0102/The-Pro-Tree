@@ -17,7 +17,7 @@ addLayer("ant", {
 
 },
 effectDescription(){
-    return "multiplying point gain by " + format(tmp[this.layer].effect)
+    return "使积分获取乘以 " + format(tmp[this.layer].effect)
     /*
       use format(num) whenever displaying a number
     */
@@ -41,15 +41,15 @@ tabFormat: [
 ],
 microtabs: {
     stuff: {
-                    "Upgrades": {
+                    "升级": {
                         unlocked() {return (hasAchievement("a", 11))},
                 content: [
                     ["blank", "15px"],
-                    ["raw-html", () => `<h4 style="opacity:.5">You are getting better.<br> You will see milestones which helps a lot on your progression.<br> Good luck to reach the 3rd row!</h4>`],
+                    ["raw-html", () => `<h4 style="opacity:.5">你越来越熟练了。<br> 你会看到里程碑，它们对你的进度帮助很大。<br> 祝你好运，抵达第 3 行！</h4>`],
                     ["upgrades", [1,2,3,4,5,6]]
                 ]
             },
-                    "Milestones": {
+                    "里程碑": {
                         content: [
                             ["blank", "15px"],
                             "milestones"
@@ -59,12 +59,12 @@ microtabs: {
         },
     upgrades: {
         11: { title: "51",
-        description: "1,000x Point gain.",
+        description: "1,000× 积分获取。",
         cost: new EN(6),
 
         },
         12: { title: "52",
-        description: "Point gain is boosted by Ants.",
+        description: "积分获取受蚂蚁增益。",
         cost: new EN(9),
         effect() {
             return player[this.layer].points.add(5).pow(2.5)
@@ -75,7 +75,7 @@ microtabs: {
         }
         },
         13: { title: "53",
-        description: "69,420x Point Gain.",
+        description: "69,420× 积分获取。",
         cost: new EN(12),
         unlocked() {
             return hasUpgrade("ant", 12)
@@ -83,7 +83,7 @@ microtabs: {
         }
         },
         14: { title: "54",
-        description: "Gain 1,000x More People.",
+        description: "获得 1,000× 更多人员。",
         cost: new EN(15),
         unlocked() {
             return hasUpgrade("ant", 13)
@@ -91,7 +91,7 @@ microtabs: {
         }
         },
         15: { title: "55",
-        description: "Keep Row 3 People Upgrades.",
+        description: "保留第 3 行人员升级。",
         cost: new EN(16),
         unlocked() {
             return hasUpgrade("ant", 14)
@@ -99,7 +99,7 @@ microtabs: {
         }
         },
         21: { title: "56",
-        description: "69x Button Power.",
+        description: "69× 按钮能量。",
         cost: new EN(17),
         unlocked() {
             return hasUpgrade("ant", 15)
@@ -107,7 +107,7 @@ microtabs: {
         }
         },
         22: { title: "57",
-        description: "10,000x People Gain.",
+        description: "10,000× 人员获取。",
         cost: new EN(17),
         unlocked() {
             return hasUpgrade("ant", 21)
@@ -115,7 +115,7 @@ microtabs: {
         }
         },
         23: { title: "58",
-        description: "1,000,000x Points Gain.",
+        description: "1,000,000× 积分获取。",
         cost: new EN(18),
         unlocked() {
             return hasUpgrade("ant", 22)
@@ -123,7 +123,7 @@ microtabs: {
         }
         },
         24: { title: "59",
-        description: "100,000x People Gain.",
+        description: "100,000× 人员获取。",
         cost: new EN(21),
         unlocked() {
             return hasUpgrade("ant", 23)
@@ -131,7 +131,7 @@ microtabs: {
         }
         },
         25: { title: "60",
-        description: "More Button Power Upgrades.",
+        description: "更多按钮能量升级。",
         cost: new EN(22),
         unlocked() {
             return hasUpgrade("ant", 24)
@@ -139,7 +139,7 @@ microtabs: {
         }
         },
         31: { title: "61",
-        description: "Gain 1e42x Button Power.",
+        description: "获得 1e42× 按钮能量。",
         cost: new EN(107),
         unlocked() {
             return hasUpgrade("g", 25)
@@ -147,7 +147,7 @@ microtabs: {
         }
         },
         32: { title: "62",
-        description: "Gain 6.969e69x Points.",
+        description: "获得 6.969e69× 积分。",
         cost: new EN(112),
         unlocked() {
             return hasUpgrade("ant", 31)
@@ -155,7 +155,7 @@ microtabs: {
         }
         },
         33: { title: "63",
-        description: "Gain 1e33x People.",
+        description: "获得 1e33× 人员。",
         cost: new EN(125),
         unlocked() {
             return hasUpgrade("ant", 32)
@@ -163,7 +163,7 @@ microtabs: {
         }
         },
         34: { title: "64",
-        description: "Gain 1e25x Button Power.",
+        description: "获得 1e25× 按钮能量。",
         cost: new EN(129),
         unlocked() {
             return hasUpgrade("ant", 33)
@@ -171,7 +171,7 @@ microtabs: {
         }
         },
         35: { title: "65",
-        description: "Unlock a new layer.",
+        description: "解锁一个新层。",
         cost: new EN(131),
         unlocked() {
             return hasUpgrade("ant", 34)
@@ -179,7 +179,7 @@ microtabs: {
         }
         },
         41: { title: "66",
-        description: "1e10x Points.",
+        description: "1e10× 积分。",
         cost: new EN(166),
         unlocked() {
             return hasUpgrade("c", 25)
@@ -187,7 +187,7 @@ microtabs: {
         }
         },
         42: { title: "67",
-        description: "1e20x Points.",
+        description: "1e20× 积分。",
         cost: new EN(168),
         unlocked() {
             return hasUpgrade("ant", 41)
@@ -195,7 +195,7 @@ microtabs: {
         }
         },
         43: { title: "68",
-        description: "1e40x Points.",
+        description: "1e40× 积分。",
         cost: new EN(170),
         unlocked() {
             return hasUpgrade("ant", 42)
@@ -203,7 +203,7 @@ microtabs: {
         }
         },
         44: { title: "69",
-        description: "1e69x Points.",
+        description: "1e69× 积分。",
         cost: new EN(170),
         unlocked() {
             return hasUpgrade("ant", 43)
@@ -211,7 +211,7 @@ microtabs: {
         }
         },
         45: { title: "70",
-        description: "Unlock more grass upgrades.",
+        description: "解锁更多草升级。",
         cost: new EN(183),
         unlocked() {
             return hasUpgrade("ant", 44)
@@ -219,7 +219,7 @@ microtabs: {
         }
         },
         51: { title: "71",
-        description: "1e150x People.",
+        description: "1e150× 人员。",
         cost: new EN(318),
         unlocked() {
             return hasUpgrade("c", 35)
@@ -227,7 +227,7 @@ microtabs: {
         }
         },
         52: { title: "72",
-        description: "1e100x BP.",
+        description: "1e100× 按钮能量。",
         cost: new EN(327),
         unlocked() {
             return hasUpgrade("ant", 51)
@@ -235,7 +235,7 @@ microtabs: {
         }
         },
         53: { title: "73",
-        description: "1e10x Grass.",
+        description: "1e10× 草。",
         cost: new EN(333),
         unlocked() {
             return hasUpgrade("ant", 52)
@@ -243,7 +243,7 @@ microtabs: {
         }
         },
         54: { title: "74",
-        description: "100,000x Cups.",
+        description: "100,000× 奖杯。",
         cost: new EN(333),
         unlocked() {
             return hasUpgrade("ant", 53)
@@ -251,7 +251,7 @@ microtabs: {
         }
         },
         55: { title: "75",
-        description: "1e100x Points.",
+        description: "1e100× 积分。",
         cost: new EN(333),
         unlocked() {
             return hasUpgrade("ant", 54)
@@ -259,7 +259,7 @@ microtabs: {
         }
         },
         61: { title: "?",
-        description: "1e1,014x Points.",
+        description: "1e1,014× 积分。",
         cost: new EN(1),
         unlocked() {
             return hasUpgrade("b", 61)
@@ -267,7 +267,7 @@ microtabs: {
         }
         },
     },
-    name: "Ants", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "蚂蚁", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "🐜", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -277,8 +277,8 @@ microtabs: {
     }},
     color: "#1890ff",
     requires: new EN(1e116), // Can be a function that takes requirement increases into account
-    resource: "Ants", // Name of prestige currency
-    baseResource: "points", // Name of resource prestige is based on
+    resource: "蚂蚁", // Name of prestige currency
+    baseResource: "积分", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     type: "static", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
     branches: ["p"],
@@ -295,7 +295,7 @@ microtabs: {
     canBuyMax() { return hasMilestone("ant", 2) },
     row: 1, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "a", description: "A: Reset for ants", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "a", description: "A: 重置以获取蚂蚁", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     resetsNothing() {return hasMilestone("ant", 3)},
     layerShown(){if (hasUpgrade("z", 14)) return false
@@ -303,15 +303,15 @@ microtabs: {
     automate() {},
     milestones: {
         1: {
-            requirementDescription: "16 Ants",
-            effectDescription: "Gain 100% People every second.",
+            requirementDescription: "16 蚂蚁",
+            effectDescription: "每秒获得 100% 人员。",
             done() { return player.ant.points.gte(16) }
-        }, 2: {requirementDescription: "25 Ants",
-          effectDescription: "You can buy max Ants.",
+        }, 2: {requirementDescription: "25 蚂蚁",
+          effectDescription: "你可以最大购买蚂蚁。",
           
              done() { return player.ant.points.gte(25)},},
-             3: {requirementDescription: "107 Ants",
-             effectDescription: "Ants resets nothing.",
+             3: {requirementDescription: "107 蚂蚁",
+             effectDescription: "蚂蚁不重置任何内容。",
              
                 done() { return player.ant.points.gte(107)},},
         

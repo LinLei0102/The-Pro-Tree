@@ -8,7 +8,7 @@ addLayer("y", {
     microtabs: {
         stuff: {
             
-                        "Upgrades": {
+                        "升级": {
                             unlocked() {return (hasAchievement("a", 11))},
                     content: [
                         ["blank", "15px"],
@@ -17,7 +17,7 @@ addLayer("y", {
                     ]
                 },
                 
-                "Buyables": {
+                "可购买项": {
                     unlocked() {return (hasUpgrade("y", 12))},
                     content: [
                         ["blank", "15px"],
@@ -25,7 +25,7 @@ addLayer("y", {
                     ]
                     
                 },
-                 "Milestones": {
+                 "里程碑": {
             unlocked() {return (hasAchievement("a", 11))},
     content: [
         ["blank", "15px"],
@@ -36,175 +36,175 @@ addLayer("y", {
                 },
     upgrades: {
         11: { title: "651",
-        description: "Gain x1.5 Medals.",
+        description: "获得 ×1.5 奖牌。",
         cost: new EN("1"),
         unlocked() {
             return hasUpgrade("re",81)
         },
         },
         12: { title: "652",
-        description: "Gain x5 yard and unlock a buyable.",
+        description: "获得 ×5 庭院，并解锁一个可购买项。",
         cost: new EN("1e6"),
         unlocked() {
             return hasUpgrade("y",11)
         },
         },
         13: { title: "653",
-        description: "Gain x125 yard.",
+        description: "获得 ×125 庭院。",
         cost: new EN("1e7"),
         unlocked() {
             return hasUpgrade("y",12)
         },
         },
         14: { title: "654",
-        description: "Gain x1,953,125 yard.",
+        description: "获得 ×1,953,125 庭院。",
         cost: new EN("1e11"),
         unlocked() {
             return hasUpgrade("y",13)
         },
         },
         15: { title: "655",
-        description: "Gain x1.084e44 yard.",
+        description: "获得 ×1.084e44 庭院。",
         cost: new EN("1e23"),
         unlocked() {
             return hasUpgrade("y",14)
         },
         },
         21: { title: "656",
-        description: "Gain x1e1,276 yard.",
+        description: "获得 ×1e1,276 庭院。",
         cost: new EN("1e107"),
         unlocked() {
             return hasUpgrade("y",15)
         },
         },
         22: { title: "657",
-        description: "Unlock the next buyable and cube yard gain.",
+        description: "解锁下一个可购买项，并使庭院获取量立方化。",
         cost: new EN("1e1816"),
         unlocked() {
             return hasUpgrade("y",21)
         },
         },
         23: { title: "658",
-        description: "Gain ^9 Yard.",
+        description: "获得 ^9 庭院。",
         cost: new EN("1e6900"),
         unlocked() {
             return hasUpgrade("y",22)
         },
         },
         24: { title: "659",
-        description: "Gain ^27 Yard.",
+        description: "获得 ^27 庭院。",
         cost: new EN("1e50000"),
         unlocked() {
             return hasUpgrade("y",23)
         },
         },
         25: { title: "660",
-        description: "Gain a good amount of yard.",
+        description: "获得不错的庭院量。",
         cost: new EN("e1e10000"),
         unlocked() {
             return hasUpgrade("y",24)
         },
         },
         31: { title: "661",
-        description: "Gain a decent amount of yard.",
+        description: "获得可观的庭院量。",
         cost: new EN("e1e100000"),
         unlocked() {
             return hasUpgrade("y",25)
         },
         },
         32: { title: "662",
-        description: "Gain a more amount of yard.",
+        description: "获得较多庭院量。",
         cost: new EN("eee9"),
         unlocked() {
             return hasUpgrade("y",31)
         },
         },
         33: { title: "663",
-        description: "Gain even more amount of yard.",
+        description: "获得更多庭院量。",
         cost: new EN("ee1e30"),
         unlocked() {
             return hasUpgrade("y",32)
         },
         },
         34: { title: "664",
-        description: "Gain a lot more amount of yard.",
+        description: "获得多得多庭院量。",
         cost: new EN("ee5e245"),
         unlocked() {
             return hasUpgrade("y",33)
         },
         },
         35: { title: "665",
-        description: "Gain a big amount of yard.",
+        description: "获得大量庭院。",
         cost: new EN("ee1e6564"),
         unlocked() {
             return hasUpgrade("y",34)
         },
         },
         41: { title: "666",
-        description: "This upgrade does nothing, bc demon number",
+        description: "这个升级没有任何效果，因为恶魔数字",
         cost: new EN("eeee9"),
         unlocked() {
             return hasUpgrade("y",35)
         },
         },
         42: { title: "667",
-        description: "Gain a massive amount of yard.",
+        description: "获得巨量庭院。",
         cost: new EN("eeee9"),
         unlocked() {
             return hasUpgrade("y",41)
         },
         },
         43: { title: "668",
-        description: "Gain a insane amount of yard.",
+        description: "获得疯狂数量的庭院。",
         cost: new EN("10^^250"),
         unlocked() {
             return hasUpgrade("y",42)
         },
         },
         44: { title: "669",
-        description: "Gain a extreme amount of yard.",
+        description: "获得极限数量的庭院。",
         cost: new EN("10^^777"),
         unlocked() {
             return hasUpgrade("y",43)
         },
         },
         45: { title: "670",
-        description: "Gain a god amount of yard.",
+        description: "获得神明数量的庭院。",
         cost: new EN("10^^1337"),
         unlocked() {
             return hasUpgrade("y",44)
         },
         },
         51: { title: "671",
-        description: "Gain a bigger amount of yard.",
+        description: "获得更大量庭院。",
         cost: new EN("10^^2500"),
         unlocked() {
             return hasUpgrade("y",45)
         },
         },
         52: { title: "672",
-        description: "Gain a best amount of yard.",
+        description: "获得最强数量的庭院。",
         cost: new EN("10^^4000"),
         unlocked() {
             return hasUpgrade("y",51)
         },
         },
         53: { title: "673",
-        description: "Gain a true best amount of yard.",
+        description: "获得真正最强数量的庭院。",
         cost: new EN("10^^10000"),
         unlocked() {
             return hasUpgrade("y",52)
         },
         },
         54: { title: "674",
-        description: "Increase all other currencies.",
+        description: "增加所有其他货币。",
         cost: new EN("10^^100000"),
         unlocked() {
             return hasUpgrade("y",53)
         },
         },
         55: { title: "675",
-        description: "Onion Upgrade 61 ^8 but divide your medal gain by 3.",
+        description: "洋葱升级 61 ^8，但你的奖牌获取量除以 3。",
         cost: new EN("10^^1e15"),
         unlocked() {
             return player.points.gte("10^^1e800")
@@ -213,9 +213,9 @@ addLayer("y", {
     },
     buyables: {
         11: {
-            title: "<h3>Thirteenth Buyable<h3>",
+            title: "<h3>第十三个可购买项<h3>",
             cost(x) {return new EN(1000000).mul(new EN(10).pow(x))},
-            display() {return `<h3>Triple Yard Gain.<h3>\nLevel: ` + formatWhole(player.y.buyables[11]) + `<br>Cost: ${format(this.cost())} Yard\nEffect: ${format(this.effect())}x Yard`},
+            display() {return `<h3>庭院获取量三倍。<h3>\n等级: ` + formatWhole(player.y.buyables[11]) + `<br>花费: ${format(this.cost())} 庭院\n效果: ${format(this.effect())}× 庭院`},
             canAfford() {return player.y.points.gte(this.cost())},
             buy() {
                 player.y.points = player.y.points.sub(this.cost())
@@ -228,9 +228,9 @@ addLayer("y", {
         },
     },
     12: {
-        title: "<h3>Fourteenth Buyable<h3>",
+        title: "<h3>第十四个可购买项<h3>",
         cost(x) { return new EN(1e100).pow(new EN(2).pow(x)) },
-        display() {return `<h3>Exponentiate Yard Gain.<h3>\nLevel: ` + formatWhole(player.y.buyables[12]) + `<br>Cost: ${format(this.cost())} Yard\nEffect: ^${format(this.effect())} Yard`},
+        display() {return `<h3>庭院获取量指数化。<h3>\n等级: ` + formatWhole(player.y.buyables[12]) + `<br>花费: ${format(this.cost())} 庭院\n效果: ^${format(this.effect())} 庭院`},
         canAfford() {return player.y.points.gte(this.cost())},
         buy() {
             player.y.points = player.y.points.sub(this.cost())
@@ -254,23 +254,23 @@ automate(){
 },
 milestones: {
     1: {
-        requirementDescription: "1e6,900 Yard",
-        effectDescription: "Automate the first yard buyable and buy max.",
+        requirementDescription: "1e6,900 庭院",
+        effectDescription: "自动购买第一个庭院可购买项并最大购买。",
         done() { return player.y.points.gte("1e6900") },
         toggles: [
           ["y","auto"]
         ]
     },
     2: {
-        requirementDescription: "eeee1.000e9 Yard",
-        effectDescription: "Automate the second yard buyable and buy max.",
+        requirementDescription: "eeee1.000e9 庭院",
+        effectDescription: "自动购买第二个庭院可购买项并最大购买。",
         done() { return player.y.points.gte("eeeee9") },
         toggles: [
           ["y","auto2"]
         ]
     },
 },
-    name: "Yard", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "庭院", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "🏡", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -281,8 +281,8 @@ milestones: {
     passiveGeneration() { return (hasMilestone("re", 11)&&player.current!="y")?1:0 },
     color: "#7CFC00",
     requires: new EN("10^^1e887"), // Can be a function that takes requirement increases into account
-    resource: "Yard", // Name of prestige currency
-    baseResource: "Points", // Name of resource prestige is based on
+    resource: "庭院", // Name of prestige currency
+    baseResource: "积分", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     branches: ["s" , "x"],
     type() {if (hasUpgrade("su", 535)) return "normal"
@@ -342,7 +342,7 @@ milestones: {
     },
     row: 6, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "y", description: "Y: Reset for Yard", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "y", description: "Y: 重置以获得庭院", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){if (hasUpgrade("su", 535)) return false
     else return (hasUpgrade("re", 81) || player[this.layer].unlocked)},})

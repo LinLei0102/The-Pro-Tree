@@ -7,20 +7,20 @@ addLayer("j", {
     ],
       microtabs: {
         stuff: {
-                        "Upgrades": {
+                        "升级": {
                             unlocked() {return (hasAchievement("a", 11))},
                     content: [
                         ["blank", "15px"],
                         ["upgrades", [1,2,3,4,5,6,7,8,9]]
                     ]
                 },
-                        "Milestones": {
+                        "里程碑": {
                             content: [
                                 ["blank", "15px"],
                                 "milestones"
                             ]
                         },
-                        "Challenges": {
+                        "挑战": {
                             unlocked() {return (hasMilestone("j", 8))},
                             content: [
                                 ["blank", "15px"],
@@ -31,208 +31,208 @@ addLayer("j", {
     },
     upgrades: {
         11: { title: "251",
-        description: "Gain e1e12x Points.",
+        description: "获得 e1e12× 积分。",
         cost: new EN("1"),
 
         },
         12: { title: "252",
-        description: "Gain e1e14x Points.",
+        description: "获得 e1e14× 积分。",
         cost: new EN("1"),
         unlocked() {
             return hasUpgrade("j", 11)
         }
         },
         13: { title: "253",
-        description: "Gain e1e15x Points.",
+        description: "获得 e1e15× 积分。",
         cost: new EN("1"),
         unlocked() {
             return hasUpgrade("j", 12)
         }
         },
         14: { title: "254",
-        description: "Gain e1e17x Points and Double Jingle gain.",
+        description: "获得 e1e17× 积分并使铃铛获取翻倍。",
         cost: new EN("69"),
         unlocked() {
             return hasUpgrade("j", 13)
         }
         },
         15: { title: "255",
-        description: "Triple Jingle gain.",
+        description: "铃铛获取变为三倍。",
         cost: new EN("420"),
         unlocked() {
             return hasUpgrade("j", 14)
         }
         },
         21: { title: "256",
-        description: "Quadruple Jingle gain and e1e18x Points.",
+        description: "铃铛获取变为四倍并获得 e1e18× 积分。",
         cost: new EN("1337"),
         unlocked() {
             return hasUpgrade("j", 15)
         }
         },
         22: { title: "257",
-        description: "Quintuple Jingle Gain.",
+        description: "铃铛获取变为五倍。",
         cost: new EN("6969"),
         unlocked() {
             return hasUpgrade("j", 21)
         }
         },
         23: { title: "258",
-        description: "6x Jingle Gain and e1e19x Points.",
+        description: "6× 铃铛获取与 e1e19× 积分。",
         cost: new EN("69420"),
         unlocked() {
             return hasUpgrade("j", 22)
         }
         },
         24: { title: "259",
-        description: "7x Jingle Gain.",
+        description: "7× 铃铛获取。",
         cost: new EN("1e5"),
         unlocked() {
             return hasUpgrade("j", 23)
         }
         },
         25: { title: "260",
-        description: "8x Jingle Gain.",
+        description: "8× 铃铛获取。",
         cost: new EN("2e6"),
         unlocked() {
             return hasUpgrade("j", 24)
         }
         },
         31: { title: "261",
-        description: "9x Jingle Gain and e1e20x Points.",
+        description: "9× 铃铛获取与 e1e20× 积分。",
         cost: new EN("1e7"),
         unlocked() {
             return hasUpgrade("j", 25)
         }
         },
         32: { title: "262",
-        description: "10x Jingle Gain.",
+        description: "10× 铃铛获取。",
         cost: new EN("5e7"),
         unlocked() {
             return hasUpgrade("j", 31)
         }
         },
         33: { title: "263",
-        description: "20x Jingle Gain.",
+        description: "20× 铃铛获取。",
         cost: new EN("1e9"),
         unlocked() {
             return hasUpgrade("j", 32)
         }
         },
         34: { title: "264",
-        description: "30x Jingle Gain.",
+        description: "30× 铃铛获取。",
         cost: new EN("1e10"),
         unlocked() {
             return hasUpgrade("j", 33)
         }
         },
         35: { title: "265",
-        description: "40x Jingle Gain.",
+        description: "40× 铃铛获取。",
         cost: new EN("1e12"),
         unlocked() {
             return hasUpgrade("j", 34)
         }
         },
         41: { title: "266",
-        description: "50x Jingle Gain and e1e21x Points.",
+        description: "50× 铃铛获取与 e1e21× 积分。",
         cost: new EN("2.5e13"),
         unlocked() {
             return hasUpgrade("j", 35)
         }
         },
         42: { title: "267",
-        description: "60x Jingle Gain.",
+        description: "60× 铃铛获取。",
         cost: new EN("1e15"),
         unlocked() {
             return hasUpgrade("j", 41)
         }
         },
         43: { title: "268",
-        description: "70x Jingle Gain and e1e22x Points.",
+        description: "70× 铃铛获取与 e1e22× 积分。",
         cost: new EN("2e16"),
         unlocked() {
             return hasUpgrade("j", 42)
         }
         },
         44: { title: "269",
-        description: "80x Jingle Gain.",
+        description: "80× 铃铛获取。",
         cost: new EN("1e18"),
         unlocked() {
             return hasUpgrade("j", 43)
         }
         },
         45: { title: "270",
-        description: "90x Jingle Gain and e1e23x Points.",
+        description: "90× 铃铛获取与 e1e23× 积分。",
         cost: new EN("1e20"),
         unlocked() {
             return hasUpgrade("j", 44)
         }
         },
         51: { title: "271",
-        description: "More Points!",
+        description: "更多积分！",
         cost: new EN("eee47"),
         unlocked() {
             return hasUpgrade("k", 45)
         }
         },
         52: { title: "272",
-        description: "More Points again!",
+        description: "又是更多积分！",
         cost: new EN("eee63"),
         unlocked() {
             return hasUpgrade("j", 51)
         }
         },
         53: { title: "273",
-        description: "More Points yet again!",
+        description: "还是更多积分！",
         cost: new EN("eee79"),
         unlocked() {
             return hasUpgrade("j", 52)
         }
         },
         54: { title: "24974",
-        description: "More Points yet again and again!",
+        description: "更多积分，一次又一次！",
         cost: new EN("eee111"),
         unlocked() {
             return hasUpgrade("j", 53)
         }
         },
         55: { title: "275",
-        description: "More Points yet again and again and unlocks a new layer!",
+        description: "更多积分，一次又一次，并解锁一个新层！",
         cost: new EN("eee200"),
         unlocked() {
             return hasUpgrade("j", 54)
         }
         },
         61: { title: "?",
-        description: "Increase key gain.",
+        description: "提升钥匙获取。",
         cost: new EN("-1"),
         unlocked() {
             return inChallenge("o", 11)
         }
         },
         62: { title: "?",
-        description: "Increase key gain again.",
+        description: "再次提升钥匙获取。",
         cost: new EN("eeeee14"),
         unlocked() {
             return inChallenge("o", 11)
         }
         },
         63: { title: "?",
-        description: "Increase key gain yet again.",
+        description: "又一次提升钥匙获取。",
         cost: new EN("eeeee14"),
         unlocked() {
             return inChallenge("o", 11)
         }
         },
         64: { title: "?",
-        description: "Increase key gain yet again and again.",
+        description: "再一次又一次提升钥匙获取。",
         cost: new EN("eeeee14"),
         unlocked() {
             return inChallenge("o", 11)
         }
         },
         65: { title: "?",
-        description: "Increase key gain yet again and again and again.",
+        description: "一遍又一遍又一遍地提升钥匙获取。",
         cost: new EN("eeeee14"),
         unlocked() {
             return inChallenge("o", 11)
@@ -240,45 +240,45 @@ addLayer("j", {
         },
     },
     milestones: {
-         1: {requirementDescription: "1 Jingle",
-          effectDescription: "Gain 100% of Fruits and Houses every second.",
+         1: {requirementDescription: "1 铃铛",
+          effectDescription: "每秒获得 100% 的水果与房屋。",
              done() { return player.j.points.gte(1)},},
-         2: {requirementDescription: "2 Total Jingles",
-             effectDescription: "Keep Fruits stuff on reset.",
+         2: {requirementDescription: "共 2 铃铛",
+             effectDescription: "重置时保留水果相关内容。",
                 done() { return player.j.total.gte(2)},},
-        3: {requirementDescription: "4 Total Jingles",
-             effectDescription: "Keep Electricity stuff on reset.",
+        3: {requirementDescription: "共 4 铃铛",
+             effectDescription: "重置时保留电力相关内容。",
             done() { return player.j.total.gte(4)},},
-         4: {requirementDescription: "16 Total Jingles",
-             effectDescription: "Keep House stuff on reset.",
+         4: {requirementDescription: "共 16 铃铛",
+             effectDescription: "重置时保留房屋相关内容。",
                 done() { return player.j.total.gte(16)},},
-         5: {requirementDescription: "256 Total Jingles",
-             effectDescription: "Keep Ice stuff on reset.",
+         5: {requirementDescription: "共 256 铃铛",
+             effectDescription: "重置时保留冰相关内容。",
               done() { return player.j.total.gte(256)},},
-         6: {requirementDescription: "65,536 Total Jingles",
-             effectDescription: "Autobuy Electricity and resets nothing.",
+         6: {requirementDescription: "共 65,536 铃铛",
+             effectDescription: "自动购买电力，不重置任何内容。",
                 done() { return player.j.total.gte(65536)},},
-        7: {requirementDescription: "4.294e9 Total Jingles",
-             effectDescription: "Autobuy Ice and resets nothing.",
+        7: {requirementDescription: "共 4.294e9 铃铛",
+             effectDescription: "自动购买冰，不重置任何内容。",
                 done() { return player.j.total.gte(4.294e9)},},
-                8: {requirementDescription: "2.222e22 Total Jingles",
-                effectDescription: "Unlock a challenge.",
+                8: {requirementDescription: "共 2.222e22 铃铛",
+                effectDescription: "解锁一个挑战。",
                    done() { return player.j.total.gte(2.222e22)},},
     },
     challenges: {
         11: {
-            name: "Turtle",
-            challengeDescription: "Raise Row 1 to Row 4 ^0.1.",
-            goalDescription: "1e111,111,125 Points.",
-            rewardDescription: "Gain ^1.01 Points.",
+            name: "乌龟",
+            challengeDescription: "将第 1 行至第 4 行提升 ^0.1。",
+            goalDescription: "1e111,111,125 积分。",
+            rewardDescription: "获得 ^1.01 积分。",
             canComplete: function() {return player.points.gte("e111111125")},
             unlocked() { return (hasMilestone('j', 8)) },
        },
        12: {
-        name: "Trap",
-        challengeDescription: "You start with 1 point every second.",
-        goalDescription: "ee1.79e308 Points.",
-        rewardDescription: "Gain ^2 Lights and increase slighty point gain.",
+        name: "陷阱",
+        challengeDescription: "你每秒初始获得 1 积分。",
+        goalDescription: "ee1.79e308 积分。",
+        rewardDescription: "获得 ^2 灯光并略微提升积分获取。",
         canComplete: function() {return player.points.gte("ee1.79e308")},
         unlocked() { return (hasUpgrade('l', 31)) },
    }},
@@ -300,13 +300,13 @@ addLayer("j", {
 
 },
 effectDescription(){
-    return "multiplying point gain by " + format(tmp[this.layer].effect) 
+    return "使积分获取乘以 " + format(tmp[this.layer].effect) 
     /*
       use format(num) whenever displaying a number
     */
    
   },
-    name: "Jingles", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "铃铛", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "🔔", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -316,8 +316,8 @@ effectDescription(){
     }},
     color: "#ffa500",
     requires: new EN("e2e12"), // Can be a function that takes requirement increases into account
-    resource: "Jingles", // Name of prestige currency
-    baseResource: "Fruits", // Name of resource prestige is based on
+    resource: "铃铛", // Name of prestige currency
+    baseResource: "水果", // Name of resource prestige is based on
     baseAmount() {return player.f.points}, // Get the current amount of baseResource
     type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
     branches: ["f"],
@@ -352,7 +352,7 @@ effectDescription(){
         if (hasMilestone("o", 1)) return (hasMilestone("o", 1)?1:0)
         },        
         hotkeys: [
-        {key: "j", description: "J: Reset for Jingles", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "j", description: "J: 重置获取铃铛", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     doReset(resettingLayer) {
         let keep = [];

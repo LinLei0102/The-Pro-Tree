@@ -7,7 +7,7 @@ addLayer("t", {
     ],
     microtabs: {
         stuff: {
-                        "Upgrades": {
+                        "升级": {
                             unlocked() {return (hasAchievement("a", 11))},
                     content: [
                         ["blank", "15px"],
@@ -18,179 +18,179 @@ addLayer("t", {
         },
     upgrades: {
         11: { title: "476",
-        description: "Gain x4 Trees.",
+        description: "获得 ×4 树。",
         cost: new EN("500"),
         },
         12: { title: "477",
-        description: "Gain x256 Trees.",
+        description: "获得 ×256 树。",
         cost: new EN("1000"),
         unlocked() {
             return hasUpgrade("t", 11)
         }
         },
         13: { title: "478",
-        description: "Gain x65,536 Trees.",
+        description: "获得 ×65,536 树。",
         cost: new EN("400000"),
         unlocked() {
             return hasUpgrade("t", 12)
         }
         },
         14: { title: "479",
-        description: "Gain x2.814e14 Trees.",
+        description: "获得 ×2.814e14 树。",
         cost: new EN("2e10"),
         unlocked() {
             return hasUpgrade("t", 13)
         }
         },
         15: { title: "480",
-        description: "Gain x7.922e28 Trees.",
+        description: "获得 ×7.922e28 树。",
         cost: new EN("5e24"),
         unlocked() {
             return hasUpgrade("t", 14)
         }
         },
         21: { title: "481",
-        description: "Gain x3.940e115 Trees.",
+        description: "获得 ×3.940e115 树。",
         cost: new EN("4e53"),
         unlocked() {
             return hasUpgrade("t", 15)
         }
         },
         22: { title: "482",
-        description: "Gain x1.552e231 Trees.",
+        description: "获得 ×1.552e231 树。",
         cost: new EN("1e169"),
         unlocked() {
             return hasUpgrade("t", 21)
         }
         },
         23: { title: "483",
-        description: "Gain x3.5e693 Trees.",
+        description: "获得 ×3.5e693 树。",
         cost: new EN("1e400"),
         unlocked() {
             return hasUpgrade("t", 22)
         }
         },
         24: { title: "484",
-        description: "Gain x7e1,386 Trees.",
+        description: "获得 ×7e1,386 树。",
         cost: new EN("1e1094"),
         unlocked() {
             return hasUpgrade("t", 23)
         }
         },
         25: { title: "485",
-        description: "Gain x2.8e5,548 Trees.",
+        description: "获得 ×2.8e5,548 树。",
         cost: new EN("1e2480"),
         unlocked() {
             return hasUpgrade("t", 24)
         }
         },
         31: { title: "486",
-        description: "Gain ^5 Trees.",
+        description: "获得 ^5 树。",
         cost: new EN("1e8029"),
         unlocked() {
             return hasUpgrade("t", 25)
         }
         },
         32: { title: "487",
-        description: "Gain ^25 Trees.",
+        description: "获得 ^25 树。",
         cost: new EN("5e40136"),
         unlocked() {
             return hasUpgrade("t", 31)
         }
         },
         33: { title: "488",
-        description: "Gain ^625 Trees.",
+        description: "获得 ^625 树。",
         cost: new EN("1e1003352"),
         unlocked() {
             return hasUpgrade("t", 32)
         }
         },
         34: { title: "489",
-        description: "Gain ^9.536e13 Trees.",
+        description: "获得 ^9.536e13 树。",
         cost: new EN("4e318546786"),
         unlocked() {
             return hasUpgrade("t", 33)
         }
         },
         35: { title: "490",
-        description: "Gain ^1e308 Trees.",
+        description: "获得 ^1e308 树。",
         cost: new EN("e2.989e22"),
         unlocked() {
             return hasUpgrade("t", 34)
         }
         },
         41: { title: "491",
-        description: "Gain a good Trees boost.",
+        description: "获得不错的树增益。",
         cost: new EN("e2.989e330"),
         unlocked() {
             return hasUpgrade("t", 35)
         }
         },
         42: { title: "492",
-        description: "Gain a big Trees boost.",
+        description: "获得大幅树增益。",
         cost: new EN("eee9"),
         unlocked() {
             return hasUpgrade("t", 41)
         }
         },
         43: { title: "493",
-        description: "Gain a bigger Trees boost.",
+        description: "获得更大幅树增益。",
         cost: new EN("eee420"),
         unlocked() {
             return hasUpgrade("t", 42)
         }
         },
         44: { title: "494",
-        description: "Gain a massive Trees boost.",
+        description: "获得巨量树增益。",
         cost: new EN("eeee9"),
         unlocked() {
             return hasUpgrade("t", 43)
         }
         },
         45: { title: "495",
-        description: "Gain a insane Trees boost.",
+        description: "获得疯狂树增益。",
         cost: new EN("eeee999999999"),
         unlocked() {
             return hasUpgrade("t", 44)
         }
         },
         51: { title: "496",
-        description: "Gain a EXTREME Trees boost.",
+        description: "获得极限树增益。",
         cost: new EN("10^^7"),
         unlocked() {
             return hasUpgrade("t", 45)
         }
         },
         52: { title: "497",
-        description: "Gain a GOD Trees boost.",
+        description: "获得神明树增益。",
         cost: new EN("10^^10"),
         unlocked() {
             return hasUpgrade("t", 51)
         }
         },
         53: { title: "498",
-        description: "Gain a BEST Trees boost.",
+        description: "获得最强树增益。",
         cost: new EN("10^^13"),
         unlocked() {
             return hasUpgrade("t", 52)
         }
         },
         54: { title: "499",
-        description: "Gain a TRUE BEST Trees boost and increase other currencies.",
+        description: "获得真正最强的树增益，并提升其他货币。",
         cost: new EN("10^^16"),
         unlocked() {
             return hasUpgrade("t", 53)
         }
         },
         55: { title: "500",
-        description: "The Onion Upgrade 71 is x65,536 more powerful and unlock the final onion challenge!",
+        description: "洋葱升级 71 强大了 ×65,536 倍，并解锁最终的洋葱挑战！",
         cost: new EN("10^^20"),
         unlocked() {
             return player.o.points.gte("10^^40")
         }
         },
     },
-    name: "Trees", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "树", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "🌳", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -200,8 +200,8 @@ addLayer("t", {
     }},
     color: "#42692f",
     requires: new EN("10^^69"), // Can be a function that takes requirement increases into account
-    resource: "Trees", // Name of prestige currency
-    baseResource: "Points", // Name of resource prestige is based on
+    resource: "树", // Name of prestige currency
+    baseResource: "积分", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     type() {if (hasUpgrade("du", 54)) return "static"
     else return "normal"},    
@@ -263,7 +263,7 @@ addLayer("t", {
     row: 5, // Row the layer is in on the tree (0 is the first row)
     passiveGeneration() { return (hasMilestone("re", 1)&&player.current!="t")?1:0 },
     hotkeys: [
-        {key: "t", description: "T: Reset for Trees", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "t", description: "T: 重置以获得树", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){if (hasUpgrade("du", 54)) return false
     else return (hasUpgrade("s", 55) || player[this.layer].unlocked)},

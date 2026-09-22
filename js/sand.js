@@ -7,24 +7,24 @@ addLayer("s", {
     ],
     microtabs: {
     stuff: {
-        "Upgrades": {
+        "升级": {
             unlocked() {return (hasAchievement("a", 55))},
     content: [
         ["blank", "15px"],
-        ["raw-html", () => `<h4 style="opacity:.5">You will be able to unlock buyables and sub currency!<br>Which you can spend it on buyables and boost more sand gain!</h4>`],
+        ["raw-html", () => `<h4 style="opacity:.5">你将能够解锁可购买项与子货币！<br>你可以用它购买可购买项，并进一步提升沙子获取量！</h4>`],
         ["upgrades", [1,2,3,4,5,6,7,8,9]]
     ]
     
 },
-"Buyables": {
+"可购买项": {
     unlocked() {return (hasUpgrade("s", 11))},
     content: [
         ["blank", "15px"],
-        ["display-text", () => "You have <h2 style='color: #c2b280; text-shadow: 0 0 10px #c2b280'>" + format(player.s.sanddunes) + "</h2> Sand Dunes 🏖️, multiplying Sand gain by <h2 style='color: #c2b280; text-shadow: 0 0 10px #c2b280'> <br>" + format(player.s.sanddunes.max(1).pow(0.5)) + "x</h2>.<br>" + "<h3>" + format(tmp.s.effect) + " Sand Dust/s<h3> <br>"],
+        ["display-text", () => "你有 <h2 style='color: #c2b280; text-shadow: 0 0 10px #c2b280'>" + format(player.s.sanddunes) + "</h2> 沙丘 🏖️，使沙子获取量乘以 <h2 style='color: #c2b280; text-shadow: 0 0 10px #c2b280'> <br>" + format(player.s.sanddunes.max(1).pow(0.5)) + "×</h2>。<br>" + "<h3>" + format(tmp.s.effect) + " 沙尘/秒<h3> <br>"],
         "buyables"
     ]
 },
-    "Milestones": {
+    "里程碑": {
         unlocked() {return (hasUpgrade("s", 21))},
 content: [
     ["blank", "15px"],
@@ -35,172 +35,172 @@ content: [
     },
     upgrades: {
         11: { title: "451",
-        description: "Begin to generate sand dunes and unlock a buyable.",
+        description: "开始产出沙丘，并解锁一个可购买项。",
         cost: new EN("500"),
     },
     12: { title: "452",
-        description: "Unlock another buyable.",
+        description: "解锁另一个可购买项。",
         cost: new EN("100000"),
         unlocked() {
             return hasUpgrade("s", 11)
         }
     },
     13: { title: "453",
-        description: "Gain 69,420x sand.",
+        description: "获得 69,420× 沙子。",
         cost: new EN("1e24"),
         unlocked() {
             return hasUpgrade("s", 12)
         }
     },
     14: { title: "454",
-        description: "Unlock the third buyable.",
+        description: "解锁第三个可购买项。",
         cost: new EN("1e60"),
         unlocked() {
             return hasUpgrade("s", 13)
         }
     },
     15: { title: "455",
-        description: "Gain 1e69x sand.",
+        description: "获得 1e69× 沙子。",
         cost: new EN("1e222"),
         unlocked() {
             return hasUpgrade("s", 14)
         }
     },
     21: { title: "456",
-        description: "Gain 1e308x sand.",
+        description: "获得 1e308× 沙子。",
         cost: new EN("1e900"),
         unlocked() {
             return hasUpgrade("s", 15)
         }
     },
     22: { title: "457",
-        description: "Gain 1e1,000x sand.",
+        description: "获得 1e1,000× 沙子。",
         cost: new EN("1e5269"),
         unlocked() {
             return hasUpgrade("s", 21)
         }
     },
     23: { title: "458",
-        description: "Unlock the fourth buyable.",
+        description: "解锁第四个可购买项。",
         cost: new EN("1e7000"),
         unlocked() {
             return hasUpgrade("s", 22)
         }
     },
     24: { title: "459",
-        description: "Gain 1e3,003x sand.",
+        description: "获得 1e3,003× 沙子。",
         cost: new EN("1e12345"),
         unlocked() {
             return hasUpgrade("s", 23)
         }
     },
     25: { title: "460",
-        description: "Gain 1e10,000x sand.",
+        description: "获得 1e10,000× 沙子。",
         cost: new EN("1e20000"),
         unlocked() {
             return hasUpgrade("s", 24)
         }
     },
     31: { title: "461",
-        description: "Gain 1e69,420x sand.",
+        description: "获得 1e69,420× 沙子。",
         cost: new EN("1e69420"),
         unlocked() {
             return hasUpgrade("s", 25)
         }
     },
     32: { title: "462",
-        description: "Gain 1e1,000,000x sand.",
+        description: "获得 1e1,000,000× 沙子。",
         cost: new EN("1e111111"),
         unlocked() {
             return hasUpgrade("s", 31)
         }
     },
     33: { title: "463",
-        description: "Gain 1e100,000,000x sand.",
+        description: "获得 1e100,000,000× 沙子。",
         cost: new EN("1e1111111"),
         unlocked() {
             return hasUpgrade("s", 32)
         }
     },
     34: { title: "464",
-        description: "Gain e1.000e9x sand and make the fourth buyable cheaper.",
+        description: "获得 e1.000e9× 沙子，并降低第四个可购买项的花费。",
         cost: new EN("1e11111111"),
         unlocked() {
             return hasUpgrade("s", 33)
         }
     },
     35: { title: "465",
-        description: "Gain a good boost to sand.",
+        description: "大幅增益沙子。",
         cost: new EN("ee1000"),
         unlocked() {
             return hasUpgrade("s", 34)
         }
     },
     41: { title: "466",
-        description: "Unlock the fifth buyable.",
+        description: "解锁第五个可购买项。",
         cost: new EN("ee10000"),
         unlocked() {
             return hasUpgrade("s", 35)
         }
     },
     42: { title: "467",
-        description: "Gain a big boost to sand.",
+        description: "巨幅增益沙子。",
         cost: new EN("ee2e11"),
         unlocked() {
             return hasUpgrade("s", 41)
         }
     },
     43: { title: "468",
-        description: "Gain a bigger boost to sand.",
+        description: "更大幅增益沙子。",
         cost: new EN("eee100"),
         unlocked() {
             return hasUpgrade("s", 42)
         }
     },
     44: { title: "469",
-        description: "Gain a massive boost to sand.",
+        description: "海量增益沙子。",
         cost: new EN("eee69420"),
         unlocked() {
             return hasUpgrade("s", 43)
         }
     },
     45: { title: "470",
-        description: "Gain a insane boost to sand.",
+        description: "疯狂增益沙子。",
         cost: new EN("eeee9"),
         unlocked() {
             return hasUpgrade("s", 44)
         }
     },
     51: { title: "471",
-        description: "Gain a EXTREME boost to sand.",
+        description: "极限增益沙子。",
         cost: new EN("eeeee8"),
         unlocked() {
             return hasUpgrade("s", 45)
         }
     },
     52: { title: "472",
-        description: "Gain a GOD boost to sand.",
+        description: "神级增益沙子。",
         cost: new EN("10^^7"),
         unlocked() {
             return hasUpgrade("s", 51)
         }
     },
     53: { title: "473",
-        description: "Gain a BEST boost to sand.",
+        description: "最强增益沙子。",
         cost: new EN("10^^8"),
         unlocked() {
             return hasUpgrade("s", 52)
         }
     },
     54: { title: "474",
-        description: "Gain a TRUE BEST boost to sand and increase other currencies.",
+        description: "真·最强增益沙子，并提升其他货币。",
         cost: new EN("10^^9"),
         unlocked() {
             return hasUpgrade("s", 53)
         }
     },
     55: { title: "475",
-        description: "The Onion Upgrade 71 is x256 more powerful and unlock a new layer.",
+        description: "洋葱升级 71 的威力提升至 256×，并解锁一个新层。",
         cost: new EN("10^^12"),
         unlocked() {
             return player.o.points.gte("10^^20")
@@ -209,9 +209,9 @@ content: [
 },
 buyables: {
     11: {
-        title: "<h3>First Buyable<h3>",
+        title: "<h3>第一个可购买项<h3>",
         cost(x) { return new EN(1).mul(new EN(3).pow(x)) },
-        display() {return `<h3>Double Sand Dunes Gain.<h3>\nLevel: ` + formatWhole(player.s.buyables[11]) + `<br>Cost: ${format(this.cost())} Sand\nEffect: ${format(this.effect())}x Sand Dunes`},
+        display() {return `<h3>沙丘获取量翻倍。<h3>\n等级: ` + formatWhole(player.s.buyables[11]) + `<br>花费: ${format(this.cost())} 沙子\n效果: ${format(this.effect())}× 沙丘`},
         canAfford() {return player.s.points.gte(this.cost())},
         buy() {
             player.s.points = player.s.points.sub(this.cost())
@@ -224,9 +224,9 @@ buyables: {
     },
 },
     12: {
-        title: "<h3>Second Buyable<h3>",
+        title: "<h3>第二个可购买项<h3>",
         cost(x) { return new EN(1).mul(new EN(5).pow(x)) },
-        display() {return `<h3>Triple Sand Dunes Gain.<h3>\nLevel: ` + formatWhole(player.s.buyables[12]) + `<br>Cost: ${format(this.cost())} Sand\nEffect: ${format(this.effect())}x Sand Dunes`},
+        display() {return `<h3>沙丘获取量三倍。<h3>\n等级: ` + formatWhole(player.s.buyables[12]) + `<br>花费: ${format(this.cost())} 沙子\n效果: ${format(this.effect())}× 沙丘`},
         canAfford() {return player.s.points.gte(this.cost())},
         buy() {
             player.s.points = player.s.points.sub(this.cost())
@@ -239,9 +239,9 @@ buyables: {
     },
 },
     13: {
-        title: "<h3>Third Buyable<h3>",
+        title: "<h3>第三个可购买项<h3>",
         cost(x) { return new EN(1).mul(new EN(69).pow(x)) },
-        display() {return `<h3>10x Sand Dunes Gain.<h3>\nLevel: ` + formatWhole(player.s.buyables[13]) + `<br>Cost: ${format(this.cost())} Sand\nEffect: ${format(this.effect())}x Sand Dunes`},
+        display() {return `<h3>沙丘获取量 10×。<h3>\n等级: ` + formatWhole(player.s.buyables[13]) + `<br>花费: ${format(this.cost())} 沙子\n效果: ${format(this.effect())}× 沙丘`},
         canAfford() {return player.s.points.gte(this.cost())},
         buy() {
             player.s.points = player.s.points.sub(this.cost())
@@ -254,9 +254,9 @@ buyables: {
     },
 },
     14: {
-        title: "<h3>Fourth Buyable<h3>",
+        title: "<h3>第四个可购买项<h3>",
         cost(x) { return hasUpgrade("s",34) ? new EN(2).pow(new EN(1.1).pow(x)) : new EN(2).pow(new EN(2).pow(x)) },
-        display() {return `<h3>Power Sand Dunes Gain.<h3>\nLevel: ` + formatWhole(player.s.buyables[14]) + `<br>Cost: ${format(this.cost())} Sand\nEffect: ^${format(this.effect())} Sand Dunes`},
+        display() {return `<h3>沙丘获取量幂运算。<h3>\n等级: ` + formatWhole(player.s.buyables[14]) + `<br>花费: ${format(this.cost())} 沙子\n效果: ^${format(this.effect())} 沙丘`},
         canAfford() {return player.s.points.gte(this.cost())},
         buy() {
             player.s.points = player.s.points.sub(this.cost())
@@ -269,9 +269,9 @@ buyables: {
     },
 },
     15: {
-        title: "<h3>Fifth Buyable<h3>",
+        title: "<h3>第五个可购买项<h3>",
         cost(x) { return new EN("ee10000").tetrate(new EN(1.000000000001).pow(x)) },
-        display() {return `<h3>Power Sand Dunes Gain.<h3>\nLevel: ` + formatWhole(player.s.buyables[15]) + `<br>Cost: ${format(this.cost())} Sand\nEffect: ^${format(this.effect())} Sand Dunes`},
+        display() {return `<h3>沙丘获取量幂运算。<h3>\n等级: ` + formatWhole(player.s.buyables[15]) + `<br>花费: ${format(this.cost())} 沙子\n效果: ^${format(this.effect())} 沙丘`},
         canAfford() {return player.s.points.gte(this.cost())},
         buy() {
             player.s.points = player.s.points.sub(this.cost())
@@ -290,7 +290,7 @@ effect() {
     let eff = EN.pow(1)
     return eff;
 },
-    name: "Sand",
+    name: "沙子",
     symbol: "🏜️", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -301,8 +301,8 @@ effect() {
     }},
     color: "#c2b280",
     requires: new EN("eeeeeeeeeeeeeeeeeee10"), // Can be a function that takes requirement increases into account
-    resource: "Sand", // Name of prestige currency
-    baseResource: "Points", // Name of resource prestige is based on
+    resource: "沙子", // Name of prestige currency
+    baseResource: "积分", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
     branches: ["r", "m"],
@@ -357,51 +357,51 @@ effect() {
 
     milestones: {
         1: {
-            requirementDescription: "1e1,777 Sand",
-            effectDescription: "Automate the first sand buyable.",
+            requirementDescription: "1e1,777 沙子",
+            effectDescription: "自动购买第一个沙子可购买项。",
             done() { return player.s.points.gte("1e1777") },
             toggles: [
               ["s","auto"]
             ]
         },
         2: {
-            requirementDescription: "6e6,969 Sand",
-            effectDescription: "Automate the second sand buyable and buy max of the first buyable.",
+            requirementDescription: "6e6,969 沙子",
+            effectDescription: "自动购买第二个沙子可购买项，并最大购买第一个可购买项。",
             done() { return player.s.points.gte("6e6969") },
             toggles: [
               ["s","auto2"]
             ]
         },
         3: {
-            requirementDescription: "1e20,000 Sand",
-            effectDescription: "Automate the third sand buyable and buy max of the second buyable.",
+            requirementDescription: "1e20,000 沙子",
+            effectDescription: "自动购买第三个沙子可购买项，并最大购买第二个可购买项。",
             done() { return player.s.points.gte("1e20000") },
             toggles: [
               ["s","auto3"]
             ]
         },
         4: {
-            requirementDescription: "e1.000e9 Sand",
-            effectDescription: "Buy max of the third buyable.",
+            requirementDescription: "e1.000e9 沙子",
+            effectDescription: "最大购买第三个可购买项。",
             done() { return player.s.points.gte("ee9") },
         },
         5: {
-            requirementDescription: "e1e3,003 Sand",
-            effectDescription: "Autobuy the fourth buyable.",
+            requirementDescription: "e1e3,003 沙子",
+            effectDescription: "自动购买第四个可购买项。",
             done() { return player.s.points.gte("ee3003") },
             toggles: [
               ["s","auto4"]
             ]
         },
         6: {
-            requirementDescription: "10,000 Medals",
-            effectDescription: "Buy max of the fourth buyable.",
+            requirementDescription: "10,000 奖牌",
+            effectDescription: "最大购买第四个可购买项。",
             done() { return player.re.points.gte("10000")
             },
         },
         7: {
-            requirementDescription: "1,000,000 Medals",
-            effectDescription: "Autobuy the fifth buyable & buy max.",
+            requirementDescription: "1,000,000 奖牌",
+            effectDescription: "自动购买第五个可购买项并最大购买。",
             done() { return player.re.points.gte("1e6") },
             toggles: [
               ["s","auto5"]
@@ -435,7 +435,7 @@ effect() {
     row: 5, // Row the layer is in on the tree (0 is the first row)
     passiveGeneration() { return (hasMilestone("re", 1)&&player.current!="s")?1:0 },
     hotkeys: [
-        {key: "s", description: "S: Reset for Sand", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "s", description: "S: 重置以获得沙子", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){if (hasUpgrade("du", 54)) return false
     else return (hasChallenge("o", 22) || player[this.layer].unlocked)},

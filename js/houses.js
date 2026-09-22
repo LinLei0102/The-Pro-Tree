@@ -7,7 +7,7 @@ addLayer("h", {
     ],
     microtabs: {
         stuff: {
-                        "Upgrades": {
+                        "升级": {
                             unlocked() {return (hasAchievement("a", 11))},
                     content: [
                         ["blank", "15px"],
@@ -18,12 +18,12 @@ addLayer("h", {
         },
     upgrades: {
         11: { title: "201",
-        description: "1e1,000,000x Points.",
+        description: "1e1,000,000× 积分。",
         cost: new EN("5"),
 
         },
         12: { title: "202",
-        description: "Gain more points based on Houses.",
+        description: "根据房屋获得更多积分。",
         cost: new EN("5"),
         effect() {
             return player[this.layer].points.add("1e69420").pow(0.420)
@@ -34,21 +34,21 @@ addLayer("h", {
         }
         },
         13: { title: "203",
-        description: "^1.03 Points.",
+        description: "^1.03 积分。",
         cost: new EN("10"),
         unlocked() {
             return hasUpgrade("h", 12)
         }
         },
         14: { title: "204",
-        description: "1e3,000,003x Points.",
+        description: "1e3,000,003× 积分。",
         cost: new EN("35"),
         unlocked() {
             return hasUpgrade("h", 13)
         }
         },
         15: { title: "205",
-        description: "Gain more houses based on points and gain 10x Houses.",
+        description: "根据积分获得更多房屋，并获得 10× 房屋。",
         effect() {
             return player.points.add(1).pow(1e-10)
         },
@@ -59,147 +59,147 @@ addLayer("h", {
         }
         },
         21: { title: "206",
-        description: "^1.025 Points.",
+        description: "^1.025 积分。",
         cost: new EN("250"),
         unlocked() {
             return hasUpgrade("h", 15)
         }
         },
         22: { title: "207",
-        description: "Triple House Gain.",
+        description: "房屋获取变为三倍。",
         cost: new EN("300"),
         unlocked() {
             return hasUpgrade("h", 21)
         }
         },
         23: { title: "208",
-        description: "Quadruple House Gain.",
+        description: "房屋获取变为四倍。",
         cost: new EN("1000"),
         unlocked() {
             return hasUpgrade("h", 22)
         }
         },
         24: { title: "209",
-        description: "1e10,000,000x Points.",
+        description: "1e10,000,000× 积分。",
         cost: new EN("4000"),
         unlocked() {
             return hasUpgrade("h", 23)
         }
         },
         25: { title: "210",
-        description: "^1.001 Points and Quintuple House Gain.",
+        description: "^1.001 积分且房屋获取变为五倍。",
         cost: new EN("6969"),
         unlocked() {
             return hasUpgrade("h", 24)
         }
         },
         31: { title: "211",
-        description: "^1.01 Points and Triple House Gain.",
+        description: "^1.01 积分且房屋获取变为三倍。",
         cost: new EN("25000"),
         unlocked() {
             return hasUpgrade("h", 25)
         }
         },
         32: { title: "212",
-        description: "^1.01 Point Gain and 10x House Gain!",
+        description: "^1.01 积分获取且 10× 房屋获取！",
         cost: new EN("1e5"),
         unlocked() {
             return hasUpgrade("h", 31)
         }
         },
         33: { title: "213",
-        description: "1e30,000,003x Points.",
+        description: "1e30,000,003× 积分。",
         cost: new EN("5e5"),
         unlocked() {
             return hasUpgrade("h", 32)
         }
         },
         34: { title: "214",
-        description: "1e10,000,000x Points and 5x House Gain.",
+        description: "1e10,000,000× 积分与 5× 房屋获取。",
         cost: new EN("2e6"),
         unlocked() {
             return hasUpgrade("h", 33)
         }
         },
         35: { title: "215",
-        description: "^1.001 Point Gain.",
+        description: "^1.001 积分获取。",
         cost: new EN("1e7"),
         unlocked() {
             return hasUpgrade("h", 34)
         }
         },
         41: { title: "216",
-        description: "ee11x Points.",
+        description: "ee11× 积分。",
         cost: new EN("1e2605"),
         unlocked() {
             return hasUpgrade("e", 45)
         }
         },
         42: { title: "217",
-        description: "ee11x Points.",
+        description: "ee11× 积分。",
         cost: new EN("1e4280"),
         unlocked() {
             return hasUpgrade("h", 41)
         }
         },
         43: { title: "218",
-        description: "ee11x Points.",
+        description: "ee11× 积分。",
         cost: new EN("1e5960"),
         unlocked() {
             return hasUpgrade("h", 42)
         }
         },
         44: { title: "219",
-        description: "ee11x Points.",
+        description: "ee11× 积分。",
         cost: new EN("1e7640"),
         unlocked() {
             return hasUpgrade("h", 43)
         }
         },
         45: { title: "220",
-        description: "ee12x Points.",
+        description: "ee12× 积分。",
         cost: new EN("1e8500"),
         unlocked() {
             return hasUpgrade("h", 44)
         }
         },
         51: { title: "221",
-        description: "Speed up by a good amount.",
+        description: "大幅加速。",
         cost: new EN("e1e60"),
         unlocked() {
             return hasUpgrade("e", 55)
         }
         },
         52: { title: "222",
-        description: "Speed up by a good amount again.",
+        description: "再次大幅加速。",
         cost: new EN("e1e90"),
         unlocked() {
             return hasUpgrade("h", 51)
         }
         },
         53: { title: "223",
-        description: "Speed up by a good amount yet again.",
+        description: "又一次大幅加速。",
         cost: new EN("e1e128"),
         unlocked() {
             return hasUpgrade("h", 52)
         }
         },
         54: { title: "224",
-        description: "Speed up by a good amount yet again and again.",
+        description: "再一次又一次大幅加速。",
         cost: new EN("e1e222"),
         unlocked() {
             return hasUpgrade("h", 53)
         }
         },
         55: { title: "225",
-        description: "Speed up by a good amount yet again and again and again.",
+        description: "一遍又一遍又一遍地大幅加速。",
         cost: new EN("e1.79e308"),
         unlocked() {
             return hasUpgrade("h", 54)
         }
         },
         61: { title: "?",
-        description: "Gain ee100x Points.",
+        description: "获得 ee100× 积分。",
         cost: new EN("1e9"),
         unlocked() {
             return hasUpgrade("e", 61)
@@ -224,13 +224,13 @@ addLayer("h", {
 
 },
 effectDescription(){
-    return "multiplying point gain by " + format(tmp[this.layer].effect) 
+    return "使积分获取乘以 " + format(tmp[this.layer].effect) 
     /*
       use format(num) whenever displaying a number
     */
    
   },
-    name: "House", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "房屋", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "🏠", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -240,8 +240,8 @@ effectDescription(){
     }},
     color: "#563D2D",
     requires: new EN("24400"), // Can be a function that takes requirement increases into account
-    resource: "Houses", // Name of prestige currency
-    baseResource: "Ants", // Name of resource prestige is based on
+    resource: "房屋", // Name of prestige currency
+    baseResource: "蚂蚁", // Name of resource prestige is based on
     baseAmount() {return player.ant.points}, // Get the current amount of baseResource
     type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
     branches: ["c"],
@@ -274,7 +274,7 @@ effectDescription(){
         if (hasMilestone("j", 1)) return (hasMilestone("j", 1)?1:0)
         },    
     hotkeys: [
-        {key: "h", description: "H: Reset for House", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "h", description: "H: 重置获取房屋", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){if (hasUpgrade("z", 33)) return false
     else return (hasChallenge("f", 12) || player[this.layer].unlocked)},

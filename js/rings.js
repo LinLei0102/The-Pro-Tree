@@ -7,7 +7,7 @@ addLayer("r", {
     ],
     microtabs: {
         stuff: {
-                        "Upgrades": {
+                        "升级": {
                             unlocked() {return (hasAchievement("a", 11))},
                     content: [
                         ["blank", "15px"],
@@ -18,179 +18,179 @@ addLayer("r", {
         },
     upgrades: {
         11: { title: "426",
-        description: "Gain x3 Rings.",
+        description: "获得 ×3 圆环。",
         cost: new EN("100"),
         },
         12: { title: "427",
-        description: "Gain x27 Rings.",
+        description: "获得 ×27 圆环。",
         cost: new EN("1000"),
         unlocked() {
             return hasUpgrade("r", 11)
         }
         },
         13: { title: "428",
-        description: "Gain x729 Rings.",
+        description: "获得 ×729 圆环。",
         cost: new EN("25000"),
         unlocked() {
             return hasUpgrade("r", 12)
         }
         },
         14: { title: "429",
-        description: "Gain x387,420,489 Rings.",
+        description: "获得 ×387,420,489 圆环。",
         cost: new EN("25000000"),
         unlocked() {
             return hasUpgrade("r", 13)
         }
         },
         15: { title: "430",
-        description: "Gain x1.500e17 Rings and increase quantum gain.",
+        description: "获得 ×1.500e17 圆环并提升量子获取。",
         cost: new EN("1e16"),
         unlocked() {
             return hasUpgrade("r", 14)
         }
         },
         21: { title: "431",
-        description: "Gain x3.381e51 Rings.",
+        description: "获得 ×3.381e51 圆环。",
         cost: new EN("1e33"),
         unlocked() {
             return hasUpgrade("r", 15)
         }
         },
         22: { title: "432",
-        description: "Gain x1.143e103 Rings.",
+        description: "获得 ×1.143e103 圆环。",
         cost: new EN("1e84"),
         unlocked() {
             return hasUpgrade("r", 21)
         }
         },
         23: { title: "433",
-        description: "Gain x1.5e309 Rings.",
+        description: "获得 ×1.5e309 圆环。",
         cost: new EN("2.5e187"),
         unlocked() {
             return hasUpgrade("r", 22)
         }
         },
         24: { title: "434",
-        description: "Gain x5e1,236 Rings.",
+        description: "获得 ×5e1,236 圆环。",
         cost: new EN("5e496"),
         unlocked() {
             return hasUpgrade("r", 23)
         }
         },
         25: { title: "435",
-        description: "Gain x1.5e3,709 Rings and increase light and key gain.",
+        description: "获得 ×1.5e3,709 圆环并提升灯光和钥匙获取。",
         cost: new EN("1e1733"),
         unlocked() {
             return hasUpgrade("r", 24)
         }
         },
         31: { title: "436",
-        description: "Gain ^4 Rings.",
+        description: "获得 ^4 圆环。",
         cost: new EN("5e5442"),
         unlocked() {
             return hasUpgrade("r", 25)
         }
         },
         32: { title: "437",
-        description: "Gain ^16 Rings.",
+        description: "获得 ^16 圆环。",
         cost: new EN("1e21763"),
         unlocked() {
             return hasUpgrade("r", 31)
         }
         },
         33: { title: "438",
-        description: "Gain ^256 Rings.",
+        description: "获得 ^256 圆环。",
         cost: new EN("5e348173"),
         unlocked() {
             return hasUpgrade("r", 32)
         }
         },
         34: { title: "439",
-        description: "Gain ^4.294e9 Rings.",
+        description: "获得 ^4.294e9 圆环。",
         cost: new EN("1e49565906"),
         unlocked() {
             return hasUpgrade("r", 33)
         }
         },
         35: { title: "440",
-        description: "Gain ^1e69 Rings.",
+        description: "获得 ^1e69 圆环。",
         cost: new EN("e1.913e17"),
         unlocked() {
             return hasUpgrade("r", 34)
         }
         },
         41: { title: "441",
-        description: "Gain a good ring boost.",
+        description: "获得不错的圆环增益。",
         cost: new EN("e1.913e86"),
         unlocked() {
             return player.points.gte("eeeeeeeeee3000")
         }
         },
         42: { title: "442",
-        description: "Gain a big ring boost.",
+        description: "获得大幅圆环增益。",
         cost: new EN("e1.913e394"),
         unlocked() {
             return hasUpgrade("r", 41)
         }
         },
         43: { title: "443",
-        description: "Gain a bigger ring boost.",
+        description: "获得更大幅圆环增益。",
         cost: new EN("e1.913e69814"),
         unlocked() {
             return hasUpgrade("r", 42)
         }
         },
         44: { title: "444",
-        description: "Gain a massive ring boost.",
+        description: "获得巨大圆环增益。",
         cost: new EN("e1.913e1069814"),
         unlocked() {
             return hasUpgrade("r", 43)
         }
         },
         45: { title: "445",
-        description: "Gain a insane ring boost.",
+        description: "获得疯狂圆环增益。",
         cost: new EN("eee10"),
         unlocked() {
             return hasUpgrade("r", 44)
         }
         },
         51: { title: "446",
-        description: "Gain a EXTREME ring boost.",
+        description: "获得极限圆环增益。",
         cost: new EN("eee69420"),
         unlocked() {
             return player.points.gte("eeeeeeeeee500000")
         }
         },
         52: { title: "447",
-        description: "Gain a GOD ring boost.",
+        description: "获得神级圆环增益。",
         cost: new EN("eeee9"),
         unlocked() {
             return hasUpgrade("r", 51)
         }
         },
         53: { title: "448",
-        description: "Gain a BEST ring boost.",
+        description: "获得最佳圆环增益。",
         cost: new EN("eeee1337"),
         unlocked() {
             return hasUpgrade("r", 52)
         }
         },
         54: { title: "449",
-        description: "Gain a TRUE BEST ring boost and increase quantum gain.",
+        description: "获得真正最佳的圆环增益并提升量子获取。",
         cost: new EN("eeeee6"),
         unlocked() {
             return hasUpgrade("r", 53)
         }
         },
         55: { title: "450",
-        description: "The Onion Upgrade 71 is x16 more powerful and unlock a challenge!",
+        description: "洋葱升级 71 强度 ×16，并解锁一个挑战！",
         cost: new EN("eeeee10"),
         unlocked() {
             return player.o.points.gte("eeeeeeeee10")
         }
         },
     },
-    name: "Rings", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "圆环", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "💍", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -200,8 +200,8 @@ addLayer("r", {
     }},
     color: "#00ced1",
     requires: new EN("eeeeeeeee10"), // Can be a function that takes requirement increases into account
-    resource: "Rings", // Name of prestige currency
-    baseResource: "Points", // Name of resource prestige is based on
+    resource: "圆环", // Name of prestige currency
+    baseResource: "积分", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     type() {if (hasUpgrade("ci", 54)) return "static"
     else return "normal"},    
@@ -265,7 +265,7 @@ addLayer("r", {
     passiveGeneration() { return (hasMilestone("re", 1)&&player.current!="r")?1:0 },
 
     hotkeys: [
-        {key: "r", description: "R: Reset for Rings", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "r", description: "R: 重置以获得圆环", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){if (hasUpgrade("ci", 54)) return false
     else return (hasChallenge("o", 21) || player[this.layer].unlocked)},

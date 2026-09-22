@@ -7,21 +7,21 @@ addLayer("f", {
     ],
       microtabs: {
         stuff: {
-                        "Upgrades": {
+                        "升级": {
                             unlocked() {return (hasAchievement("a", 11))},
                     content: [
                         ["blank", "15px"],
-                        ["raw-html", () => `<h4 style="opacity:.5">You will see challenges, which basically decreases the production.<br> But you will get an reward for completing it!</h4>`],
+                        ["raw-html", () => `<h4 style="opacity:.5">你会看到挑战，它们基本上会降低产出。<br> 但完成它会获得奖励！</h4>`],
                         ["upgrades", [1,2,3,4,5,6,7,8,9]]
                     ]
                 },
-                        "Milestones": {
+                        "里程碑": {
                             content: [
                                 ["blank", "15px"],
                                 "milestones"
                             ]
                         },
-                        "Challenges": {
+                        "挑战": {
                             unlocked() {return (hasUpgrade("e", 35))},
                             content: [
                                 ["blank", "15px"],
@@ -32,12 +32,12 @@ addLayer("f", {
     },
     upgrades: {
         11: { title: "151",
-        description: "1e100x Points and keep People Upgrades.",
+        description: "1e100× 积分，并保留人员升级。",
         cost: new EN("1"),
 
         },
         12: { title: "152",
-        description: "Gain more points based on Fruits and Autobuy dices.",
+        description: "根据水果和自动购买骰子获得更多积分。",
         cost: new EN("2"),
         effect() {
             return player[this.layer].points.add(1e10).pow(0.420)
@@ -48,49 +48,49 @@ addLayer("f", {
         }
         },
         13: { title: "153",
-        description: "1e150x Points.",
+        description: "1e150× 积分。",
         cost: new EN("3"),
         unlocked() {
             return hasUpgrade("f", 12)
         }
         },
         14: { title: "154",
-        description: "1e123x BP, People.",
+        description: "1e123× 按钮能量、人员。",
         cost: new EN("10"),
         unlocked() {
             return hasUpgrade("f", 13)
         }
         },
         15: { title: "155",
-        description: "1e10x Cups, 1e25x Grass.",
+        description: "1e10× 奖杯，1e25× 草。",
         cost: new EN("16"),
         unlocked() {
             return hasUpgrade("f", 14)
         }
         },
         21: { title: "156",
-        description: "1e200x Points.",
+        description: "1e200× 积分。",
         cost: new EN("25"),
         unlocked() {
             return hasUpgrade("f", 15)
         }
         },
         22: { title: "157",
-        description: "^1.024 People.",
+        description: "^1.024 人员。",
         cost: new EN("69"),
         unlocked() {
             return hasUpgrade("f", 21)
         }
         },
         23: { title: "158",
-        description: "0x Points (Joke)",
+        description: "0× 积分（玩笑）",
         cost: new EN("100"),
         unlocked() {
             return hasUpgrade("f", 22)
         }
         },
         24: { title: "159",
-        description: "Every Upgrade = 1,000x Points.",
+        description: "每项升级 = 1,000× 积分。",
         effect() {
             let effect = ExpantaNum.pow(1000, player.f.upgrades.length)
             return effect
@@ -102,7 +102,7 @@ addLayer("f", {
         }
         },
         25: { title: "160",
-        description: "Gain more Fruits based on points.",
+        description: "根据积分获得更多水果。",
         cost: new EN("250"),
         effect() {
             return player.points.add(1).pow(0.000001)
@@ -113,112 +113,112 @@ addLayer("f", {
         }
         },
         31: { title: "161",
-        description: "1e300x Points.",
+        description: "1e300× 积分。",
         cost: new EN("300"),
         unlocked() {
             return hasUpgrade("f", 25)
         }
         },
         32: { title: "162",
-        description: "1e200x Points.",
+        description: "1e200× 积分。",
         cost: new EN("666"),
         unlocked() {
             return hasUpgrade("f", 31)
         }
         },
         33: { title: "163",
-        description: "Double Fruits.",
+        description: "双倍水果。",
         cost: new EN("1337"),
         unlocked() {
             return hasUpgrade("f", 32)
         }
         },
         34: { title: "164",
-        description: "Triple Fruits.",
+        description: "三倍水果。",
         cost: new EN("2500"),
         unlocked() {
             return hasUpgrade("f", 33)
         }
         },
         35: { title: "165",
-        description: "Double Fruits gain, 1e100x Points and unlock another challenge in button power layer.",
+        description: "双倍水果获取、1e100× 积分，并在按钮能量层解锁另一个挑战。",
         cost: new EN("15000"),
         unlocked() {
             return hasUpgrade("f", 34)
         }
         },
         41: { title: "166",
-        description: "1e20,000,000x Points.",
+        description: "1e20,000,000× 积分。",
         cost: new EN("1e132229"),
         unlocked() {
             return hasUpgrade("h", 35)
         }
         },
         42: { title: "167",
-        description: "^1.005 Points.",
+        description: "^1.005 积分。",
         cost: new EN("1e151543"),
         unlocked() {
             return hasUpgrade("f", 41)
         }
         },
         43: { title: "168",
-        description: "1e50,000,000x Points.",
+        description: "1e50,000,000× 积分。",
         cost: new EN("1e175078"),
         unlocked() {
             return hasUpgrade("f", 42)
         }
         },
         44: { title: "169",
-        description: "1J10x Points (Joke)",
+        description: "1J10× 积分（玩笑）",
         cost: new EN("1e234271"),
         unlocked() {
             return hasUpgrade("f", 43)
         }
         },
         45: { title: "170",
-        description: "1e60,070,000x Points and unlock a new layer.",
+        description: "1e60,070,000× 积分，并解锁一个新层。",
         cost: new EN("1e234317"),
         unlocked() {
             return hasUpgrade("f", 44)
         }
         },
         51: { title: "171",
-        description: "Speed up by a small amount.",
+        description: "以较小幅度加速。",
         cost: new EN("e1e21"),
         unlocked() {
             return hasUpgrade("j", 45)
         }
         },
         52: { title: "172",
-        description: "Speed up by a small amount again.",
+        description: "再次以较小幅度加速。",
         cost: new EN("e1e22"),
         unlocked() {
             return hasUpgrade("f", 51)
         }
         },
         53: { title: "173",
-        description: "Speed up by a small amount yet again.",
+        description: "再一次以较小幅度加速。",
         cost: new EN("e3e23"),
         unlocked() {
             return hasUpgrade("f", 52)
         }
         },
         54: { title: "174",
-        description: "Speed up by a small amount yet again and again.",
+        description: "再一次又一次地以较小幅度加速。",
         cost: new EN("e3e24"),
         unlocked() {
             return hasUpgrade("f", 53)
         }
         },
         55: { title: "175",
-        description: "Speed up by a small amount yet again and again and again.",
+        description: "再一次又一次又一次地以较小幅度加速。",
         cost: new EN("e1e26"),
         unlocked() {
             return hasUpgrade("f", 53)
         }
         },
         61: { title: "?",
-        description: "1e500,000,000x Points.",
+        description: "1e500,000,000× 积分。",
         cost: new EN("1e72"),
         unlocked() {
             return hasUpgrade("d", 61)
@@ -227,31 +227,31 @@ addLayer("f", {
     },
     milestones: {
         1: {
-            requirementDescription: "1 Total Fruits",
-            effectDescription: "Gain 100%  Grass and Cups every second.",
+            requirementDescription: "1 总水果",
+            effectDescription: "每秒获得 100% 草和奖杯。",
             done() { return player.f.points.gte(1) }
         },
-                2: {requirementDescription: "8 Total Fruits",
-             effectDescription: "Dices reset nothing.",
+                2: {requirementDescription: "8 总水果",
+             effectDescription: "骰子不重置任何内容。",
                 done() { return player.f.total.gte(8)},},
-                3: {requirementDescription: "15 Total Fruits",
-             effectDescription: "Unlock a challenge in button power layer.",
+                3: {requirementDescription: "15 总水果",
+             effectDescription: "在按钮能量层解锁一个挑战。",
                 done() { return player.f.total.gte(15)},},
     },
     challenges: {
         11: {
-            name: "Resolve",
-            challengeDescription: "Raise People, BP, Grass and Cups to ^0.001.",
-            goalDescription: "1e26,159,020 Points.",
-            rewardDescription: "Gain ^1.01 Points.",
+            name: "解析",
+            challengeDescription: "将人员、按钮能量、草和奖杯提升至 ^0.001。",
+            goalDescription: "1e26,159,020 积分。",
+            rewardDescription: "获得 ^1.01 积分。",
             canComplete: function() {return player.points.gte("e26159020")},
             unlocked() { return (hasUpgrade('e', 35)) },
         },
         12: {
-            name: "Divided",
-            challengeDescription: "Raise People, BP, Grass, Cups and Points to ^0.1.",
-            goalDescription: "1e28,825 Points.",
-            rewardDescription: "Unlock a new layer and ^1.02 Points.",
+            name: "分裂",
+            challengeDescription: "将人员、按钮能量、草、奖杯和积分提升至 ^0.1。",
+            goalDescription: "1e28,825 积分。",
+            rewardDescription: "解锁一个新层并获得 ^1.02 积分。",
             canComplete: function() {return player.points.gte("e28825")},
             unlocked() { return (hasChallenge('f', 11)) },
     }},
@@ -273,13 +273,13 @@ addLayer("f", {
 
 },
 effectDescription(){
-    return "multiplying point gain by " + format(tmp[this.layer].effect) 
+    return "使积分获取乘以 " + format(tmp[this.layer].effect) 
     /*
       use format(num) whenever displaying a number
     */
    
   },
-    name: "Fruits", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "水果", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "🍇", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -289,8 +289,8 @@ effectDescription(){
     }},
     color: "#800080",
     requires: new EN("1e499"), // Can be a function that takes requirement increases into account
-    resource: "Fruits", // Name of prestige currency
-    baseResource: "Grass", // Name of resource prestige is based on
+    resource: "水果", // Name of prestige currency
+    baseResource: "草", // Name of resource prestige is based on
     baseAmount() {return player.g.points}, // Get the current amount of baseResource
     type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
     branches: ["c"],
@@ -322,7 +322,7 @@ effectDescription(){
         if (layers[resettingLayer].row > this.row) layerDataReset("f", keep)
     },
     hotkeys: [
-        {key: "f", description: "F: Reset for Fruits", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "f", description: "F: 重置获取水果", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){if (hasUpgrade("z", 31)) return false
     else return (hasUpgrade("d", 35) || player[this.layer].unlocked)},

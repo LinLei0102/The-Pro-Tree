@@ -3,7 +3,7 @@ function makeRed(c){
 }
 
 addLayer("p", {
-    name: "People", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "人员", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "🧍", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -12,8 +12,8 @@ addLayer("p", {
     }},
     color: "3399FF",
     requires: new ExpantaNum([10]), // Can be a function that takes requirement increases into account
-    resource: "People", // Name of prestige currency
-    baseResource: "points", // Name of resource prestige is based on
+    resource: "人员", // Name of prestige currency
+    baseResource: "积分", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     type() {if (hasUpgrade("z", 12)) return "static"
     else return "normal"},    
@@ -87,14 +87,14 @@ addLayer("p", {
     ],
     microtabs: {
         stuff: {
-                        "Upgrades": {
+                        "升级": {
                             unlocked() {return (hasAchievement("a", 11))},
                     content: [
                         ["blank", "15px"],
-                        ["raw-html", () => `<h4 style="opacity:.5">Welcome to the Pro Tree!<br> Your goal is to reach the endgame. You can press P to gain People.<br> Which is used to buy upgrades.</h4>`],
+                        ["raw-html", () => `<h4 style="opacity:.5">欢迎来到 Pro Tree！<br> 你的目标是抵达终局。你可以按 P 来获得人员。<br> 人员用于购买升级。</h4>`],
                         ["upgrades", [1,2,3,4,5,6,7,8,9]]
                     ],
-                    "Tutorial": {
+                    "教程": {
                         unlocked() {return (hasAchievement("a", 11))},
                         content: [
                             ["blank", "15px"],
@@ -111,12 +111,12 @@ addLayer("p", {
         },
     upgrades: {
         11: { title: "1",
-        description: "Double your point gain.",
+        description: "使积分获取翻倍。",
         cost: new ExpantaNum(1),
 
         },
         12: { title: "2",
-        description: "Point gain is boosted by People.",
+        description: "积分获取受人员增益。",
         cost: new ExpantaNum(5),
         effect() {
             return player[this.layer].points.add(1).pow("0.5").min("ee6")
@@ -127,7 +127,7 @@ addLayer("p", {
         }
         },
         13: { title: "3",
-        description: "People gain is boosted by Points.",
+        description: "人员获取受积分增益。",
         cost: EN("10"),
         effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
         effect() {
@@ -140,7 +140,7 @@ addLayer("p", {
         }
         },
         14: { title: "4",
-        description: "Triple your point gain.",
+        description: "使积分获取变为三倍。",
         cost: new EN(20),
         unlocked() {
             return hasUpgrade("p", 13)
@@ -148,7 +148,7 @@ addLayer("p", {
         }
         },
         15: { title: "5",
-        description: "Double Point and unlock a new layer.",
+        description: "积分翻倍并解锁一个新层。",
         cost: new EN(50),
         unlocked() {
             return hasUpgrade("p", 14)
@@ -156,7 +156,7 @@ addLayer("p", {
         }
         },
         21: { title: "6",
-        description: "Gain 3x More People",
+        description: "获得 3× 更多人员",
         cost: new EN(1e9),
         unlocked() {
             return hasUpgrade("b", 15)
@@ -164,7 +164,7 @@ addLayer("p", {
         }
         },
         22: { title: "7",
-        description: "Button Power gain is boosted by Points at a reduced rate.",
+        description: "按钮能量获取受积分增益，但效率降低。",
         cost: new EN(2.5e10),
         effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
         effect() {
@@ -177,7 +177,7 @@ addLayer("p", {
         }
         },
         23: { title: "8",
-        description: "Gain 10x More Points",
+        description: "获得 10× 更多积分",
         cost: new EN(1e12),
         unlocked() {
             return hasUpgrade("p", 22)
@@ -185,7 +185,7 @@ addLayer("p", {
         }
         },
         24: { title: "9",
-        description: "4x Prestige Point Gain.",
+        description: "4× 声望点获取。",
         cost: new EN(5e12),
         unlocked() {
             return hasUpgrade("p", 23)
@@ -193,7 +193,7 @@ addLayer("p", {
         }
         },
         25: { title: "10",
-        description: "Point gain boost itself.",
+        description: "积分获取自我增益。",
         cost: EN(2e13),
         effect() {
             return player.points.add(1).pow(0.1).min("eee100")
@@ -204,112 +204,112 @@ addLayer("p", {
         }
         },
         31: { title: "11",
-        description: "10x Button Power.",
+        description: "10× 按钮能量。",
         cost: EN(1e40),
         unlocked() {
             return hasUpgrade("b", 25)
         }
         },
         32: { title: "12",
-        description: "^1.01 Points.",
+        description: "^1.01 积分。",
         cost: EN(1e42),
         unlocked() {
             return hasUpgrade("p", 31)
         }
         },
         33: { title: "13",
-        description: "^1.11 Points.",
+        description: "^1.11 积分。",
         cost: EN(1e42),
         unlocked() {
             return hasUpgrade("p", 32)
         }
         },
         34: { title: "14",
-        description: "69,420x People.",
+        description: "69,420× 人员。",
         cost: EN(1e54),
         unlocked() {
             return hasUpgrade("p", 33)
         }
         },
         35: { title: "15",
-        description: "69,420x Points.",
+        description: "69,420× 积分。",
         cost: EN(1e71),
         unlocked() {
             return hasUpgrade("p", 34)
         }
         },
         41: { title: "16",
-        description: "1,000,000x People",
+        description: "1,000,000× 人员",
         cost: EN(1e220),
         unlocked() {
             return hasUpgrade("b", 35)
         }
         },
         42: { title: "17",
-        description: "^1.111 Points",
+        description: "^1.111 积分",
         cost: EN(1e232),
         unlocked() {
             return hasUpgrade("p", 41)
         }
         },
         43: { title: "18",
-        description: "1e9x Points.",
+        description: "1e9× 积分。",
         cost:EN("1e410"),
         unlocked() {
             return hasUpgrade("p", 42)
         }
         },
         44: { title: "19",
-        description: "100,000x Button Power.",
+        description: "100,000× 按钮能量。",
         cost: EN("1e453"),
         unlocked() {
             return hasUpgrade("p", 43)
         }
         },
         45: { title: "20",
-        description: "1e10x People.",
+        description: "1e10× 人员。",
         cost: EN("1e477"),
         unlocked() {
             return hasUpgrade("p", 44)
         }
         },
         51: { title: "21",
-        description: "1,000,000x Button Power.",
+        description: "1,000,000× 按钮能量。",
         cost: EN("1e517"),
         unlocked() {
             return hasUpgrade("p", 45)
         }
         },
         52: { title: "22",
-        description: "1e12x Points.",
+        description: "1e12× 积分。",
         cost: EN("1e540"),
         unlocked() {
             return hasUpgrade("p", 51)
         }
         },
         53: { title: "23",
-        description: "1e10x People.",
+        description: "1e10× 人员。",
         cost: EN("1e603"),
         unlocked() {
             return hasUpgrade("p", 52)
         }
         },
         54: { title: "24",
-        description: "10,000,000x Button Power.",
+        description: "10,000,000× 按钮能量。",
         cost: EN("1e650"),
         unlocked() {
             return hasUpgrade("p", 53)
         }
         },
         55: { title: "25",
-        description: "^1.01 Points, 1e6x People, BP.",
+        description: "^1.01 积分，1e6× 人员，按钮能量。",
         cost: EN("1e678"),
         unlocked() {
             return hasUpgrade("p", 54)
         }
         },
         61: { title: "?",
-        description: "Point gain is Boosted by People at a reduced rate.",
+        description: "积分获取受人员增益，但效率降低。",
         cost: EN("1e2000000"),
         effect() {
             return player[this.layer].points.add(1).pow(0.05).min("3e109258")
@@ -320,7 +320,7 @@ addLayer("p", {
         }
         },
         62: { title: "?",
-        description: "Point gain is Boosted by People at a reduced rate. (^0.2)",
+        description: "积分获取受人员增益，但效率降低。（^0.2）",
         cost: EN("1e2000000"),
         effect() {
             return player[this.layer].points.add(1).pow(0.1).min("e258609")
@@ -331,7 +331,7 @@ addLayer("p", {
         }
         },
         63: { title: "?",
-        description: "Point gain is Boosted by People.",
+        description: "积分获取受人员增益。",
         cost: EN("1e2000000"),
         effect() {
             return player[this.layer].points.add(1).pow(0.5).min("ee1000000")
@@ -342,49 +342,49 @@ addLayer("p", {
         }
         },
         64: { title: "?",
-        description: "Speed up by a very large amount.",
+        description: "以非常巨大的幅度加速。",
         cost: EN("ee10000"),
         unlocked() {
             return hasUpgrade("i", 55)
         }
         },
         65: { title: "?",
-        description: "Speed up by a ultra large amount.",
+        description: "以超巨大幅度加速。",
         cost: EN("ee20000"),
         unlocked() {
             return hasUpgrade("p", 64)
         }
         },
         71: { title: "?",
-        description: "Speed up by a OMEGA amount!",
+        description: "以欧米伽幅度加速！",
         cost: EN("ee30000"),
         unlocked() {
             return hasUpgrade("p", 65)
         }
         },
         72: { title: "?",
-        description: "Speed up by a EVEN amount!",
+        description: "以更甚幅度加速！",
         cost: EN("ee200000"),
         unlocked() {
             return hasUpgrade("p", 71)
         }
         },
         73: { title: "?",
-        description: "Speed up by a GIANT amount!",
+        description: "以巨大无匹的幅度加速！",
         cost: EN("eee6"),
         unlocked() {
             return hasUpgrade("p", 72)
         }
         },
         74: { title: "?",
-        description: "Speed up by a Light amount!",
+        description: "以灯光级的幅度加速！",
         cost: EN("ee5000000"),
         unlocked() {
             return hasUpgrade("p", 73)
         }
         },
         75: { title: "?",
-        description: "Speed up by a BIGGEST AMOUNT!",
+        description: "以最大之最的幅度加速！",
         cost: EN("eee9"),
         unlocked() {
             return hasUpgrade("p", 74)
@@ -400,7 +400,7 @@ addLayer("p", {
     },
     row: 0, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "p", description: "P: Reset for People", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "p", description: "P: 重置获取人员", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     
     ],
     doReset(resettingLayer){ // Triggers when this layer is being reset, along with the layer doing the resetting. Not triggered by lower layers resetting, but is by layers on the same row.
@@ -426,7 +426,7 @@ addLayer("p", {
     else return (hasAchievement("a", 11) || player[this.layer].unlocked)}
 })
 addLayer("stat", {
-    name: "statistics", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "统计", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "📈", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -434,11 +434,11 @@ addLayer("stat", {
         unlocked: true,
     }},
     color: "#ffffff",
-    tooltip(){return "Statistics"},
+    tooltip(){return "统计"},
     row: "side", // Row the layer is in on the tree (0 is the first row)
     layerShown(){return true},
     tabFormat:{
-        "Stats":{
+        "统计":{
             content:[
                 ["display-text",function(){return getStatTab()}]
             ]
@@ -447,72 +447,72 @@ addLayer("stat", {
 })
 function getStatTab(){
     let br = "<br>"
-    let x = "<h1 style='color: #ffffff'>Points</h1>"
+    let x = "<h1 style='color: #ffffff'>积分</h1>"
     x += br
-    x += "<h3>You have " + format(player.points) + " Points.</h3>"
+    x += "<h3>你有 " + format(player.points) + " 积分。</h3>"
     x += br
-    x += "<h3>Your best amount of points was " + format(player.bestPoints) + ".</h3>"    
+    x += "<h3>你的最高积分曾达到 " + format(player.bestPoints) + ".</h3>"    
     x += br
     x+= "――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――"
     x += br
-    x += "<h1>Time:🕒</h1>"
+    x += "<h1>时间:🕒</h1>"
     x += br
-    x += "<h3>You have played for " + formatTime(player.timePlayed, true + ".</h3>")
+    x += "<h3>你已游玩 " + formatTime(player.timePlayed, true + ".</h3>")
    x += br
     x+= "<h4>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</h4>"
     if (player.su.unlocked){
         x += br
-        x += "<h1 style='color: orange'>Supernova</h1>"
+        x += "<h1 style='color: orange'>超新星</h1>"
         x += br
-        x += "<h3>You have " + formatWhole(player.su.points) + " Neutron Stars (" + formatWhole(player.su.total) + " total).</h3>"
+        x += "<h3>你有 " + formatWhole(player.su.points) + " 中子星（" + formatWhole(player.su.total) + " 总计）。</h3>"
        
         x += br
-       x += "<h3>You have spent " + formatTime(player.su.resetTime, true) + " in this Supernova.</h3>"
+       x += "<h3>你已花费 " + formatTime(player.su.resetTime, true) + " 于此超新星中。</h3>"
        x += br
        x+= "――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――"
     }
     if (player.ju.unlocked){
         x += br
-        x += "<h1 style='color: #da614e'>Juice:🍊</h1>"
+        x += "<h1 style='color: #da614e'>果汁:🍊</h1>"
         x += br
-        x += "<h3>You have " + formatWhole(player.ju.points) + " Juices.</h3>"
+        x += "<h3>你有 " + formatWhole(player.ju.points) + " 果汁。</h3>"
         x += br
-        x += "<h3>You have spent " + formatTime(player.ju.resetTime, true) + " in this Juice.</h3>"
+        x += "<h3>你已花费 " + formatTime(player.ju.resetTime, true) + " 于此果汁中。</h3>"
         x += br
         x+= "――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――"
         x += br
     }
     if (player.ap.unlocked){
         x += br
-        x += "<h1 style='color: yellow'>Ascension</h1>"
+        x += "<h1 style='color: yellow'>升华</h1>"
         x += br
-        x += "<h3>You have " + formatWhole(player.ap.points) + " Ascension Points.</h3>"
+        x += "<h3>你有 " + formatWhole(player.ap.points) + " 升华点。</h3>"
         x += br
         x+= "――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――"
         x += br
     }
     x += br
-    x += "<h1 style='color: white'>Layers</h1>"
+    x += "<h1 style='color: white'>层</h1>"
     x += br
-    x += "<h3>There are 40+ layers in this game.</h3>"
+    x += "<h3>这个游戏有 40+ 个层。</h3>"
     x += br
-    x += "<h3>There are over 1,000+ upgrades in this game.</h3>"
+    x += "<h3>这个游戏有超过 1,000+ 个升级。</h3>"
     x += br
-    x += "<h3>There are 30+ buyables in this game.</h3>"
+    x += "<h3>这个游戏有 30+ 个可购买项。</h3>"
     x += br
-    x += "<h3>There are over 50+ milestones in this game.</h3>"
+    x += "<h3>这个游戏有超过 50+ 个里程碑。</h3>"
     x += br
-    x += "<h3>There are over 50+ challenges in this game.</h3>"
+    x += "<h3>这个游戏有超过 50+ 个挑战。</h3>"
     x += br
-    x += "<h3>More Coming Soon!</h3>"
+    x += "<h3>更多内容即将推出！</h3>"
     x += br
     x+= "――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――"
     x += br
-    let y = "<h1 style='color: yellow'>Achievements:🏆</h1>"
+    let y = "<h1 style='color: yellow'>成就:🏆</h1>"
     y += br
-    y += "<h3>You have " + format(player.a.points) + " Achievement Points.</h3>"
+    y += "<h3>你有 " + format(player.a.points) + " 成就点。</h3>"
     y += br
-    y += "<h3>You have " + formatWhole(player.a.achievements.length) +  "/" + (Object.keys(tmp.a.achievements).length - 2) + " Achievements.</h3>"
+    y += "<h3>你有 " + formatWhole(player.a.achievements.length) +  "/" + (Object.keys(tmp.a.achievements).length - 2) + " 成就。</h3>"
     y += br
     y+= "――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――"
     return x+y

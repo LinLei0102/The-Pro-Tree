@@ -7,14 +7,14 @@ addLayer("du", {
     ],
     microtabs: {
         stuff: {
-                        "Upgrades": {
+                        "升级": {
                             unlocked() {return (hasAchievement("a", 11))},
                     content: [
                         ["blank", "15px"],
                         ["upgrades", [1,2,3,4,5,6,7,8,9]]
                     ]
             },
-          "Challenges": {
+          "挑战": {
     unlocked() {return (hasUpgrade("du", 12))},
 content: [
 ["blank", "15px"],
@@ -25,175 +25,175 @@ content: [
                 },
     upgrades: {
         11: { title: "776",
-        description: "Gain x7 Medals!",
+        description: "获得 ×7 奖牌！",
         cost: new EN("1"),
         unlocked() {
             return hasChallenge("re", 21)
         },
         },
-        12: { title: "777 (Lucky!)",
-        description: "Gain x7 Medals again, unlock 1 duck challenge and gain x777 ducks.",
+        12: { title: "777（幸运！）",
+        description: "再次获得 ×7 奖牌，解锁 1 个鸭子挑战，并获得 ×777 鸭子。",
         cost: new EN("77"),
         unlocked() {
             return hasUpgrade("du", 11)
         },
         },
         13: { title: "778",
-        description: "Gain x10 ducks.",
+        description: "获得 ×10 鸭子。",
         cost: new EN("777000"),
         unlocked() {
             return hasUpgrade("du", 12)
         },
         },
         14: { title: "779",
-        description: "Unlock 2 new duck challenges.",
+        description: "解锁 2 个新鸭子挑战。",
         cost: new EN("7770000"),
         unlocked() {
             return hasUpgrade("du", 13)
         },
         },
         15: { title: "780",
-        description: "Gain x10 ducks.",
+        description: "获得 ×10 鸭子。",
         cost: new EN("7.77e9"),
         unlocked() {
             return hasUpgrade("du", 14)
         },
         },
         21: { title: "781",
-        description: "Gain x100 ducks.",
+        description: "获得 ×100 鸭子。",
         cost: new EN("7.77e9"),
         unlocked() {
             return hasUpgrade("du", 15)
         },
         },
         22: { title: "782",
-        description: "Gain x100 ducks.",
+        description: "获得 ×100 鸭子。",
         cost: new EN("7.77e12"),
         unlocked() {
             return hasUpgrade("du", 21)
         },
         },
         23: { title: "783",
-        description: "Unlock 3 new duck challenges.",
+        description: "解锁 3 个新鸭子挑战。",
         cost: new EN("7.77e13"),
         unlocked() {
             return hasUpgrade("du", 22)
         },
         },
         24: { title: "784",
-        description: "Gain x100 ducks.",
+        description: "获得 ×100 鸭子。",
         cost: new EN("7.77e21"),
         unlocked() {
             return hasUpgrade("du", 23)
         },
         },
         25: { title: "785",
-        description: "Gain x100 ducks.",
+        description: "获得 ×100 鸭子。",
         cost: new EN("7.77e23"),
         unlocked() {
             return hasUpgrade("du", 24)
         },
         },
         31: { title: "786",
-        description: "Gain x1,000 ducks.",
+        description: "获得 ×1,000 鸭子。",
         cost: new EN("7.77e25"),
         unlocked() {
             return hasUpgrade("du", 25)
         },
         },
         32: { title: "787",
-        description: "Gain x1,000 ducks.",
+        description: "获得 ×1,000 鸭子。",
         cost: new EN("7.77e28"),
         unlocked() {
             return hasUpgrade("du", 31)
         },
         },
         33: { title: "788",
-        description: "Gain x1,000 ducks.",
+        description: "获得 ×1,000 鸭子。",
         cost: new EN("7.77e32"),
         unlocked() {
             return hasUpgrade("du", 32)
         },
         },
         34: { title: "789",
-        description: "Gain x1,000 ducks.",
+        description: "获得 ×1,000 鸭子。",
         cost: new EN("7.77e34"),
         unlocked() {
             return hasUpgrade("du", 33)
         },
         },
         35: { title: "790",
-        description: "Gain x1,000 ducks.",
+        description: "获得 ×1,000 鸭子。",
         cost: new EN("7.77e37"),
         unlocked() {
             return hasUpgrade("du", 34)
         },
         },
         41: { title: "791",
-        description: "Unlock the final duck challenge.",
+        description: "解锁最终鸭子挑战。",
         cost: new EN("7.77e41"),
         unlocked() {
             return hasUpgrade("du", 35)
         },
         },
         42: { title: "792",
-        description: "Nothing.",
+        description: "无。",
         cost: new EN("7.77e45"),
         unlocked() {
             return hasUpgrade("du", 41)
         },
         },
         43: { title: "793",
-        description: "Nothing.",
+        description: "无。",
         cost: new EN("7.77e45"),
         unlocked() {
             return hasUpgrade("du", 42)
         },
         },
         44: { title: "794",
-        description: "Nothing.",
+        description: "无。",
         cost: new EN("7.77e45"),
         unlocked() {
             return hasUpgrade("du", 43)
         },
         },
         45: { title: "795",
-        description: "Nothing.",
+        description: "无。",
         cost: new EN("7.77e45"),
         unlocked() {
             return hasUpgrade("du", 44)
         },
         },
         51: { title: "796",
-        description: "Nothing.",
+        description: "无。",
         cost: new EN("7.77e45"),
         unlocked() {
             return hasUpgrade("du", 45)
         },
         },
         52: { title: "797",
-        description: "Nothing.",
+        description: "无。",
         cost: new EN("7.77e45"),
         unlocked() {
             return hasUpgrade("du", 51)
         },
         },
         53: { title: "798",
-        description: "Nothing.",
+        description: "无。",
         cost: new EN("7.77e45"),
         unlocked() {
             return hasUpgrade("du", 52)
         },
         },
         54: { title: "799",
-        description: "Increase from universal - ducks currencies but remove sand and transcension layer.",
+        description: "增加从宇宙到鸭子的货币，但移除沙子和超越层。",
         cost: new EN("7.77e45"),
         unlocked() {
             return hasUpgrade("du",53)
         },
         },
         55: { title: "800",
-        description: "Gain x1,000,000,000 medals.",
+        description: "获得 ×1,000,000,000 奖牌。",
         cost: new EN("10^^^10"),
         unlocked() {
             return hasUpgrade("du", 54)
@@ -202,63 +202,63 @@ content: [
     },
     challenges: {
         11: {
-                name: "Easiest",
-                challengeDescription: "Normal Run^2.",
-                goalDescription: "1G18 Points.",
-                rewardDescription: "Gain x10 ducks.",
+                name: "最简单",
+                challengeDescription: "普通流程^2。",
+                goalDescription: "1G18 积分。",
+                rewardDescription: "获得 ×10 鸭子。",
                 canComplete: function() {return player.points.gte("10^^^18")},
                 unlocked() { return (hasUpgrade('du', 12)) },
         },
                 12: {
-                name: "Easy",
-                challengeDescription: "Normal Run^3.",
-                goalDescription: "1G19 Points.",
-                rewardDescription: "Gain x10 ducks again.",
+                name: "简单",
+                challengeDescription: "普通流程^3。",
+                goalDescription: "1G19 积分。",
+                rewardDescription: "再次获得 ×10 鸭子。",
                 canComplete: function() {return player.points.gte("10^^^19")},
                 unlocked() { return (hasUpgrade('du', 14)) },
         },
         21: {
-            name: "Easy+",
-            challengeDescription: "Normal Run^4.",
-            goalDescription: "1G19 Points.",
-            rewardDescription: "Gain x100 ducks.",
+            name: "简单+",
+            challengeDescription: "普通流程^4。",
+            goalDescription: "1G19 积分。",
+            rewardDescription: "获得 ×100 鸭子。",
             canComplete: function() {return player.points.gte("10^^^19")},
             unlocked() { return (hasChallenge('du', 12)) },
     },
     22: {
-        name: "Easy++",
-        challengeDescription: "Normal Run^5.",
-        goalDescription: "1G19 Points.",
-        rewardDescription: "Gain x100 ducks.",
+        name: "简单++",
+        challengeDescription: "普通流程^5。",
+        goalDescription: "1G19 积分。",
+        rewardDescription: "获得 ×100 鸭子。",
         canComplete: function() {return player.points.gte("10^^^19")},
         unlocked() { return (hasUpgrade('du', 23)) },
 },
 31: {
-    name: "Easy+3",
-    challengeDescription: "Normal Run^6.",
-    goalDescription: "1G19 Points.",
-    rewardDescription: "Gain x1,000 ducks.",
+    name: "简单+3",
+    challengeDescription: "普通流程^6。",
+    goalDescription: "1G19 积分。",
+    rewardDescription: "获得 ×1,000 鸭子。",
     canComplete: function() {return player.points.gte("10^^^19")},
     unlocked() { return (hasChallenge('du', 22)) },
 },
 32: {
-    name: "Easy+^",
-    challengeDescription: "Normal Run^7",
-    goalDescription: "1G19 Points.",
-    rewardDescription: "Gain x1,000 ducks.",
+    name: "简单+^",
+    challengeDescription: "普通流程^7",
+    goalDescription: "1G19 积分。",
+    rewardDescription: "获得 ×1,000 鸭子。",
     canComplete: function() {return player.points.gte("10^^^19")},
     unlocked() { return (hasChallenge('du', 31)) },
 },
 41: {
-    name: "Medium",
-    challengeDescription: "Normal Run^8.",
-    goalDescription: "1G20 Points.",
-    rewardDescription: "Gain x1,000,000 ducks.",
+    name: "中等",
+    challengeDescription: "普通流程^8。",
+    goalDescription: "1G20 积分。",
+    rewardDescription: "获得 ×1,000,000 鸭子。",
     canComplete: function() {return player.points.gte("10^^^20")},
     unlocked() { return (hasUpgrade('du', 41)) },
 },
     },
-    name: "Ducks", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "鸭子", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "🦆", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -268,8 +268,8 @@ content: [
     }},
     color: " #FFFF00",
     requires: new EN("10^^^17"), // Can be a function that takes requirement increases into account
-    resource: "Ducks", // Name of prestige currency
-    baseResource: "Points", // Name of resource prestige is based on
+    resource: "鸭子", // Name of prestige currency
+    baseResource: "积分", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     branches: ["w", "ci"],
     type() {if (hasUpgrade("su", 535)) return "normal"
@@ -324,7 +324,7 @@ content: [
     },
     row: 7, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: ")", description: "Shift+): Reset for Ducks", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: ")", description: "Shift+): 重置以获取鸭子", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){if (hasUpgrade("su", 535)) return false
     else return (hasChallenge("re", 21) || player[this.layer].unlocked)},})

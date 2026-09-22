@@ -49,7 +49,7 @@ function toggleAuto(toggle) {
 	needCanvasUpdate=true
 }
 
-const MS_DISPLAYS = ["ALL", "LAST, AUTO, INCOMPLETE", "AUTOMATION, INCOMPLETE", "INCOMPLETE", "NONE"];
+const MS_DISPLAYS = ["全部", "最近、自动、未完成", "自动化、未完成", "未完成", "无"];
 
 const MS_SETTINGS = ["always", "last", "automation", "incomplete", "never"];
 
@@ -78,7 +78,7 @@ function milestoneShown(layer, id) {
 	return false;
 }
 
-const NT_DISPLAYS = ["FGH-J NOTATION", "HYPER-E", "CHAINED ARROWS", "FALLBACK NOTATION"];
+const NT_DISPLAYS = ["FGH-J 记数法", "HYPER-E", "链式箭头", "备用记数法"];
 
 const NT_SETTINGS = ["default", "hypere", "chained", "fallback"];
 

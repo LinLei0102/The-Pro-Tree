@@ -7,7 +7,7 @@ addLayer("ha", {
     ],
     microtabs: {
         stuff: {
-                        "Upgrades": {
+                        "升级": {
                             unlocked() {return (hasAchievement("a", 11))},
                     content: [
                         ["blank", "15px"],
@@ -19,175 +19,175 @@ addLayer("ha", {
                 },
     upgrades: {
         11: { title: "876",
-        description: "Gain x1,000 Medals!",
+        description: "获得 ×1,000 奖牌！",
         cost: new EN("1"),
         unlocked() {
             return hasChallenge("re", 52)
         },
         },
         12: { title: "877",
-        description: "Gain x10 Hammers.",
+        description: "获得 ×10 锤子。",
         cost: new EN("100"),
         unlocked() {
             return hasUpgrade("ha", 11)
         },
         },
         13: { title: "878",
-        description: "Gain x100 Hammers.",
+        description: "获得 ×100 锤子。",
         cost: new EN("1000"),
         unlocked() {
             return hasUpgrade("ha", 12)
         },
         },
         14: { title: "879",
-        description: "Gain x1,000 Hammers.",
+        description: "获得 ×1,000 锤子。",
         cost: new EN("100000"),
         unlocked() {
             return hasUpgrade("ha", 13)
         },
         },
         15: { title: "880",
-        description: "Gain x10,000 Hammers.",
+        description: "获得 ×10,000 锤子。",
         cost: new EN("100000000"),
         unlocked() {
             return hasUpgrade("ha", 14)
         },
         },
         21: { title: "881",
-        description: "Gain x100,000 Hammers.",
+        description: "获得 ×100,000 锤子。",
         cost: new EN("1e11"),
         unlocked() {
             return hasUpgrade("ha", 15)
         },
         },
         22: { title: "882",
-        description: "Gain x1,000,000 Hammers.",
+        description: "获得 ×1,000,000 锤子。",
         cost: new EN("1e16"),
         unlocked() {
             return hasUpgrade("ha", 21)
         },
         },
         23: { title: "883",
-        description: "Gain x10,000,000 Hammers.",
+        description: "获得 ×10,000,000 锤子。",
         cost: new EN("1e22"),
         unlocked() {
             return hasUpgrade("ha", 22)
         },
         },
         24: { title: "884",
-        description: "Gain x100,000,000 Hammers.",
+        description: "获得 ×100,000,000 锤子。",
         cost: new EN("1e29"),
         unlocked() {
             return hasUpgrade("ha", 23)
         },
         },
         25: { title: "885",
-        description: "Gain x1e9 Hammers.",
+        description: "获得 ×1e9 锤子。",
         cost: new EN("1e37"),
         unlocked() {
             return hasUpgrade("ha", 24)
         },
         },
         31: { title: "886",
-        description: "Gain x1e10 Hammers.",
+        description: "获得 ×1e10 锤子。",
         cost: new EN("1e46"),
         unlocked() {
             return hasUpgrade("ha", 25)
         },
         },
         32: { title: "887",
-        description: "Gain x1e11 Hammers.",
+        description: "获得 ×1e11 锤子。",
         cost: new EN("1e56"),
         unlocked() {
             return hasUpgrade("ha", 31)
         },
         },
         33: { title: "888",
-        description: "Gain x1e12 Hammers.",
+        description: "获得 ×1e12 锤子。",
         cost: new EN("1e67"),
         unlocked() {
             return hasUpgrade("ha", 32)
         },
         },
         34: { title: "889",
-        description: "Gain x1e13 Hammers.",
+        description: "获得 ×1e13 锤子。",
         cost: new EN("1e79"),
         unlocked() {
             return hasUpgrade("ha", 33)
         },
         },
         35: { title: "890",
-        description: "Gain x1e14 Hammers.",
+        description: "获得 ×1e14 锤子。",
         cost: new EN("1e92"),
         unlocked() {
             return hasUpgrade("ha", 34)
         },
         },
         41: { title: "891",
-        description: "Gain x1e15 Hammers.",
+        description: "获得 ×1e15 锤子。",
         cost: new EN("1e106"),
         unlocked() {
             return hasUpgrade("ha", 35)
         },
         },
         42: { title: "892",
-        description: "Gain x1e16 Hammers.",
+        description: "获得 ×1e16 锤子。",
         cost: new EN("1e121"),
         unlocked() {
             return hasUpgrade("ha", 41)
         },
         },
         43: { title: "893",
-        description: "Gain x1e17 Hammers.",
+        description: "获得 ×1e17 锤子。",
         cost: new EN("1e137"),
         unlocked() {
             return hasUpgrade("ha", 42)
         },
         },
         44: { title: "894",
-        description: "Gain x1e18 Hammers.",
+        description: "获得 ×1e18 锤子。",
         cost: new EN("1e154"),
         unlocked() {
             return hasUpgrade("ha", 43)
         },
         },
         45: { title: "895",
-        description: "Gain x1e19 Hammers.",
+        description: "获得 ×1e19 锤子。",
         cost: new EN("1e172"),
         unlocked() {
             return hasUpgrade("ha", 44)
         },
         },
         51: { title: "896",
-        description: "Gain x1e20 Hammers.",
+        description: "获得 ×1e20 锤子。",
         cost: new EN("1e191"),
         unlocked() {
             return hasUpgrade("ha", 45)
         },
         },
         52: { title: "897",
-        description: "Gain x1e21 Hammers.",
+        description: "获得 ×1e21 锤子。",
         cost: new EN("1e211"),
         unlocked() {
             return hasUpgrade("ha", 51)
         },
         },
         53: { title: "898",
-        description: "Gain x1e22 Hammers.",
+        description: "获得 ×1e22 锤子。",
         cost: new EN("1e232"),
         unlocked() {
             return hasUpgrade("ha", 52)
         },
         },
         54: { title: "899",
-        description: "Increase Row 7 and Row 8 currencies.",
+        description: "提升第 7 行与第 8 行的货币。",
         cost: new EN("1e255"),
         unlocked() {
             return hasUpgrade("ha", 53)
         },
         },
-        55: { title: "900 (100 more to 1K!)",
-        description: "Gain ^1.11 Medals.",
+        55: { title: "900（再 100 到 1K！）",
+        description: "获得 ^1.11 奖牌。",
         cost: new EN("10^^^1000"),
         unlocked() {
             return hasUpgrade("ha", 54)
@@ -199,7 +199,7 @@ addLayer("ha", {
         },
         autoUpgrade() { if (hasMilestone("re" , 23)) return true},
 
-    name: "Hammers", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "锤子", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "🔨", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -209,8 +209,8 @@ addLayer("ha", {
     }},
     color: " #ffffff",
     requires: new EN("10^^^1234567"), // Can be a function that takes requirement increases into account
-    resource: "Hammers", // Name of prestige currency
-    baseResource: "Points", // Name of resource prestige is based on
+    resource: "锤子", // Name of prestige currency
+    baseResource: "积分", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     branches: ["ar", "ga"],
     type() {if (hasUpgrade("su", 535)) return "normal"
@@ -253,7 +253,7 @@ addLayer("ha", {
     },
     row: 7, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "%", description: "Shift+%: Reset for Hammers", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "%", description: "Shift+%: 重置获取锤子", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){if (hasUpgrade("su", 535)) return false
     else return (hasChallenge("re", 52) || player[this.layer].unlocked)},})
