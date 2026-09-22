@@ -419,8 +419,8 @@ addLayer("p", {
     }
     },
     passiveGeneration() {
-        if (hasUpgrade("z", 12)) return (hasUpgrade("z", 12)?0:0)
-        if (hasMilestone("ant", 1)) return (hasMilestone("ant", 1)?1:0)
+        if (hasUpgrade("z", 12)) return 0
+        if (hasMilestone("ant", 1)) return 1
         },
     layerShown(){if (hasUpgrade("z", 12)) return false
     else return (hasAchievement("a", 11) || player[this.layer].unlocked)}
@@ -457,7 +457,7 @@ function getStatTab(){
     x += br
     x += "<h1>时间:🕒</h1>"
     x += br
-    x += "<h3>你已游玩 " + formatTime(player.timePlayed, true + ".</h3>")
+    x += "<h3>你已游玩 " + formatTime(player.timePlayed) + "。</h3>"
    x += br
     x+= "<h4>―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</h4>"
     if (player.su.unlocked){
@@ -467,7 +467,7 @@ function getStatTab(){
         x += "<h3>你有 " + formatWhole(player.su.points) + " 中子星（" + formatWhole(player.su.total) + " 总计）。</h3>"
        
         x += br
-       x += "<h3>你已花费 " + formatTime(player.su.resetTime, true) + " 于此超新星中。</h3>"
+       x += "<h3>你已花费 " + formatTime(player.su.resetTime) + " 于此超新星中。</h3>"
        x += br
        x+= "――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――"
     }
@@ -477,7 +477,7 @@ function getStatTab(){
         x += br
         x += "<h3>你有 " + formatWhole(player.ju.points) + " 果汁。</h3>"
         x += br
-        x += "<h3>你已花费 " + formatTime(player.ju.resetTime, true) + " 于此果汁中。</h3>"
+        x += "<h3>你已花费 " + formatTime(player.ju.resetTime) + " 于此果汁中。</h3>"
         x += br
         x+= "――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――"
         x += br

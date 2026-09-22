@@ -359,8 +359,8 @@ effectDescription(){
         return new EN(1)
     },
     passiveGeneration() { 
-        if (hasUpgrade("z", 21)) return (hasUpgrade("z", 21)?0:0)
-        if (hasMilestone("f", 1)) return (hasMilestone("f", 1)?1:0)
+        if (hasUpgrade("z", 21)) return 0
+        if (hasMilestone("f", 1)) return 1
         },
     row: 2, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [

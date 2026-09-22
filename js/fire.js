@@ -247,7 +247,7 @@ addLayer("fi", {
         return mult
     },
      passiveGeneration() { 
-        if (hasMilestone("re", 20)) return (hasMilestone("re", 20)?1:0)
+        if (hasMilestone("re", 20)) return 1
         },
         autoUpgrade() { if (hasMilestone("re" , 21)) return true},
         doReset(resettingLayer) {

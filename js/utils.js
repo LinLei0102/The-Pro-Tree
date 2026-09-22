@@ -160,15 +160,12 @@ function inChallenge(layer, id) {
 
 // ************ Misc ************
 
-var onTreeTab = true
-
 function showTab(name, prev) {
 	if (LAYERS.includes(name) && !layerunlocked(name)) return
 	if (player.tab !== name) clearParticles(function(p) {return p.layer === player.tab})
 	if (tmp[name] && player.tab === name && isPlainObject(tmp[name].tabFormat)) {
 		player.subtabs[name].mainTabs = Object.keys(layers[name].tabFormat)[0]
 	}
-	var toTreeTab = name == "none"
 	player.tab = name
 	if (tmp[name] && (tmp[name].row !== "side") && (tmp[name].row !== "otherside")) player.lastSafeTab = name
 	updateTabFormats()
@@ -178,12 +175,9 @@ function showTab(name, prev) {
 }
 
 function showNavTab(name, prev) {
-	console.log(prev)
 	if (LAYERS.includes(name) && !layerunlocked(name)) return
 	if (player.navTab !== name) clearParticles(function(p) {return p.layer === player.navTab})
 	if (tmp[name] && tmp[name].previousTab !== undefined) prev = tmp[name].previousTab
-	var toTreeTab = name == "tree-tab"
-	console.log(name + prev)
 	if (name!== "none" && prev && !tmp[prev]?.leftTab == !tmp[name]?.leftTab) player[name].prevTab = prev
 	else if (player[name])
 		player[name].prevTab = ""
@@ -296,30 +290,6 @@ function updateAchievements(layer) {
 	}
 }
 
-function addTime(diff, layer) {
-	let data = player
-	let time = data.timePlayed
-	if (layer) {
-		data = data[layer]
-		time = data.time
-	}
-
-	//I am not that good to perfectly fix that leak. ~ DB Aarex
-	if (time + 0 !== time) {
-		console.log("检测到内存泄漏。正在尝试修复...")
-		time = toNumber(time)
-		if (isNaN(time) || time == 0) {
-			console.log("修复失败！正在重置...")
-			time = layer ? player.timePlayed : 0
-			if (!layer) player.timePlayedReset = true
-		}
-	}
-	time += toNumber(diff)
-
-	if (layer) data.time = time
-	else data.timePlayed = time
-}
-
 shiftDown = false
 ctrlDown = false
 
@@ -403,7 +373,8 @@ function doPopup(type = "none", text = "这是一个测试弹窗。", title = ""
 
 //Function to reduce time on active popups
 function adjustPopupTime(diff) {
-	for (popup in activePopups) {
+	// 必须倒序遍历：正序 splice 会跳过后一个元素
+	for (let popup = activePopups.length - 1; popup >= 0; popup--) {
 		activePopups[popup].time -= diff;
 		if (activePopups[popup]["time"] < 0) {
 			activePopups.splice(popup, 1); // Remove popup when time hits 0

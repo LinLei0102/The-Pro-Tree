@@ -371,8 +371,8 @@ microtabs: {
         {key: "b", description: "B: 重置以获取按钮能量", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     passiveGeneration() {
-        if (hasUpgrade("z", 13)) return (hasUpgrade("z", 13)?0:0)
-        if (hasMilestone("g", 1)) return (hasMilestone("g", 1)?1:0)
+        if (hasUpgrade("z", 13)) return 0
+        if (hasMilestone("g", 1)) return 1
         },
     layerShown(){if (hasUpgrade("z", 13)) return "ghost"
     else return (hasUpgrade("p", 15) || player[this.layer].unlocked)}

@@ -256,7 +256,7 @@ addLayer("ar", {
         if (layers[resettingLayer].row > this.row) layerDataReset("ar", keep)
     },
     passiveGeneration() { 
-        if (hasMilestone("re", 15)) return (hasMilestone("re", 15)?1:0)
+        if (hasMilestone("re", 15)) return 1
         },   
     gainExp() { // Calculate the exponent on main currency from bonuses
         return new EN(1)

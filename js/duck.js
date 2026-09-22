@@ -315,7 +315,7 @@ content: [
         if (layers[resettingLayer].row > this.row) layerDataReset("du", keep)
     },
     passiveGeneration() { 
-        if (hasMilestone("re", 18)) return (hasMilestone("re", 18)?1:0)
+        if (hasMilestone("re", 18)) return 1
         },   
         autoUpgrade() { if (hasMilestone("re" , 19)) return true},
 

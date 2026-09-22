@@ -243,7 +243,7 @@ addLayer("ju", {
     },
     autoUpgrade() { if (hasMilestone("su" , 3)) return true},
     passiveGeneration() { 
-        if (hasMilestone("re", 24)) return (hasMilestone("re", 24)?1:0)
+        if (hasMilestone("re", 24)) return 1
         },
     gainExp() { // Calculate the exponent on main currency from bonuses
         return new EN(1)

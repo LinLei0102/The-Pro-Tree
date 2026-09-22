@@ -195,7 +195,7 @@ addLayer("eg", {
         },
     },
     passiveGeneration() { 
-        if (hasMilestone("re", 19)) return (hasMilestone("re", 19)?1:0)
+        if (hasMilestone("re", 19)) return 1
         }, 
     name: "蛋", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "🥚", // This appears on the layer's node. Default is the id with the first letter capitalized

@@ -64,7 +64,7 @@ function polarize(array, smallTop = false) {
     return [array[0], array[array.length-1], array.length-1]
 }
 
-function format(decimal, precision = 2, small = false, verbose = false) {
+function format(decimal, precision = 2, small = false) {
     if (EN.isNaN(decimal)) return "NaN"
     small = small || modInfo.allowSmall
     let precision2 = Math.max(3, precision)

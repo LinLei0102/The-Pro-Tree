@@ -202,7 +202,7 @@ addLayer("ba", {
         auto: false
     }},
     passiveGeneration() { 
-        if (hasMilestone("re", 16)) return (hasMilestone("re", 16)?1:0)
+        if (hasMilestone("re", 16)) return 1
         },  
     color: "#21abcd",
     requires: new EN("10^^^4"), // Can be a function that takes requirement increases into account

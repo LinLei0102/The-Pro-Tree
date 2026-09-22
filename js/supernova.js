@@ -156,7 +156,7 @@ microtabs: {
             return ("超新星")
         },
         passiveGeneration() { 
-            if (hasMilestone("sa", 1)) return (hasMilestone("sa", 1)?1:0)
+            if (hasMilestone("sa", 1)) return 1
             },
         buyables: {
             11: {

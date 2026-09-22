@@ -374,8 +374,8 @@ addLayer("o", {
     layerShown(){if (hasUpgrade("ar", 55)) return false
     else return (hasUpgrade("n", 55) || player[this.layer].unlocked)},
     passiveGeneration() { 
-        if (hasUpgrade("ar", 55)) return (hasUpgrade("ar", 55)?0:0)
-        if (hasMilestone("re", 1)) return (hasMilestone("re", 1)?1:0)
+        if (hasUpgrade("ar", 55)) return 0
+        if (hasMilestone("re", 1)) return 1
         },   
     challenges: {
         11: {

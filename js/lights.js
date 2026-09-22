@@ -425,8 +425,8 @@ effectDescription(){
     },
     row: 4, // Row the layer is in on the tree (0 is the first row)
     passiveGeneration() { 
-        if (hasUpgrade("z", 52)) return (hasUpgrade("z", 52)?0:0)
-        if (hasMilestone("o", 1)) return (hasMilestone("o", 1)?1:0)
+        if (hasUpgrade("z", 52)) return 0
+        if (hasMilestone("o", 1)) return 1
         },     
         hotkeys: [
         {key: "l", description: "L: 重置以获得灯光", onPress(){if (canReset(this.layer)) doReset(this.layer)}},

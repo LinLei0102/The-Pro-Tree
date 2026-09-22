@@ -270,8 +270,8 @@ effectDescription(){
         if (layers[resettingLayer].row > this.row) layerDataReset("h", keep)
     },
     passiveGeneration() { 
-        if (hasUpgrade("z", 33)) return (hasUpgrade("z", 33)?0:0)
-        if (hasMilestone("j", 1)) return (hasMilestone("j", 1)?1:0)
+        if (hasUpgrade("z", 33)) return 0
+        if (hasMilestone("j", 1)) return 1
         },    
     hotkeys: [
         {key: "h", description: "H: 重置获取房屋", onPress(){if (canReset(this.layer)) doReset(this.layer)}},

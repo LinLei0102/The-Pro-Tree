@@ -107,7 +107,7 @@ microtabs: {
             return ("轮回")
         },
         passiveGeneration() { 
-            if (hasMilestone("su", 1)) return (hasMilestone("su", 1)?1:0)
+            if (hasMilestone("su", 1)) return 1
             },
         buyables: {
             11: {

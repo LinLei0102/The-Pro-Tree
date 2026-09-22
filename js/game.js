@@ -188,8 +188,6 @@ function generatePoints(layer, diff) {
 	addPoints(layer, tmp[layer].resetGain.times(diff))
 }
 
-var prevOnReset
-
 function doReset(layer, force=false) {
 	if (tmp[layer].type == "none") return
 	let row = tmp[layer].row
@@ -232,12 +230,10 @@ function doReset(layer, force=false) {
 		if (row >= layers[layerResetting].row && (!force || layerResetting != layer)) completeChallenge(layerResetting)
 	}
 
-	prevOnReset = {...player} 
 	player.points = (row == 0 ? OmegaNumZero : getStartPoints())
 
 	for (let x = row; x >= 0; x--) rowReset(x, layer)
 	rowReset("side", layer)
-	prevOnReset = undefined
 
 	player[layer].resetTime = 0
 
@@ -432,7 +428,8 @@ var interval = setInterval(function() {
 	if (needCanvasUpdate){ resizeCanvas();
 		needCanvasUpdate = false;
 	}
-	tmp.scrolled = document.getElementById('treeTab') && document.getElementById('treeTab').scrollTop > 30
+	let treeTab = document.getElementById('treeTab')
+	tmp.scrolled = treeTab && treeTab.scrollTop > 30
 	updateTemp();
 	updateOomps(diff);
 	updateWidth()

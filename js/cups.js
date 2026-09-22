@@ -337,8 +337,8 @@ effectDescription(){
         if (layers[resettingLayer].row > this.row) layerDataReset("c", keep)
     },
     passiveGeneration() { 
-        if (hasUpgrade("z", 22)) return (hasUpgrade("z", 22)?0:0)
-        if (hasMilestone("f", 1)) return (hasMilestone("f", 1)?1:0)
+        if (hasUpgrade("z", 22)) return 0
+        if (hasMilestone("f", 1)) return 1
         },    
     layerShown(){if (hasUpgrade("z", 22)) return false
     return (hasUpgrade("ant", 35) || player[this.layer].unlocked)},

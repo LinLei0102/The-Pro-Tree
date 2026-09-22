@@ -311,8 +311,8 @@ effectDescription(){
     },
     row: 3, // Row the layer is in on the tree (0 is the first row)
     passiveGeneration() { 
-        if (hasUpgrade("z", 31)) return (hasUpgrade("z", 31)?0:0)
-        if (hasMilestone("j", 1)) return (hasMilestone("j", 1)?1:0)
+        if (hasUpgrade("z", 31)) return 0
+        if (hasMilestone("j", 1)) return 1
         },    
         doReset(resettingLayer) {
         let keep = [];

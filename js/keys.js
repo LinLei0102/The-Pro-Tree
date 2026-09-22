@@ -374,8 +374,8 @@ addLayer("k", {
     },
     row: 4, // Row the layer is in on the tree (0 is the first row)
     passiveGeneration() { 
-        if (hasUpgrade("z", 45)) return (hasUpgrade("z", 45)?0:0)
-        if (hasMilestone("o", 1)) return (hasMilestone("o", 1)?1:0)
+        if (hasUpgrade("z", 45)) return 0
+        if (hasMilestone("o", 1)) return 1
         }, 
     hotkeys: [
         {key: "k", description: "K: 重置获取钥匙", onPress(){if (canReset(this.layer)) doReset(this.layer)}},

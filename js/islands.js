@@ -195,7 +195,7 @@ addLayer("is", {
         },
     },
     passiveGeneration() { 
-        if (hasMilestone("re", 23)) return (hasMilestone("re", 23)?1:0)
+        if (hasMilestone("re", 23)) return 1
         },
         autoUpgrade() { if (hasMilestone("re" , 24)) return true},
 

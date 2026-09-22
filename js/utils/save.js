@@ -197,7 +197,7 @@ function load() {
 		options = getStartOptions();
 	}
 	else {
-		player = Object.assign(getStartPlayer(), JSON.parse(atob(get)));
+		player = Object.assign(getStartPlayer(), JSON.parse(decodeSaveString(get)));
 		fixSave();
 		loadOptions();
 	}
@@ -222,7 +222,7 @@ function load() {
 function loadOptions() {
 	let get2 = localStorage.getItem(modInfo.id+"_options");
 	if (get2) 
-		options = Object.assign(getStartOptions(), JSON.parse(decodeURIComponent(escape(atob(get2)))));
+		options = Object.assign(getStartOptions(), JSON.parse(decodeSaveString(get2)));
 	else 
 		options = getStartOptions()
 
@@ -259,8 +259,14 @@ function NaNcheck(data, name = "player") {
 		}
 	}
 }
+// 解码存档字符串：save()/exportSave() 使用 UTF-8 安全编码，
+// 而旧版导出为裸 btoa（只能含 Latin-1 字符）。此处两种都兼容。
+function decodeSaveString(s) {
+	let raw = atob(s)
+	try { return decodeURIComponent(escape(raw)) } catch (e) { return raw }
+}
 function exportSave() {
-	let str = btoa(JSON.stringify(player));
+	let str = btoa(unescape(encodeURIComponent(JSON.stringify(player))));
 
 	const el = document.createElement("textarea");
 	el.value = str;
@@ -274,7 +280,7 @@ function importSave(imported = undefined, forced = false) {
 	if (imported === undefined)
 		imported = prompt("在此粘贴你的存档");
 	try {
-		tempPlr = Object.assign(getStartPlayer(), JSON.parse(atob(imported)));
+		tempPlr = Object.assign(getStartPlayer(), JSON.parse(decodeSaveString(imported)));
 		if (tempPlr.versionType != modInfo.id && !forced && !confirm("此存档似乎来自其他模组！你确定要导入吗？")) // Wrong save (use "Forced" to force it to accept.)
 			return;
 		player = tempPlr;

@@ -116,7 +116,7 @@ var systemComponents = {
 		<h2  class="overlayThing" id="points">{{format(player.points)}}</h2>
 		<span v-if="player.points.lt('1e1e6')"  class="overlayThing"> {{modInfo.pointsName}}</span>
 		<br>
-		<span v-if="canGenPoints()"  class="overlayThing">({{tmp.other.oompsMag != 0 ? format(tmp.other.oomps) + " 数量级" + (tmp.other.oompsMag < 0 ? "^数量级" : tmp.other.oompsMag > 1 ? "^" + tmp.other.oompsMag : "") : formatSmall(getPointGen())}}/秒)</span>
+		<span v-if="canGenPoints()"  class="overlayThing">({{tmp.other.oompsMag != 0 ? format(tmp.other.oomps) + " 数量级" + (tmp.other.oompsMag < 0 ? "^数量级" : tmp.other.oompsMag > 1 ? "^" + tmp.other.oompsMag : "") : formatSmall(tmp.pointGen)}}/秒)</span>
 		<div v-for="thing in tmp.displayThings" class="overlayThing"><span v-if="thing" v-html="thing"></span></div>
 	</div>
 	`
