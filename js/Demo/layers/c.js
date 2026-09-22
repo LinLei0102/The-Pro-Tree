@@ -3,7 +3,7 @@ var testTree = [["f", "c"],
 
 addLayer("c", {
         layer: "c", // This is assigned automatically, both to the layer and all upgrades, etc. Shown here so you know about it
-        name: "Candies", // This is optional, only used in a few places, If absent it just uses the layer id.
+        name: "糖果", // This is optional, only used in a few places, If absent it just uses the layer id.
         symbol: "C", // This appears on the layer's node. Default is the id with the first letter capitalized
         position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
         startData() { return {
@@ -13,14 +13,14 @@ addLayer("c", {
             total: new Decimal(0),
             buyables: {}, // You don't actually have to initialize this one
             beep: false,
-            thingy: "pointy",
+            thingy: "尖尖的",
             otherThingy: 10,
-            drop: "drip",
+            drop: "滴水",
         }},
         color: "#4BDC13",
         requires: new Decimal(10), // Can be a function that takes requirement increases into account
-        resource: "lollipops", // Name of prestige currency
-        baseResource: "points", // Name of resource prestige is based on
+        resource: "棒棒糖", // Name of prestige currency
+        baseResource: "积分", // Name of resource prestige is based on
         baseAmount() {return player.points}, // Get the current amount of baseResource
         type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
         exponent: 0.5, // Prestige currency exponent
@@ -49,25 +49,25 @@ addLayer("c", {
         effectDescription() { // Optional text to describe the effects
             eff = this.effect();
             eff.waffleBoost = eff.waffleBoost.times(buyableEffect(this.layer, 11).first)
-            return "which are boosting waffles by "+format(eff.waffleBoost)+" and increasing the Ice Cream cap by "+format(eff.icecreamCap)
+            return "它们将华夫饼提升 "+format(eff.waffleBoost)+" 并将冰淇淋上限提高 "+format(eff.icecreamCap)
         },
         infoboxes:{
             coolInfo: {
-                title: "Lore",
+                title: "背景设定",
                 titleStyle: {'color': '#FE0000'},
-                body: "DEEP LORE!",
+                body: "深邃的背景设定！",
                 bodyStyle: {'background-color': "#0000EE"}
             }
         },
         milestones: {
-            0: {requirementDescription: "3 Lollipops",
+            0: {requirementDescription: "3 个棒棒糖",
                 done() {return player[this.layer].best.gte(3)}, // Used to determine when to give the milestone
-                effectDescription: "Unlock the next milestone",
+                effectDescription: "解锁下一个里程碑",
             },
-            1: {requirementDescription: "4 Lollipops",
+            1: {requirementDescription: "4 个棒棒糖",
                 unlocked() {return hasMilestone(this.layer, 0)},
                 done() {return player[this.layer].best.gte(4)},
-                effectDescription: "You can toggle beep and boop (which do nothing)",
+                effectDescription: "你可以切换哔和噗（它们什么也不做）",
                 toggles: [
                     ["c", "beep"], // Each toggle is defined by a layer and the data toggled for that layer
                     ["f", "boop"]],
@@ -80,11 +80,11 @@ addLayer("c", {
         challenges: {
 
 		    11: {
-                name: "Fun",
+                name: "乐趣",
                 completionLimit: 3,
-			    challengeDescription() {return "Makes the game 0% harder<br>"+challengeCompletions(this.layer, this.id) + "/" + this.completionLimit + " completions"},
+			    challengeDescription() {return "使游戏难度增加 0%<br>"+challengeCompletions(this.layer, this.id) + "/" + this.completionLimit + " 次完成"},
                 unlocked() { return player[this.layer].best.gt(0) },
-                goalDescription: 'Have 20 points I guess',
+                goalDescription: '大概要有 20 积分吧',
                 canComplete() {
                     return player.points.gte(20)
                 },
@@ -94,7 +94,7 @@ addLayer("c", {
                 },
                 rewardDisplay() { return format(this.rewardEffect())+"x" },
                 countsAs: [12, 21], // Use this for if a challenge includes the effects of other challenges. Being in this challenge "counts as" being in these.
-                rewardDescription: "Says hi",
+                rewardDescription: "打个招呼",
                 onComplete() {console.log("hiii")}, // Called when you successfully complete the challenge
                 onEnter() {console.log("So challenging")},
                 onExit() {console.log("Sweet freedom!")},
@@ -104,15 +104,15 @@ addLayer("c", {
         upgrades: {
 
             11: {
-                title: "Generator of Genericness",
-                description: "Gain 1 Point every second.",
+                title: "通用性生成器",
+                description: "每秒获得 1 积分。",
                 cost: new Decimal(1),
                 unlocked() { return player[this.layer].unlocked }, // The upgrade is only visible when this is true
                 branches: [12],
-                tooltip: "hi",
+                tooltip: "嗨",
             },
             12: {
-                description: "Point generation is faster based on your unspent Lollipops.",
+                description: "积分产出速度会依据你未花费的棒棒糖加快。",
                 cost: new Decimal(1),
                 unlocked() { return (hasUpgrade(this.layer, 11))},
                 effect() { // Calculate bonuses from the upgrade. Can return a single value or an object with multiple values
@@ -139,13 +139,13 @@ addLayer("c", {
                 },
                 canAfford(){return player.points.lte(7)},
                 pay(){player.points = player.points.add(7)},
-                fullDisplay: "Only buyable with less than 7 points, and gives you 7 more. Unlocks a secret subtab."
+                fullDisplay: "仅当积分低于 7 时可购买，并额外给你 7 点。解锁一个秘密子标签页。"
             },
             22: {
-                title: "This upgrade doesn't exist",
-                description: "Or does it?.",
+                title: "这个升级并不存在",
+                description: "真的吗？",
                 currencyLocation() {return player[this.layer].buyables}, // The object in player data that the currency is contained in
-                currencyDisplayName: "exhancers", // Use if using a nonstandard currency
+                currencyDisplayName: "增强器", // Use if using a nonstandard currency
                 currencyInternalName: 11, // Use if using a nonstandard currency
 
                 cost: new Decimal(3),
@@ -159,10 +159,10 @@ addLayer("c", {
                 resetBuyables(this.layer)
                 doReset(this.layer, true) // Force a reset
             },
-            respecText: "Respec Thingies", // Text on Respec button, optional
-            respecMessage: "Are you sure? Respeccing these doesn't accomplish much.",
+            respecText: "洗点小玩意儿", // Text on Respec button, optional
+            respecMessage: "确定吗？对这些洗点并没什么实际意义。",
             11: {
-                title: "Exhancers", // Optional, displayed at the top in a larger font
+                title: "增强器", // Optional, displayed at the top in a larger font
                 cost(x) { // cost for buying xth buyable, can be an object if there are multiple currencies
                     if (x.gte(25)) x = x.pow(2).div(25)
                     let cost = Decimal.pow(2, x.pow(1.5))
@@ -179,9 +179,7 @@ addLayer("c", {
                 },
                 display() { // Everything else displayed in the buyable button after the title
                     let data = tmp[this.layer].buyables[this.id]
-                    return "Cost: " + format(data.cost) + " lollipops\n\
-                    Amount: " + player[this.layer].buyables[this.id] + "/4\n\
-                    Adds + " + format(data.effect.first) + " things and multiplies stuff by " + format(data.effect.second)
+                    return "花费: " + format(data.cost) + " 个棒棒糖\n数量: " + player[this.layer].buyables[this.id] + "/4\n增加 + " + format(data.effect.first) + " 样东西，并将数值乘以 " + format(data.effect.second)
                 },
                 unlocked() { return player[this.layer].unlocked }, 
                 canAfford() {
@@ -215,23 +213,23 @@ addLayer("c", {
         }, // Useful for if you gain secondary resources or have other interesting things happen to this layer when you reset it. You gain the currency after this function ends.
 
         hotkeys: [
-            {key: "c", description: "C: reset for lollipops or whatever", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
-            {key: "ctrl+c", description: "Ctrl+c: respec things", onPress(){respecBuyables(this.layer)}, unlocked() {return hasUpgrade('c', '22')}}  ,
+            {key: "c", description: "C: 重置以获得棒棒糖之类的", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+            {key: "ctrl+c", description: "Ctrl+c: 洗点小玩意儿", onPress(){respecBuyables(this.layer)}, unlocked() {return hasUpgrade('c', '22')}}  ,
         ],
         increaseUnlockOrder: [], // Array of layer names to have their order increased when this one is first unlocked
 
         microtabs: {
             stuff: {
-                first: {
-                    content: ["upgrades", ["display-text", function() {return "confirmed<br>" + player.c.drop}], ["drop-down", ["drop", ["drip", "drop"]]]]
+                "第一": {
+                    content: ["upgrades", ["display-text", function() {return "已确认<br>" + player.c.drop}], ["drop-down", ["drop", ["滴水", "掉落"]]]]
                 },
-                second: {
+                "第二": {
                     embedLayer: "f",
 
                     content: [["upgrade", 11],
                             ["row", [["upgrade", 11], "blank", "blank", ["upgrade", 11],]],
                         
-                        ["display-text", function() {return "double confirmed"}]]
+                        ["display-text", function() {return "双重确认"}]]
                 },
             },
             otherStuff: {
@@ -252,7 +250,7 @@ addLayer("c", {
                     return (player.points.add(1).log(10).div(10)).toNumber()
                 },
                 display() {
-                    return format(player.points) + " / 1e10 points"
+                    return format(player.points) + " / 1e10 积分"
                 },
                 unlocked: true,
 
@@ -294,24 +292,24 @@ addLayer("c", {
         
         // Optional, lets you format the tab yourself by listing components. You can create your own components in v.js.
         tabFormat: {
-            "main tab": {
+            "主页面": {
                 buttonStyle() {return  {'color': 'orange'}},
                 shouldNotify: true,
                 content:
                     ["main-display",
                     "prestige-button", "resource-display",
                     ["blank", "5px"], // Height
-                    ["raw-html", function() {return "<button onclick='console.log(`yeet`); makeParticles(textParticle)'>'HI'</button>"}],
-                    ["display-text", "Name your points!"],
+                    ["raw-html", function() {return "<button onclick='console.log(`yeet`); makeParticles(textParticle)'>'嗨'</button>"}],
+                    ["display-text", "给你的积分起个名字！"],
                     ["text-input", "thingy"],
                     ["display-text",
-                        function() {return 'I have ' + format(player.points) + ' ' + player[this.layer].thingy + ' points!'},
+                        function() {return '我有 ' + format(player.points) + ' ' + player[this.layer].thingy + ' 积分！'},
                         {"color": "red", "font-size": "32px", "font-family": "Comic Sans MS"}],
                     "h-line", "milestones", "blank", "upgrades", "challenges"],
                 glowColor: "blue",
 
             },
-            thingies: {
+            "小玩意儿": {
                 prestigeNotify: true,
                 style() {return  {'background-color': '#222222'}},
                 buttonStyle() {return {'border-color': 'orange'}},
@@ -319,7 +317,7 @@ addLayer("c", {
                     "buyables", "blank",
                     ["row", [
                         ["toggle", ["c", "beep"]], ["blank", ["30px", "10px"]], // Width, height
-                        ["display-text", function() {return "Beep"}], "blank", ["v-line", "200px"],
+                        ["display-text", function() {return "哔"}], "blank", ["v-line", "200px"],
                         ["column", [
                             ["prestige-button", "", {'width': '150px', 'height': '80px'}],
                             ["prestige-button", "", {'width': '100px', 'height': '150px'}],
@@ -328,7 +326,7 @@ addLayer("c", {
                     "blank",
                     ["display-image", "discord.png"],],
             },
-            jail: {
+            "监狱": {
                 style() {return  {'background-color': '#222222'}},
 
                 content: [
@@ -336,23 +334,23 @@ addLayer("c", {
                     ["bar", "longBoi"], "blank",
                     ["row", [
                         ["column", [
-                            ["display-text", "Sugar level:", {'color': 'teal'}],  "blank", ["bar", "tallBoi"]],
+                            ["display-text", "糖分等级:", {'color': 'teal'}],  "blank", ["bar", "tallBoi"]],
                         {'background-color': '#555555', 'padding': '15px'}],
                         "blank",
                         ["column", [
-                        ["display-text", "idk"],
+                        ["display-text", "不知道"],
                         ["blank", ['0', '50px']], ["bar", "flatBoi"]
                         ]],
                     ]],
-                    "blank", ["display-text", "It's jail because \"bars\"! So funny! Ha ha!"],["tree", testTree], 
+                    "blank", ["display-text", "它叫「监狱」是因为「条」！真好笑！哈哈！"],["tree", testTree], 
                 ],
             },
-            illuminati: {
+            "光明会": {
                 unlocked() {return (hasUpgrade("c", 13))},
                 content:[
-                    ["raw-html", function() {return "<h1> C O N F I R M E D </h1>"}], "blank",
+                    ["raw-html", function() {return "<h1> 已 确 认 </h1>"}], "blank",
                     ["microtabs", "stuff", {'width': '600px', 'height': '350px', 'background-color': 'brown', 'border-style': 'solid'}],
-                    ["display-text", "Adjust how many points H gives you!"],
+                    ["display-text", "调整 H 给你多少积分！"],
                     ["slider", ["otherThingy", 1, 30]], "blank", ["upgrade-tree", [[11], 
                     [12, 22, 22, 11]]]
                 ]
@@ -374,7 +372,7 @@ addLayer("c", {
         },
         tooltip() { // Optional, tooltip displays when the layer is unlocked
             let tooltip = formatWhole(player[this.layer].points) + " " + this.resource
-            if (player[this.layer].buyables[11].gt(0)) tooltip += "<br><i><br><br><br>" + formatWhole(player[this.layer].buyables[11]) + " Exhancers</i>"
+            if (player[this.layer].buyables[11].gt(0)) tooltip += "<br><i><br><br><br>" + formatWhole(player[this.layer].buyables[11]) + " 个增强器</i>"
             return tooltip
         },
         shouldNotify() { // Optional, layer will be highlighted on the tree if true.
@@ -382,7 +380,7 @@ addLayer("c", {
             return (player.c.buyables[11] == 1)
         },
         marked: "discord.png",
-        resetDescription: "Melt your points into ",
+        resetDescription: "把你的积分熔铸成 ",
 })
 
 const textParticle = {

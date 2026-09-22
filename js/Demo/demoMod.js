@@ -14,15 +14,15 @@ let modInfo = {
 // Set your version in num and name
 let VERSION = {
 	num: "2.6.6",
-	name: "Fixed Reality",
+	name: "修复的现实",
 }
 
-let changelog = `<h1>Changelog:</h1><br>
+let changelog = `<h1>更新日志：</h1><br>
 	<h3>v0.0</h3><br>
-		- Added things.<br>
-		- Added stuff.`
+		- 添加了一些东西。<br>
+		- 添加了一些内容。`
 
-let winText = `Congratulations! You have reached the end and beaten this game, but for now...`
+let winText = `恭喜！你已到达终点并通关了本游戏，但现在...`
 // If you add new functions anywhere inside of a layer, and those functions have an effect when called, add them here.
 // (The ones here are examples, all official functions are already taken care of)
 var doNotCallTheseFunctionsEveryTick = ["doReset", "buy", "onPurchase", "blowUpEverything"]
@@ -54,9 +54,9 @@ function addedPlayerData() { return {
 
 // Display extra things at the top of the page
 var displayThings = [
-	function() {if (player.points.eq(69)) return "Tee hee!"},
-	function() {if (player.f.points.gt(1)) return `You have ${player.f.points} farm points. (Which do nothing.)`},
-	function() {if (inChallenge("c", 11)) return "The game is currently <h1>0%</h1> harder."},
+	function() {if (player.points.eq(69)) return "嘿嘿！"},
+	function() {if (player.f.points.gt(1)) return `你有 ${player.f.points} 个农场点。（它们什么也不做。）`},
+	function() {if (inChallenge("c", 11)) return "游戏目前难度增加了 <h1>0%</h1>。"},
 ]
 
 // Determines when the game "ends"

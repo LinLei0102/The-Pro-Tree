@@ -6,31 +6,31 @@ addLayer("a", {
         points: new Decimal(0),
     }},
     color: "yellow",
-    resource: "achievement power", 
+    resource: "成就之力", 
     row: "side",
     tooltip() { // Optional, tooltip displays when the layer is locked
-        return ("Achievements")
+        return ("成就")
     },
     achievementPopups: true,
     achievements: {
         11: {
             image: "discord.png",
-            name: "Get me!",
+            name: "抓到我！",
             done() {return true}, // This one is a freebie
-            goalTooltip: "How did this happen?", // Shows when achievement is not completed
-            doneTooltip: "You did it!", // Showed when the achievement is completed
+            goalTooltip: "这是怎么发生的？", // Shows when achievement is not completed
+            doneTooltip: "你做到了！", // Showed when the achievement is completed
         },
         12: {
-            name: "Impossible!",
+            name: "不可能！",
             done() {return false},
-            goalTooltip: "Mwahahaha!", // Shows when achievement is not completed
-            doneTooltip: "HOW????", // Showed when the achievement is completed
+            goalTooltip: "哇哈哈哈！", // Shows when achievement is not completed
+            doneTooltip: "怎么做到的？？？？", // Showed when the achievement is completed
             textStyle: {'color': '#04e050'},
         },
         13: {
-            name: "EIEIO",
+            name: "咿呀咿呀哟",
             done() {return player.f.points.gte(1)},
-            tooltip: "Get a farm point.\n\nReward: The dinosaur is now your friend (you can max Farm Points).", // Showed when the achievement is completed
+            tooltip: "获得 1 个农场点。\n\n奖励: 恐龙现在是你的朋友了（你可以把农场点拉满）。", // Showed when the achievement is completed
             onComplete() {console.log("Bork bork bork!")}
         },
     },
@@ -55,7 +55,7 @@ addLayer("a", {
             player[this.layer].grid[id]++
         },
         getTitle(data, id) {
-            return "Gridable #" + id
+            return "格子 #" + id
         },
         getDisplay(data, id) {
             return data

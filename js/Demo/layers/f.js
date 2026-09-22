@@ -2,9 +2,9 @@
 addLayer("f", {
     infoboxes:{
         coolInfo: {
-            title: "Lore",
+            title: "背景设定",
             titleStyle: {'color': '#FE0000'},
-            body: "DEEP LORE!",
+            body: "深邃的背景设定！",
             bodyStyle: {'background-color': "#0000EE"}
         }
     },
@@ -13,12 +13,12 @@ addLayer("f", {
         unlocked: false,
         points: new Decimal(0),
         boop: false,
-        clickables: {[11]: "Start"}, // Optional default Clickable state
+        clickables: {[11]: "开始"}, // Optional default Clickable state
     }},
     color: "#FE0102",
     requires() {return new Decimal(10)}, 
-    resource: "farm points", 
-    baseResource: "points", 
+    resource: "农场点", 
+    baseResource: "积分", 
     baseAmount() {return player.points},
     type: "static",
     exponent: 0.5,
@@ -32,16 +32,16 @@ addLayer("f", {
     branches: ["c"], // When this layer appears, a branch will appear from this layer to any layers here. Each entry can be a pair consisting of a layer id and a color.
 
     tooltipLocked() { // Optional, tooltip displays when the layer is locked
-        return ("This weird farmer dinosaur will only see you if you have at least " + this.requires() + " points. You only have " + formatWhole(player.points))
+        return ("这只奇怪的农夫恐龙只会在你拥有至少 " + this.requires() + " 积分时才肯见你。你只有 " + formatWhole(player.points))
     },
     midsection: [
         "blank", ['display-image', 'https://images.beano.com/store/24ab3094eb95e5373bca1ccd6f330d4406db8d1f517fc4170b32e146f80d?auto=compress%2Cformat&dpr=1&w=390'],
-        ["display-text", "Bork bork!"]
+        ["display-text", "嗷呜嗷呜！"]
     ],
     // The following are only currently used for "custom" Prestige type:
     prestigeButtonText() { //Is secretly HTML
-        if (!this.canBuyMax()) return "Hi! I'm a <u>weird dinosaur</u> and I'll give you a Farm Point in exchange for all of your points and lollipops! (At least " + formatWhole(tmp[this.layer].nextAt) + " points)"
-        if (this.canBuyMax()) return "Hi! I'm a <u>weird dinosaur</u> and I'll give you <b>" + formatWhole(tmp[this.layer].resetGain) + "</b> Farm Points in exchange for all of your points and lollipops! (You'll get another one at " + formatWhole(tmp[this.layer].nextAtDisp) + " points)"
+        if (!this.canBuyMax()) return "嗨！我是一只<u>奇怪的恐龙</u>，我会用 1 个农场点换走你所有的积分和棒棒糖！（至少需要 " + formatWhole(tmp[this.layer].nextAt) + " 积分）"
+        if (this.canBuyMax()) return "嗨！我是一只<u>奇怪的恐龙</u>，我会给你 <b>" + formatWhole(tmp[this.layer].resetGain) + "</b> 个农场点，换走你所有的积分和棒棒糖！（你在 " + formatWhole(tmp[this.layer].nextAtDisp) + " 积分）"
     },
     getResetGain() {
         return getResetGain(this.layer, useType = "static")
@@ -56,36 +56,36 @@ addLayer("f", {
     clickables: {
 
         masterButtonPress() {
-            if (getClickableState(this.layer, 11) == "Borkened...")
-                player[this.layer].clickables[11] = "Start"
+            if (getClickableState(this.layer, 11) == "坏掉了……")
+                player[this.layer].clickables[11] = "开始"
         },
-        masterButtonText() {return (getClickableState(this.layer, 11) == "Borkened...") ? "Fix the clickable!" : "Does nothing"}, // Text on Respec button, optional
+        masterButtonText() {return (getClickableState(this.layer, 11) == "坏掉了……") ? "修复这个可点击项！" : "什么也不做"}, // Text on Respec button, optional
         11: {
-            title: "Clicky clicky!", // Optional, displayed at the top in a larger font
+            title: "点点点！", // Optional, displayed at the top in a larger font
             display() { // Everything else displayed in the buyable button after the title
                 let data = getClickableState(this.layer, this.id)
-                return "Current state:<br>" + data
+                return "当前状态:<br>" + data
             },
             unlocked() { return player[this.layer].unlocked }, 
             canClick() {
-                return getClickableState(this.layer, this.id) !== "Borkened..."},
+                return getClickableState(this.layer, this.id) !== "坏掉了……"},
             onClick() { 
                 switch(getClickableState(this.layer, this.id)){
-                    case "Start":
-                        player[this.layer].clickables[this.id] = "A new state!"
+                    case "开始":
+                        player[this.layer].clickables[this.id] = "新状态！"
                         break;
-                    case "A new state!":
-                        player[this.layer].clickables[this.id] = "Keep going!"
+                    case "新状态！":
+                        player[this.layer].clickables[this.id] = "继续！"
                         break;
-                    case "Keep going!":
-                        player[this.layer].clickables[this.id] = "Maybe that's a bit too far..."
+                    case "继续！":
+                        player[this.layer].clickables[this.id] = "也许有点过头了……"
                         break;                        
-                    case "Maybe that's a bit too far...":
+                    case "也许有点过头了……":
                         makeParticles(coolParticle, 4)
-                        player[this.layer].clickables[this.id] = "Borkened..."
+                        player[this.layer].clickables[this.id] = "坏掉了……"
                         break;
                     default:
-                        player[this.layer].clickables[this.id] = "Start"
+                        player[this.layer].clickables[this.id] = "开始"
                         break;
                 }
             },
@@ -94,16 +94,16 @@ addLayer("f", {
             },
             style() {
                 switch(getClickableState(this.layer, this.id)){
-                    case "Start":
+                    case "开始":
                         return {'background-color': 'green'}
                         break;
-                    case "A new state!":
+                    case "新状态！":
                         return {'background-color': 'yellow'}
                         break;
-                    case "Keep going!":
+                    case "继续！":
                         return {'background-color': 'orange'}
                         break;                        
-                    case "Maybe that's a bit too far...":
+                    case "也许有点过头了……":
                         return {'background-color': 'red'}
                         break;
                     default:
